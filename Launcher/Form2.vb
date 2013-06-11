@@ -61,4 +61,12 @@ Public Class Form2
         End Try
 
     End Sub
+
+    Private Sub Form2_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        If e.CloseReason = CloseReason.UserClosing Then
+            e.Cancel = True
+            Me.Hide()
+        End If
+    End Sub
+
 End Class
