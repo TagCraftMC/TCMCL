@@ -5,6 +5,7 @@ Public Class Form1
     'Ammar can you read this?
     'crackhead
     'pokemon
+    'yes all the chicken
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             If accessOP = "0" And Form2.CheckBox1.Checked = False Then
