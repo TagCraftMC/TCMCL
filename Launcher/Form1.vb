@@ -1,9 +1,36 @@
 ﻿Imports System.Net.Sockets
+Imports System.IO
 
 Public Class Form1
     Dim accessOP As String
+    Dim oFile As System.IO.File
+    Dim oWrite As System.IO.StreamWriter
+    Dim oRead As System.IO.StreamReader
+    Dim line As String
+
+    Dim oFilex As System.IO.File
+    Dim oWritex As System.IO.StreamWriter
+    Dim oReadx As System.IO.StreamReader
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Try
+            Dim objReader As StreamWriter
+
+
+            objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/taguser.txt")
+            objReader.Write(TextBox1.Text)
+            objReader.Close()
+
+        Catch ex As Exception
+
+        End Try
+
+
+
+
+
         Try
             '  info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
             'programfiles for 64 bit
@@ -85,7 +112,7 @@ Public Class Form1
             End If
         End Try
 
-      
+
     End Sub
 
     Private Sub TextBox1_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyUp
@@ -100,7 +127,24 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         accessOP = "0"
-        TextBox1.Select()
+
+
+        Try
+            oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/taguser.txt")
+            TextBox1.Text = oRead.ReadLine
+
+
+            oRead.Close()
+
+        Catch ex As Exception
+
+        End Try
+        If TextBox1.Text = "" Then
+            TextBox1.Select()
+        Else
+            'nothing
+        End If
+
         x()
         y()
         z()
