@@ -75,7 +75,7 @@ Public Class Form1
             End If
         End Try
 
-      
+
     End Sub
 
     Private Sub TextBox1_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyUp
