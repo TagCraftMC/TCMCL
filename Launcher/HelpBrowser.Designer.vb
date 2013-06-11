@@ -22,13 +22,18 @@ Partial Class HelpBrowser
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.HelpBRW = New System.Windows.Forms.WebBrowser()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'HelpBRW
         '
         Me.HelpBRW.AllowNavigation = False
         Me.HelpBRW.AllowWebBrowserDrop = False
+        Me.HelpBRW.ContextMenuStrip = Me.ContextMenuStrip1
         Me.HelpBRW.Dock = System.Windows.Forms.DockStyle.Fill
         Me.HelpBRW.IsWebBrowserContextMenuEnabled = False
         Me.HelpBRW.Location = New System.Drawing.Point(0, 0)
@@ -38,6 +43,20 @@ Partial Class HelpBrowser
         Me.HelpBRW.TabIndex = 0
         Me.HelpBRW.Url = New System.Uri("http://www.tagcraftmc.com/launcherhelp", System.UriKind.Absolute)
         Me.HelpBRW.WebBrowserShortcutsEnabled = False
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.ContextMenuStrip1.ShowImageMargin = False
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(128, 48)
+        '
+        'CopyToolStripMenuItem
+        '
+        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'HelpBrowser
         '
@@ -49,8 +68,11 @@ Partial Class HelpBrowser
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "HelpBrowser"
         Me.Text = "TagCraftMC Launcher Help"
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents HelpBRW As System.Windows.Forms.WebBrowser
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents CopyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
