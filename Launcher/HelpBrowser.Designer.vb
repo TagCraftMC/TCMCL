@@ -50,12 +50,12 @@ Partial Class HelpBrowser
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.ContextMenuStrip1.ShowImageMargin = False
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(128, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(78, 26)
         '
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(77, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'HelpBrowser
@@ -66,6 +66,7 @@ Partial Class HelpBrowser
         Me.Controls.Add(Me.HelpBRW)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.MaximizeBox = False
         Me.Name = "HelpBrowser"
         Me.Text = "TagCraftMC Launcher Help"
         Me.ContextMenuStrip1.ResumeLayout(False)
