@@ -2,7 +2,7 @@
 
 Public Class Form1
     Dim accessOP As String
-
+    'Ammar can you read this?
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             If accessOP = "0" And Form2.CheckBox1.Checked = False Then
