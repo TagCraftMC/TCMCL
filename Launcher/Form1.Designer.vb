@@ -22,21 +22,30 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.HelpBTN = New System.Windows.Forms.Button()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.HelpBTN = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(9, 133)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(126, 48)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Launch"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
@@ -54,6 +63,24 @@ Partial Class Form1
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Username:"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(141, 133)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(126, 48)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Options"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(405, 133)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(126, 48)
+        Me.Button3.TabIndex = 5
+        Me.Button3.Text = "Exit"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel6})
@@ -62,16 +89,6 @@ Partial Class Form1
         Me.StatusStrip1.Size = New System.Drawing.Size(542, 22)
         Me.StatusStrip1.TabIndex = 6
         Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'HelpBTN
-        '
-        Me.HelpBTN.BackgroundImage = Global.Launcher.My.Resources.Resources.Helpme
-        Me.HelpBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HelpBTN.Location = New System.Drawing.Point(273, 133)
-        Me.HelpBTN.Name = "HelpBTN"
-        Me.HelpBTN.Size = New System.Drawing.Size(126, 48)
-        Me.HelpBTN.TabIndex = 7
-        Me.HelpBTN.UseVisualStyleBackColor = True
         '
         'ToolStripStatusLabel1
         '
@@ -121,41 +138,19 @@ Partial Class Form1
         Me.ToolStripStatusLabel6.Text = "TeamSpeak"
         Me.ToolStripStatusLabel6.Visible = False
         '
-        'Button3
+        'HelpBTN
         '
-        Me.Button3.BackgroundImage = Global.Launcher.My.Resources.Resources.bye
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(405, 133)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(126, 48)
-        Me.Button3.TabIndex = 5
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.BackgroundImage = Global.Launcher.My.Resources.Resources.options
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(141, 133)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(126, 48)
-        Me.Button2.TabIndex = 4
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.BackgroundImage = Global.Launcher.My.Resources.Resources.launch
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(9, 133)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(126, 48)
-        Me.Button1.TabIndex = 0
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.HelpBTN.Location = New System.Drawing.Point(273, 133)
+        Me.HelpBTN.Name = "HelpBTN"
+        Me.HelpBTN.Size = New System.Drawing.Size(126, 48)
+        Me.HelpBTN.TabIndex = 7
+        Me.HelpBTN.Text = "Help"
+        Me.HelpBTN.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Launcher.My.Resources.Resources.bg
         Me.ClientSize = New System.Drawing.Size(542, 234)
         Me.Controls.Add(Me.HelpBTN)
         Me.Controls.Add(Me.StatusStrip1)
