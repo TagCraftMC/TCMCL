@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 
 Public Class Form2
+    Dim computer_info As New Devices.ComputerInfo
     Dim oFile As System.IO.File
     Dim oWrite As System.IO.StreamWriter
     Dim oRead As System.IO.StreamReader
@@ -20,7 +21,7 @@ Public Class Form2
             objReader.Write(ComboBox1.Text)
             objReader.Close()
 
-          
+
             Dim lines As New List(Of String)(IO.File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt"))
             'Remove the line to delete, e.g.
 
@@ -59,6 +60,8 @@ Public Class Form2
         Catch ex As Exception
 
         End Try
+
+        'MsgBox(computer_info.AvailablePhysicalMemory)
 
     End Sub
 

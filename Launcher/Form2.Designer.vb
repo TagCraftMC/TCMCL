@@ -73,7 +73,7 @@ Partial Class Form2
         Me.ComboBox2.AllowDrop = True
         Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"256M", "512M", "1024M"})
+        Me.ComboBox2.Items.AddRange(New Object() {"256M", "512M", "1024M", "2048M", "4096M", "6144M", "8192M"})
         Me.ComboBox2.Location = New System.Drawing.Point(93, 52)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
