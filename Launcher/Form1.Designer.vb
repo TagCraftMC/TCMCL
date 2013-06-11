@@ -22,22 +22,28 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.HelpBTN = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -55,6 +61,7 @@ Partial Class Form1
         '
         'TextBox1
         '
+        Me.TextBox1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Symbol", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(263, 115)
         Me.TextBox1.Name = "TextBox1"
@@ -109,6 +116,13 @@ Partial Class Form1
         Me.StatusStrip1.TabIndex = 6
         Me.StatusStrip1.Text = "StatusStrip1"
         '
+        'ToolStripStatusLabel7
+        '
+        Me.ToolStripStatusLabel7.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
+        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(13, 19)
+        Me.ToolStripStatusLabel7.Text = " "
+        '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -117,24 +131,6 @@ Partial Class Form1
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(83, 21)
         Me.ToolStripStatusLabel1.Text = "Factions"
         Me.ToolStripStatusLabel1.Visible = False
-        '
-        'ToolStripStatusLabel2
-        '
-        Me.ToolStripStatusLabel2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripStatusLabel2.Image = Global.Launcher.My.Resources.Resources.online
-        Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(130, 21)
-        Me.ToolStripStatusLabel2.Text = "Hunger Games"
-        Me.ToolStripStatusLabel2.Visible = False
-        '
-        'ToolStripStatusLabel5
-        '
-        Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripStatusLabel5.Image = Global.Launcher.My.Resources.Resources.online
-        Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(106, 21)
-        Me.ToolStripStatusLabel5.Text = "TeamSpeak"
-        Me.ToolStripStatusLabel5.Visible = False
         '
         'ToolStripStatusLabel3
         '
@@ -145,6 +141,15 @@ Partial Class Form1
         Me.ToolStripStatusLabel3.Text = "Factions"
         Me.ToolStripStatusLabel3.Visible = False
         '
+        'ToolStripStatusLabel2
+        '
+        Me.ToolStripStatusLabel2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel2.Image = Global.Launcher.My.Resources.Resources.online
+        Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(130, 21)
+        Me.ToolStripStatusLabel2.Text = "Hunger Games"
+        Me.ToolStripStatusLabel2.Visible = False
+        '
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -153,6 +158,15 @@ Partial Class Form1
         Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(130, 21)
         Me.ToolStripStatusLabel4.Text = "Hunger Games"
         Me.ToolStripStatusLabel4.Visible = False
+        '
+        'ToolStripStatusLabel5
+        '
+        Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel5.Image = Global.Launcher.My.Resources.Resources.online
+        Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(106, 21)
+        Me.ToolStripStatusLabel5.Text = "TeamSpeak"
+        Me.ToolStripStatusLabel5.Visible = False
         '
         'ToolStripStatusLabel6
         '
@@ -187,12 +201,31 @@ Partial Class Form1
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "TagCraftMC Launcher"
         '
-        'ToolStripStatusLabel7
+        'ContextMenuStrip1
         '
-        Me.ToolStripStatusLabel7.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
-        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(13, 19)
-        Me.ToolStripStatusLabel7.Text = " "
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.ContextMenuStrip1.ShowImageMargin = False
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(78, 70)
+        '
+        'CutToolStripMenuItem
+        '
+        Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CutToolStripMenuItem.Text = "Cut"
+        '
+        'CopyToolStripMenuItem
+        '
+        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CopyToolStripMenuItem.Text = "Copy"
+        '
+        'PasteToolStripMenuItem
+        '
+        Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'Form1
         '
@@ -214,6 +247,7 @@ Partial Class Form1
         Me.Text = "TagCraftMC Launcher"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -233,5 +267,9 @@ Partial Class Form1
     Friend WithEvents HelpBTN As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents ToolStripStatusLabel7 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents CutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CopyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PasteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

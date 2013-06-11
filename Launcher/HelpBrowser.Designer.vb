@@ -48,14 +48,14 @@ Partial Class HelpBrowser
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.ContextMenuStrip1.ShowImageMargin = False
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(78, 26)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(128, 48)
         '
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(77, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'HelpBrowser

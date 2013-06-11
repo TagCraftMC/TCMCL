@@ -205,4 +205,19 @@ Public Class Form1
     Private Sub HelpBTN_Click(sender As Object, e As EventArgs) Handles HelpBTN.Click
         HelpBrowser.Show()
     End Sub
+
+    Private Sub CutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutToolStripMenuItem.Click
+        TextBox1.Cut()
+
+    End Sub
+
+    Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
+        TextBox1.Copy()
+
+    End Sub
+
+    Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
+        TextBox1.Paste()
+
+    End Sub
 End Class
