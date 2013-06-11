@@ -2,16 +2,17 @@
 
 Public Class Form1
     Dim accessOP As String
-    'Ammar can you read this?
-    'crackhead
-    'pokemon
-    'yes all the chicken
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
+            '  info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
+            'programfiles for 64 bit
+            'x86 for 32
             If accessOP = "0" And Form2.CheckBox1.Checked = False Then
                 Dim text As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
                 Dim process As New Process
                 Dim info As New ProcessStartInfo
+                'info.FileName = "javaw"
                 info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
                 info.CreateNoWindow = True
                 info.Arguments = "-Dsun.java2d.noddraw=true -Dsun.awt.noerasebackground=true -Dsun.java2d.d3d=false -Dsun.java2d.opengl=false -Dsun.java2d.pmoffscreen=false -Djava.library.path=" + text + "natives -cp " + text + "minecraft.jar;" + text + "jinput.jar;" + text + "lwjgl.jar;" + text + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
@@ -22,9 +23,11 @@ Public Class Form1
                 Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
                 Dim process As New Process
                 Dim info As New ProcessStartInfo
+                'info.FileName = "javaw"
                 info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
                 info.CreateNoWindow = True
                 info.Arguments = "-Xms" + "256m" + " -Xmx" + Form2.ComboBox2.Text + " -Dsun.java2d.noddraw=true" + " -Dsun.awt.noerasebackground=true" + " -Dsun.java2d.d3d=false" + " -Dsun.java2d.opengl=false" + " -Dsun.java2d.pmoffscreen=false" + " -Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
                 process.StartInfo = info
                 process.Start()
                 End
@@ -35,6 +38,8 @@ Public Class Form1
                 Dim process As New Process
                 Dim info As New ProcessStartInfo
                 info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
+                ' info.FileName = "java"
+                '  info.CreateNoWindow = True
                 info.Arguments = "-Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
                 process.StartInfo = info
                 process.Start()
@@ -45,7 +50,8 @@ Public Class Form1
                 Dim text As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
                 Dim process As New Process
                 Dim info As New ProcessStartInfo
-                info.FileName = "javaw"
+                '         info.FileName = "javaw"
+                info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
                 info.CreateNoWindow = True
                 info.Arguments = "-Dsun.java2d.noddraw=true -Dsun.awt.noerasebackground=true -Dsun.java2d.d3d=false -Dsun.java2d.opengl=false -Dsun.java2d.pmoffscreen=false -Djava.library.path=" + text + "natives -cp " + text + "minecraft.jar;" + text + "jinput.jar;" + text + "lwjgl.jar;" + text + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
                 process.StartInfo = info
@@ -55,9 +61,11 @@ Public Class Form1
                 Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
                 Dim process As New Process
                 Dim info As New ProcessStartInfo
-                info.FileName = "javaw"
+                '                info.FileName = "javaw"
+                info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
                 info.CreateNoWindow = True
                 info.Arguments = "-Xms" + "256m" + " -Xmx" + Form2.ComboBox2.Text + " -Dsun.java2d.noddraw=true" + " -Dsun.awt.noerasebackground=true" + " -Dsun.java2d.d3d=false" + " -Dsun.java2d.opengl=false" + " -Dsun.java2d.pmoffscreen=false" + " -Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
                 process.StartInfo = info
                 process.Start()
                 End
@@ -68,6 +76,8 @@ Public Class Form1
                 Dim process As New Process
                 Dim info As New ProcessStartInfo
                 info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe"
+                '                info.FileName = "java"
+                '  info.CreateNoWindow = True
                 info.Arguments = "-Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
                 process.StartInfo = info
                 process.Start()
@@ -75,7 +85,7 @@ Public Class Form1
             End If
         End Try
 
-
+      
     End Sub
 
     Private Sub TextBox1_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyUp
@@ -101,8 +111,10 @@ Public Class Form1
     Public Sub x()
         Dim tcpClient As TcpClient = New TcpClient()
         Try
+            '     tcpClient.Connect("192.95.29.101", 25565)
             tcpClient.Connect("factions.tagcraftmc.com", 25565)
 
+            'main   
             ToolStripStatusLabel1.Visible = True
 
         Catch ex As Exception
@@ -114,8 +126,10 @@ Public Class Form1
     Public Sub y()
         Dim tcpClient As TcpClient = New TcpClient()
         Try
+            ' tcpClient.Connect("192.95.29.101", 25566)
             tcpClient.Connect("hungergames.tagcraftmc.com", 25566)
 
+            'HG
             ToolStripStatusLabel2.Visible = True
 
         Catch ex As Exception
@@ -127,8 +141,10 @@ Public Class Form1
     Public Sub z()
         Dim tcpClient As TcpClient = New TcpClient()
         Try
+            ' tcpClient.Connect("192.95.29.101", 25566)
             tcpClient.Connect("tsq.tagcraftmc.com", 10011)
 
+            'TS
             ToolStripStatusLabel5.Visible = True
 
         Catch ex As Exception
