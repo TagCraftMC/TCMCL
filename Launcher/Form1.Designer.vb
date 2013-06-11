@@ -25,7 +25,6 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -35,12 +34,13 @@ Partial Class Form1
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.HelpBTN = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(40, 133)
+        Me.Button1.Location = New System.Drawing.Point(9, 133)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(126, 48)
         Me.Button1.TabIndex = 0
@@ -63,18 +63,9 @@ Partial Class Form1
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Username:"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(60, 31)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(112, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "TagCraftMC Launcher"
-        '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(176, 133)
+        Me.Button2.Location = New System.Drawing.Point(141, 133)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(126, 48)
         Me.Button2.TabIndex = 4
@@ -83,7 +74,7 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(308, 133)
+        Me.Button3.Location = New System.Drawing.Point(405, 133)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(126, 48)
         Me.Button3.TabIndex = 5
@@ -147,22 +138,31 @@ Partial Class Form1
         Me.ToolStripStatusLabel6.Text = "TeamSpeak"
         Me.ToolStripStatusLabel6.Visible = False
         '
+        'HelpBTN
+        '
+        Me.HelpBTN.Location = New System.Drawing.Point(273, 133)
+        Me.HelpBTN.Name = "HelpBTN"
+        Me.HelpBTN.Size = New System.Drawing.Size(126, 48)
+        Me.HelpBTN.TabIndex = 7
+        Me.HelpBTN.Text = "Help"
+        Me.HelpBTN.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(542, 234)
+        Me.Controls.Add(Me.HelpBTN)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.Text = "Launcher"
+        Me.Text = "TagCraftMC Launcher"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -172,7 +172,6 @@ Partial Class Form1
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
@@ -182,5 +181,6 @@ Partial Class Form1
     Friend WithEvents ToolStripStatusLabel4 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel5 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel6 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents HelpBTN As System.Windows.Forms.Button
 
 End Class

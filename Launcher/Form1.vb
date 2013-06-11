@@ -201,4 +201,8 @@ Public Class Form1
         accessOP = "1"
         Form2.Show()
     End Sub
+
+    Private Sub HelpBTN_Click(sender As Object, e As EventArgs) Handles HelpBTN.Click
+        HelpBrowser.Show()
+    End Sub
 End Class
