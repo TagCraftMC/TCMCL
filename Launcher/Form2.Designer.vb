@@ -28,6 +28,10 @@ Partial Class Form2
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -36,7 +40,7 @@ Partial Class Form2
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
-        Me.ComboBox1.Location = New System.Drawing.Point(93, 25)
+        Me.ComboBox1.Location = New System.Drawing.Point(68, 13)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 0
@@ -44,7 +48,7 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(31, 28)
+        Me.Label1.Location = New System.Drawing.Point(6, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(59, 13)
         Me.Label1.TabIndex = 1
@@ -52,7 +56,7 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(25, 87)
+        Me.Button1.Location = New System.Drawing.Point(124, 231)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 2
@@ -62,7 +66,7 @@ Partial Class Form2
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(40, 55)
+        Me.Label2.Location = New System.Drawing.Point(6, 16)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 4
@@ -74,7 +78,7 @@ Partial Class Form2
         Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"256M", "512M", "1024M", "2048M", "4096M", "6144M", "8192M"})
-        Me.ComboBox2.Location = New System.Drawing.Point(93, 52)
+        Me.ComboBox2.Location = New System.Drawing.Point(68, 13)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox2.TabIndex = 3
@@ -82,29 +86,52 @@ Partial Class Form2
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(156, 91)
+        Me.CheckBox1.Location = New System.Drawing.Point(68, 40)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(58, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(88, 17)
         Me.CheckBox1.TabIndex = 5
-        Me.CheckBox1.Text = "Debug"
+        Me.CheckBox1.Text = "Debug Mode"
         Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(310, 102)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Basic Options"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.CheckBox1)
+        Me.GroupBox2.Controls.Add(Me.Label2)
+        Me.GroupBox2.Controls.Add(Me.ComboBox2)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 120)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(310, 102)
+        Me.GroupBox2.TabIndex = 7
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Advance Options"
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(248, 125)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.ClientSize = New System.Drawing.Size(334, 266)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Form2"
         Me.Text = "Options"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
@@ -113,4 +140,6 @@ Partial Class Form2
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
 End Class
