@@ -42,6 +42,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel8 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -136,18 +137,20 @@ Partial Class Form1
         '
         Me.StatusStrip1.BackColor = System.Drawing.Color.Transparent
         Me.StatusStrip1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel7, Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel6})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 269)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel8, Me.ToolStripStatusLabel7, Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel6})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 267)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(655, 24)
+        Me.StatusStrip1.Size = New System.Drawing.Size(655, 26)
+        Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 6
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'ToolStripStatusLabel7
         '
         Me.ToolStripStatusLabel7.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.ToolStripStatusLabel7.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
-        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(13, 19)
+        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(13, 21)
         Me.ToolStripStatusLabel7.Text = " "
         '
         'HelpBTN
@@ -176,57 +179,71 @@ Partial Class Form1
         '
         'ToolStripStatusLabel1
         '
-        Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel1.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(83, 21)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(86, 21)
         Me.ToolStripStatusLabel1.Text = "Factions"
         Me.ToolStripStatusLabel1.Visible = False
         '
         'ToolStripStatusLabel3
         '
-        Me.ToolStripStatusLabel3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel3.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel3.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(83, 21)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(86, 21)
         Me.ToolStripStatusLabel3.Text = "Factions"
         Me.ToolStripStatusLabel3.Visible = False
         '
         'ToolStripStatusLabel2
         '
-        Me.ToolStripStatusLabel2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel2.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel2.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(130, 21)
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(134, 21)
         Me.ToolStripStatusLabel2.Text = "Hunger Games"
         Me.ToolStripStatusLabel2.Visible = False
         '
         'ToolStripStatusLabel4
         '
-        Me.ToolStripStatusLabel4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel4.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel4.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(130, 21)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(134, 21)
         Me.ToolStripStatusLabel4.Text = "Hunger Games"
         Me.ToolStripStatusLabel4.Visible = False
         '
         'ToolStripStatusLabel5
         '
-        Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel5.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel5.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(106, 21)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(110, 21)
         Me.ToolStripStatusLabel5.Text = "TeamSpeak"
         Me.ToolStripStatusLabel5.Visible = False
         '
         'ToolStripStatusLabel6
         '
-        Me.ToolStripStatusLabel6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel6.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel6.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(106, 21)
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(110, 21)
         Me.ToolStripStatusLabel6.Text = "TeamSpeak"
         Me.ToolStripStatusLabel6.Visible = False
+        '
+        'ToolStripStatusLabel8
+        '
+        Me.ToolStripStatusLabel8.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel8.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.ToolStripStatusLabel8.Name = "ToolStripStatusLabel8"
+        Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(126, 21)
+        Me.ToolStripStatusLabel8.Text = "Network Status:"
         '
         'Form1
         '
@@ -272,5 +289,6 @@ Partial Class Form1
     Friend WithEvents CutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CopyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PasteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripStatusLabel8 As System.Windows.Forms.ToolStripStatusLabel
 
 End Class
