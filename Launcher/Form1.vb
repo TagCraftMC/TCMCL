@@ -2,6 +2,14 @@
 Imports System.IO
 
 Public Class Form1
+
+    Dim server As Boolean
+
+    Dim HG As Boolean
+
+    Dim TS As Boolean
+
+
     Dim accessOP As String
     Dim oFile As System.IO.File
     Dim oWrite As System.IO.StreamWriter
@@ -128,6 +136,8 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         accessOP = "0"
 
+        BackgroundWorker1.RunWorkerAsync()
+
 
         Try
             oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/taguser.txt")
@@ -145,10 +155,11 @@ Public Class Form1
             'nothing
         End If
 
-        x()
-        y()
-        z()
+        '        x()
+        '       y()
+        '      z()
     End Sub
+
 
 
 
@@ -159,10 +170,13 @@ Public Class Form1
             tcpClient.Connect("factions.tagcraftmc.com", 25565)
 
             'main   
-            ToolStripStatusLabel1.Visible = True
+            '            ToolStripStatusLabel1.Visible = True
+            server = True
 
         Catch ex As Exception
-            ToolStripStatusLabel3.Visible = True
+            'ToolStripStatusLabel3.Visible = True
+            server = False
+
 
         End Try
     End Sub
@@ -174,10 +188,13 @@ Public Class Form1
             tcpClient.Connect("hungergames.tagcraftmc.com", 25566)
 
             'HG
-            ToolStripStatusLabel2.Visible = True
+            ' ToolStripStatusLabel2.Visible = True
+            HG = True
 
         Catch ex As Exception
-            ToolStripStatusLabel4.Visible = True
+            'ToolStripStatusLabel4.Visible = True
+            HG = False
+
 
         End Try
     End Sub
@@ -189,13 +206,18 @@ Public Class Form1
             tcpClient.Connect("tsq.tagcraftmc.com", 10011)
 
             'TS
-            ToolStripStatusLabel5.Visible = True
+            '       ToolStripStatusLabel5.Visible = True
+            TS = True
 
         Catch ex As Exception
-            ToolStripStatusLabel6.Visible = True
+            'ToolStripStatusLabel6.Visible = True
+            TS = False
 
         End Try
     End Sub
+
+
+
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         accessOP = "1"
@@ -220,4 +242,51 @@ Public Class Form1
         TextBox1.Paste()
 
     End Sub
+
+
+
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+
+        '       System.Threading.Thread.Sleep(10)
+        x()
+        y()
+        z()
+
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        If server = True Then
+            ToolStripStatusLabel1.Visible = True
+
+        Else
+            ToolStripStatusLabel3.Visible = True
+
+        End If
+
+        If HG = True Then
+            ToolStripStatusLabel2.Visible = True
+
+        Else
+            ToolStripStatusLabel4.Visible = True
+
+        End If
+
+        If TS = True Then
+            ToolStripStatusLabel5.Visible = True
+
+        Else
+            ToolStripStatusLabel6.Visible = True
+
+        End If
+
+        BackgroundWorker1.RunWorkerAsync()
+
+
+    End Sub
+
+
+
+
+
+
 End Class
