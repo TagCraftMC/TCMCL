@@ -1,6 +1,8 @@
 ﻿Imports System.IO
 
 Public Class Form2
+    Dim locationx As String
+
     Dim computer_info As New Devices.ComputerInfo
     Dim oFile As System.IO.File
     Dim oWrite As System.IO.StreamWriter
@@ -72,4 +74,15 @@ Public Class Form2
         End If
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Button3.Enabled = False
+        Me.PictureBox1.ImageLocation = "http://s3.amazonaws.com/MinecraftSkins/" + Me.TextBox1.Text + ".png"
+        locationx = "http://s3.amazonaws.com/MinecraftSkins/" + Me.TextBox1.Text + ".png"
+        Button3.Enabled = True
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Process.Start(locationx)
+    End Sub
 End Class
