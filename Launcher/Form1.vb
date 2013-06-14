@@ -255,6 +255,15 @@ Public Class Form1
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        Try
+            a.Visible = False
+            b.Visible = False
+            c.Visible = False
+
+        Catch ex As Exception
+
+        End Try
+
         If server = True Then
             ToolStripStatusLabel1.Visible = True
             ToolStripStatusLabel3.Visible = False

@@ -35,15 +35,18 @@ Partial Class Form1
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel8 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.HelpBTN = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.HelpBTN = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.a = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.b = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.c = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -138,7 +141,7 @@ Partial Class Form1
         '
         Me.StatusStrip1.BackColor = System.Drawing.Color.Transparent
         Me.StatusStrip1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel8, Me.ToolStripStatusLabel7, Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel6})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel8, Me.ToolStripStatusLabel7, Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel3, Me.a, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel4, Me.b, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel6, Me.c})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 267)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(655, 26)
@@ -161,6 +164,33 @@ Partial Class Form1
         Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
         Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(13, 21)
         Me.ToolStripStatusLabel7.Text = " "
+        '
+        'HelpBTN
+        '
+        Me.HelpBTN.BackColor = System.Drawing.Color.DodgerBlue
+        Me.HelpBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HelpBTN.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HelpBTN.ForeColor = System.Drawing.Color.White
+        Me.HelpBTN.Location = New System.Drawing.Point(330, 186)
+        Me.HelpBTN.Name = "HelpBTN"
+        Me.HelpBTN.Size = New System.Drawing.Size(153, 67)
+        Me.HelpBTN.TabIndex = 3
+        Me.HelpBTN.Text = "HELP"
+        Me.HelpBTN.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Symbol", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label2.Location = New System.Drawing.Point(3, 6)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(650, 86)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "TagCraftMC Launcher"
+        '
+        'BackgroundWorker1
+        '
         '
         'ToolStripStatusLabel1
         '
@@ -222,29 +252,32 @@ Partial Class Form1
         Me.ToolStripStatusLabel6.Text = "TeamSpeak"
         Me.ToolStripStatusLabel6.Visible = False
         '
-        'HelpBTN
+        'a
         '
-        Me.HelpBTN.BackColor = System.Drawing.Color.DodgerBlue
-        Me.HelpBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HelpBTN.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HelpBTN.ForeColor = System.Drawing.Color.White
-        Me.HelpBTN.Location = New System.Drawing.Point(330, 186)
-        Me.HelpBTN.Name = "HelpBTN"
-        Me.HelpBTN.Size = New System.Drawing.Size(153, 67)
-        Me.HelpBTN.TabIndex = 3
-        Me.HelpBTN.Text = "HELP"
-        Me.HelpBTN.UseVisualStyleBackColor = False
+        Me.a.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.a.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.a.Image = Global.Launcher.My.Resources.Resources.unknown
+        Me.a.Name = "a"
+        Me.a.Size = New System.Drawing.Size(85, 21)
+        Me.a.Text = "Factions"
         '
-        'Label2
+        'b
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Symbol", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label2.Location = New System.Drawing.Point(3, 6)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(650, 86)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "TagCraftMC Launcher"
+        Me.b.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.b.Image = Global.Launcher.My.Resources.Resources.unknown
+        Me.b.Name = "b"
+        Me.b.Size = New System.Drawing.Size(134, 21)
+        Me.b.Text = "Hunger Games"
+        '
+        'c
+        '
+        Me.c.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.c.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.c.Image = Global.Launcher.My.Resources.Resources.unknown
+        Me.c.Name = "c"
+        Me.c.Size = New System.Drawing.Size(108, 21)
+        Me.c.Text = "TeamSpeak"
         '
         'Form1
         '
@@ -292,5 +325,8 @@ Partial Class Form1
     Friend WithEvents PasteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripStatusLabel8 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents a As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents b As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents c As System.Windows.Forms.ToolStripStatusLabel
 
 End Class
