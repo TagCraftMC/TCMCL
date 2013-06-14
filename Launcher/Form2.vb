@@ -35,10 +35,22 @@ Public Class Form2
                 '            MsgBox(line)
             End Using
 
-            objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-            objReader.Write("gamma:" + ComboBox1.Text & Environment.NewLine & line)
+            If ComboBox1.Text = "Enabled" Then
+                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                objReader.Write("gamma:" + "10" & Environment.NewLine & line)
 
-            objReader.Close()
+                objReader.Close()
+
+
+            ElseIf ComboBox1.Text = "Disabled" Then
+                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                objReader.Write("gamma:" + "1" & Environment.NewLine & line)
+
+                objReader.Close()
+
+
+            End If
+
 
 
         Catch ex As Exception
@@ -50,7 +62,7 @@ Public Class Form2
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
-        ComboBox1.Text = "1"
+        ComboBox1.Text = "Disabled"
         ComboBox2.Text = "256M"
         Try
             oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/tagoptions.txt")

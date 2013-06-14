@@ -47,8 +47,8 @@ Partial Class Form2
         Me.ComboBox1.AllowDrop = True
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
-        Me.ComboBox1.Location = New System.Drawing.Point(68, 13)
+        Me.ComboBox1.Items.AddRange(New Object() {"Enabled", "Disabled"})
+        Me.ComboBox1.Location = New System.Drawing.Point(68, 18)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 0
@@ -56,11 +56,11 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 16)
+        Me.Label1.Location = New System.Drawing.Point(6, 21)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 13)
+        Me.Label1.Size = New System.Drawing.Size(56, 13)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Brightness:"
+        Me.Label1.Text = "Full Bright:"
         '
         'Button1
         '
