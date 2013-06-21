@@ -6,8 +6,9 @@ Public Class Form3
     Dim Pathx As String
     Dim xFilesCount = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/").Length
     Dim xFilesTransferred As Integer = 0
+    Dim reader As String
+    Dim oRead As System.IO.StreamReader
 
-  
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'for naming save file add + 1 for each backup number.
@@ -33,8 +34,46 @@ Public Class Form3
             Next
             Timer1.Start()
 
+            Try
+                oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.backupmanager/log.txt")
+                reader = oRead.ReadLine
+
+
+                oRead.Close()
+                'read and write number here
+              
+              
+
+            Catch ex As Exception
+
+            End Try
+            Try
+                If reader = vbNullString Then
+                    Dim objReader As StreamWriter
+
+
+                    objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.backupmanager/log.txt")
+                    objReader.Write("1")
+                    objReader.Close()
+
+                End If
+            Catch ex As Exception
+
+            End Try
+
+
+
+            Try
+
+            Catch ex As Exception
+
+            End Try
+
+
+
+
             BackgroundWorker2.RunWorkerAsync()
-            Timer1.Stop()
+            '  Timer1.Stop()
 
         Else
             Directory.CreateDirectory(Pathx)
@@ -53,8 +92,39 @@ Public Class Form3
             Next
             Timer1.Start()
 
+            Try
+                oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.backupmanager/log.txt")
+                reader = oRead.ReadLine
+
+
+                oRead.Close()
+                'read and write number here
+
+
+
+            Catch ex As Exception
+
+            End Try
+            Try
+                If reader = vbNullString Then
+                    Dim objReader As StreamWriter
+
+
+                    objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.backupmanager/log.txt")
+                    objReader.Write("1")
+                    objReader.Close()
+
+                End If
+            Catch ex As Exception
+
+            End Try
+
+
+
+
+
             BackgroundWorker2.RunWorkerAsync()
-            Timer1.Stop()
+            ' Timer1.Stop()
 
         End If
 
@@ -66,6 +136,7 @@ Public Class Form3
 
     Public Sub createbackup()
         'close java
+
 
 
         Dim xNewLocataion = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.backupmanager"

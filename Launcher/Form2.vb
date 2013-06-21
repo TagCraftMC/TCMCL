@@ -1,6 +1,11 @@
 ﻿Imports System.IO
 
 Public Class Form2
+    Dim x As String
+    Dim y As String
+    Dim check As Boolean
+    Dim debuglog As String
+
     Dim locationx As String
 
     Dim computer_info As New Devices.ComputerInfo
@@ -58,12 +63,20 @@ Public Class Form2
         End Try
         Me.Hide()
         ComboBox1.Enabled = False
+        x = ComboBox1.Text
+
+        If CheckBox1.Checked = True Then
+            check = True
+        ElseIf CheckBox1.Checked = False Then
+            check = False
+        End If
 
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
         ComboBox1.Text = "Disabled"
         ComboBox2.Text = "256M"
+
         Try
             oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/tagoptions.txt")
             ComboBox1.Text = oRead.ReadLine
@@ -75,6 +88,11 @@ Public Class Form2
 
         End Try
 
+        x = ComboBox1.Text
+
+        y = ComboBox2.Text
+
+     
         'MsgBox(computer_info.AvailablePhysicalMemory)
 
     End Sub
@@ -82,6 +100,13 @@ Public Class Form2
     Private Sub Form2_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
             e.Cancel = True
+            ComboBox1.Text = x
+            ComboBox2.Text = y
+            If check = True Then
+                CheckBox1.Checked = True
+            ElseIf check = False Then
+                CheckBox1.Checked = False
+            End If
             Me.Hide()
         End If
     End Sub
@@ -101,4 +126,32 @@ Public Class Form2
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Form3.Show()
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        ComboBox1.Text = x
+        ComboBox2.Text = y
+        If check = True Then
+            CheckBox1.Checked = True
+        ElseIf check = False Then
+            CheckBox1.Checked = False
+        End If
+
+        Me.Hide()
+
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+     
+
+        If CheckBox1.Checked = True Then
+            ComboBox2.Enabled = False
+            debuglog = ComboBox2.Text
+            ComboBox2.Text = "256M"
+        ElseIf CheckBox1.Checked = False Then
+            ComboBox2.Enabled = True
+            ComboBox2.Text = debuglog
+
+        End If
+    End Sub
+
 End Class
