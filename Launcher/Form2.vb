@@ -72,10 +72,15 @@ Public Class Form2
         End If
 
     End Sub
+    Private Sub Launch_Draw(sender As Object, e As System.Windows.Forms.DrawToolTipEventArgs) Handles OptionsToolTip.Draw
+        e.DrawBackground()
+        e.DrawText()
+    End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
         ComboBox1.Text = "Disabled"
         ComboBox2.Text = "256M"
+        ComboBox3.Text = "1.5.2"
 
         Try
             oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/tagoptions.txt")

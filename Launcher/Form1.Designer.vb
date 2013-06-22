@@ -35,18 +35,19 @@ Partial Class Form1
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel8 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.a = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.b = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.c = New System.Windows.Forms.ToolStripStatusLabel()
         Me.HelpBTN = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.a = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.b = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.c = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.LauncherToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -62,6 +63,7 @@ Partial Class Form1
         Me.Button1.Size = New System.Drawing.Size(153, 67)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "LAUNCH"
+        Me.LauncherToolTip.SetToolTip(Me.Button1, "Launch Minecraft")
         Me.Button1.UseVisualStyleBackColor = False
         '
         'TextBox1
@@ -73,6 +75,7 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(269, 39)
         Me.TextBox1.TabIndex = 1
+        Me.LauncherToolTip.SetToolTip(Me.TextBox1, "Enter your username or character name")
         '
         'ContextMenuStrip1
         '
@@ -122,6 +125,7 @@ Partial Class Form1
         Me.Button2.Size = New System.Drawing.Size(153, 67)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "OPTIONS"
+        Me.LauncherToolTip.SetToolTip(Me.Button2, "Open the launch settings for Minecraft")
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
@@ -135,6 +139,7 @@ Partial Class Form1
         Me.Button3.Size = New System.Drawing.Size(153, 67)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "EXIT"
+        Me.LauncherToolTip.SetToolTip(Me.Button3, "Exit the launcher")
         Me.Button3.UseVisualStyleBackColor = False
         '
         'StatusStrip1
@@ -148,6 +153,7 @@ Partial Class Form1
         Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 6
         Me.StatusStrip1.Text = "StatusStrip1"
+        Me.LauncherToolTip.SetToolTip(Me.StatusStrip1, "The status of our servers. Green: Online - Red: Offline - Gray: Querying")
         '
         'ToolStripStatusLabel8
         '
@@ -156,6 +162,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel8.Name = "ToolStripStatusLabel8"
         Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(126, 21)
         Me.ToolStripStatusLabel8.Text = "Network Status:"
+        Me.ToolStripStatusLabel8.ToolTipText = "Status of our servers"
         '
         'ToolStripStatusLabel7
         '
@@ -165,41 +172,15 @@ Partial Class Form1
         Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(13, 21)
         Me.ToolStripStatusLabel7.Text = " "
         '
-        'HelpBTN
-        '
-        Me.HelpBTN.BackColor = System.Drawing.Color.DodgerBlue
-        Me.HelpBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HelpBTN.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HelpBTN.ForeColor = System.Drawing.Color.White
-        Me.HelpBTN.Location = New System.Drawing.Point(330, 186)
-        Me.HelpBTN.Name = "HelpBTN"
-        Me.HelpBTN.Size = New System.Drawing.Size(153, 67)
-        Me.HelpBTN.TabIndex = 3
-        Me.HelpBTN.Text = "HELP"
-        Me.HelpBTN.UseVisualStyleBackColor = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Symbol", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label2.Location = New System.Drawing.Point(3, 6)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(650, 86)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "TagCraftMC Launcher"
-        '
-        'BackgroundWorker1
-        '
-        '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel1.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(85, 21)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(86, 21)
         Me.ToolStripStatusLabel1.Text = "Factions"
+        Me.ToolStripStatusLabel1.ToolTipText = "Factions is online: play.tagcraftmc.com"
         Me.ToolStripStatusLabel1.Visible = False
         '
         'ToolStripStatusLabel3
@@ -208,9 +189,20 @@ Partial Class Form1
         Me.ToolStripStatusLabel3.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel3.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(85, 21)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(86, 21)
         Me.ToolStripStatusLabel3.Text = "Factions"
+        Me.ToolStripStatusLabel3.ToolTipText = "Factions is offline: play.tagcraftmc.com"
         Me.ToolStripStatusLabel3.Visible = False
+        '
+        'a
+        '
+        Me.a.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.a.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.a.Image = Global.Launcher.My.Resources.Resources.unknown
+        Me.a.Name = "a"
+        Me.a.Size = New System.Drawing.Size(86, 21)
+        Me.a.Text = "Factions"
+        Me.a.ToolTipText = "Factions is querying: play.tagcraftmc.com"
         '
         'ToolStripStatusLabel2
         '
@@ -232,35 +224,6 @@ Partial Class Form1
         Me.ToolStripStatusLabel4.Text = "Hunger Games"
         Me.ToolStripStatusLabel4.Visible = False
         '
-        'ToolStripStatusLabel5
-        '
-        Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripStatusLabel5.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.ToolStripStatusLabel5.Image = Global.Launcher.My.Resources.Resources.online
-        Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(108, 21)
-        Me.ToolStripStatusLabel5.Text = "TeamSpeak"
-        Me.ToolStripStatusLabel5.Visible = False
-        '
-        'ToolStripStatusLabel6
-        '
-        Me.ToolStripStatusLabel6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripStatusLabel6.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.ToolStripStatusLabel6.Image = Global.Launcher.My.Resources.Resources.offline
-        Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(108, 21)
-        Me.ToolStripStatusLabel6.Text = "TeamSpeak"
-        Me.ToolStripStatusLabel6.Visible = False
-        '
-        'a
-        '
-        Me.a.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.a.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.a.Image = Global.Launcher.My.Resources.Resources.unknown
-        Me.a.Name = "a"
-        Me.a.Size = New System.Drawing.Size(85, 21)
-        Me.a.Text = "Factions"
-        '
         'b
         '
         Me.b.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -270,14 +233,68 @@ Partial Class Form1
         Me.b.Size = New System.Drawing.Size(134, 21)
         Me.b.Text = "Hunger Games"
         '
+        'ToolStripStatusLabel5
+        '
+        Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel5.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.ToolStripStatusLabel5.Image = Global.Launcher.My.Resources.Resources.online
+        Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(110, 21)
+        Me.ToolStripStatusLabel5.Text = "TeamSpeak"
+        Me.ToolStripStatusLabel5.Visible = False
+        '
+        'ToolStripStatusLabel6
+        '
+        Me.ToolStripStatusLabel6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel6.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.ToolStripStatusLabel6.Image = Global.Launcher.My.Resources.Resources.offline
+        Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(110, 21)
+        Me.ToolStripStatusLabel6.Text = "TeamSpeak"
+        Me.ToolStripStatusLabel6.Visible = False
+        '
         'c
         '
         Me.c.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.c.ForeColor = System.Drawing.Color.DodgerBlue
         Me.c.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.c.Name = "c"
-        Me.c.Size = New System.Drawing.Size(108, 21)
+        Me.c.Size = New System.Drawing.Size(110, 21)
         Me.c.Text = "TeamSpeak"
+        '
+        'HelpBTN
+        '
+        Me.HelpBTN.BackColor = System.Drawing.Color.DodgerBlue
+        Me.HelpBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HelpBTN.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HelpBTN.ForeColor = System.Drawing.Color.White
+        Me.HelpBTN.Location = New System.Drawing.Point(330, 186)
+        Me.HelpBTN.Name = "HelpBTN"
+        Me.HelpBTN.Size = New System.Drawing.Size(153, 67)
+        Me.HelpBTN.TabIndex = 3
+        Me.HelpBTN.Text = "HELP"
+        Me.LauncherToolTip.SetToolTip(Me.HelpBTN, "Open a help page about Minecraft and the launcher")
+        Me.HelpBTN.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Symbol", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label2.Location = New System.Drawing.Point(3, 6)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(650, 86)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "TagCraftMC Launcher"
+        '
+        'BackgroundWorker1
+        '
+        '
+        'LauncherToolTip
+        '
+        Me.LauncherToolTip.BackColor = System.Drawing.Color.DodgerBlue
+        Me.LauncherToolTip.ForeColor = System.Drawing.Color.White
+        Me.LauncherToolTip.OwnerDraw = True
         '
         'Form1
         '
@@ -328,5 +345,6 @@ Partial Class Form1
     Friend WithEvents a As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents b As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents c As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents LauncherToolTip As System.Windows.Forms.ToolTip
 
 End Class
