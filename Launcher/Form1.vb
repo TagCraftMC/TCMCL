@@ -1,5 +1,6 @@
 ﻿Imports System.Net.Sockets
 Imports System.IO
+Imports System.Drawing.Drawing2D
 
 Public Class Form1
     Dim mem As String
@@ -265,11 +266,32 @@ Public Class Form1
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         End
     End Sub
+    Private Sub Launch_Draw(sender As Object, e As System.Windows.Forms.DrawToolTipEventArgs) Handles LauncherToolTip.Draw
+        e.DrawBackground()
+        e.DrawText()
+    End Sub
+    'Private Sub ToolTip1_Popup(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PopupEventArgs) Handles LauncherToolTip.Popup
+    'e.ToolTipSize = New Size(300, 300)
+    'End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         accessOP = "0"
 
         BackgroundWorker1.RunWorkerAsync()
+        'SavedTooltilForeColor = GetSysColor(COLOR_INFOTEXT) 'save fore color
+
+        'Try
+        'Dim toolTip1 As New ToolTip()
+        'toolTip1.AutoPopDelay = 5000
+        'toolTip1.InitialDelay = 1000
+        'toolTip1.ReshowDelay = 500
+        'toolTip1.ShowAlways = True
+        'toolTip1.SetToolTip(Me.Button1, "My button1")
+        'toolTip1.SetToolTip(Me.Button2, "My Button1")
+        'toolTip1.ToolTipTitle("help")
+        'Catch ex As Exception
+
+        'End Try
 
 
         Try
@@ -365,6 +387,7 @@ Public Class Form1
 
         End Try
     End Sub
+
 
 
 
