@@ -58,6 +58,21 @@ Public Class Form2
 
 
 
+
+
+
+
+
+            Dim objReaderx As StreamWriter
+
+
+            objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/memory.txt")
+            objReaderx.Write(ComboBox2.Text)
+            objReaderx.Close()
+
+
+
+
         Catch ex As Exception
 
         End Try
@@ -83,6 +98,13 @@ Public Class Form2
 
 
             oRead.Close()
+
+            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/memory.txt")
+            ComboBox2.Text = oReadx.ReadLine
+
+
+            oReadx.Close()
+
 
         Catch ex As Exception
 

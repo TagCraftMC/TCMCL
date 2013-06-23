@@ -2,6 +2,9 @@
 Imports System.IO
 
 Public Class Form1
+    Dim mem As String
+    Dim mempass As String
+
 
     Dim server As Boolean
 
@@ -37,86 +40,216 @@ Public Class Form1
 
 
 
+        Try
+
+            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/memory.txt")
+            mem = oReadx.ReadLine
+
+
+            oReadx.Close()
+
+
+            If mem = vbNullString Then
+                mempass = "0"
+
+            Else
+                mempass = "1"
+
+            End If
+
+         Catch ex As Exception
+
+        End Try
+
 
 
         Try
-            '  info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
-            'programfiles for 64 bit
-            'x86 for 32
-            If accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                Dim text As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
-                Dim process As New Process
-                Dim info As New ProcessStartInfo
-                'info.FileName = "javaw"
-                info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
-                info.CreateNoWindow = True
-                info.Arguments = "-Dsun.java2d.noddraw=true -Dsun.awt.noerasebackground=true -Dsun.java2d.d3d=false -Dsun.java2d.opengl=false -Dsun.java2d.pmoffscreen=false -Djava.library.path=" + text + "natives -cp " + text + "minecraft.jar;" + text + "jinput.jar;" + text + "lwjgl.jar;" + text + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
-                process.StartInfo = info
-                process.Start()
-                End
-            ElseIf accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
-                Dim process As New Process
-                Dim info As New ProcessStartInfo
-                'info.FileName = "javaw"
-                info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
-                info.CreateNoWindow = True
-                info.Arguments = "-Xms" + "256m" + " -Xmx" + Form2.ComboBox2.Text + " -Dsun.java2d.noddraw=true" + " -Dsun.awt.noerasebackground=true" + " -Dsun.java2d.d3d=false" + " -Dsun.java2d.opengl=false" + " -Dsun.java2d.pmoffscreen=false" + " -Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
-                '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
-                process.StartInfo = info
-                process.Start()
-                End
+            If mempass = "0" Then
+                '  info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
+                'programfiles for 64 bit
+                'x86 for 32
+                If accessOP = "0" And Form2.CheckBox1.Checked = False Then
+                    Dim text As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    'info.FileName = "javaw"
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
+                    info.CreateNoWindow = True
+                    info.Arguments = "-Dsun.java2d.noddraw=true -Dsun.awt.noerasebackground=true -Dsun.java2d.d3d=false -Dsun.java2d.opengl=false -Dsun.java2d.pmoffscreen=false -Djava.library.path=" + text + "natives -cp " + text + "minecraft.jar;" + text + "jinput.jar;" + text + "lwjgl.jar;" + text + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    process.StartInfo = info
+                    process.Start()
+                    End
+                ElseIf accessOP = "1" And Form2.CheckBox1.Checked = False Then
+                    Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    'info.FileName = "javaw"
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
+                    info.CreateNoWindow = True
+                    info.Arguments = "-Xms" + "256m" + " -Xmx" + "256M" + " -Dsun.java2d.noddraw=true" + " -Dsun.awt.noerasebackground=true" + " -Dsun.java2d.d3d=false" + " -Dsun.java2d.opengl=false" + " -Dsun.java2d.pmoffscreen=false" + " -Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
+                    process.StartInfo = info
+                    process.Start()
+                    End
 
-            ElseIf Form2.CheckBox1.Checked = True Then
+                ElseIf Form2.CheckBox1.Checked = True Then
 
-                Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
-                Dim process As New Process
-                Dim info As New ProcessStartInfo
-                info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
-                ' info.FileName = "java"
-                '  info.CreateNoWindow = True
-                info.Arguments = "-Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
-                process.StartInfo = info
-                process.Start()
-                End
+                    Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
+                    ' info.FileName = "java"
+                    '  info.CreateNoWindow = True
+                    info.Arguments = "-Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    process.StartInfo = info
+                    process.Start()
+                    End
+                End If
+
+
+
+
+
+
+
+
+
+
+
+            ElseIf mempass = "1" Then
+
+
+
+                If accessOP = "0" And Form2.CheckBox1.Checked = False Then
+                    Dim text As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    'info.FileName = "javaw"
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
+                    info.CreateNoWindow = True
+                    info.Arguments = "-Dsun.java2d.noddraw=true -Dsun.awt.noerasebackground=true -Dsun.java2d.d3d=false -Dsun.java2d.opengl=false -Dsun.java2d.pmoffscreen=false -Djava.library.path=" + text + "natives -cp " + text + "minecraft.jar;" + text + "jinput.jar;" + text + "lwjgl.jar;" + text + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    process.StartInfo = info
+                    process.Start()
+                    End
+                ElseIf accessOP = "1" And Form2.CheckBox1.Checked = False Then
+                    Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    'info.FileName = "javaw"
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
+                    info.CreateNoWindow = True
+                    info.Arguments = "-Xms" + "256m" + " -Xmx" + mem + " -Dsun.java2d.noddraw=true" + " -Dsun.awt.noerasebackground=true" + " -Dsun.java2d.d3d=false" + " -Dsun.java2d.opengl=false" + " -Dsun.java2d.pmoffscreen=false" + " -Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
+                    process.StartInfo = info
+                    process.Start()
+                    End
+
+                ElseIf Form2.CheckBox1.Checked = True Then
+
+                    Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
+                    ' info.FileName = "java"
+                    '  info.CreateNoWindow = True
+                    info.Arguments = "-Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    process.StartInfo = info
+                    process.Start()
+                    End
+                End If
+
+
+
             End If
+
+
+
+
+
         Catch ex As Exception
-            If accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                Dim text As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
-                Dim process As New Process
-                Dim info As New ProcessStartInfo
-                '         info.FileName = "javaw"
-                info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
-                info.CreateNoWindow = True
-                info.Arguments = "-Dsun.java2d.noddraw=true -Dsun.awt.noerasebackground=true -Dsun.java2d.d3d=false -Dsun.java2d.opengl=false -Dsun.java2d.pmoffscreen=false -Djava.library.path=" + text + "natives -cp " + text + "minecraft.jar;" + text + "jinput.jar;" + text + "lwjgl.jar;" + text + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
-                process.StartInfo = info
-                process.Start()
-                End
-            ElseIf accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
-                Dim process As New Process
-                Dim info As New ProcessStartInfo
-                '                info.FileName = "javaw"
-                info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
-                info.CreateNoWindow = True
-                info.Arguments = "-Xms" + "256m" + " -Xmx" + Form2.ComboBox2.Text + " -Dsun.java2d.noddraw=true" + " -Dsun.awt.noerasebackground=true" + " -Dsun.java2d.d3d=false" + " -Dsun.java2d.opengl=false" + " -Dsun.java2d.pmoffscreen=false" + " -Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
-                '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
-                process.StartInfo = info
-                process.Start()
-                End
 
-            ElseIf Form2.CheckBox1.Checked = True Then
+            If mempass = "0" Then
 
-                Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
-                Dim process As New Process
-                Dim info As New ProcessStartInfo
-                info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe"
-                '                info.FileName = "java"
-                '  info.CreateNoWindow = True
-                info.Arguments = "-Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
-                process.StartInfo = info
-                process.Start()
-                End
+                If accessOP = "0" And Form2.CheckBox1.Checked = False Then
+                    Dim text As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    '         info.FileName = "javaw"
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
+                    info.CreateNoWindow = True
+                    info.Arguments = "-Dsun.java2d.noddraw=true -Dsun.awt.noerasebackground=true -Dsun.java2d.d3d=false -Dsun.java2d.opengl=false -Dsun.java2d.pmoffscreen=false -Djava.library.path=" + text + "natives -cp " + text + "minecraft.jar;" + text + "jinput.jar;" + text + "lwjgl.jar;" + text + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    process.StartInfo = info
+                    process.Start()
+                    End
+                ElseIf accessOP = "1" And Form2.CheckBox1.Checked = False Then
+                    Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    '                info.FileName = "javaw"
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
+                    info.CreateNoWindow = True
+                    info.Arguments = "-Xms" + "256m" + " -Xmx" + "256M" + " -Dsun.java2d.noddraw=true" + " -Dsun.awt.noerasebackground=true" + " -Dsun.java2d.d3d=false" + " -Dsun.java2d.opengl=false" + " -Dsun.java2d.pmoffscreen=false" + " -Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
+                    process.StartInfo = info
+                    process.Start()
+                    End
+
+                ElseIf Form2.CheckBox1.Checked = True Then
+
+                    Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe"
+                    '                info.FileName = "java"
+                    '  info.CreateNoWindow = True
+                    info.Arguments = "-Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    process.StartInfo = info
+                    process.Start()
+                    End
+                End If
+
+            ElseIf mempass = "1" Then
+
+
+                If accessOP = "0" And Form2.CheckBox1.Checked = False Then
+                    Dim text As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    '         info.FileName = "javaw"
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
+                    info.CreateNoWindow = True
+                    info.Arguments = "-Dsun.java2d.noddraw=true -Dsun.awt.noerasebackground=true -Dsun.java2d.d3d=false -Dsun.java2d.opengl=false -Dsun.java2d.pmoffscreen=false -Djava.library.path=" + text + "natives -cp " + text + "minecraft.jar;" + text + "jinput.jar;" + text + "lwjgl.jar;" + text + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    process.StartInfo = info
+                    process.Start()
+                    End
+                ElseIf accessOP = "1" And Form2.CheckBox1.Checked = False Then
+                    Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    '                info.FileName = "javaw"
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
+                    info.CreateNoWindow = True
+                    info.Arguments = "-Xms" + "256m" + " -Xmx" + mem + " -Dsun.java2d.noddraw=true" + " -Dsun.awt.noerasebackground=true" + " -Dsun.java2d.d3d=false" + " -Dsun.java2d.opengl=false" + " -Dsun.java2d.pmoffscreen=false" + " -Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
+                    process.StartInfo = info
+                    process.Start()
+                    End
+
+                ElseIf Form2.CheckBox1.Checked = True Then
+
+                    Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/bin/"
+                    Dim process As New Process
+                    Dim info As New ProcessStartInfo
+                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe"
+                    '                info.FileName = "java"
+                    '  info.CreateNoWindow = True
+                    info.Arguments = "-Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
+                    process.StartInfo = info
+                    process.Start()
+                    End
+
+                End If
+
             End If
         End Try
 
@@ -146,16 +279,33 @@ Public Class Form1
 
             oRead.Close()
 
+
+            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/memory.txt")
+            mem = oReadx.ReadLine
+
+
+            oReadx.Close()
+
+
         Catch ex As Exception
 
         End Try
+
         If TextBox1.Text = "" Then
             TextBox1.Select()
         Else
             'nothing
         End If
 
-        '        x()
+        If mem = vbNullString Then
+            mempass = "0"
+
+        Else
+            mempass = "1"
+
+        End If
+
+      '        x()
         '       y()
         '      z()
     End Sub
