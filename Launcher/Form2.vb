@@ -79,6 +79,7 @@ Public Class Form2
         Me.Hide()
         ComboBox1.Enabled = False
         x = ComboBox1.Text
+        y = ComboBox2.Text
 
         If CheckBox1.Checked = True Then
             check = True
