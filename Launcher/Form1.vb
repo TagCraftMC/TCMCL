@@ -507,4 +507,25 @@ Public Class Form1
 
 
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+        Try
+            Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/"
+            Dim process As New Process
+            Dim info As New ProcessStartInfo
+            '                info.FileName = "javaw"
+            info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
+            info.CreateNoWindow = True
+            info.Arguments = "-Xmx1G -Djava.library.path=" + appData + "versions\1.6\1.6x -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6\1.6.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -0 --version 1.6 --gameDir" + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + " --assetsDir " + appData + "assets"
+            '  info.Arguments = "-Xmx1G -Djava.library.path=C:\Users\Ammar\AppData\Roaming\.minecraft\versions\1.6\1.6x -cp C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\com\google\guava\guava\14.0\guava-14.0.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;C:\Users\Ammar\AppData\Roaming\.minecraft\versions\1.6\1.6.jar net.minecraft.client.main.Main --username Ammar_Ahmad --session -0 --version 1.6 --gameDir C:\Users\Ammar\AppData\Roaming\.minecraft --assetsDir C:\Users\Ammar\AppData\Roaming\.minecraft\assets"
+
+
+            process.StartInfo = info
+            process.Start()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 End Class
