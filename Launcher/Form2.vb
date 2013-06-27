@@ -41,14 +41,20 @@ Public Class Form2
             End Using
 
             If ComboBox1.Text = "Enabled" Then
-                '  objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-                '  objReader.Write("gamma:" + "10" & Environment.NewLine & line)
+                '                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                '               objReader.Write("gamma:" + "10" & Environment.NewLine & line)
 
-                '                objReader.Close()
+                'objReader.Close()
 
-                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-                objReader.Write(line.Replace("gamma:0.0", "gamma:10.0"))
-                objReader.Close()
+                Try
+                    objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                    objReader.Write(line.Replace("gamma:0.0", "gamma:10.0"))
+                    objReader.Close()
+
+                Catch ex As Exception
+                    'MsgBox("Please change your brightness settings in minecraft to moody")
+                End Try
+
 
 
             ElseIf ComboBox1.Text = "Disabled" Then
@@ -57,9 +63,17 @@ Public Class Form2
 
                 'objReader.Close()
 
-                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-                objReader.Write(line.Replace("gamma:10.0", "gamma:0.0"))
-                objReader.Close()
+                Try
+
+                    objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                    objReader.Write(line.Replace("gamma:10.0", "gamma:0.0"))
+                    objReader.Close()
+
+
+                Catch ex As Exception
+                    'MsgBox("Please change your brightness settings in minecraft to moody")
+                End Try
+
 
 
             End If
