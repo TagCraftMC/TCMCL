@@ -95,8 +95,8 @@ Public Class Form2
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
         ComboBox1.Text = "Disabled"
-        ComboBox2.Text = "256M"
-        ComboBox3.Text = "1.5.2"
+        ComboBox2.Text = "512M"
+        ComboBox3.Text = "1.6"
 
         Try
             oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/tagoptions.txt")
@@ -174,7 +174,7 @@ Public Class Form2
         If CheckBox1.Checked = True Then
             ComboBox2.Enabled = False
             debuglog = ComboBox2.Text
-            ComboBox2.Text = "256M"
+            ComboBox2.Text = "512M"
         ElseIf CheckBox1.Checked = False Then
             ComboBox2.Enabled = True
             ComboBox2.Text = debuglog

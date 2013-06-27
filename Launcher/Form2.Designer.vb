@@ -41,9 +41,9 @@ Partial Class Form2
         Me.Button5 = New System.Windows.Forms.Button()
         Me.OptionsToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -112,7 +112,7 @@ Partial Class Form2
         Me.ComboBox2.Font = New System.Drawing.Font("Segoe UI Symbol", 18.0!)
         Me.ComboBox2.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"256M", "512M", "1024M", "1536M", "2048M", "3072M", "4096M", "6144M", "5120M", "7168M", "8192M"})
+        Me.ComboBox2.Items.AddRange(New Object() {"512M", "1024M", "1536M", "2048M", "3072M", "4096M", "6144M", "5120M", "7168M", "8192M"})
         Me.ComboBox2.Location = New System.Drawing.Point(145, 44)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(132, 40)
@@ -265,6 +265,14 @@ Partial Class Form2
         Me.GroupBox4.Text = "Update Options"
         Me.OptionsToolTip.SetToolTip(Me.GroupBox4, "Sorry this feature is not enabled right now")
         '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(6, 105)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(326, 40)
+        Me.ProgressBar1.TabIndex = 8
+        Me.OptionsToolTip.SetToolTip(Me.ProgressBar1, "Updating progress")
+        '
         'ComboBox3
         '
         Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -294,14 +302,6 @@ Partial Class Form2
         Me.Button6.Text = "Update"
         Me.OptionsToolTip.SetToolTip(Me.Button6, "Sorry this feature is not enabled right now")
         Me.Button6.UseVisualStyleBackColor = False
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(6, 105)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(326, 40)
-        Me.ProgressBar1.TabIndex = 8
-        Me.OptionsToolTip.SetToolTip(Me.ProgressBar1, "Updating progress")
         '
         'Form2
         '

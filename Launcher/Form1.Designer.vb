@@ -48,7 +48,6 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.LauncherToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -297,22 +296,12 @@ Partial Class Form1
         Me.LauncherToolTip.ForeColor = System.Drawing.Color.White
         Me.LauncherToolTip.OwnerDraw = True
         '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(12, 157)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 9
-        Me.Button4.Text = "1.6 test"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(655, 293)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.HelpBTN)
         Me.Controls.Add(Me.StatusStrip1)
@@ -357,6 +346,5 @@ Partial Class Form1
     Friend WithEvents b As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents c As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents LauncherToolTip As System.Windows.Forms.ToolTip
-    Friend WithEvents Button4 As System.Windows.Forms.Button
 
 End Class
