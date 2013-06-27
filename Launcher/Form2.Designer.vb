@@ -60,9 +60,9 @@ Partial Class Form2
         Me.ComboBox1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.ComboBox1.Location = New System.Drawing.Point(145, 44)
+        Me.ComboBox1.Location = New System.Drawing.Point(145, 53)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(132, 40)
+        Me.ComboBox1.Size = New System.Drawing.Size(166, 40)
         Me.ComboBox1.TabIndex = 0
         Me.OptionsToolTip.SetToolTip(Me.ComboBox1, "Enable Or Disable Fullbright Mode.")
         '
@@ -71,7 +71,7 @@ Partial Class Form2
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Symbol", 18.0!)
         Me.Label1.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label1.Location = New System.Drawing.Point(10, 47)
+        Me.Label1.Location = New System.Drawing.Point(10, 56)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(129, 32)
         Me.Label1.TabIndex = 1
@@ -84,7 +84,7 @@ Partial Class Form2
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!)
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(12, 404)
+        Me.Button1.Location = New System.Drawing.Point(12, 294)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(153, 67)
         Me.Button1.TabIndex = 2
@@ -97,7 +97,7 @@ Partial Class Form2
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Symbol", 18.0!)
         Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label2.Location = New System.Drawing.Point(10, 47)
+        Me.Label2.Location = New System.Drawing.Point(10, 55)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(110, 32)
         Me.Label2.TabIndex = 4
@@ -113,9 +113,9 @@ Partial Class Form2
         Me.ComboBox2.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"512M", "1024M", "1536M", "2048M", "3072M", "4096M", "6144M", "5120M", "7168M", "8192M"})
-        Me.ComboBox2.Location = New System.Drawing.Point(145, 44)
+        Me.ComboBox2.Location = New System.Drawing.Point(145, 52)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(132, 40)
+        Me.ComboBox2.Size = New System.Drawing.Size(166, 40)
         Me.ComboBox2.TabIndex = 3
         Me.OptionsToolTip.SetToolTip(Me.ComboBox2, "Choose the ammount of ram you want Minecraft to use")
         '
@@ -125,7 +125,7 @@ Partial Class Form2
         Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Symbol", 18.0!)
         Me.CheckBox1.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 90)
+        Me.CheckBox1.Location = New System.Drawing.Point(6, 98)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(176, 36)
         Me.CheckBox1.TabIndex = 5
@@ -141,7 +141,7 @@ Partial Class Form2
         Me.GroupBox1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(338, 90)
+        Me.GroupBox1.Size = New System.Drawing.Size(338, 110)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Basic Options"
@@ -153,9 +153,9 @@ Partial Class Form2
         Me.GroupBox2.Controls.Add(Me.ComboBox2)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI Symbol", 24.5!)
         Me.GroupBox2.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 106)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 136)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(338, 135)
+        Me.GroupBox2.Size = New System.Drawing.Size(338, 145)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Advance Options"
@@ -236,7 +236,7 @@ Partial Class Form2
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!)
         Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(197, 404)
+        Me.Button5.Location = New System.Drawing.Point(197, 294)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(153, 67)
         Me.Button5.TabIndex = 10
@@ -257,13 +257,14 @@ Partial Class Form2
         Me.GroupBox4.Controls.Add(Me.Button6)
         Me.GroupBox4.Font = New System.Drawing.Font("Segoe UI Symbol", 24.5!)
         Me.GroupBox4.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 247)
+        Me.GroupBox4.Location = New System.Drawing.Point(586, 216)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(338, 151)
         Me.GroupBox4.TabIndex = 8
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Update Options"
         Me.OptionsToolTip.SetToolTip(Me.GroupBox4, "Sorry this feature is not enabled right now")
+        Me.GroupBox4.Visible = False
         '
         'ProgressBar1
         '
@@ -272,6 +273,7 @@ Partial Class Form2
         Me.ProgressBar1.Size = New System.Drawing.Size(326, 40)
         Me.ProgressBar1.TabIndex = 8
         Me.OptionsToolTip.SetToolTip(Me.ProgressBar1, "Updating progress")
+        Me.ProgressBar1.Visible = False
         '
         'ComboBox3
         '
@@ -287,6 +289,7 @@ Partial Class Form2
         Me.ComboBox3.Size = New System.Drawing.Size(132, 40)
         Me.ComboBox3.TabIndex = 7
         Me.OptionsToolTip.SetToolTip(Me.ComboBox3, "Sorry this feature is not enabled right now")
+        Me.ComboBox3.Visible = False
         '
         'Button6
         '
@@ -302,13 +305,14 @@ Partial Class Form2
         Me.Button6.Text = "Update"
         Me.OptionsToolTip.SetToolTip(Me.Button6, "Sorry this feature is not enabled right now")
         Me.Button6.UseVisualStyleBackColor = False
+        Me.Button6.Visible = False
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(362, 483)
+        Me.ClientSize = New System.Drawing.Size(367, 375)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)

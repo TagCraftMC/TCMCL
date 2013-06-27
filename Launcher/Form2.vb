@@ -96,7 +96,7 @@ Public Class Form2
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
         ComboBox1.Text = "Disabled"
         ComboBox2.Text = "512M"
-        ComboBox3.Text = "1.6"
+        '     ComboBox3.Text = "1.6"
 
         Try
             oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/tagoptions.txt")
