@@ -32,7 +32,7 @@ Public Class Form2
             Dim lines As New List(Of String)(IO.File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt"))
             'Remove the line to delete, e.g.
 
-            lines.RemoveAt(5)
+            '            lines.RemoveAt(5)
             IO.File.WriteAllLines((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt"), lines.ToArray())
 
             Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
@@ -41,16 +41,24 @@ Public Class Form2
             End Using
 
             If ComboBox1.Text = "Enabled" Then
-                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-                objReader.Write("gamma:" + "10" & Environment.NewLine & line)
+                '  objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                '  objReader.Write("gamma:" + "10" & Environment.NewLine & line)
 
+                '                objReader.Close()
+
+                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                objReader.Write(line.Replace("gamma:0.0", "gamma:10.0"))
                 objReader.Close()
 
 
             ElseIf ComboBox1.Text = "Disabled" Then
-                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-                objReader.Write("gamma:" + "1" & Environment.NewLine & line)
+                '                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                '               objReader.Write("gamma:" + "1" & Environment.NewLine & line)
 
+                'objReader.Close()
+
+                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                objReader.Write(line.Replace("gamma:10.0", "gamma:0.0"))
                 objReader.Close()
 
 
@@ -77,7 +85,7 @@ Public Class Form2
 
         End Try
         Me.Hide()
-        ComboBox1.Enabled = False
+        '    ComboBox1.Enabled = False
         x = ComboBox1.Text
         y = ComboBox2.Text
 
