@@ -30,6 +30,7 @@ Partial Class Form2
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -84,7 +85,7 @@ Partial Class Form2
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!)
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(12, 294)
+        Me.Button1.Location = New System.Drawing.Point(12, 331)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(153, 67)
         Me.Button1.TabIndex = 2
@@ -135,16 +136,29 @@ Partial Class Form2
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Symbol", 24.5!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(338, 110)
+        Me.GroupBox1.Size = New System.Drawing.Size(338, 155)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Basic Options"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Symbol", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(16, 110)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(286, 26)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "*Please make sure your brightness setting in minecraft" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "is set to moody before en" & _
+    "abling this."
         '
         'GroupBox2
         '
@@ -153,7 +167,7 @@ Partial Class Form2
         Me.GroupBox2.Controls.Add(Me.ComboBox2)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI Symbol", 24.5!)
         Me.GroupBox2.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 136)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 173)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(338, 145)
         Me.GroupBox2.TabIndex = 7
@@ -236,7 +250,7 @@ Partial Class Form2
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!)
         Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(197, 294)
+        Me.Button5.Location = New System.Drawing.Point(197, 331)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(153, 67)
         Me.Button5.TabIndex = 10
@@ -312,7 +326,7 @@ Partial Class Form2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(367, 375)
+        Me.ClientSize = New System.Drawing.Size(367, 412)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -356,4 +370,5 @@ Partial Class Form2
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class
