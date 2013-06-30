@@ -143,7 +143,7 @@ Partial Class Form2
         Me.GroupBox1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(338, 155)
+        Me.GroupBox1.Size = New System.Drawing.Size(328, 155)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Basic Options"
@@ -169,7 +169,7 @@ Partial Class Form2
         Me.GroupBox2.ForeColor = System.Drawing.Color.DodgerBlue
         Me.GroupBox2.Location = New System.Drawing.Point(12, 173)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(338, 145)
+        Me.GroupBox2.Size = New System.Drawing.Size(328, 145)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Advance Options"
@@ -250,7 +250,7 @@ Partial Class Form2
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!)
         Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(197, 331)
+        Me.Button5.Location = New System.Drawing.Point(187, 331)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(153, 67)
         Me.Button5.TabIndex = 10
@@ -326,7 +326,7 @@ Partial Class Form2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(367, 412)
+        Me.ClientSize = New System.Drawing.Size(355, 412)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
