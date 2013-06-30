@@ -38,6 +38,7 @@ Partial Class HelpBrowser
         Me.HelpBRW.Location = New System.Drawing.Point(0, 0)
         Me.HelpBRW.MinimumSize = New System.Drawing.Size(20, 20)
         Me.HelpBRW.Name = "HelpBRW"
+        Me.HelpBRW.ScriptErrorsSuppressed = True
         Me.HelpBRW.Size = New System.Drawing.Size(854, 562)
         Me.HelpBRW.TabIndex = 0
         Me.HelpBRW.Url = New System.Uri("http://www.tagcraftmc.com/launcherhelp", System.UriKind.Absolute)
