@@ -50,6 +50,7 @@ Partial Class Form1
         Me.LauncherToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.lvLBL = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -180,7 +181,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel1.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(86, 21)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(85, 21)
         Me.ToolStripStatusLabel1.Text = "Factions"
         Me.ToolStripStatusLabel1.ToolTipText = "Factions is online: play.tagcraftmc.com"
         Me.ToolStripStatusLabel1.Visible = False
@@ -191,7 +192,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel3.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel3.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(86, 21)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(85, 21)
         Me.ToolStripStatusLabel3.Text = "Factions"
         Me.ToolStripStatusLabel3.ToolTipText = "Factions is offline: play.tagcraftmc.com"
         Me.ToolStripStatusLabel3.Visible = False
@@ -202,7 +203,7 @@ Partial Class Form1
         Me.a.ForeColor = System.Drawing.Color.DodgerBlue
         Me.a.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.a.Name = "a"
-        Me.a.Size = New System.Drawing.Size(86, 21)
+        Me.a.Size = New System.Drawing.Size(85, 21)
         Me.a.Text = "Factions"
         Me.a.ToolTipText = "Factions is querying: play.tagcraftmc.com"
         '
@@ -241,7 +242,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel5.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel5.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(110, 21)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(108, 21)
         Me.ToolStripStatusLabel5.Text = "TeamSpeak"
         Me.ToolStripStatusLabel5.Visible = False
         '
@@ -251,7 +252,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel6.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel6.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(110, 21)
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(108, 21)
         Me.ToolStripStatusLabel6.Text = "TeamSpeak"
         Me.ToolStripStatusLabel6.Visible = False
         '
@@ -261,7 +262,7 @@ Partial Class Form1
         Me.c.ForeColor = System.Drawing.Color.DodgerBlue
         Me.c.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.c.Name = "c"
-        Me.c.Size = New System.Drawing.Size(110, 21)
+        Me.c.Size = New System.Drawing.Size(108, 21)
         Me.c.Text = "TeamSpeak"
         '
         'HelpBTN
@@ -321,12 +322,28 @@ Partial Class Form1
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Version 1.00"
         '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.AllowNavigation = False
+        Me.WebBrowser1.IsWebBrowserContextMenuEnabled = False
+        Me.WebBrowser1.Location = New System.Drawing.Point(633, 2)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
+        Me.WebBrowser1.ScrollBarsEnabled = False
+        Me.WebBrowser1.Size = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.TabIndex = 11
+        Me.WebBrowser1.Url = New System.Uri("http://www.tagcraftmc.com/launcherhits", System.UriKind.Absolute)
+        Me.WebBrowser1.Visible = False
+        Me.WebBrowser1.WebBrowserShortcutsEnabled = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(655, 293)
+        Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lvLBL)
         Me.Controls.Add(Me.Label2)
@@ -375,5 +392,6 @@ Partial Class Form1
     Friend WithEvents LauncherToolTip As System.Windows.Forms.ToolTip
     Friend WithEvents lvLBL As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
 
 End Class
