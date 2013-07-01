@@ -324,7 +324,6 @@ Partial Class Form1
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.AllowNavigation = False
         Me.WebBrowser1.IsWebBrowserContextMenuEnabled = False
         Me.WebBrowser1.Location = New System.Drawing.Point(633, 2)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
