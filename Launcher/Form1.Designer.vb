@@ -333,7 +333,7 @@ Partial Class Form1
         Me.WebBrowser1.ScrollBarsEnabled = False
         Me.WebBrowser1.Size = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.TabIndex = 11
-        Me.WebBrowser1.Url = New System.Uri("http://www.tagcraftmc.com/launcherhits", System.UriKind.Absolute)
+        Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)
         Me.WebBrowser1.Visible = False
         Me.WebBrowser1.WebBrowserShortcutsEnabled = False
         '

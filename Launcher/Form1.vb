@@ -4,6 +4,9 @@ Imports System.Drawing.Drawing2D
 Imports System.Net
 
 Public Class Form1
+    Dim nom As String
+    Dim nomx As String
+
     Dim mem As String
     Dim mempass As String
 
@@ -327,7 +330,41 @@ Public Class Form1
         'Catch ex As Exception
 
         'End Try
+        Try
+            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/runtimecatch.txt")
+            '            ComboBox2.Text = oReadx.ReadLine
 
+            nomx = oReadx.ReadLine
+
+
+            oReadx.Close()
+
+          
+
+        Catch ex As Exception
+
+        End Try
+
+        If nomx = "" Then
+            WebBrowser1.Navigate(New Uri("http://www.tagcraftmc.com/launcherhits"))
+        ElseIf nomx = "open" Then
+            'do nothing
+
+        End If
+
+
+        Try
+
+            Dim objReaderx As StreamWriter
+
+
+            objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/runtimecatch.txt")
+            objReaderx.Write("open")
+            objReaderx.Close()
+
+        Catch ex As Exception
+
+        End Try
 
         Try
             oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/taguser.txt")
