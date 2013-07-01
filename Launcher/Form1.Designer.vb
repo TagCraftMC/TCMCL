@@ -48,6 +48,8 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.LauncherToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.lvLBL = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -178,7 +180,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel1.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(85, 21)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(86, 21)
         Me.ToolStripStatusLabel1.Text = "Factions"
         Me.ToolStripStatusLabel1.ToolTipText = "Factions is online: play.tagcraftmc.com"
         Me.ToolStripStatusLabel1.Visible = False
@@ -189,7 +191,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel3.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel3.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(85, 21)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(86, 21)
         Me.ToolStripStatusLabel3.Text = "Factions"
         Me.ToolStripStatusLabel3.ToolTipText = "Factions is offline: play.tagcraftmc.com"
         Me.ToolStripStatusLabel3.Visible = False
@@ -200,7 +202,7 @@ Partial Class Form1
         Me.a.ForeColor = System.Drawing.Color.DodgerBlue
         Me.a.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.a.Name = "a"
-        Me.a.Size = New System.Drawing.Size(85, 21)
+        Me.a.Size = New System.Drawing.Size(86, 21)
         Me.a.Text = "Factions"
         Me.a.ToolTipText = "Factions is querying: play.tagcraftmc.com"
         '
@@ -239,7 +241,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel5.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel5.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(108, 21)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(110, 21)
         Me.ToolStripStatusLabel5.Text = "TeamSpeak"
         Me.ToolStripStatusLabel5.Visible = False
         '
@@ -249,7 +251,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel6.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel6.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(108, 21)
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(110, 21)
         Me.ToolStripStatusLabel6.Text = "TeamSpeak"
         Me.ToolStripStatusLabel6.Visible = False
         '
@@ -259,7 +261,7 @@ Partial Class Form1
         Me.c.ForeColor = System.Drawing.Color.DodgerBlue
         Me.c.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.c.Name = "c"
-        Me.c.Size = New System.Drawing.Size(108, 21)
+        Me.c.Size = New System.Drawing.Size(110, 21)
         Me.c.Text = "TeamSpeak"
         '
         'HelpBTN
@@ -296,12 +298,37 @@ Partial Class Form1
         Me.LauncherToolTip.ForeColor = System.Drawing.Color.White
         Me.LauncherToolTip.OwnerDraw = True
         '
+        'lvLBL
+        '
+        Me.lvLBL.AutoSize = True
+        Me.lvLBL.Font = New System.Drawing.Font("Segoe UI Symbol", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lvLBL.ForeColor = System.Drawing.Color.Red
+        Me.lvLBL.Location = New System.Drawing.Point(0, 2)
+        Me.lvLBL.Name = "lvLBL"
+        Me.lvLBL.Size = New System.Drawing.Size(278, 13)
+        Me.lvLBL.TabIndex = 9
+        Me.lvLBL.Text = "Warning: Your version of the launcher is out of date."
+        Me.lvLBL.Visible = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label4.Location = New System.Drawing.Point(586, 279)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(70, 13)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "Version 1.00"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(655, 293)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lvLBL)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.HelpBTN)
         Me.Controls.Add(Me.StatusStrip1)
@@ -346,5 +373,7 @@ Partial Class Form1
     Friend WithEvents b As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents c As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents LauncherToolTip As System.Windows.Forms.ToolTip
+    Friend WithEvents lvLBL As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 
 End Class

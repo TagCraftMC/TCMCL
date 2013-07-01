@@ -1,6 +1,7 @@
 ﻿Imports System.Net.Sockets
 Imports System.IO
 Imports System.Drawing.Drawing2D
+Imports System.Net
 
 Public Class Form1
     Dim mem As String
@@ -12,6 +13,8 @@ Public Class Form1
     Dim HG As Boolean
 
     Dim TS As Boolean
+
+    Dim LauncherVersion As Boolean
 
 
     Dim accessOP As String
@@ -359,7 +362,7 @@ Public Class Form1
 
         End If
 
-      '        x()
+        '        x()
         '       y()
         '      z()
     End Sub
@@ -419,6 +422,31 @@ Public Class Form1
 
         End Try
     End Sub
+    Public Sub lv()
+        Dim client As WebClient = New WebClient()
+        Try
+            Dim URL As String = "http://files.enjin.com/256377/CamelLauncher/version.http"
+            Dim result As String = client.DownloadString(URL)
+            'Debug.Print("DEBUG CHECK STRING DOWNLOAD: {0}", result)
+            If (LCase(Label4.Text) = result) Then 'lower case it all incase I am drunk and do VeRsIoN 9001
+
+                LauncherVersion = True
+            Else
+
+                LauncherVersion = False
+            End If
+
+        Catch ex As Exception
+
+            LauncherVersion = False
+
+        End Try
+
+
+
+
+
+    End Sub
 
 
 
@@ -455,7 +483,8 @@ Public Class Form1
         '       System.Threading.Thread.Sleep(10)
         x()
         y()
-        z()
+        lv()
+        lv()
 
     End Sub
 
@@ -464,10 +493,21 @@ Public Class Form1
             a.Visible = False
             b.Visible = False
             c.Visible = False
+            lvLBL.Visible = False
 
         Catch ex As Exception
 
         End Try
+
+        If LauncherVersion = True Then
+            lvLBL.Visible = False
+
+
+        Else
+            lvLBL.Visible = True
+
+
+        End If
 
         If server = True Then
             ToolStripStatusLabel1.Visible = True
