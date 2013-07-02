@@ -131,7 +131,7 @@ Partial Class Form1
         Me.Button2.Size = New System.Drawing.Size(153, 67)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "OPTIONS"
-        Me.LauncherToolTip.SetToolTip(Me.Button2, "Open the launch settings for Minecraft")
+        Me.LauncherToolTip.SetToolTip(Me.Button2, "Open the Option settings")
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
@@ -279,7 +279,7 @@ Partial Class Form1
         Me.HelpBTN.Size = New System.Drawing.Size(153, 67)
         Me.HelpBTN.TabIndex = 3
         Me.HelpBTN.Text = "HELP"
-        Me.LauncherToolTip.SetToolTip(Me.HelpBTN, "Open a help page about Minecraft and the launcher")
+        Me.LauncherToolTip.SetToolTip(Me.HelpBTN, "Opens help for Minecraft and the Launcher")
         Me.HelpBTN.UseVisualStyleBackColor = False
         '
         'Label2
@@ -362,6 +362,7 @@ Partial Class Form1
         Me.LinkLabel1.TabIndex = 13
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Click here to update"
+        Me.LauncherToolTip.SetToolTip(Me.LinkLabel1, "Oh dear, it's out of date. Click here to update.")
         Me.LinkLabel1.Visible = False
         '
         'Form1
