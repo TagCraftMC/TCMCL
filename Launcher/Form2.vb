@@ -85,19 +85,17 @@ Public Class Form2
 
 
 
-            Dim objReaderx As StreamWriter
-
-
-            objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
-            objReaderx.Write(ComboBox2.Text)
-            objReaderx.Close()
-
-
-
-
         Catch ex As Exception
 
         End Try
+
+        Dim objReaderx As StreamWriter
+
+
+        objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
+        objReaderx.Write(ComboBox2.Text)
+        objReaderx.Close()
+
         Me.Hide()
         '    ComboBox1.Enabled = False
         x = ComboBox1.Text
