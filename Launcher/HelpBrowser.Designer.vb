@@ -24,8 +24,9 @@ Partial Class HelpBrowser
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.HelpBRW = New System.Windows.Forms.WebBrowser()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.VisitTagCraftMCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,19 +45,25 @@ Partial Class HelpBrowser
         Me.HelpBRW.Url = New System.Uri("http://www.tagcraftmc.com/launcherhelp", System.UriKind.Absolute)
         Me.HelpBRW.WebBrowserShortcutsEnabled = False
         '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.ContextMenuStrip1.ShowImageMargin = False
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(78, 26)
-        '
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(77, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.VisitTagCraftMCToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.ContextMenuStrip1.ShowImageMargin = False
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(140, 70)
+        '
+        'VisitTagCraftMCToolStripMenuItem
+        '
+        Me.VisitTagCraftMCToolStripMenuItem.Name = "VisitTagCraftMCToolStripMenuItem"
+        Me.VisitTagCraftMCToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.VisitTagCraftMCToolStripMenuItem.Text = "Visit TagCraftMC"
         '
         'HelpBrowser
         '
@@ -76,4 +83,5 @@ Partial Class HelpBrowser
     Friend WithEvents HelpBRW As System.Windows.Forms.WebBrowser
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents CopyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents VisitTagCraftMCToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
