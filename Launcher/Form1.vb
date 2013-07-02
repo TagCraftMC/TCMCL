@@ -38,7 +38,7 @@ Public Class Form1
             Dim objReader As StreamWriter
 
 
-            objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/taguser.txt")
+            objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/taguser.txt")
             objReader.Write(TextBox1.Text)
             objReader.Close()
 
@@ -50,7 +50,7 @@ Public Class Form1
 
         Try
 
-            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/memory.txt")
+            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
             mem = oReadx.ReadLine
 
 
@@ -331,7 +331,7 @@ Public Class Form1
 
         'End Try
         Try
-            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/runtimecatch.txt")
+            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/runtimecatch.txt")
             '            ComboBox2.Text = oReadx.ReadLine
 
             nomx = oReadx.ReadLine
@@ -358,7 +358,7 @@ Public Class Form1
             Dim objReaderx As StreamWriter
 
 
-            objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/runtimecatch.txt")
+            objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/runtimecatch.txt")
             objReaderx.Write("open")
             objReaderx.Close()
 
@@ -367,14 +367,14 @@ Public Class Form1
         End Try
 
         Try
-            oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/taguser.txt")
+            oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/taguser.txt")
             TextBox1.Text = oRead.ReadLine
 
 
             oRead.Close()
 
 
-            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/memory.txt")
+            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
             mem = oReadx.ReadLine
 
 

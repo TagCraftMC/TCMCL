@@ -24,7 +24,7 @@ Public Class Form2
             Dim objReader As StreamWriter
 
 
-            objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/tagoptions.txt")
+            objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/tagoptions.txt")
             objReader.Write(ComboBox1.Text)
             objReader.Close()
 
@@ -88,7 +88,7 @@ Public Class Form2
             Dim objReaderx As StreamWriter
 
 
-            objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/memory.txt")
+            objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
             objReaderx.Write(ComboBox2.Text)
             objReaderx.Close()
 
@@ -121,13 +121,13 @@ Public Class Form2
         '     ComboBox3.Text = "1.6"
 
         Try
-            oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/tagoptions.txt")
+            oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/tagoptions.txt")
             ComboBox1.Text = oRead.ReadLine
 
 
             oRead.Close()
 
-            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/memory.txt")
+            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
             ComboBox2.Text = oReadx.ReadLine
 
 
