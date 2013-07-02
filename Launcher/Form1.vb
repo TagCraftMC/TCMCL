@@ -538,11 +538,12 @@ Public Class Form1
 
         If LauncherVersion = True Then
             lvLBL.Visible = False
+            LinkLabel1.Visible = False
 
 
         Else
             lvLBL.Visible = True
-
+            LinkLabel1.Visible = True
 
         End If
 
@@ -586,4 +587,7 @@ Public Class Form1
 
     End Sub
 
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        System.Diagnostics.Process.Start("http://www.tagcraftmc.com/launcherupdate")
+    End Sub
 End Class
