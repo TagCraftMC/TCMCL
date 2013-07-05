@@ -2,13 +2,19 @@
 Imports System.IO
 Imports System.Drawing.Drawing2D
 Imports System.Net
+Imports System.Runtime.InteropServices
+Imports System.Security.Permissions
+Imports System.Reflection
 
 Public Class Form1
+
+    Public Shared mem As String
+
     Dim nom As String
     Dim nomx As String
 
-    Dim mem As String
-    Dim mempass As String
+    'Dim mem As String
+    Public Shared mempass As String
 
 
     Dim server As Boolean
@@ -20,7 +26,7 @@ Public Class Form1
     Dim LauncherVersion As Boolean
 
 
-    Dim accessOP As String
+    Public Shared accessOP As String
     Dim oFile As System.IO.File
     Dim oWrite As System.IO.StreamWriter
     Dim oRead As System.IO.StreamReader
@@ -29,6 +35,10 @@ Public Class Form1
     Dim oFilex As System.IO.File
     Dim oWritex As System.IO.StreamWriter
     Dim oReadx As System.IO.StreamReader
+
+
+
+
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -73,227 +83,7 @@ Public Class Form1
 
 
 
-        Try
-            If mempass = "0" Then
-                '  info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
-                'programfiles for 64 bit
-                'x86 for 32
-                If accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    'info.FileName = "javaw"
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
-                    info.CreateNoWindow = True
-                    '           info.Arguments = "-Dsun.java2d.noddraw=true -Dsun.awt.noerasebackground=true -Dsun.java2d.d3d=false -Dsun.java2d.opengl=false -Dsun.java2d.pmoffscreen=false -Djava.library.path=" + text + "natives -cp " + text + "minecraft.jar;" + text + "jinput.jar;" + text + "lwjgl.jar;" + text + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
-                    info.Arguments = "-Xmx512m -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -0 --version 1.6.1 --gameDir" + q + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + q + " --assetsDir " + appData + "assets"
-
-                    process.StartInfo = info
-                    process.Start()
-                    End
-                ElseIf accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    'info.FileName = "javaw"
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
-                    info.CreateNoWindow = True
-                    info.Arguments = "-Xmx512m -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -0 --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
-                    process.StartInfo = info
-                    process.Start()
-                    End
-
-                ElseIf Form2.CheckBox1.Checked = True Then
-
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
-                    ' info.FileName = "java"
-                    '  info.CreateNoWindow = True
-                    info.Arguments = "-Xmx512m -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -AMMARS_CAMEL_CRAFT_#2013_#TagCraftMC --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    process.StartInfo = info
-                    process.Start()
-                    End
-                End If
-
-
-
-
-
-
-
-
-
-
-
-            ElseIf mempass = "1" Then
-
-                If accessOP = "0" And Form2.CheckBox1.Checked = False And mempass = "1" Then
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    'info.FileName = "javaw"
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
-                    info.CreateNoWindow = True
-                    info.Arguments = "-Xmx" + mem + " -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -0 --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-
-
-                    '                    info.Arguments = "-Xms" + "256m" + " -Xmx" + mem + " -Dsun.java2d.noddraw=true" + " -Dsun.awt.noerasebackground=true" + " -Dsun.java2d.d3d=false" + " -Dsun.java2d.opengl=false" + " -Dsun.java2d.pmoffscreen=false" + " -Djava.library.path=" + appData + "natives -cp " + appData + "minecraft.jar;" + appData + "jinput.jar;" + appData + "lwjgl.jar;" + appData + "lwjgl_util.jar net.minecraft.client.Minecraft " + Me.TextBox1.Text
-                    '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
-                    process.StartInfo = info
-                    process.Start()
-                    End
-
-
-
-                ElseIf accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    'info.FileName = "javaw"
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
-                    info.CreateNoWindow = True
-                    info.Arguments = "-Xmx512m -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -0 --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    process.StartInfo = info
-                    process.Start()
-                    End
-                ElseIf accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    'info.FileName = "javaw"
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
-                    info.CreateNoWindow = True
-                    info.Arguments = "-Xmx" + mem + " -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -0 --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
-                    process.StartInfo = info
-                    process.Start()
-                    End
-
-                ElseIf Form2.CheckBox1.Checked = True Then
-
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
-                    ' info.FileName = "java"
-                    '  info.CreateNoWindow = True
-                    info.Arguments = "-Xmx512m -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -AMMARS_CAMEL_CRAFT_#2013_#TagCraftMC --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    process.StartInfo = info
-                    process.Start()
-                    End
-                End If
-
-
-
-            End If
-
-
-
-
-
-        Catch ex As Exception
-
-            If mempass = "0" Then
-
-                If accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    '         info.FileName = "javaw"
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
-                    info.CreateNoWindow = True
-                    info.Arguments = "-Xmx512m -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -0 --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    process.StartInfo = info
-                    process.Start()
-                    End
-                ElseIf accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    '                info.FileName = "javaw"
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
-                    info.CreateNoWindow = True
-                    info.Arguments = "-Xmx512m -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -0 --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
-                    process.StartInfo = info
-                    process.Start()
-                    End
-
-                ElseIf Form2.CheckBox1.Checked = True Then
-
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe"
-                    '                info.FileName = "java"
-                    '  info.CreateNoWindow = True
-                    info.Arguments = "-Xmx512m -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -AMMARS_CAMEL_CRAFT_#2013_#TagCraftMC --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    process.StartInfo = info
-                    process.Start()
-                    End
-                End If
-
-            ElseIf mempass = "1" Then
-                If accessOP = "0" And Form2.CheckBox1.Checked = False And mempass = "1" Then
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    '                info.FileName = "javaw"
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
-                    info.CreateNoWindow = True
-                    info.Arguments = "-Xmx" + mem + " -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -0 --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
-                    process.StartInfo = info
-                    process.Start()
-                    End
-
-
-                ElseIf accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    '         info.FileName = "javaw"
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
-                    info.CreateNoWindow = True
-                    info.Arguments = "-Xmx512m -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -0 --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    process.StartInfo = info
-                    process.Start()
-                    End
-                ElseIf accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    '                info.FileName = "javaw"
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
-                    info.CreateNoWindow = True
-                    info.Arguments = "-Xmx" + mem + " -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -0 --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    '-Xms" + MiniRam[MiniRamCMBO.SelectedIndex] + " -Xmx" + MaxRam[MaxiRamCMBO.SelectedIndex] + " "
-                    process.StartInfo = info
-                    process.Start()
-                    End
-
-                ElseIf Form2.CheckBox1.Checked = True Then
-
-                    Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
-                    Dim process As New Process
-                    Dim info As New ProcessStartInfo
-                    info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe"
-                    '                info.FileName = "java"
-                    '  info.CreateNoWindow = True
-                    info.Arguments = "-Xmx512m -Djava.library.path=" + appData + "versions\1.6.1\1.6.1_TagCraftMC -cp " + appData + "libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;" + appData + "libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;" + appData + "libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;" + appData + "libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;" + appData + "libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;" + appData + "libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;" + appData + "libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;" + appData + "libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;" + appData + "libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;" + appData + "libraries\com\google\guava\guava\14.0\guava-14.0.jar;" + appData + "libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;" + appData + "libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;" + appData + "libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;" + appData + "libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;" + appData + "libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;" + appData + "versions\1.6.1\1.6.1.jar net.minecraft.client.main.Main --username " + TextBox1.Text + " --session -AMMARS_CAMEL_CRAFT_#2013_#TagCraftMC --version 1.6.1 --gameDir" + q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q + " --assetsDir " + appData + "assets"
-                    process.StartInfo = info
-                    process.Start()
-                    End
-
-                End If
-
-            End If
-        End Try
-
-
+        mainx()
 
     End Sub
 
@@ -341,7 +131,7 @@ Public Class Form1
 
             oReadx.Close()
 
-          
+
 
         Catch ex As Exception
 
@@ -592,4 +382,6 @@ Public Class Form1
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         System.Diagnostics.Process.Start("http://www.tagcraftmc.com/launcherupdate")
     End Sub
+
+
 End Class
