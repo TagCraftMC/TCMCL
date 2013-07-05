@@ -114,6 +114,13 @@ Public Class Form2
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If Environment.Is64BitOperatingSystem = True Then
+            'nothing
+        ElseIf Environment.Is64BitOperatingSystem = False Then
+            ComboBox2.Enabled = False
+
+        End If
+
         ComboBox1.Text = "Disabled"
         ComboBox2.Text = "512M"
         '     ComboBox3.Text = "1.6"
@@ -140,7 +147,7 @@ Public Class Form2
 
         y = ComboBox2.Text
 
-     
+
         'MsgBox(computer_info.AvailablePhysicalMemory)
 
     End Sub
@@ -189,7 +196,15 @@ Public Class Form2
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-     
+        If Environment.Is64BitOperatingSystem = True Then
+            'nothing
+        ElseIf Environment.Is64BitOperatingSystem = False Then
+            ComboBox2.Enabled = False
+            debuglog = ComboBox2.Text
+            ComboBox2.Text = "512M"
+            Exit Sub
+
+        End If
 
         If CheckBox1.Checked = True Then
             ComboBox2.Enabled = False

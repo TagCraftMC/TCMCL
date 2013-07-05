@@ -47,7 +47,7 @@ Module Module1
     End Sub
 
     Sub ammar2()
-      
+
         Dim q As String
         q = Form1.TextBox2.Text
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
@@ -87,7 +87,7 @@ Module Module1
     End Sub
 
     Sub ammar3()
-      
+
 
         Dim q As String
         q = Form1.TextBox2.Text
@@ -127,7 +127,7 @@ Module Module1
 
 
     Sub ammar4()
-      
+
         Dim q As String
         q = Form1.TextBox2.Text
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
@@ -168,7 +168,7 @@ Module Module1
     End Sub
 
     Sub ammar5()
-      
+
         Dim q As String
         q = Form1.TextBox2.Text
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
@@ -205,7 +205,7 @@ Module Module1
     End Sub
 
     Sub ammar6()
-      
+
         Dim q As String
         q = Form1.TextBox2.Text
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
@@ -245,7 +245,7 @@ Module Module1
 
 
     Sub ammar7()
-      
+
         Dim q As String
         q = Form1.TextBox2.Text
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
@@ -280,7 +280,7 @@ Module Module1
     End Sub
 
     Sub ammar8()
-      
+
         Dim q As String
         q = Form1.TextBox2.Text
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
@@ -316,7 +316,7 @@ Module Module1
     End Sub
 
     Sub ammar9()
-      
+
         Dim q As String
         q = Form1.TextBox2.Text
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
@@ -356,7 +356,7 @@ Module Module1
 
 
     Sub ammar10()
-      
+
         Dim q As String
         q = Form1.TextBox2.Text
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
@@ -394,7 +394,7 @@ Module Module1
 
 
     Sub ammar11()
-      
+
         Dim q As String
         q = Form1.TextBox2.Text
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
@@ -431,7 +431,7 @@ Module Module1
     End Sub
 
     Sub ammar12()
-      
+
         Dim q As String
         q = Form1.TextBox2.Text
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
@@ -467,7 +467,7 @@ Module Module1
     End Sub
 
     Sub ammar13()
-      
+
         Dim q As String
         q = Form1.TextBox2.Text
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
