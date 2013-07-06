@@ -78,13 +78,6 @@ Public Class Form2
 
             End If
 
-
-
-
-
-
-
-
         Catch ex As Exception
 
         End Try
@@ -164,22 +157,6 @@ Public Class Form2
             End If
             Me.Hide()
         End If
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Button3.Enabled = False
-        Me.PictureBox1.ImageLocation = "http://s3.amazonaws.com/MinecraftSkins/" + Me.TextBox1.Text + ".png"
-        locationx = "http://s3.amazonaws.com/MinecraftSkins/" + Me.TextBox1.Text + ".png"
-        Button3.Enabled = True
-
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Process.Start(locationx)
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Form3.Show()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
