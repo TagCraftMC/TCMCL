@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Launcher")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyCompany("TagCraftMC")> 
 <Assembly: AssemblyProduct("Launcher")> 
-<Assembly: AssemblyCopyright("Copyright ©  2013")> 
+<Assembly: AssemblyCopyright("Copyright TagCraftMC ©  2013")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
