@@ -43,7 +43,7 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim q As String
-        q = TextBox2.Text
+        q = Chr(34)
 
 
         Try

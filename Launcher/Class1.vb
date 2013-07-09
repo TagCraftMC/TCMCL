@@ -11,7 +11,7 @@ Module Module1
     End Sub
     Sub ammar1()
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -28,7 +28,7 @@ Module Module1
     Sub yasir1()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -49,7 +49,7 @@ Module Module1
     Sub ammar2()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -68,7 +68,7 @@ Module Module1
     Sub yasir2()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -90,7 +90,7 @@ Module Module1
 
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -108,7 +108,7 @@ Module Module1
     Sub yasir3()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -129,7 +129,7 @@ Module Module1
     Sub ammar4()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -146,7 +146,7 @@ Module Module1
     Sub yasir4()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -170,7 +170,7 @@ Module Module1
     Sub ammar5()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -188,7 +188,7 @@ Module Module1
     Sub yasir5()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -207,7 +207,7 @@ Module Module1
     Sub ammar6()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -225,7 +225,7 @@ Module Module1
     Sub yasir6()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -247,7 +247,7 @@ Module Module1
     Sub ammar7()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -262,7 +262,7 @@ Module Module1
 
     Sub yasir7()
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -282,7 +282,7 @@ Module Module1
     Sub ammar8()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -298,7 +298,7 @@ Module Module1
     Sub yasir8()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -318,7 +318,7 @@ Module Module1
     Sub ammar9()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -336,7 +336,7 @@ Module Module1
     Sub yasir9()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -358,7 +358,7 @@ Module Module1
     Sub ammar10()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -375,7 +375,7 @@ Module Module1
     Sub yasir10()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -396,7 +396,7 @@ Module Module1
     Sub ammar11()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -412,7 +412,7 @@ Module Module1
     Sub yasir11()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -433,7 +433,7 @@ Module Module1
     Sub ammar12()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -450,7 +450,7 @@ Module Module1
     Sub yasir12()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
 
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -469,7 +469,7 @@ Module Module1
     Sub ammar13()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -486,7 +486,7 @@ Module Module1
     Sub yasir13()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -506,7 +506,7 @@ Module Module1
     Sub ammar14()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -524,7 +524,7 @@ Module Module1
     Sub yasir14()
 
         Dim q As String
-        q = Form1.TextBox2.Text
+        q = Chr(34)
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
         Dim info As New ProcessStartInfo

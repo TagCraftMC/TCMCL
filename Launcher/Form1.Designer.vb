@@ -54,7 +54,6 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -366,22 +365,12 @@ Partial Class Form1
         Me.Label3.TabIndex = 12
         Me.Label3.Text = "Website: www.tagcraftmc.com Server: play.tagcraftmc.com TS3: ts.tagcraftmc.com"
         '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(558, 2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(69, 20)
-        Me.TextBox2.TabIndex = 14
-        Me.TextBox2.Text = """"
-        Me.TextBox2.Visible = False
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(655, 293)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.WebBrowser1)
@@ -437,6 +426,5 @@ Partial Class Form1
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
 
 End Class
