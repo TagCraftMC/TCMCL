@@ -33,6 +33,8 @@ Partial Class Form2
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.OptionsToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
@@ -72,7 +74,7 @@ Partial Class Form2
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!)
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(12, 331)
+        Me.Button1.Location = New System.Drawing.Point(12, 379)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(153, 67)
         Me.Button1.TabIndex = 2
@@ -113,7 +115,7 @@ Partial Class Form2
         Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI Symbol", 18.0!)
         Me.CheckBox1.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 98)
+        Me.CheckBox1.Location = New System.Drawing.Point(6, 149)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(176, 36)
         Me.CheckBox1.TabIndex = 5
@@ -149,6 +151,8 @@ Partial Class Form2
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.ComboBox3)
         Me.GroupBox2.Controls.Add(Me.CheckBox1)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.ComboBox2)
@@ -156,10 +160,35 @@ Partial Class Form2
         Me.GroupBox2.ForeColor = System.Drawing.Color.DodgerBlue
         Me.GroupBox2.Location = New System.Drawing.Point(12, 173)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(328, 145)
+        Me.GroupBox2.Size = New System.Drawing.Size(328, 198)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Advance Options"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Symbol", 18.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label3.Location = New System.Drawing.Point(10, 101)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(100, 32)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Version:"
+        Me.OptionsToolTip.SetToolTip(Me.Label3, "Choose the ammount of ram you want Minecraft to use")
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.AllowDrop = True
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox3.Font = New System.Drawing.Font("Segoe UI Symbol", 18.0!)
+        Me.ComboBox3.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(145, 98)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(166, 40)
+        Me.ComboBox3.TabIndex = 6
         '
         'Button5
         '
@@ -167,7 +196,7 @@ Partial Class Form2
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!)
         Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(187, 331)
+        Me.Button5.Location = New System.Drawing.Point(187, 379)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(153, 67)
         Me.Button5.TabIndex = 10
@@ -186,7 +215,7 @@ Partial Class Form2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(355, 412)
+        Me.ClientSize = New System.Drawing.Size(355, 456)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -214,4 +243,6 @@ Partial Class Form2
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents OptionsToolTip As System.Windows.Forms.ToolTip
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
 End Class
