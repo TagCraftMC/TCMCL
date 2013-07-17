@@ -9,6 +9,7 @@ Imports System.Reflection
 Public Class Form1
 
     Public Shared mem As String
+    Public Shared ver As String
 
     Dim nom As String
     Dim nomx As String
@@ -36,6 +37,9 @@ Public Class Form1
     Dim oWritex As System.IO.StreamWriter
     Dim oReadx As System.IO.StreamReader
 
+    Dim oFiley As System.IO.File
+    Dim oWritey As System.IO.StreamWriter
+    Dim oReady As System.IO.StreamReader
 
 
 
@@ -68,6 +72,17 @@ Public Class Form1
 
             oReadx.Close()
 
+            oReady = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
+            ver = oReady.ReadLine
+
+
+            oReady.Close()
+
+            If ver = vbNullString Then
+                ver = "1.6.2"
+            Else
+                'nothing!
+            End If
 
             If mem = vbNullString Then
                 mempass = "0"
