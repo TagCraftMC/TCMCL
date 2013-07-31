@@ -23,7 +23,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -184,7 +183,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel1.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(85, 21)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(86, 21)
         Me.ToolStripStatusLabel1.Text = "Factions"
         Me.ToolStripStatusLabel1.ToolTipText = "Factions is online: play.tagcraftmc.com"
         Me.ToolStripStatusLabel1.Visible = False
@@ -195,7 +194,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel3.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel3.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(85, 21)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(86, 21)
         Me.ToolStripStatusLabel3.Text = "Factions"
         Me.ToolStripStatusLabel3.ToolTipText = "Factions is offline: play.tagcraftmc.com"
         Me.ToolStripStatusLabel3.Visible = False
@@ -206,7 +205,7 @@ Partial Class Form1
         Me.a.ForeColor = System.Drawing.Color.DodgerBlue
         Me.a.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.a.Name = "a"
-        Me.a.Size = New System.Drawing.Size(85, 21)
+        Me.a.Size = New System.Drawing.Size(86, 21)
         Me.a.Text = "Factions"
         Me.a.ToolTipText = "Factions is querying: play.tagcraftmc.com"
         '
@@ -245,7 +244,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel5.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel5.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(108, 21)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(110, 21)
         Me.ToolStripStatusLabel5.Text = "TeamSpeak"
         Me.ToolStripStatusLabel5.Visible = False
         '
@@ -255,7 +254,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel6.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel6.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(108, 21)
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(110, 21)
         Me.ToolStripStatusLabel6.Text = "TeamSpeak"
         Me.ToolStripStatusLabel6.Visible = False
         '
@@ -265,7 +264,7 @@ Partial Class Form1
         Me.c.ForeColor = System.Drawing.Color.DodgerBlue
         Me.c.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.c.Name = "c"
-        Me.c.Size = New System.Drawing.Size(108, 21)
+        Me.c.Size = New System.Drawing.Size(110, 21)
         Me.c.Text = "TeamSpeak"
         '
         'HelpBTN
@@ -385,7 +384,6 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "TagCraftMC Launcher"
