@@ -712,7 +712,25 @@ Module Module1
 
 
 
-        ElseIf Form1.ver.Contains("1.6") Then
+        Else
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            '------------------------------------------------------------------------
 
             If Environment.Is64BitOperatingSystem = True Then
 
