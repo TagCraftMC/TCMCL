@@ -125,10 +125,18 @@ Public Class Form2
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Dim lines() As String = IO.File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionlist.txt")
-        For Each line As String In lines
-            ComboBox3.Items.Add(line)
+        'Dim lines() As String = IO.File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionlist.txt")
+        'For Each line As String In lines
+        ' ComboBox3.Items.Add(line)
+        ' Next
+
+        Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions")
+        For Each fi In finfo.GetFiles
+            '            ComboBox3.Items.Add(fi.Name)
+            ComboBox3.Items.Add(Path.GetFileNameWithoutExtension(fi.Name))
+
         Next
+        
         If Environment.Is64BitOperatingSystem = True Then
             'nothing
         ElseIf Environment.Is64BitOperatingSystem = False Then

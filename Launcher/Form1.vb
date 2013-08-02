@@ -11,6 +11,15 @@ Public Class Form1
     Public Shared mem As String
     Public Shared ver As String
 
+    '-----------------------
+
+    Public Shared version As String
+    Public Shared replacedir As String
+    Public Shared replacename As String
+
+    '-----------------------
+
+
     Dim nom As String
     Dim nomx As String
 
@@ -41,6 +50,9 @@ Public Class Form1
     Dim oWritey As System.IO.StreamWriter
     Dim oReady As System.IO.StreamReader
 
+    Dim oFilep As System.IO.File
+    Dim oWritep As System.IO.StreamWriter
+    Dim oReadp As System.IO.StreamReader
 
 
 
@@ -78,11 +90,23 @@ Public Class Form1
 
             oReady.Close()
 
+
+
+
             If ver = vbNullString Then
                 ver = "1.6.2"
             Else
                 'nothing!
             End If
+
+
+            oReadp = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ver + ".txt")
+            version = oReadp.ReadLine
+
+
+            oReadp.Close()
+
+
 
             If mem = vbNullString Then
                 mempass = "0"
