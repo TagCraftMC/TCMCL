@@ -92,12 +92,11 @@ Public Class Form1
 
 
 
-
-            If ver = vbNullString Then
-                ver = "1.6.2"
-            Else
-                'nothing!
-            End If
+            'removed so that it is easy to set version number without editing the program.
+            '    If ver = vbNullString Then
+            ' ver = "1.6.2"
+            ' Else
+            ' End If
 
 
             oReadp = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ver + ".txt")

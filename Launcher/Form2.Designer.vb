@@ -174,7 +174,7 @@ Partial Class Form2
         Me.Label3.Size = New System.Drawing.Size(100, 32)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Version:"
-        Me.OptionsToolTip.SetToolTip(Me.Label3, "Choose the ammount of ram you want Minecraft to use")
+        Me.OptionsToolTip.SetToolTip(Me.Label3, "Select the Minecraft version you want to play")
         '
         'ComboBox3
         '
@@ -188,6 +188,7 @@ Partial Class Form2
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(166, 40)
         Me.ComboBox3.TabIndex = 6
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox3, "Select the Minecraft version you want to play")
         '
         'Button5
         '
