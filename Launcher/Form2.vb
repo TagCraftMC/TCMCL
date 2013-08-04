@@ -146,7 +146,7 @@ Public Class Form2
 
         ComboBox1.Text = "Disabled"
         ComboBox2.Text = "512M"
-        ComboBox3.Text = "1.6.2"
+        ' ComboBox3.Text = "1.6.2"
 
         '     ComboBox3.Text = "1.6"
 
