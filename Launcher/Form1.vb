@@ -146,6 +146,8 @@ Public Class Form1
         accessOP = "0"
 
         BackgroundWorker1.RunWorkerAsync()
+        BackgroundWorker2.RunWorkerAsync()
+
         'SavedTooltilForeColor = GetSysColor(COLOR_INFOTEXT) 'save fore color
 
         'Try
@@ -291,32 +293,46 @@ Public Class Form1
     End Sub
     Public Sub lv()
         Dim client As WebClient = New WebClient()
-        Try
-            Dim URL As String = "http://files.enjin.com/256377/CamelLauncher/version.http"
-            Dim result As String = client.DownloadString(URL)
-            'Debug.Print("DEBUG CHECK STRING DOWNLOAD: {0}", result)
-            If (LCase(Label4.Text) = result) Then 'lower case it all incase I am drunk and do VeRsIoN 9001
+        If InternetConnection() = False Then
+            LauncherVersion = True
 
-                LauncherVersion = True
-            Else
+        Else
+            Try
+                Dim URL As String = "http://files.enjin.com/256377/CamelLauncher/version.http"
+                Dim result As String = client.DownloadString(URL)
+                'Debug.Print("DEBUG CHECK STRING DOWNLOAD: {0}", result)
+                If (LCase(Label4.Text) = result) Then 'lower case it all incase I am drunk and do VeRsIoN 9001
+
+                    LauncherVersion = True
+                Else
+
+                    LauncherVersion = False
+                End If
+
+            Catch ex As Exception
 
                 LauncherVersion = False
-            End If
 
-        Catch ex As Exception
-
-            LauncherVersion = False
-
-        End Try
-
-
-
+            End Try
+        End If
 
 
     End Sub
 
 
-
+    Private Function InternetConnection() As Boolean
+        Dim req As System.Net.WebRequest = System.Net.WebRequest.Create("http://files.enjin.com/256377/CamelLauncher/version.http")
+        Dim resp As System.Net.WebResponse
+        Try
+            resp = req.GetResponse()
+            resp.Close()
+            req = Nothing
+            Return True
+        Catch ex As Exception
+            req = Nothing
+            Return False
+        End Try
+    End Function
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -343,23 +359,14 @@ Public Class Form1
 
     End Sub
 
+    Private Sub BackgroundWorker2_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker2.DoWork
 
-
-    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-
-        '       System.Threading.Thread.Sleep(10)
-        x()
-        y()
-        z()
+         InternetConnection()
         lv()
 
     End Sub
-
-    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+    Private Sub BackgroundWorker2_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
         Try
-            a.Visible = False
-            b.Visible = False
-            c.Visible = False
             lvLBL.Visible = False
 
         Catch ex As Exception
@@ -376,6 +383,33 @@ Public Class Form1
             LinkLabel1.Visible = True
 
         End If
+
+
+    End Sub
+
+
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+
+        '       System.Threading.Thread.Sleep(10)
+        x()
+        y()
+        z()
+        '    InternetConnection()
+        '   lv()
+
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+
+
+        Try
+            a.Visible = False
+            b.Visible = False
+            c.Visible = False
+
+        Catch ex As Exception
+
+        End Try
 
         If server = True Then
             ToolStripStatusLabel1.Visible = True
