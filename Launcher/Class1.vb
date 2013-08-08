@@ -13,7 +13,7 @@ Module Module1
     'for Matix/Nodus client
     '-Djava.library.path=[]versions\Matix\Matix_TagCraftMC -cp []libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;[]libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;[]libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;[]libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;[]libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;[]libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;[]libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;[]libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;[]libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;[]libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;[]libraries\com\google\guava\guava\14.0\guava-14.0.jar;[]libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;[]libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;[]libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;[]libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;[]libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;[]versions\Matix\Matix.jar net.minecraft.client.main.Main --username ~ --session -0 --version Matix --gameDir| --assetsDir []assets
     'for liteloader
-    '-Djava.library.path=[]versions\LiteLoader1.6.2\LiteLoader1.6.2_TagcraftMC -cp []libraries\com\mumfrey\liteloader\1.6.2\liteloader-1.6.2.jar;[]libraries\net\minecraft\launchwrapper\1.3\launchwrapper-1.3.jar;[]libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar;[]libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;[]libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;[]libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;[]libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;[]libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;[]libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;[]libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;[]libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;[]libraries\com\google\guava\guava\14.0\guava-14.0.jar;[]libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;[]libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;[]libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;[]libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;[]libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;[]libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;[]libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;[]versions\LiteLoader1.6.2\LiteLoader1.6.2.jar net.minecraft.launchwrapper.Launch --username ~ --session token:0 --gameDir | --assetsDir * --tweakClass com.mumfrey.liteloader.launch.LiteLoaderTweaker
+    '-Djava.library.path=[]versions\LiteLoader1.6.2\LiteLoader1.6.2_TagCraftMC -cp []libraries\com\mumfrey\liteloader\1.6.2\liteloader-1.6.2.jar;[]libraries\net\minecraft\launchwrapper\1.3\launchwrapper-1.3.jar;[]libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar;[]libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;[]libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;[]libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;[]libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;[]libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;[]libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;[]libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;[]libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;[]libraries\com\google\guava\guava\14.0\guava-14.0.jar;[]libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;[]libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;[]libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;[]libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;[]libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;[]libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;[]libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar;[]versions\LiteLoader1.6.2\LiteLoader1.6.2.jar net.minecraft.launchwrapper.Launch --username ~ --session token:0 --gameDir | --assetsDir []assets --tweakClass com.mumfrey.liteloader.launch.LiteLoaderTweaker
     Sub Main()
         '  a()
         Console.ReadLine()
@@ -25,8 +25,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         '  Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
         Dim retValue As Boolean
@@ -48,8 +47,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -74,8 +72,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -97,8 +94,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         'info.FileName = "javaw"
@@ -124,8 +120,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -146,8 +141,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
@@ -171,8 +165,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -192,8 +185,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         'info.FileName = "javaw"
@@ -220,8 +212,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -239,8 +230,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         'info.FileName = "javaw"
@@ -263,8 +253,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -285,8 +274,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         'info.FileName = "javaw"
@@ -311,8 +299,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -330,8 +317,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
@@ -355,8 +341,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -375,8 +360,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         '         info.FileName = "javaw"
@@ -400,8 +384,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
 
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -423,8 +406,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         '                info.FileName = "javaw"
@@ -449,8 +431,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -470,8 +451,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe"
@@ -496,8 +476,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -516,8 +495,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         '                info.FileName = "javaw"
@@ -541,8 +519,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -562,8 +539,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         '         info.FileName = "javaw"
@@ -586,8 +562,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -606,8 +581,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         '                info.FileName = "javaw"
@@ -631,8 +605,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -653,8 +626,7 @@ Module Module1
         Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-        Form1.version = Form1.version.Replace("*", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assests" + q)
-
+       
         Dim process As New Process
         Dim info As New ProcessStartInfo
         info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe"
