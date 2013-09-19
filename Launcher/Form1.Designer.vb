@@ -29,7 +29,6 @@ Partial Class Form1
         Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -45,43 +44,52 @@ Partial Class Form1
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.c = New System.Windows.Forms.ToolStripStatusLabel()
         Me.HelpBTN = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.LauncherToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.lvLBL = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.Launcher.My.Resources.Resources.Launch
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(12, 186)
+        Me.Button1.Location = New System.Drawing.Point(295, 342)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(153, 67)
+        Me.Button1.Size = New System.Drawing.Size(196, 40)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "LAUNCH"
-        Me.LauncherToolTip.SetToolTip(Me.Button1, "Launch Minecraft")
         Me.Button1.UseVisualStyleBackColor = False
         '
         'TextBox1
         '
+        Me.TextBox1.BackColor = System.Drawing.Color.Black
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Symbol", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.TextBox1.Location = New System.Drawing.Point(263, 115)
+        Me.TextBox1.Font = New System.Drawing.Font("Minecraft", 12.0!)
+        Me.TextBox1.ForeColor = System.Drawing.Color.White
+        Me.TextBox1.Location = New System.Drawing.Point(305, 174)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(269, 39)
+        Me.TextBox1.Size = New System.Drawing.Size(176, 20)
         Me.TextBox1.TabIndex = 1
-        Me.LauncherToolTip.SetToolTip(Me.TextBox1, "Enter your username or character name")
+        Me.TextBox1.Text = "Chalkie"
         '
         'ContextMenuStrip1
         '
@@ -109,43 +117,28 @@ Partial Class Form1
         Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(77, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Symbol", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label1.Location = New System.Drawing.Point(87, 109)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(170, 45)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Username:"
-        '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.BackgroundImage = Global.Launcher.My.Resources.Resources.Options
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(171, 186)
+        Me.Button2.Location = New System.Drawing.Point(29, 225)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(153, 67)
+        Me.Button2.Size = New System.Drawing.Size(196, 40)
         Me.Button2.TabIndex = 2
-        Me.Button2.Text = "OPTIONS"
-        Me.LauncherToolTip.SetToolTip(Me.Button2, "Open the Option settings")
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button3.BackColor = System.Drawing.Color.Transparent
+        Me.Button3.BackgroundImage = Global.Launcher.My.Resources.Resources._Exit
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(489, 186)
+        Me.Button3.Location = New System.Drawing.Point(29, 342)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(153, 67)
+        Me.Button3.Size = New System.Drawing.Size(196, 40)
         Me.Button3.TabIndex = 4
-        Me.Button3.Text = "EXIT"
-        Me.LauncherToolTip.SetToolTip(Me.Button3, "Exit the launcher")
         Me.Button3.UseVisualStyleBackColor = False
         '
         'StatusStrip1
@@ -153,9 +146,9 @@ Partial Class Form1
         Me.StatusStrip1.BackColor = System.Drawing.Color.Transparent
         Me.StatusStrip1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel8, Me.ToolStripStatusLabel7, Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel3, Me.a, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel4, Me.b, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel6, Me.c})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 267)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 536)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(655, 26)
+        Me.StatusStrip1.Size = New System.Drawing.Size(784, 26)
         Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 6
         Me.StatusStrip1.Text = "StatusStrip1"
@@ -184,7 +177,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel1.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(85, 21)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(86, 21)
         Me.ToolStripStatusLabel1.Text = "Factions"
         Me.ToolStripStatusLabel1.ToolTipText = "Factions is online: play.tagcraftmc.com"
         Me.ToolStripStatusLabel1.Visible = False
@@ -195,7 +188,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel3.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel3.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(85, 21)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(86, 21)
         Me.ToolStripStatusLabel3.Text = "Factions"
         Me.ToolStripStatusLabel3.ToolTipText = "Factions is offline: play.tagcraftmc.com"
         Me.ToolStripStatusLabel3.Visible = False
@@ -206,7 +199,7 @@ Partial Class Form1
         Me.a.ForeColor = System.Drawing.Color.DodgerBlue
         Me.a.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.a.Name = "a"
-        Me.a.Size = New System.Drawing.Size(85, 21)
+        Me.a.Size = New System.Drawing.Size(86, 21)
         Me.a.Text = "Factions"
         Me.a.ToolTipText = "Factions is querying: play.tagcraftmc.com"
         '
@@ -245,7 +238,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel5.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel5.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(108, 21)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(110, 21)
         Me.ToolStripStatusLabel5.Text = "TeamSpeak"
         Me.ToolStripStatusLabel5.Visible = False
         '
@@ -255,7 +248,7 @@ Partial Class Form1
         Me.ToolStripStatusLabel6.ForeColor = System.Drawing.Color.DodgerBlue
         Me.ToolStripStatusLabel6.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(108, 21)
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(110, 21)
         Me.ToolStripStatusLabel6.Text = "TeamSpeak"
         Me.ToolStripStatusLabel6.Visible = False
         '
@@ -265,33 +258,20 @@ Partial Class Form1
         Me.c.ForeColor = System.Drawing.Color.DodgerBlue
         Me.c.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.c.Name = "c"
-        Me.c.Size = New System.Drawing.Size(108, 21)
+        Me.c.Size = New System.Drawing.Size(110, 21)
         Me.c.Text = "TeamSpeak"
         '
         'HelpBTN
         '
-        Me.HelpBTN.BackColor = System.Drawing.Color.DodgerBlue
+        Me.HelpBTN.BackColor = System.Drawing.Color.Transparent
+        Me.HelpBTN.BackgroundImage = Global.Launcher.My.Resources.Resources.HelpandInfo
+        Me.HelpBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.HelpBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HelpBTN.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HelpBTN.ForeColor = System.Drawing.Color.White
-        Me.HelpBTN.Location = New System.Drawing.Point(330, 186)
+        Me.HelpBTN.Location = New System.Drawing.Point(29, 284)
         Me.HelpBTN.Name = "HelpBTN"
-        Me.HelpBTN.Size = New System.Drawing.Size(153, 67)
+        Me.HelpBTN.Size = New System.Drawing.Size(196, 40)
         Me.HelpBTN.TabIndex = 3
-        Me.HelpBTN.Text = "HELP"
-        Me.LauncherToolTip.SetToolTip(Me.HelpBTN, "Opens help for Minecraft and the Launcher")
         Me.HelpBTN.UseVisualStyleBackColor = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Symbol", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label2.Location = New System.Drawing.Point(3, 6)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(650, 86)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "TagCraftMC Launcher"
         '
         'BackgroundWorker1
         '
@@ -332,18 +312,19 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label4.Location = New System.Drawing.Point(586, 279)
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(317, 484)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 13)
+        Me.Label4.Size = New System.Drawing.Size(107, 17)
         Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Version 1.10"
+        Me.Label4.Text = "Version 1.20"
         '
         'WebBrowser1
         '
         Me.WebBrowser1.IsWebBrowserContextMenuEnabled = False
-        Me.WebBrowser1.Location = New System.Drawing.Point(633, 2)
+        Me.WebBrowser1.Location = New System.Drawing.Point(762, 2)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.ScriptErrorsSuppressed = True
@@ -354,39 +335,139 @@ Partial Class Form1
         Me.WebBrowser1.Visible = False
         Me.WebBrowser1.WebBrowserShortcutsEnabled = False
         '
+        'BackgroundWorker2
+        '
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.Transparent
+        Me.Button4.BackgroundImage = Global.Launcher.My.Resources.Resources.Visit
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Location = New System.Drawing.Point(29, 165)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(196, 40)
+        Me.Button4.TabIndex = 14
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Launcher.My.Resources.Resources.TextBG2
+        Me.PictureBox1.Location = New System.Drawing.Point(295, 165)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(196, 40)
+        Me.PictureBox1.TabIndex = 15
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Launcher.My.Resources.Resources.TextBG2
+        Me.PictureBox2.Location = New System.Drawing.Point(295, 225)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(196, 40)
+        Me.PictureBox2.TabIndex = 16
+        Me.PictureBox2.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(294, 147)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(199, 17)
+        Me.Label1.TabIndex = 17
+        Me.Label1.Text = "Minecraft Account Name"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(317, 207)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(152, 17)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "Minecraft Version"
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Symbol", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label3.Location = New System.Drawing.Point(111, 254)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(192, 501)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(421, 13)
-        Me.Label3.TabIndex = 12
-        Me.Label3.Text = "Website: www.tagcraftmc.com Server: play.tagcraftmc.com TS3: ts.tagcraftmc.com"
+        Me.Label3.Size = New System.Drawing.Size(365, 17)
+        Me.Label3.TabIndex = 19
+        Me.Label3.Text = "Minecraft © 2013 Mojang. All rights reserved"
         '
-        'BackgroundWorker2
+        'CheckBox1
         '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBox1.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.CheckBox1.ForeColor = System.Drawing.Color.White
+        Me.CheckBox1.Location = New System.Drawing.Point(307, 268)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(177, 21)
+        Me.CheckBox1.TabIndex = 20
+        Me.CheckBox1.Text = "Remember Account"
+        Me.CheckBox1.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(598, 147)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(105, 17)
+        Me.Label5.TabIndex = 21
+        Me.Label5.Text = "Latest News"
+        '
+        'Label6
+        '
+        Me.Label6.Font = New System.Drawing.Font("Minecraft", 8.25!)
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Image = Global.Launcher.My.Resources.Resources.News
+        Me.Label6.Location = New System.Drawing.Point(557, 165)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(196, 217)
+        Me.Label6.TabIndex = 22
+        Me.Label6.Text = "-------------------" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "The Gateway system is " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "online and accepting players." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Pleas" & _
+    "e use the normal hostname play.tagcraftmc.com" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "to connect." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "-------------------" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 1.6.2 has been released." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(655, 293)
-        Me.Controls.Add(Me.LinkLabel1)
+        Me.BackgroundImage = Global.Launcher.My.Resources.Resources.ChalkieFinal_zps9ed55b9c
+        Me.ClientSize = New System.Drawing.Size(784, 562)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lvLBL)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.HelpBTN)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "Form1"
@@ -394,13 +475,14 @@ Partial Class Form1
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
@@ -411,7 +493,6 @@ Partial Class Form1
     Friend WithEvents ToolStripStatusLabel5 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel6 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents HelpBTN As System.Windows.Forms.Button
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents ToolStripStatusLabel7 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents CutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -426,8 +507,16 @@ Partial Class Form1
     Friend WithEvents lvLBL As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 
 End Class

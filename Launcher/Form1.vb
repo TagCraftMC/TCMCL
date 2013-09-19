@@ -455,5 +455,54 @@ Public Class Form1
         System.Diagnostics.Process.Start("http://www.tagcraftmc.com/launcherupdate")
     End Sub
 
+    Private Sub Button4_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.MouseEnter
 
+        Button4.BackgroundImage = My.Resources.VisitHover
+
+    End Sub
+    Private Sub Button4_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.MouseLeave
+
+        Button4.BackgroundImage = My.Resources.Visit
+
+    End Sub
+    Private Sub Button2_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.MouseEnter
+
+        Button2.BackgroundImage = My.Resources.OptionsHover
+
+    End Sub
+    Private Sub Button2_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.MouseLeave
+
+        Button2.BackgroundImage = My.Resources.Options
+
+    End Sub
+    Private Sub HelpBTN_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HelpBTN.MouseEnter
+
+        HelpBTN.BackgroundImage = My.Resources.HelpandInfoHover
+
+    End Sub
+    Private Sub HelpBTN_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HelpBTN.MouseLeave
+
+        HelpBTN.BackgroundImage = My.Resources.HelpandInfo
+
+    End Sub
+    Private Sub Button3_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.MouseEnter
+
+        Button3.BackgroundImage = My.Resources.ExitHover
+
+    End Sub
+    Private Sub Button3_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.MouseLeave
+
+        Button3.BackgroundImage = My.Resources._Exit
+
+    End Sub
+    Private Sub Button1_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.MouseEnter
+
+        Button1.BackgroundImage = My.Resources.LaunchHover
+
+    End Sub
+    Private Sub Button1_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.MouseLeave
+
+        Button1.BackgroundImage = My.Resources.Launch
+
+    End Sub
 End Class

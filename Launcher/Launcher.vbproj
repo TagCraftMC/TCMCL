@@ -152,6 +152,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\VisitHover.png" />
+    <None Include="Resources\Visit.png" />
+    <None Include="Resources\OptionsHover.png" />
+    <None Include="Resources\Options.png" />
+    <None Include="Resources\News.png" />
+    <None Include="Resources\Logo.png" />
+    <None Include="Resources\LaunchHover.png" />
+    <None Include="Resources\Launch.png" />
+    <None Include="Resources\HelpandInfoHover.png" />
+    <None Include="Resources\HelpandInfo.png" />
+    <None Include="Resources\ExitHover.png" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\TextBG2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
