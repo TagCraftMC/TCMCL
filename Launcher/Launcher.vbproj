@@ -96,6 +96,7 @@
     <Compile Include="HelpBrowser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MinecraftFont.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -142,6 +143,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\minecraft_font.ttf" />
     <None Include="Resources\offline.png" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\Exit_.png" />
     <None Include="Resources\VisitHover.png" />
     <None Include="Resources\Visit.png" />
     <None Include="Resources\OptionsHover.png" />

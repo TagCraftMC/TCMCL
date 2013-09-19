@@ -5,6 +5,8 @@ Imports System.Net
 Imports System.Runtime.InteropServices
 Imports System.Security.Permissions
 Imports System.Reflection
+Imports System.Drawing.Text
+
 
 Public Class Form1
 
@@ -143,6 +145,13 @@ Public Class Form1
     'End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Try
+            Label1.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+        Catch ex As Exception
+            MessageBox.Show("Warning, Could not load the font minecraft_font.ttf", "Unable to load the font file", _
+            MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
+        End Try
         accessOP = "0"
 
         BackgroundWorker1.RunWorkerAsync()
@@ -492,7 +501,7 @@ Public Class Form1
     End Sub
     Private Sub Button3_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.MouseLeave
 
-        Button3.BackgroundImage = My.Resources._Exit
+        Button3.BackgroundImage = My.Resources.Exit_
 
     End Sub
     Private Sub Button1_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.MouseEnter
@@ -504,5 +513,9 @@ Public Class Form1
 
         Button1.BackgroundImage = My.Resources.Launch
 
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        System.Diagnostics.Process.Start("http://www.tagcraftmc.com")
     End Sub
 End Class

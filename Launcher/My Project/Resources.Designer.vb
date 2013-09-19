@@ -63,9 +63,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property _Exit() As System.Drawing.Bitmap
+        Friend ReadOnly Property ChalkieFinal_zps9ed55b9c() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Exit", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ChalkieFinal_zps9ed55b9c", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -73,9 +73,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property ChalkieFinal_zps9ed55b9c() As System.Drawing.Bitmap
+        Friend ReadOnly Property Exit_() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("ChalkieFinal_zps9ed55b9c", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Exit_", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -137,6 +137,16 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("Logo", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property minecraft_font() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("minecraft_font", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
         
