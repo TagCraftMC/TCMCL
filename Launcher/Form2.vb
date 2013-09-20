@@ -202,5 +202,24 @@ Public Class Form2
 
         End If
     End Sub
+    Private Sub Button5_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.MouseEnter
 
+        Button5.BackgroundImage = My.Resources.ExitHover
+
+    End Sub
+    Private Sub Button5_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.MouseLeave
+
+        Button5.BackgroundImage = My.Resources.Exit_
+
+    End Sub
+    Private Sub Button1_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.MouseEnter
+
+        Button1.BackgroundImage = My.Resources.SaveOptionsHover
+
+    End Sub
+    Private Sub Button1_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.MouseLeave
+
+        Button1.BackgroundImage = My.Resources.SaveOptions
+
+    End Sub
 End Class

@@ -68,16 +68,15 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.Launcher.My.Resources.Resources.SaveOptions
+        Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(12, 379)
+        Me.Button1.ForeColor = System.Drawing.Color.Transparent
+        Me.Button1.Location = New System.Drawing.Point(6, 415)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(153, 67)
+        Me.Button1.Size = New System.Drawing.Size(196, 40)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "SAVE"
-        Me.OptionsToolTip.SetToolTip(Me.Button1, "Save your settings and exit")
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Label2
@@ -163,16 +162,15 @@ Partial Class Form2
         '
         'Button5
         '
-        Me.Button5.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button5.BackColor = System.Drawing.Color.Transparent
+        Me.Button5.BackgroundImage = Global.Launcher.My.Resources.Resources.Exit_
+        Me.Button5.FlatAppearance.BorderSize = 0
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Segoe UI Symbol", 15.75!)
-        Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(187, 379)
+        Me.Button5.ForeColor = System.Drawing.Color.Transparent
+        Me.Button5.Location = New System.Drawing.Point(212, 415)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(153, 67)
+        Me.Button5.Size = New System.Drawing.Size(196, 40)
         Me.Button5.TabIndex = 10
-        Me.Button5.Text = "EXIT"
-        Me.OptionsToolTip.SetToolTip(Me.Button5, "Exit without saving settings")
         Me.Button5.UseVisualStyleBackColor = False
         '
         'OptionsToolTip
@@ -195,12 +193,13 @@ Partial Class Form2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(355, 456)
+        Me.BackgroundImage = Global.Launcher.My.Resources.Resources.OptionsArea
+        Me.ClientSize = New System.Drawing.Size(414, 466)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.Name = "Form2"

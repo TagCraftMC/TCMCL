@@ -154,6 +154,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\SaveOptionsHover.png" />
+    <None Include="Resources\SaveOptions.png" />
+    <None Include="Resources\OptionsArea.png" />
     <None Include="Resources\Exit_.png" />
     <None Include="Resources\VisitHover.png" />
     <None Include="Resources\Visit.png" />
