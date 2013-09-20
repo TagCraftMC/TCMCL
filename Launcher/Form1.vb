@@ -63,6 +63,16 @@ Public Class Form1
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Try
+            Dim objReaderz As StreamWriter
+            objReaderz = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
+            objReaderz.Write(ComboBox1.Text)
+            objReaderz.Close()
+        Catch ex As Exception
+            MessageBox.Show("Please report this error this to www.tagcraftmc.com", "Error: Unable to save Version")
+        End Try
+
         Dim q As String
         q = Chr(34)
         Dim objReader As StreamWriter
@@ -154,6 +164,21 @@ Public Class Form1
     'End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions")
+        For Each fi In finfo.GetFiles
+
+            ComboBox1.Items.Add(Path.GetFileNameWithoutExtension(fi.Name))
+
+        Next
+        Try
+            oReady = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
+            ComboBox1.Text = oReady.ReadLine
+            oReady.Close()
+        Catch ex As Exception
+
+        End Try
+
         Try
             Label1.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
             Label2.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
@@ -558,5 +583,9 @@ Public Class Form1
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         System.Diagnostics.Process.Start("http://www.tagcraftmc.com")
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
     End Sub
 End Class
