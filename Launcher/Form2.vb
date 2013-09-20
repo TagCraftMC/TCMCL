@@ -96,20 +96,11 @@ Public Class Form2
         objReaderx.Close()
 
 
-        Dim objReaderz As StreamWriter
-
-
-        objReaderz = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
-        objReaderz.Write(ComboBox3.Text)
-        objReaderz.Close()
-
-
 
         Me.Hide()
         '    ComboBox1.Enabled = False
         x = ComboBox1.Text
         y = ComboBox2.Text
-        z = ComboBox3.Text
 
 
         If CheckBox1.Checked = True Then
@@ -125,18 +116,6 @@ Public Class Form2
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
-        'Dim lines() As String = IO.File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionlist.txt")
-        'For Each line As String In lines
-        ' ComboBox3.Items.Add(line)
-        ' Next
-
-        Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions")
-        For Each fi In finfo.GetFiles
-            '            ComboBox3.Items.Add(fi.Name)
-            ComboBox3.Items.Add(Path.GetFileNameWithoutExtension(fi.Name))
-
-        Next
-        
         If Environment.Is64BitOperatingSystem = True Then
             'nothing
         ElseIf Environment.Is64BitOperatingSystem = False Then
@@ -146,9 +125,6 @@ Public Class Form2
 
         ComboBox1.Text = "Disabled"
         ComboBox2.Text = "512M"
-        ' ComboBox3.Text = "1.6.2"
-
-        '     ComboBox3.Text = "1.6"
 
         Try
             oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/tagoptions.txt")
@@ -164,13 +140,6 @@ Public Class Form2
             oReadx.Close()
 
 
-            oReady = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
-            ComboBox3.Text = oReady.ReadLine
-
-
-            oReady.Close()
-
-
         Catch ex As Exception
 
         End Try
@@ -178,8 +147,6 @@ Public Class Form2
         x = ComboBox1.Text
 
         y = ComboBox2.Text
-
-        z = ComboBox3.Text
 
 
         'MsgBox(computer_info.AvailablePhysicalMemory)
@@ -191,7 +158,6 @@ Public Class Form2
             e.Cancel = True
             ComboBox1.Text = x
             ComboBox2.Text = y
-            ComboBox3.Text = z
 
             If check = True Then
                 CheckBox1.Checked = True
@@ -205,7 +171,6 @@ Public Class Form2
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         ComboBox1.Text = x
         ComboBox2.Text = y
-        ComboBox3.Text = z
         If check = True Then
             CheckBox1.Checked = True
         ElseIf check = False Then

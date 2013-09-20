@@ -32,8 +32,6 @@ Partial Class Form2
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.OptionsToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label5 = New System.Windows.Forms.Label()
@@ -151,8 +149,6 @@ Partial Class Form2
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.ComboBox3)
         Me.GroupBox2.Controls.Add(Me.CheckBox1)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.ComboBox2)
@@ -164,32 +160,6 @@ Partial Class Form2
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Advance Options"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Symbol", 18.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label3.Location = New System.Drawing.Point(10, 101)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(100, 32)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Version:"
-        Me.OptionsToolTip.SetToolTip(Me.Label3, "Select the Minecraft version you want to play")
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.AllowDrop = True
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox3.Font = New System.Drawing.Font("Segoe UI Symbol", 18.0!)
-        Me.ComboBox3.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(145, 98)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(166, 40)
-        Me.ComboBox3.TabIndex = 6
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox3, "Select the Minecraft version you want to play")
         '
         'Button5
         '
@@ -254,7 +224,5 @@ Partial Class Form2
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents OptionsToolTip As System.Windows.Forms.ToolTip
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

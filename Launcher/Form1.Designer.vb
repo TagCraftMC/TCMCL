@@ -91,6 +91,7 @@ Partial Class Form1
         Me.TextBox1.Font = New System.Drawing.Font("Minecraft", 12.0!)
         Me.TextBox1.ForeColor = System.Drawing.Color.White
         Me.TextBox1.Location = New System.Drawing.Point(304, 259)
+        Me.TextBox1.MaxLength = 16
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(176, 20)
         Me.TextBox1.TabIndex = 1
