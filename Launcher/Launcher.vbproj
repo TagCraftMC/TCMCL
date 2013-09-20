@@ -77,6 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
+    <Compile Include="Credit.Designer.vb">
+      <DependentUpon>Credit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Credit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Credit.resx">
+      <DependentUpon>Credit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -153,7 +162,10 @@
     <None Include="Resources\unknown.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.ico" />
+    <None Include="Resources\CreditsHover.png" />
+    <None Include="Resources\Credits.png" />
+    <None Include="Resources\ModsHover.png" />
+    <None Include="Resources\Mods.png" />
     <None Include="Resources\SaveOptionsHover.png" />
     <None Include="Resources\SaveOptions.png" />
     <None Include="Resources\OptionsArea.png" />
@@ -171,6 +183,9 @@
     <None Include="Resources\ExitHover.png" />
     <None Include="Resources\Exit.png" />
     <None Include="Resources\TextBG2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thanks.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

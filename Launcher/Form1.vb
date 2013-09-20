@@ -145,6 +145,12 @@ Public Class Form1
         mainx()
 
     End Sub
+    Function centerForm(ByVal Form_to_Center As Form) As Point
+        Dim pLocation As New Point
+        pLocation.X = (Me.Left + (Me.Width - Form_to_Center.Width) / 2) '// set the X coordinates.
+        pLocation.Y = (Me.Top + (Me.Height - Form_to_Center.Height) / 2) '// set the Y coordinates.
+        Return pLocation '// return the Location to the Form it was called from.
+    End Function
 
     Private Sub TextBox1_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyUp
         If e.KeyCode = Keys.Enter Then
@@ -164,6 +170,7 @@ Public Class Form1
     'End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+
 
         Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions")
         For Each fi In finfo.GetFiles
@@ -587,5 +594,11 @@ Public Class Form1
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        If TextBox1.Text = "HelloChalkie" Or TextBox1.Text = "HelloAmmar" Then
+            MessageBox.Show("Hello " + Environment.UserName + " how is it going? Congrats on finding an Easter Egg/Secret." + Environment.NewLine + "We hope you're enjoying Minecraft and have a great day." + Environment.NewLine + "- TagCraftMC", "Hi Five, you found an Easter Egg/Secret", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 End Class

@@ -110,6 +110,14 @@ Public Class Form2
         End If
 
     End Sub
+
+    Function centerForm(ByVal Form_to_Center As Form) As Point
+        Dim pLocation As New Point
+        pLocation.X = (Me.Left + (Me.Width - Form_to_Center.Width) / 2) '// set the X coordinates.
+        pLocation.Y = (Me.Top + (Me.Height - Form_to_Center.Height) / 2) '// set the Y coordinates.
+        Return pLocation '// return the Location to the Form it was called from.
+    End Function
+
     Private Sub Launch_Draw(sender As Object, e As System.Windows.Forms.DrawToolTipEventArgs) Handles OptionsToolTip.Draw
         e.DrawBackground()
         e.DrawText()
@@ -150,6 +158,7 @@ Public Class Form2
 
 
         'MsgBox(computer_info.AvailablePhysicalMemory)
+        Me.Location = Form1.centerForm(Me) '// center Form of Main Form.
 
     End Sub
 
@@ -222,4 +231,33 @@ Public Class Form2
         Button1.BackgroundImage = My.Resources.SaveOptions
 
     End Sub
+    Private Sub Button2_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.MouseEnter
+
+        Button2.BackgroundImage = My.Resources.ModsHover
+
+    End Sub
+    Private Sub Button2_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.MouseLeave
+
+        Button2.BackgroundImage = My.Resources.Mods
+
+    End Sub
+    Private Sub Button3_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.MouseEnter
+
+        Button3.BackgroundImage = My.Resources.CreditsHover
+
+    End Sub
+    Private Sub Button3_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.MouseLeave
+
+        Button3.BackgroundImage = My.Resources.Credits
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        System.Diagnostics.Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Help/")
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Credit.Show()
+    End Sub
+
 End Class
