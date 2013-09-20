@@ -48,6 +48,10 @@ Public Class Form1
     Dim oWritex As System.IO.StreamWriter
     Dim oReadx As System.IO.StreamReader
 
+    Dim oFilec As System.IO.File
+    Dim oWritec As System.IO.StreamWriter
+    Dim oReadc As System.IO.StreamReader
+
     Dim oFiley As System.IO.File
     Dim oWritey As System.IO.StreamWriter
     Dim oReady As System.IO.StreamReader
@@ -58,21 +62,26 @@ Public Class Form1
 
 
 
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim q As String
         q = Chr(34)
-
-
+        Dim objReader As StreamWriter
         Try
-            Dim objReader As StreamWriter
-
-
+            If CheckBox1.Checked = True Then
+                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/rememberme.txt")
+                objReader.Write("True")
+                objReader.Close()
+            Else
+                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/rememberme.txt")
+                objReader.Write("False")
+                objReader.Close()
+            End If
             objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/taguser.txt")
             objReader.Write(TextBox1.Text)
             objReader.Close()
 
         Catch ex As Exception
+            MessageBox.Show("")
 
         End Try
 
@@ -147,6 +156,24 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
             Label1.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            Label2.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            Label3.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            Label4.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            Label5.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            Label6.Font = MinecraftFont.GetInstance(8.25, FontStyle.Regular)
+            CheckBox1.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            TextBox1.Font = MinecraftFont.GetInstance(12, FontStyle.Regular)
+            ToolStripStatusLabel1.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            ToolStripStatusLabel2.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            ToolStripStatusLabel3.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            ToolStripStatusLabel4.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            ToolStripStatusLabel5.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            ToolStripStatusLabel6.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            ToolStripStatusLabel7.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            ToolStripStatusLabel8.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            lvLBL.Font = MinecraftFont.GetInstance(6.75, FontStyle.Regular)
+            StatusStrip1.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
+            LinkLabel1.Font = MinecraftFont.GetInstance(6.75, FontStyle.Regular)
         Catch ex As Exception
             MessageBox.Show("Warning, Could not load the font minecraft_font.ttf", "Unable to load the font file", _
             MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
@@ -186,6 +213,7 @@ Public Class Form1
 
         End Try
 
+
         If nomx = "" Then
             WebBrowser1.Navigate(New Uri("http://www.tagcraftmc.com/launcherhits"))
         ElseIf nomx = "open" Then
@@ -208,22 +236,35 @@ Public Class Form1
         End Try
 
         Try
-            oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/taguser.txt")
-            TextBox1.Text = oRead.ReadLine
+            'Super dodgy work around since I could not work out how to convert the string to boolen correctly for the checkbox
+            oReadc = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/rememberme.txt")
+            TextBox2.Text = Convert.ToBoolean(oReadc.ReadLine)
+            oReadc.Close()
+            If TextBox2.Text = "True" Then
+                CheckBox1.Checked = True
+            End If
+
+            If CheckBox1.Checked = True Then
+
+                oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/taguser.txt")
+                TextBox1.Text = oRead.ReadLine
 
 
-            oRead.Close()
+                oRead.Close()
 
 
-            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
-            mem = oReadx.ReadLine
+                oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
+                mem = oReadx.ReadLine
 
 
-            oReadx.Close()
+                oReadx.Close()
+
+            End If
+
 
 
         Catch ex As Exception
-
+            MessageBox.Show("nope")
         End Try
 
         If TextBox1.Text = "" Then
@@ -252,7 +293,7 @@ Public Class Form1
         Dim tcpClient As TcpClient = New TcpClient()
         Try
             '     tcpClient.Connect("192.95.29.101", 25565)
-            tcpClient.Connect("factions.tagcraftmc.com", 25565)
+            tcpClient.Connect("play.tagcraftmc.com", 25565)
 
             'main   
             '            ToolStripStatusLabel1.Visible = True
@@ -270,7 +311,7 @@ Public Class Form1
         Dim tcpClient As TcpClient = New TcpClient()
         Try
             ' tcpClient.Connect("192.95.29.101", 25566)
-            tcpClient.Connect("hungergames.tagcraftmc.com", 25566)
+            tcpClient.Connect("play.tagcraftmc.com", 25565)
 
             'HG
             ' ToolStripStatusLabel2.Visible = True
