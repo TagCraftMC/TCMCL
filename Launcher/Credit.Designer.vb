@@ -38,7 +38,7 @@ Partial Class Credit
         Me.Button1.BackgroundImage = Global.Launcher.My.Resources.Resources.Exit_
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(51, 278)
+        Me.Button1.Location = New System.Drawing.Point(112, 414)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(196, 40)
         Me.Button1.TabIndex = 0
@@ -50,7 +50,7 @@ Partial Class Credit
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Minecraft", 18.0!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(3, 15)
+        Me.Label1.Location = New System.Drawing.Point(56, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(298, 30)
         Me.Label1.TabIndex = 1
@@ -62,7 +62,7 @@ Partial Class Credit
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(5, 101)
+        Me.Label2.Location = New System.Drawing.Point(58, 113)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(171, 16)
         Me.Label2.TabIndex = 2
@@ -74,7 +74,7 @@ Partial Class Credit
         Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel1.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.ForeColor = System.Drawing.Color.White
-        Me.LinkLabel1.Location = New System.Drawing.Point(5, 192)
+        Me.LinkLabel1.Location = New System.Drawing.Point(58, 204)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(94, 16)
         Me.LinkLabel1.TabIndex = 3
@@ -87,7 +87,7 @@ Partial Class Credit
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(5, 117)
+        Me.Label3.Location = New System.Drawing.Point(58, 129)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(249, 16)
         Me.Label3.TabIndex = 4
@@ -99,7 +99,7 @@ Partial Class Credit
         Me.LinkLabel2.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel2.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel2.ForeColor = System.Drawing.Color.White
-        Me.LinkLabel2.Location = New System.Drawing.Point(5, 208)
+        Me.LinkLabel2.Location = New System.Drawing.Point(58, 220)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(186, 16)
         Me.LinkLabel2.TabIndex = 5
@@ -112,7 +112,7 @@ Partial Class Credit
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(5, 136)
+        Me.Label4.Location = New System.Drawing.Point(58, 148)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(289, 16)
         Me.Label4.TabIndex = 6
@@ -123,7 +123,7 @@ Partial Class Credit
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(5, 154)
+        Me.Label5.Location = New System.Drawing.Point(58, 166)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(280, 38)
         Me.Label5.TabIndex = 7
@@ -133,9 +133,9 @@ Partial Class Credit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Launcher.My.Resources.Resources.Thanks
+        Me.BackgroundImage = Global.Launcher.My.Resources.Resources.OptionsArea
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(415, 466)
+        Me.ClientSize = New System.Drawing.Size(414, 466)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.LinkLabel2)
@@ -145,7 +145,7 @@ Partial Class Credit
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Credit"
         Me.ShowInTaskbar = False
         Me.Text = "Credit"

@@ -170,8 +170,6 @@ Public Class Form1
     'End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
-
-
         Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions")
         For Each fi In finfo.GetFiles
 
@@ -183,32 +181,6 @@ Public Class Form1
             ComboBox1.Text = oReady.ReadLine
             oReady.Close()
         Catch ex As Exception
-
-        End Try
-
-        Try
-            Label1.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            Label2.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            Label3.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            Label4.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            Label5.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            Label6.Font = MinecraftFont.GetInstance(8.25, FontStyle.Regular)
-            CheckBox1.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            TextBox1.Font = MinecraftFont.GetInstance(12, FontStyle.Regular)
-            ToolStripStatusLabel1.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            ToolStripStatusLabel2.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            ToolStripStatusLabel3.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            ToolStripStatusLabel4.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            ToolStripStatusLabel5.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            ToolStripStatusLabel6.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            ToolStripStatusLabel7.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            ToolStripStatusLabel8.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            lvLBL.Font = MinecraftFont.GetInstance(6.75, FontStyle.Regular)
-            StatusStrip1.Font = MinecraftFont.GetInstance(9.75, FontStyle.Regular)
-            LinkLabel1.Font = MinecraftFont.GetInstance(6.75, FontStyle.Regular)
-        Catch ex As Exception
-            MessageBox.Show("Warning, Could not load the font minecraft_font.ttf", "Unable to load the font file", _
-            MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
 
         End Try
         accessOP = "0"

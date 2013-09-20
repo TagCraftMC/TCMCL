@@ -114,7 +114,7 @@ Public Class Form2
     Function centerForm(ByVal Form_to_Center As Form) As Point
         Dim pLocation As New Point
         pLocation.X = (Me.Left + (Me.Width - Form_to_Center.Width) / 2) '// set the X coordinates.
-        pLocation.Y = (Me.Top + (Me.Height - Form_to_Center.Height) / 2) '// set the Y coordinates.
+        pLocation.Y = (Me.Top + (Me.Height - Form_to_Center.Height) / 1) '// set the Y coordinates.
         Return pLocation '// return the Location to the Form it was called from.
     End Function
 
