@@ -170,6 +170,7 @@ Public Class Form1
     'End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+
         Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions")
         For Each fi In finfo.GetFiles
 
@@ -572,5 +573,14 @@ Public Class Form1
         If TextBox1.Text = "HelloChalkie" Or TextBox1.Text = "HelloAmmar" Then
             MessageBox.Show("Hello " + Environment.UserName + " how is it going? Congrats on finding an Easter Egg/Secret." + Environment.NewLine + "We hope you're enjoying Minecraft and have a great day." + Environment.NewLine + "- TagCraftMC", "Hi Five, you found an Easter Egg/Secret", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim resFont = My.Resources.minecraft_font
+        Dim fontCol As New System.Drawing.Text.PrivateFontCollection
+        fontCol.AddMemoryFont(System.Runtime.InteropServices.Marshal.
+        UnsafeAddrOfPinnedArrayElement(resFont, 0), resFont.Length)
+        Dim fnt = New System.Drawing.Font(fontCol.Families(0), 15)
+        Label1.Font = New System.Drawing.Font(fontCol.Families(0), 15)
     End Sub
 End Class

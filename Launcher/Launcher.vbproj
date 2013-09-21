@@ -102,7 +102,6 @@
     <Compile Include="HelpBrowser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MinecraftFont.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -152,7 +151,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\minecraft_font.ttf" />
+    <EmbeddedResource Include="Resources\minecraft_font.ttf" />
     <None Include="Resources\offline.png" />
   </ItemGroup>
   <ItemGroup>
