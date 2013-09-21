@@ -169,8 +169,26 @@ Public Class Form1
     'Private Sub ToolTip1_Popup(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PopupEventArgs) Handles LauncherToolTip.Popup
     'e.ToolTipSize = New Size(300, 300)
     'End Sub
-
+    Dim pfc As New PrivateFontCollection()
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        'Dim minecraftfont As PrivateFontCollection = New PrivateFontCollection
+        'minecraftfont.AddFontFile("C:\minecraft_font.ttf")
+        'lvLBL.Font = New Font(minecraftfont.Families(0), 6.25)
+        'LinkLabel1.Font = New Font(minecraftfont.Families(0), 6.25)
+        'Label1.Font = New Font(minecraftfont.Families(0), 9.75)
+        'Label2.Font = New Font(minecraftfont.Families(0), 9.75)
+        'CheckBox1.Font = New Font(minecraftfont.Families(0), 9.75)
+        'Label5.Font = New Font(minecraftfont.Families(0), 9.75)
+        'Label6.Font = New Font(minecraftfont.Families(0), 8.25)
+        'Label4.Font = New Font(minecraftfont.Families(0), 9.75)
+        'Label3.Font = New Font(minecraftfont.Families(0), 9.75)
+        'TextBox1.Font = New Font(minecraftfont.Families(0), 12)
+        'ComboBox1.Font = New Font(minecraftfont.Families(0), 8.25)
+
+
+
+
         Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions")
         For Each fi In finfo.GetFiles
 

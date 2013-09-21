@@ -186,6 +186,18 @@
   <ItemGroup>
     <None Include="Resources\Thanks.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccountName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccountName2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinecraftVersion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RememberAccount.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

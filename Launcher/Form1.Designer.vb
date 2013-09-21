@@ -64,6 +64,7 @@ Partial Class Form1
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -378,27 +379,25 @@ Partial Class Form1
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Minecraft", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(293, 232)
+        Me.Label1.Image = Global.Launcher.My.Resources.Resources.AccountName2
+        Me.Label1.Location = New System.Drawing.Point(273, 232)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(199, 17)
+        Me.Label1.Size = New System.Drawing.Size(237, 17)
         Me.Label1.TabIndex = 17
-        Me.Label1.Text = "Minecraft Account Name"
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Minecraft", 9.75!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(316, 292)
+        Me.Label2.Image = Global.Launcher.My.Resources.Resources.MinecraftVersion
+        Me.Label2.Location = New System.Drawing.Point(273, 292)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(152, 17)
+        Me.Label2.Size = New System.Drawing.Size(237, 17)
         Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Minecraft Version"
         '
         'Label3
         '
@@ -418,24 +417,22 @@ Partial Class Form1
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox1.Font = New System.Drawing.Font("Minecraft", 9.75!)
         Me.CheckBox1.ForeColor = System.Drawing.Color.White
-        Me.CheckBox1.Location = New System.Drawing.Point(306, 353)
+        Me.CheckBox1.Location = New System.Drawing.Point(294, 355)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(177, 21)
+        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 20
-        Me.CheckBox1.Text = "Remember Account"
         Me.CheckBox1.UseVisualStyleBackColor = False
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Minecraft", 9.75!)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(597, 232)
+        Me.Label5.Image = Global.Launcher.My.Resources.Resources.LatestNews
+        Me.Label5.Location = New System.Drawing.Point(533, 233)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(105, 17)
+        Me.Label5.Size = New System.Drawing.Size(237, 17)
         Me.Label5.TabIndex = 21
-        Me.Label5.Text = "Latest News"
         '
         'Label6
         '
@@ -477,6 +474,15 @@ Partial Class Form1
         Me.TextBox2.TabIndex = 25
         Me.TextBox2.Visible = False
         '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Image = Global.Launcher.My.Resources.Resources.RememberAccount
+        Me.Label7.Location = New System.Drawing.Point(283, 353)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(237, 17)
+        Me.Label7.TabIndex = 26
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -506,6 +512,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label7)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.Name = "Form1"
@@ -560,5 +567,6 @@ Partial Class Form1
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 
 End Class
