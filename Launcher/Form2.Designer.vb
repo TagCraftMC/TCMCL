@@ -122,7 +122,7 @@ Partial Class Form2
         Me.Label4.Font = New System.Drawing.Font("Minecraft", 9.75!)
         Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Image = Global.Launcher.My.Resources.Resources.Warning
-        Me.Label4.Location = New System.Drawing.Point(6, 147)
+        Me.Label4.Location = New System.Drawing.Point(6, 165)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(402, 57)
         Me.Label4.TabIndex = 2
