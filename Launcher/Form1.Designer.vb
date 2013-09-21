@@ -23,7 +23,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -47,7 +46,6 @@ Partial Class Form1
         Me.HelpBTN = New System.Windows.Forms.Button()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.LauncherToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.lvLBL = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
@@ -60,16 +58,18 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -89,12 +89,12 @@ Partial Class Form1
         Me.TextBox1.BackColor = System.Drawing.Color.Black
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.TextBox1.Font = New System.Drawing.Font("Minecraft", 12.0!)
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
         Me.TextBox1.Location = New System.Drawing.Point(304, 259)
         Me.TextBox1.MaxLength = 16
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(176, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(176, 22)
         Me.TextBox1.TabIndex = 1
         '
         'ContextMenuStrip1
@@ -290,32 +290,16 @@ Partial Class Form1
         Me.LauncherToolTip.ForeColor = System.Drawing.Color.White
         Me.LauncherToolTip.OwnerDraw = True
         '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel1.Font = New System.Drawing.Font("Minecraft", 6.25!)
-        Me.LinkLabel1.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.DodgerBlue
-        Me.LinkLabel1.Location = New System.Drawing.Point(293, 3)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(116, 11)
-        Me.LinkLabel1.TabIndex = 13
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Click here to update"
-        Me.LinkLabel1.Visible = False
-        '
         'lvLBL
         '
-        Me.lvLBL.AutoSize = True
         Me.lvLBL.BackColor = System.Drawing.Color.Transparent
         Me.lvLBL.Font = New System.Drawing.Font("Minecraft", 6.25!)
         Me.lvLBL.ForeColor = System.Drawing.Color.Red
-        Me.lvLBL.Location = New System.Drawing.Point(0, 2)
+        Me.lvLBL.Image = Global.Launcher.My.Resources.Resources.OutOfDate
+        Me.lvLBL.Location = New System.Drawing.Point(37, 2)
         Me.lvLBL.Name = "lvLBL"
-        Me.lvLBL.Size = New System.Drawing.Size(294, 11)
+        Me.lvLBL.Size = New System.Drawing.Size(701, 20)
         Me.lvLBL.TabIndex = 9
-        Me.lvLBL.Text = "Warning: Your version of the launcher is out of date."
         Me.lvLBL.Visible = False
         '
         'Label4
@@ -324,11 +308,12 @@ Partial Class Form1
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Minecraft", 9.75!)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(341, 526)
+        Me.Label4.Location = New System.Drawing.Point(680, 545)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(107, 17)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Version 1.20"
+        Me.Label4.Visible = False
         '
         'WebBrowser1
         '
@@ -401,15 +386,14 @@ Partial Class Form1
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Minecraft", 9.75!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(216, 543)
+        Me.Label3.Image = Global.Launcher.My.Resources.Resources.CopyrightMojang2
+        Me.Label3.Location = New System.Drawing.Point(140, 544)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(365, 17)
+        Me.Label3.Size = New System.Drawing.Size(501, 17)
         Me.Label3.TabIndex = 19
-        Me.Label3.Text = "Minecraft © 2013 Mojang. All rights reserved"
         '
         'CheckBox1
         '
@@ -434,18 +418,6 @@ Partial Class Form1
         Me.Label5.Size = New System.Drawing.Size(237, 17)
         Me.Label5.TabIndex = 21
         '
-        'Label6
-        '
-        Me.Label6.Font = New System.Drawing.Font("Minecraft", 8.25!)
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Image = Global.Launcher.My.Resources.Resources.News
-        Me.Label6.Location = New System.Drawing.Point(556, 250)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(196, 217)
-        Me.Label6.TabIndex = 22
-        Me.Label6.Text = resources.GetString("Label6.Text")
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
@@ -459,7 +431,7 @@ Partial Class Form1
         'ComboBox1
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Minecraft", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(301, 320)
         Me.ComboBox1.Name = "ComboBox1"
@@ -483,6 +455,26 @@ Partial Class Form1
         Me.Label7.Size = New System.Drawing.Size(237, 17)
         Me.Label7.TabIndex = 26
         '
+        'Label8
+        '
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Image = Global.Launcher.My.Resources.Resources.LauncherVersion
+        Me.Label8.Location = New System.Drawing.Point(278, 527)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(237, 17)
+        Me.Label8.TabIndex = 27
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.ErrorImage = Global.Launcher.My.Resources.Resources.UnableToLoadNews
+        Me.PictureBox4.ImageLocation = "http://files.enjin.com/256377/TagCraftMC_Launcher_Files/LauncherNews.png"
+        Me.PictureBox4.InitialImage = Global.Launcher.My.Resources.Resources.LoadingNewsANIV2
+        Me.PictureBox4.Location = New System.Drawing.Point(556, 250)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(196, 217)
+        Me.PictureBox4.TabIndex = 28
+        Me.PictureBox4.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -490,10 +482,10 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.ChalkieFinal_zps9ed55b9c
         Me.ClientSize = New System.Drawing.Size(784, 562)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label3)
@@ -501,18 +493,18 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lvLBL)
         Me.Controls.Add(Me.HelpBTN)
-        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.Name = "Form1"
@@ -523,6 +515,7 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -553,7 +546,6 @@ Partial Class Form1
     Friend WithEvents lvLBL As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
@@ -563,10 +555,11 @@ Partial Class Form1
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
 
 End Class

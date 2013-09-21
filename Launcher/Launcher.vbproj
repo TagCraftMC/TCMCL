@@ -198,6 +198,39 @@
   <ItemGroup>
     <None Include="Resources\RememberAccount.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LatestNews.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LauncherVersion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OurLauncher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyrightMojang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyrightMojang2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OutOfDate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News2.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadingNews.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnableToLoadNews.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadingNewsANI.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadingNewsANIV2.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
