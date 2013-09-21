@@ -371,7 +371,7 @@ Public Class Form1
 
         Else
             Try
-                Dim URL As String = "http://files.enjin.com/256377/CamelLauncher/version.http"
+                Dim URL As String = "http://files.enjin.com/256377/TagCraftMC_Launcher_Files/version.http"
                 Dim result As String = client.DownloadString(URL)
                 'Debug.Print("DEBUG CHECK STRING DOWNLOAD: {0}", result)
                 If (LCase(Label4.Text) = result) Then 'lower case it all incase I am drunk and do VeRsIoN 9001
@@ -448,12 +448,10 @@ Public Class Form1
 
         If LauncherVersion = True Then
             lvLBL.Visible = False
-            LinkLabel1.Visible = False
 
 
         Else
             lvLBL.Visible = True
-            LinkLabel1.Visible = True
 
         End If
 
@@ -523,8 +521,7 @@ Public Class Form1
 
 
     End Sub
-
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+    Private Sub lvLBL_MouseDown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lvLBL.MouseDown
         System.Diagnostics.Process.Start("http://www.tagcraftmc.com/launcherupdate")
     End Sub
 

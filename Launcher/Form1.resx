@@ -132,18 +132,6 @@
   <metadata name="BackgroundWorker2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>445, 18</value>
   </metadata>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>-------------------
-The Gateway system is 
-online and accepting players.
-Please use the normal hostname play.tagcraftmc.com
-to connect.
--------------------
-Version 1.6.2 has been released.
-
-(NON AUTO UPDATING YET)
-</value>
-  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>74</value>
   </metadata>
