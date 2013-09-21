@@ -35,32 +35,34 @@ Partial Class Form2
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ComboBox1
         '
         Me.ComboBox1.AllowDrop = True
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.ComboBox1.Location = New System.Drawing.Point(108, 103)
+        Me.ComboBox1.Location = New System.Drawing.Point(130, 103)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(94, 25)
+        Me.ComboBox1.Size = New System.Drawing.Size(94, 21)
         Me.ComboBox1.TabIndex = 0
         Me.OptionsToolTip.SetToolTip(Me.ComboBox1, "Enable Or Disable Fullbright Mode.")
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Minecraft", 9.75!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(3, 106)
+        Me.Label1.Image = Global.Launcher.My.Resources.Resources.Fullbright
+        Me.Label1.Location = New System.Drawing.Point(16, 107)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(94, 17)
+        Me.Label1.Size = New System.Drawing.Size(108, 17)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Full Bright:"
         Me.OptionsToolTip.SetToolTip(Me.Label1, "Enable Or Disable Fullbright Mode.")
         '
         'Button1
@@ -78,42 +80,39 @@ Partial Class Form2
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Minecraft", 9.75!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(232, 106)
+        Me.Label2.Image = Global.Launcher.My.Resources.Resources.Memory
+        Me.Label2.Location = New System.Drawing.Point(231, 107)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(71, 17)
+        Me.Label2.Size = New System.Drawing.Size(77, 17)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Memory:"
         Me.OptionsToolTip.SetToolTip(Me.Label2, "Choose the ammount of ram you want Minecraft to use")
         '
         'ComboBox2
         '
         Me.ComboBox2.AllowDrop = True
         Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.ComboBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"512M", "1024M", "1536M", "2048M", "3072M", "4096M", "6144M", "5120M", "7168M", "8192M"})
         Me.ComboBox2.Location = New System.Drawing.Point(314, 103)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(94, 25)
+        Me.ComboBox2.Size = New System.Drawing.Size(94, 21)
         Me.ComboBox2.TabIndex = 3
         Me.OptionsToolTip.SetToolTip(Me.ComboBox2, "Choose the ammount of ram you want Minecraft to use")
         '
         'CheckBox1
         '
-        Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CheckBox1.Font = New System.Drawing.Font("Minecraft", 9.75!)
         Me.CheckBox1.ForeColor = System.Drawing.Color.White
-        Me.CheckBox1.Location = New System.Drawing.Point(2, 134)
+        Me.CheckBox1.Location = New System.Drawing.Point(130, 128)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(120, 21)
+        Me.CheckBox1.Size = New System.Drawing.Size(16, 16)
         Me.CheckBox1.TabIndex = 5
-        Me.CheckBox1.Text = "Debug Mode"
         Me.OptionsToolTip.SetToolTip(Me.CheckBox1, "Brings up Java's debug console when launching Minecraft")
         Me.CheckBox1.UseVisualStyleBackColor = False
         '
@@ -122,12 +121,11 @@ Partial Class Form2
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Minecraft", 9.75!)
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(6, 286)
+        Me.Label4.Image = Global.Launcher.My.Resources.Resources.Warning
+        Me.Label4.Location = New System.Drawing.Point(6, 147)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(402, 57)
         Me.Label4.TabIndex = 2
-        Me.Label4.Text = "*Please make sure you have your Minecraft Brightness setting to ""Moody"" before en" & _
-    "abling the full bright option."
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button5
@@ -151,15 +149,14 @@ Partial Class Form2
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Minecraft", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(151, 28)
+        Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
+        Me.Label3.Location = New System.Drawing.Point(148, 36)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(121, 30)
         Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Options"
         '
         'Button2
         '
@@ -184,6 +181,25 @@ Partial Class Form2
         Me.Button3.TabIndex = 13
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Image = Global.Launcher.My.Resources.Resources.Debug
+        Me.Label5.Location = New System.Drawing.Point(-4, 127)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(136, 17)
+        Me.Label5.TabIndex = 14
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.Launcher.My.Resources.Resources.Promise
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 256)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(402, 92)
+        Me.PictureBox1.TabIndex = 15
+        Me.PictureBox1.TabStop = False
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -191,6 +207,8 @@ Partial Class Form2
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.OptionsArea
         Me.ClientSize = New System.Drawing.Size(414, 466)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label3)
@@ -207,8 +225,8 @@ Partial Class Form2
         Me.Name = "Form2"
         Me.ShowInTaskbar = False
         Me.Text = "Options"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
@@ -223,4 +241,6 @@ Partial Class Form2
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

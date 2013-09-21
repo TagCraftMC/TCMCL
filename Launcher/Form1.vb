@@ -394,7 +394,7 @@ Public Class Form1
 
 
     Private Function InternetConnection() As Boolean
-        Dim req As System.Net.WebRequest = System.Net.WebRequest.Create("http://files.enjin.com/256377/CamelLauncher/version.http")
+        Dim req As System.Net.WebRequest = System.Net.WebRequest.Create("http://files.enjin.com/256377/TagCraftMC_Launcher_Files/version.http")
         Dim resp As System.Net.WebResponse
         Try
             resp = req.GetResponse()
@@ -434,7 +434,7 @@ Public Class Form1
 
     Private Sub BackgroundWorker2_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker2.DoWork
 
-         InternetConnection()
+        InternetConnection()
         lv()
 
     End Sub

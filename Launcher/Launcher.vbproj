@@ -231,6 +231,27 @@
   <ItemGroup>
     <None Include="Resources\LoadingNewsANIV2.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fullbright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Memory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Debug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promise.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

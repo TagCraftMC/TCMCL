@@ -20,31 +20,6 @@ Public Class Credit
     End Sub
 #End Region
 
-    Private Sub FadeForm(ByVal TotalSeconds As Single)
-        If TotalSeconds = 0 Then
-            Me.Opacity = 1
-            Exit Sub
-        End If
-
-        Dim [then] As Double = DateAndTime.Timer
-        Dim difference As Double = 0
-
-        'difference is the percentage of the total seconds elapsed
-        Do While difference < 1
-            Me.Opacity = difference
-
-            difference = (DateAndTime.Timer - [then]) / TotalSeconds
-            System.Threading.Thread.Sleep(10)
-        Loop
-
-        Me.Opacity = 1
-
-    End Sub
-
-    Private Sub Form1_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Shown
-        FadeForm(1.5)
-    End Sub
-
     Private Sub Button1_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.MouseEnter
 
         Button1.BackgroundImage = My.Resources.ExitHover
