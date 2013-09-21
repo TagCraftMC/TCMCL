@@ -121,6 +121,9 @@
   <data name="Thanks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thanks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Thanks1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Thanks1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="VisitHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VisitHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +165,9 @@
   </data>
   <data name="MinecraftVersion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MinecraftVersion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="creditsandthanks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\creditsandthanks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HelpandInfoHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HelpandInfoHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,6 +220,9 @@
   <data name="offline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\offline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Thanks2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Thanks2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,6 +241,9 @@
   <data name="ChalkieFinal_zps9ed55b9c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChalkieFinal_zps9ed55b9c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RememberAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RememberAccount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="unknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unknown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -241,8 +253,8 @@
   <data name="OptionsArea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OptionsArea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RememberAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RememberAccount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Promise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Promise.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OutOfDate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OutOfDate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,7 +271,16 @@
   <data name="News" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\News.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Promise" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Promise.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cyborg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cyborg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="font" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\font.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="syber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\syber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

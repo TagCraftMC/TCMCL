@@ -39,15 +39,22 @@ Public Class Credit
         Me.Location = Form2.centerForm(Me) '// center Form of Main Form.
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub Label4_Click(sender As Object, e As EventArgs)
 
     End Sub
+    Private Sub Label4_Click_1(sender As Object, e As EventArgs) Handles Label4.Click
+        System.Diagnostics.Process.Start("https://www.youtube.com/user/CyborgPancakeZ")
+    End Sub
 
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
         System.Diagnostics.Process.Start("http://fontstruct.com/fontstructions/show/432966")
     End Sub
 
-    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
-        System.Diagnostics.Process.Start("https://www.youtube.com/user/CyborgPancakeZ")
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        System.Diagnostics.Process.Start("https://www.youtube.com/user/BlazesGraphics")
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+        System.Diagnostics.Process.Start("http://www.tagcraftmc.com/profile/3462147")
     End Sub
 End Class

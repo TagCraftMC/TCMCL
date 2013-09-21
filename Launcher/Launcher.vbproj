@@ -252,6 +252,27 @@
   <ItemGroup>
     <None Include="Resources\Promise.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\creditsandthanks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thanks1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thanks2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blaze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cyborg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\syber.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

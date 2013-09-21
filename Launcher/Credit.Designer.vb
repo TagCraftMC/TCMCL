@@ -25,11 +25,10 @@ Partial Class Credit
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1
@@ -46,88 +45,59 @@ Partial Class Credit
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Minecraft", 18.0!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(56, 9)
+        Me.Label1.Image = Global.Launcher.My.Resources.Resources.creditsandthanks
+        Me.Label1.Location = New System.Drawing.Point(54, 36)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(298, 30)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Credit's and Thanks"
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(58, 113)
+        Me.Label2.Image = Global.Launcher.My.Resources.Resources.Thanks2
+        Me.Label2.Location = New System.Drawing.Point(12, 126)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(171, 16)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Font by Pwnage_Block."
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel1.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.ForeColor = System.Drawing.Color.White
-        Me.LinkLabel1.Location = New System.Drawing.Point(58, 204)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(94, 16)
-        Me.LinkLabel1.TabIndex = 3
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Link To Font"
+        Me.Label2.Size = New System.Drawing.Size(390, 151)
+        Me.Label2.TabIndex = 6
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(58, 129)
+        Me.Label3.Image = Global.Launcher.My.Resources.Resources.font
+        Me.Label3.Location = New System.Drawing.Point(1, 281)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(249, 16)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Background by CyborgPancakeZ."
-        '
-        'LinkLabel2
-        '
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel2.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel2.ForeColor = System.Drawing.Color.White
-        Me.LinkLabel2.Location = New System.Drawing.Point(58, 220)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(186, 16)
-        Me.LinkLabel2.TabIndex = 5
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Link To CyborgPancakeZ"
+        Me.Label3.Size = New System.Drawing.Size(255, 17)
+        Me.Label3.TabIndex = 7
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(58, 148)
+        Me.Label4.Image = Global.Launcher.My.Resources.Resources.Cyborg
+        Me.Label4.Location = New System.Drawing.Point(13, 321)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(289, 16)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Special thanks to all TagCraftMC staff."
+        Me.Label4.Size = New System.Drawing.Size(255, 17)
+        Me.Label4.TabIndex = 8
         '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Minecraft", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(58, 166)
+        Me.Label5.Image = Global.Launcher.My.Resources.Resources.blaze
+        Me.Label5.Location = New System.Drawing.Point(8, 301)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(280, 38)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Also speical thanks to everyone who plays our server."
+        Me.Label5.Size = New System.Drawing.Size(255, 17)
+        Me.Label5.TabIndex = 9
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Image = Global.Launcher.My.Resources.Resources.syber
+        Me.Label6.Location = New System.Drawing.Point(21, 341)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(255, 17)
+        Me.Label6.TabIndex = 10
         '
         'Credit
         '
@@ -136,11 +106,10 @@ Partial Class Credit
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.OptionsArea
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(414, 466)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
@@ -150,15 +119,13 @@ Partial Class Credit
         Me.ShowInTaskbar = False
         Me.Text = "Credit"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class
