@@ -8,6 +8,7 @@ Imports System.Reflection
 Imports System.Drawing.Text
 
 
+
 Public Class Form1
 
     Public Shared mem As String
@@ -576,11 +577,13 @@ Public Class Form1
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Dim resFont = My.Resources.minecraft_font
-        Dim fontCol As New System.Drawing.Text.PrivateFontCollection
-        fontCol.AddMemoryFont(System.Runtime.InteropServices.Marshal.
-        UnsafeAddrOfPinnedArrayElement(resFont, 0), resFont.Length)
-        Dim fnt = New System.Drawing.Font(fontCol.Families(0), 15)
-        Label1.Font = New System.Drawing.Font(fontCol.Families(0), 15)
+        Try
+            Dim customfont As PrivateFontCollection = New PrivateFontCollection
+            customfont.AddFontFile(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Font/minecraft_font.ttf")
+            Label1.Font = New Font(customfont.Families(0), 15)
+        Catch ex As Exception
+            MessageBox.Show("Unable to load the font file from TagCraftMC Files" + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Font/minecraft_font.ttf")
+        End Try
+
     End Sub
 End Class

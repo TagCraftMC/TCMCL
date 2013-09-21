@@ -381,11 +381,11 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Minecraft", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(293, 232)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(140, 15)
+        Me.Label1.Size = New System.Drawing.Size(199, 17)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Minecraft Account Name"
         '
@@ -480,11 +480,11 @@ Partial Class Form1
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(112, 214)
+        Me.Button5.Location = New System.Drawing.Point(28, 221)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.Size = New System.Drawing.Size(196, 23)
         Me.Button5.TabIndex = 26
-        Me.Button5.Text = "Button5"
+        Me.Button5.Text = "The Ammar Test Button"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Form1
