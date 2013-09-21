@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Drawing.Text
 
 Public Class Form2
     Dim x As String
@@ -259,5 +260,4 @@ Public Class Form2
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Credit.Show()
     End Sub
-
 End Class

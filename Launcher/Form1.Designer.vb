@@ -64,7 +64,6 @@ Partial Class Form1
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -478,15 +477,6 @@ Partial Class Form1
         Me.TextBox2.TabIndex = 25
         Me.TextBox2.Visible = False
         '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(28, 221)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(196, 23)
-        Me.Button5.TabIndex = 26
-        Me.Button5.Text = "The Ammar Test Button"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -494,7 +484,6 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.ChalkieFinal_zps9ed55b9c
         Me.ClientSize = New System.Drawing.Size(784, 562)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.PictureBox3)
@@ -571,6 +560,5 @@ Partial Class Form1
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents Button5 As System.Windows.Forms.Button
 
 End Class

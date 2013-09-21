@@ -1,4 +1,5 @@
-﻿
+﻿Imports System.Drawing.Text
+
 Public Class Credit
 #Region "ClientAreaMove Handling"
     Private Const WM_NCHITTEST As Integer = &H84
