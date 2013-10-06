@@ -23,9 +23,10 @@ Partial Class HelpBrowser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HelpBrowser))
         Me.HelpBRW = New System.Windows.Forms.WebBrowser()
-        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VisitTagCraftMCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -45,19 +46,19 @@ Partial Class HelpBrowser
         Me.HelpBRW.Url = New System.Uri("http://www.tagcraftmc.com/launcherhelp", System.UriKind.Absolute)
         Me.HelpBRW.WebBrowserShortcutsEnabled = False
         '
-        'CopyToolStripMenuItem
-        '
-        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
-        Me.CopyToolStripMenuItem.Text = "Copy"
-        '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.VisitTagCraftMCToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.ContextMenuStrip1.ShowImageMargin = False
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(140, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(140, 48)
+        '
+        'CopyToolStripMenuItem
+        '
+        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'VisitTagCraftMCToolStripMenuItem
         '
@@ -73,9 +74,10 @@ Partial Class HelpBrowser
         Me.Controls.Add(Me.HelpBRW)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "HelpBrowser"
-        Me.Text = "TagCraftMC Launcher Help"
+        Me.Text = "Minecraft Launcher Help"
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 

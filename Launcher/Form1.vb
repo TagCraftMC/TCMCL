@@ -371,7 +371,7 @@ Public Class Form1
 
         Else
             Try
-                Dim URL As String = "http://files.enjin.com/256377/TagCraftMC_Launcher_Files/version.http"
+                Dim URL As String = "http://cp.tagcraftmc.com/status/LauncherVersion/Version.http"
                 Dim result As String = client.DownloadString(URL)
                 'Debug.Print("DEBUG CHECK STRING DOWNLOAD: {0}", result)
                 If (LCase(Label4.Text) = result) Then 'lower case it all incase I am drunk and do VeRsIoN 9001
@@ -394,7 +394,7 @@ Public Class Form1
 
 
     Private Function InternetConnection() As Boolean
-        Dim req As System.Net.WebRequest = System.Net.WebRequest.Create("http://files.enjin.com/256377/TagCraftMC_Launcher_Files/version.http")
+        Dim req As System.Net.WebRequest = System.Net.WebRequest.Create("http://cp.tagcraftmc.com/status/LauncherVersion/Version.http")
         Dim resp As System.Net.WebResponse
         Try
             resp = req.GetResponse()
