@@ -273,6 +273,7 @@
     <None Include="Resources\syber.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Version130.png" />
     <Content Include="TAG3.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

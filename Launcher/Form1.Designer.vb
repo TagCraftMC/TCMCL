@@ -313,7 +313,7 @@ Partial Class Form1
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(107, 17)
         Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Version 1.20"
+        Me.Label4.Text = "Version 1.30"
         Me.Label4.Visible = False
         '
         'WebBrowser1
@@ -459,7 +459,7 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Image = Global.Launcher.My.Resources.Resources.LauncherVersion
+        Me.Label8.Image = Global.Launcher.My.Resources.Resources.Version130
         Me.Label8.Location = New System.Drawing.Point(278, 527)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(237, 17)

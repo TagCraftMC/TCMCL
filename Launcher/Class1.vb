@@ -701,33 +701,33 @@ Module Module1
                     If Form1.mempass = "0" Then
 
                         If Form1.accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                            yasir8()
+                        ammar8()
 
 
                         ElseIf Form1.accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                            yasir9()
+                        ammar9()
 
 
                         ElseIf Form2.CheckBox1.Checked = True Then
 
-                            yasir10()
+                        ammar10()
 
                         End If
 
                     ElseIf Form1.mempass = "1" Then
                         If Form1.accessOP = "0" And Form2.CheckBox1.Checked = False And Form1.mempass = "1" Then
-                            yasir11()
+                        ammar11()
 
 
                         ElseIf Form1.accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                            yasir12()
+                        ammar12()
 
                         ElseIf Form1.accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                            yasir13()
+                        ammar13()
 
                         ElseIf Form2.CheckBox1.Checked = True Then
 
-                            yasir14()
+                        ammar14()
 
                         End If
 
