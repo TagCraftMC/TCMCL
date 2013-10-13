@@ -117,6 +117,8 @@ Partial Class Credit
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Credit"
         Me.Text = "Minecraft Launcher Credit"
         Me.ResumeLayout(False)

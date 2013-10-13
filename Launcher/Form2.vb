@@ -119,10 +119,10 @@ Public Class Form2
         Return pLocation '// return the Location to the Form it was called from.
     End Function
 
-    Private Sub Launch_Draw(sender As Object, e As System.Windows.Forms.DrawToolTipEventArgs) Handles OptionsToolTip.Draw
-        e.DrawBackground()
-        e.DrawText()
-    End Sub
+    'Private Sub Launch_Draw(sender As Object, e As System.Windows.Forms.DrawToolTipEventArgs) Handles OptionsToolTip.Draw
+    '   e.DrawBackground()
+    '   e.DrawText()
+    'End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
         If Environment.Is64BitOperatingSystem = True Then
