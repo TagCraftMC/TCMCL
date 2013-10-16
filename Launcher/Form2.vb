@@ -234,12 +234,12 @@ Public Class Form2
     End Sub
     Private Sub Button2_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.MouseEnter
 
-        Button2.BackgroundImage = My.Resources.ModsHover
+        Button2.BackgroundImage = My.Resources.InstallModsV2Mouse
 
     End Sub
     Private Sub Button2_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.MouseLeave
 
-        Button2.BackgroundImage = My.Resources.Mods
+        Button2.BackgroundImage = My.Resources.InstallModsV2
 
     End Sub
     Private Sub Button3_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.MouseEnter

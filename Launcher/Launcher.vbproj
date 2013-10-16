@@ -132,9 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -162,8 +162,6 @@
   <ItemGroup>
     <None Include="Resources\CreditsHover.png" />
     <None Include="Resources\Credits.png" />
-    <None Include="Resources\ModsHover.png" />
-    <None Include="Resources\Mods.png" />
     <None Include="Resources\SaveOptionsHover.png" />
     <None Include="Resources\SaveOptions.png" />
     <None Include="Resources\OptionsArea.png" />
@@ -274,6 +272,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Version130.png" />
+    <None Include="Resources\InstallModsV2.png" />
+    <None Include="Resources\InstallModsV2Mouse.png" />
+    <None Include="Resources\Mods.png" />
+    <None Include="Resources\ModsHover.png" />
+    <None Include="Resources\InstallModsV2Mouse1.png" />
+    <None Include="Resources\InstallModsV21.png" />
     <Content Include="TAG3.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

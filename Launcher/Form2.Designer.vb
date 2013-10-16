@@ -162,7 +162,7 @@ Partial Class Form2
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImage = Global.Launcher.My.Resources.Resources.Mods
+        Me.Button2.BackgroundImage = Global.Launcher.My.Resources.Resources.InstallModsV2
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Location = New System.Drawing.Point(6, 354)
