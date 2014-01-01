@@ -568,7 +568,7 @@ Module Module1
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
 
 
-        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe", "-Xmx" + Form1.mem + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
+        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe", "-Xmx" + Form1.mem + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
         End
 
 
@@ -772,7 +772,7 @@ Module Module1
 
                     ElseIf Form2.CheckBox1.Checked = True Then
 
-                        ammar7()
+                    ammar7()
 
 
                     End If
