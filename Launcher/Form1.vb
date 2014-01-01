@@ -6,7 +6,8 @@ Imports System.Runtime.InteropServices
 Imports System.Security.Permissions
 Imports System.Reflection
 Imports System.Drawing.Text
-
+Imports TagAPIx
+Imports Newtonsoft.Json
 
 
 Public Class Form1
@@ -22,6 +23,7 @@ Public Class Form1
 
     '-----------------------
 
+    Dim progresshere As Integer
 
     Dim nom As String
     Dim nomx As String
@@ -64,6 +66,11 @@ Public Class Form1
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+       
+        'progresshere = 100
+        'While (progresshere < 100)
+        'do nothing!
+        'End While
 
         Try
             Dim objReaderz As StreamWriter
@@ -73,6 +80,7 @@ Public Class Form1
         Catch ex As Exception
             MessageBox.Show("Please report this error this to www.tagcraftmc.com", "Error: Unable to save Version")
         End Try
+
 
         Dim q As String
         q = Chr(34)
@@ -121,11 +129,7 @@ Public Class Form1
             ' End If
 
 
-            oReadp = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ver + ".txt")
-            version = oReadp.ReadLine
-
-
-            oReadp.Close()
+           
 
 
 
@@ -142,9 +146,10 @@ Public Class Form1
         End Try
 
 
+        BackgroundWorker3.RunWorkerAsync()
 
-        mainx()
 
+      
     End Sub
     Function centerForm(ByVal Form_to_Center As Form) As Point
         Dim pLocation As New Point
@@ -188,13 +193,14 @@ Public Class Form1
 
 
 
+        Dim di As New DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions")
+        For Each subdi As DirectoryInfo In di.GetDirectories
 
-        Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions")
-        For Each fi In finfo.GetFiles
-
-            ComboBox1.Items.Add(Path.GetFileNameWithoutExtension(fi.Name))
-
+            'MsgBox(subdi.Name)
+            ComboBox1.Items.Add(subdi.Name)
         Next
+       
+
         Try
             oReady = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
             ComboBox1.Text = oReady.ReadLine
@@ -580,13 +586,31 @@ Public Class Form1
         System.Diagnostics.Process.Start("http://www.tagcraftmc.com")
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
-    End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         If TextBox1.Text = "HelloChalkie" Or TextBox1.Text = "HelloAmmar" Then
             MessageBox.Show("Hello " + Environment.UserName + " how is it going? Congrats on finding an Easter Egg/Secret." + Environment.NewLine + "We hope you're enjoying Minecraft and have a great day." + Environment.NewLine + "- TagCraftMC", "Hi Five, you found an Easter Egg/Secret", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
+
+    Private Sub BackgroundWorker3_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker3.DoWork
+        progresshere = 0
+        TagAPIx.Class1.main()
+        TagAPIx.Class1.extractfile()
+        oReadp = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ver + ".txt")
+        version = oReadp.ReadLine
+
+
+        oReadp.Close()
+        aftereverything()
+
+
+
+    End Sub
+
+    Public Sub aftereverything()
+        mainx()
+
+    End Sub
+
 End Class

@@ -65,6 +65,7 @@ Partial Class Form1
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,7 +152,7 @@ Partial Class Form1
         'StatusStrip1
         '
         Me.StatusStrip1.BackColor = System.Drawing.Color.Transparent
-        Me.StatusStrip1.Font = New System.Drawing.Font("Minecraft", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StatusStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel8, Me.ToolStripStatusLabel7, Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel3, Me.a, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel4, Me.b, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel6, Me.c})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 540)
         Me.StatusStrip1.Name = "StatusStrip1"
@@ -164,17 +165,17 @@ Partial Class Form1
         '
         'ToolStripStatusLabel8
         '
-        Me.ToolStripStatusLabel8.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.ToolStripStatusLabel8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.ToolStripStatusLabel8.ForeColor = System.Drawing.Color.White
         Me.ToolStripStatusLabel8.Margin = New System.Windows.Forms.Padding(160, 3, 0, 2)
         Me.ToolStripStatusLabel8.Name = "ToolStripStatusLabel8"
-        Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(133, 17)
+        Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(100, 17)
         Me.ToolStripStatusLabel8.Text = "Network Status:"
         Me.ToolStripStatusLabel8.ToolTipText = "Status of our servers"
         '
         'ToolStripStatusLabel7
         '
-        Me.ToolStripStatusLabel7.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.ToolStripStatusLabel7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.ToolStripStatusLabel7.ForeColor = System.Drawing.Color.White
         Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
         Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(11, 17)
@@ -182,92 +183,92 @@ Partial Class Form1
         '
         'ToolStripStatusLabel1
         '
-        Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.ToolStripStatusLabel1.ForeColor = System.Drawing.Color.White
         Me.ToolStripStatusLabel1.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(94, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(75, 17)
         Me.ToolStripStatusLabel1.Text = "Factions"
         Me.ToolStripStatusLabel1.ToolTipText = "Factions is online: play.tagcraftmc.com"
         Me.ToolStripStatusLabel1.Visible = False
         '
         'ToolStripStatusLabel3
         '
-        Me.ToolStripStatusLabel3.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.ToolStripStatusLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.ToolStripStatusLabel3.ForeColor = System.Drawing.Color.White
         Me.ToolStripStatusLabel3.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(94, 17)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(75, 17)
         Me.ToolStripStatusLabel3.Text = "Factions"
         Me.ToolStripStatusLabel3.ToolTipText = "Factions is offline: play.tagcraftmc.com"
         Me.ToolStripStatusLabel3.Visible = False
         '
         'a
         '
-        Me.a.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.a.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.a.ForeColor = System.Drawing.Color.White
         Me.a.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.a.Name = "a"
-        Me.a.Size = New System.Drawing.Size(94, 17)
+        Me.a.Size = New System.Drawing.Size(75, 17)
         Me.a.Text = "Factions"
         Me.a.ToolTipText = "Factions is querying: play.tagcraftmc.com"
         '
         'ToolStripStatusLabel2
         '
-        Me.ToolStripStatusLabel2.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.ToolStripStatusLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.ToolStripStatusLabel2.ForeColor = System.Drawing.Color.White
         Me.ToolStripStatusLabel2.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(137, 17)
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(115, 17)
         Me.ToolStripStatusLabel2.Text = "Hunger Games"
         Me.ToolStripStatusLabel2.Visible = False
         '
         'ToolStripStatusLabel4
         '
-        Me.ToolStripStatusLabel4.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.ToolStripStatusLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.ToolStripStatusLabel4.ForeColor = System.Drawing.Color.White
         Me.ToolStripStatusLabel4.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(137, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(115, 17)
         Me.ToolStripStatusLabel4.Text = "Hunger Games"
         Me.ToolStripStatusLabel4.Visible = False
         '
         'b
         '
-        Me.b.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.b.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.b.ForeColor = System.Drawing.Color.White
         Me.b.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.b.Name = "b"
-        Me.b.Size = New System.Drawing.Size(137, 17)
+        Me.b.Size = New System.Drawing.Size(115, 17)
         Me.b.Text = "Hunger Games"
         '
         'ToolStripStatusLabel5
         '
-        Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.ToolStripStatusLabel5.ForeColor = System.Drawing.Color.White
         Me.ToolStripStatusLabel5.Image = Global.Launcher.My.Resources.Resources.online
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(112, 17)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(100, 16)
         Me.ToolStripStatusLabel5.Text = "TeamSpeak"
         Me.ToolStripStatusLabel5.Visible = False
         '
         'ToolStripStatusLabel6
         '
-        Me.ToolStripStatusLabel6.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.ToolStripStatusLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.ToolStripStatusLabel6.ForeColor = System.Drawing.Color.White
         Me.ToolStripStatusLabel6.Image = Global.Launcher.My.Resources.Resources.offline
         Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(112, 17)
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(100, 16)
         Me.ToolStripStatusLabel6.Text = "TeamSpeak"
         Me.ToolStripStatusLabel6.Visible = False
         '
         'c
         '
-        Me.c.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.c.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.c.ForeColor = System.Drawing.Color.White
         Me.c.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.c.Name = "c"
-        Me.c.Size = New System.Drawing.Size(112, 17)
+        Me.c.Size = New System.Drawing.Size(100, 16)
         Me.c.Text = "TeamSpeak"
         '
         'HelpBTN
@@ -294,7 +295,7 @@ Partial Class Form1
         'lvLBL
         '
         Me.lvLBL.BackColor = System.Drawing.Color.Transparent
-        Me.lvLBL.Font = New System.Drawing.Font("Minecraft", 6.25!)
+        Me.lvLBL.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
         Me.lvLBL.ForeColor = System.Drawing.Color.Red
         Me.lvLBL.Image = Global.Launcher.My.Resources.Resources.OutOfDate
         Me.lvLBL.Location = New System.Drawing.Point(37, 2)
@@ -307,11 +308,11 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(680, 545)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(107, 17)
+        Me.Label4.Size = New System.Drawing.Size(81, 16)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Version 1.30"
         Me.Label4.Visible = False
@@ -366,7 +367,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Minecraft", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Image = Global.Launcher.My.Resources.Resources.AccountName2
         Me.Label1.Location = New System.Drawing.Point(273, 232)
@@ -377,7 +378,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Image = Global.Launcher.My.Resources.Resources.MinecraftVersion
         Me.Label2.Location = New System.Drawing.Point(273, 292)
@@ -388,7 +389,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Image = Global.Launcher.My.Resources.Resources.CopyrightMojang2
         Me.Label3.Location = New System.Drawing.Point(140, 544)
@@ -400,7 +401,7 @@ Partial Class Form1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
-        Me.CheckBox1.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.CheckBox1.ForeColor = System.Drawing.Color.White
         Me.CheckBox1.Location = New System.Drawing.Point(294, 355)
         Me.CheckBox1.Name = "CheckBox1"
@@ -411,7 +412,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Image = Global.Launcher.My.Resources.Resources.LatestNews
         Me.Label5.Location = New System.Drawing.Point(533, 233)
@@ -475,6 +476,10 @@ Partial Class Form1
         Me.PictureBox4.Size = New System.Drawing.Size(196, 217)
         Me.PictureBox4.TabIndex = 28
         Me.PictureBox4.TabStop = False
+        '
+        'BackgroundWorker3
+        '
+        Me.BackgroundWorker3.WorkerReportsProgress = True
         '
         'Form1
         '
@@ -563,5 +568,6 @@ Partial Class Form1
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents BackgroundWorker3 As System.ComponentModel.BackgroundWorker
 
 End Class

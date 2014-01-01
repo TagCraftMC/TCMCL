@@ -22,9 +22,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         '  Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
 
@@ -44,9 +44,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim appData As String = q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q
         Dim process As New Process
@@ -69,9 +69,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -91,9 +91,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -117,9 +117,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -138,9 +138,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -162,9 +162,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -182,9 +182,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -209,9 +209,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -227,9 +227,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -250,9 +250,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -271,9 +271,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -296,9 +296,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -314,9 +314,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        '  Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -338,9 +338,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -357,9 +357,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -381,9 +381,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
 
         Dim retValue As Boolean
@@ -403,9 +403,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -428,9 +428,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -448,9 +448,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -473,9 +473,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        '   Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        '  Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -492,9 +492,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -516,9 +516,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -536,9 +536,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        'Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        'Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -559,9 +559,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        '  Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        '  Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        '  Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -578,9 +578,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
@@ -602,9 +602,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -623,9 +623,9 @@ Module Module1
         Dim q As String
         q = Chr(34)
 
-        Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
-        Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
-        Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
+        ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
+        ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
+        ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
