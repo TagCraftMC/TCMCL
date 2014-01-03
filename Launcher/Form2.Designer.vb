@@ -57,7 +57,7 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Image = Global.Launcher.My.Resources.Resources.Fullbright
         Me.Label1.Location = New System.Drawing.Point(16, 107)
@@ -82,7 +82,7 @@ Partial Class Form2
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Image = Global.Launcher.My.Resources.Resources.Memory
         Me.Label2.Location = New System.Drawing.Point(231, 107)
@@ -108,7 +108,7 @@ Partial Class Form2
         '
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox1.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.CheckBox1.ForeColor = System.Drawing.Color.White
         Me.CheckBox1.Location = New System.Drawing.Point(130, 128)
         Me.CheckBox1.Name = "CheckBox1"
@@ -120,7 +120,7 @@ Partial Class Form2
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Minecraft", 9.75!)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Image = Global.Launcher.My.Resources.Resources.Warning
         Me.Label4.Location = New System.Drawing.Point(6, 165)
@@ -128,6 +128,7 @@ Partial Class Form2
         Me.Label4.Size = New System.Drawing.Size(402, 57)
         Me.Label4.TabIndex = 2
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label4.Visible = False
         '
         'Button5
         '
@@ -151,7 +152,7 @@ Partial Class Form2
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Minecraft", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
         Me.Label3.Location = New System.Drawing.Point(148, 36)
@@ -200,6 +201,7 @@ Partial Class Form2
         Me.PictureBox1.Size = New System.Drawing.Size(402, 92)
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
         '
         'Form2
         '

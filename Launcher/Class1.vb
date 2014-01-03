@@ -454,7 +454,7 @@ Module Module1
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
-        info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe"
+        info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
         '                info.FileName = "java"
         '  info.CreateNoWindow = True
         info.Arguments = "-Xmx512m " + Form1.version
@@ -568,7 +568,7 @@ Module Module1
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
 
 
-        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe", "-Xmx" + Form1.mem + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
+        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe", "-Xmx" + Form1.mem + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
         End
 
 
@@ -629,7 +629,7 @@ Module Module1
        
         Dim process As New Process
         Dim info As New ProcessStartInfo
-        info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\java.exe"
+        info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
         '                info.FileName = "java"
         '  info.CreateNoWindow = True
         info.Arguments = "-Xmx512m " + Form1.version
