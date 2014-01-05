@@ -246,7 +246,7 @@ Public Class Form1
 
         If nomx = "" Then
             WebBrowser1.Navigate(New Uri("http://www.tagcraftmc.com/launcherhits"))
-        ElseIf nomx = "open" Then
+        ElseIf nomx = "firsttime" Then
             WebBrowser1.Navigate(New Uri("http://www.tagcraftmc.com/launcherads"))
 
         End If
@@ -258,7 +258,7 @@ Public Class Form1
 
 
             objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/runtimecatch.txt")
-            objReaderx.Write("open")
+            objReaderx.Write("firsttime")
             objReaderx.Close()
 
         Catch ex As Exception

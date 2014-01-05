@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("TagCraftMC")> 
 <Assembly: AssemblyProduct("Launcher")> 
-<Assembly: AssemblyCopyright("Copyright TagCraftMC ©  2013")> 
+<Assembly: AssemblyCopyright("Copyright TagCraftMC ©  2014")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
