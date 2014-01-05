@@ -68,7 +68,7 @@ Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click      
         Try
             If TextBox1.Text = "" Then
-                MessageBox.Show("Please choose a user name", "Are you my mommy?")
+                MessageBox.Show("Please choose an Account Name. This is needed even if you're just playing Single Player", "Are you my mommy?")
             Else
                 Button1.Enabled = False
                 Try
