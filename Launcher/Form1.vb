@@ -247,7 +247,7 @@ Public Class Form1
         If nomx = "" Then
             WebBrowser1.Navigate(New Uri("http://www.tagcraftmc.com/launcherhits"))
         ElseIf nomx = "open" Then
-            'do nothing
+            WebBrowser1.Navigate(New Uri("http://www.tagcraftmc.com/launcherads"))
 
         End If
 
