@@ -50,6 +50,9 @@
   <PropertyGroup>
     <ApplicationIcon>TagCraftMCIcon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ionic.Zip">
       <HintPath>..\..\TagAPI\TagAPI\bin\Debug\Ionic.Zip.dll</HintPath>
@@ -147,6 +150,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -290,7 +294,6 @@
     <None Include="Resources\InstallModsV21.png" />
     <None Include="Resources\CopyrightMojang2014.png" />
     <None Include="Resources\Version140.png" />
-    <Content Include="TAG3.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
