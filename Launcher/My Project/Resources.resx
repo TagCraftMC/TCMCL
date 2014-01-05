@@ -124,6 +124,9 @@
   <data name="Thanks1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thanks1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="InstallModsV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InstallModsV21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="VisitHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VisitHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,6 +181,9 @@
   <data name="OutOfDate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OutOfDate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CreditsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CreditsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SaveOptionsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveOptionsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,6 +223,9 @@
   <data name="LauncherVersion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LauncherVersion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ModsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ModsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AccountName" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AccountName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -238,8 +247,11 @@
   <data name="online" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\online.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Options1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Options1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="InstallModsV2Mouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InstallModsV2Mouse1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mods" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Options2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Options2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,8 +268,8 @@
   <data name="unknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unknown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CreditsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CreditsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Options1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Options1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OptionsArea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OptionsArea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -267,6 +279,9 @@
   </data>
   <data name="blaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CopyrightMojang2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CopyrightMojang2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Debug" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Debug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,16 +295,7 @@
   <data name="News" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\News.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mods" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ModsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ModsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="InstallModsV2Mouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\InstallModsV2Mouse1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="InstallModsV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\InstallModsV21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Version140" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Version140.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

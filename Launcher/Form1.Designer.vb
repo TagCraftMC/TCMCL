@@ -314,7 +314,7 @@ Partial Class Form1
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(81, 16)
         Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Version 1.30"
+        Me.Label4.Text = "Version 1.40"
         Me.Label4.Visible = False
         '
         'WebBrowser1
@@ -391,7 +391,7 @@ Partial Class Form1
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Image = Global.Launcher.My.Resources.Resources.CopyrightMojang2
+        Me.Label3.Image = Global.Launcher.My.Resources.Resources.CopyrightMojang2014
         Me.Label3.Location = New System.Drawing.Point(140, 544)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(501, 17)
@@ -460,7 +460,7 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Image = Global.Launcher.My.Resources.Resources.Version130
+        Me.Label8.Image = Global.Launcher.My.Resources.Resources.Version140
         Me.Label8.Location = New System.Drawing.Point(278, 527)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(237, 17)
