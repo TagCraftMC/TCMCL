@@ -69,6 +69,8 @@ Public Class Form1
         Try
             If TextBox1.Text = "" Then
                 MessageBox.Show("Please choose an Account Name. This is needed even if you're just playing Single Player", "Are you my mommy?")
+            ElseIf ComboBox1.Text = "" Then
+                MessageBox.Show("Please choose a Version. This is needed even if you're just playing Single Player", "Are you my mommy?")
             Else
                 Button1.Enabled = False
                 Try
