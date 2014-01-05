@@ -65,92 +65,99 @@ Public Class Form1
 
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Button1.Enabled = False
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click      
+        Try
+            If TextBox1.Text = "" Then
+                MessageBox.Show("Please choose a user name", "Are you my mommy?")
+            Else
+                Button1.Enabled = False
+                Try
+                    Dim objReaderz As StreamWriter
+                    objReaderz = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
+                    objReaderz.Write(ComboBox1.Text)
+                    objReaderz.Close()
+                Catch ex As Exception
+                    MessageBox.Show("Please report this error this to www.tagcraftmc.com", "Error: Unable to save Version")
+                End Try
+
+
+                Dim q As String
+                q = Chr(34)
+                Dim objReader As StreamWriter
+                Try
+                    If CheckBox1.Checked = True Then
+                        objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/rememberme.txt")
+                        objReader.Write("True")
+                        objReader.Close()
+                    Else
+                        objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/rememberme.txt")
+                        objReader.Write("False")
+                        objReader.Close()
+                    End If
+                    objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/taguser.txt")
+                    objReader.Write(TextBox1.Text)
+                    objReader.Close()
+
+                Catch ex As Exception
+                    MessageBox.Show("")
+
+                End Try
+
+
+
+                Try
+
+                    oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
+                    mem = oReadx.ReadLine
+
+
+                    oReadx.Close()
+
+                    oReady = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
+                    ver = oReady.ReadLine
+
+
+                    oReady.Close()
+
+
+
+                    'removed so that it is easy to set version number without editing the program.
+                    '    If ver = vbNullString Then
+                    ' ver = "1.6.2"
+                    ' Else
+                    ' End If
+
+
+
+
+
+
+                    If mem = vbNullString Then
+                        mempass = "0"
+
+                    Else
+                        mempass = "1"
+
+                    End If
+
+                Catch ex As Exception
+
+                End Try
+
+
+                BackgroundWorker3.RunWorkerAsync()
+
+            End If
+        Catch ex As Exception
+
+        End Try
 
         'progresshere = 100
         'While (progresshere < 100)
         'do nothing!
         'End While
 
-        Try
-            Dim objReaderz As StreamWriter
-            objReaderz = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
-            objReaderz.Write(ComboBox1.Text)
-            objReaderz.Close()
-        Catch ex As Exception
-            MessageBox.Show("Please report this error this to www.tagcraftmc.com", "Error: Unable to save Version")
-        End Try
 
-
-        Dim q As String
-        q = Chr(34)
-        Dim objReader As StreamWriter
-        Try
-            If CheckBox1.Checked = True Then
-                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/rememberme.txt")
-                objReader.Write("True")
-                objReader.Close()
-            Else
-                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/rememberme.txt")
-                objReader.Write("False")
-                objReader.Close()
-            End If
-            objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/taguser.txt")
-            objReader.Write(TextBox1.Text)
-            objReader.Close()
-
-        Catch ex As Exception
-            MessageBox.Show("")
-
-        End Try
-
-
-
-        Try
-
-            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
-            mem = oReadx.ReadLine
-
-
-            oReadx.Close()
-
-            oReady = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
-            ver = oReady.ReadLine
-
-
-            oReady.Close()
-
-
-
-            'removed so that it is easy to set version number without editing the program.
-            '    If ver = vbNullString Then
-            ' ver = "1.6.2"
-            ' Else
-            ' End If
-
-
-           
-
-
-
-            If mem = vbNullString Then
-                mempass = "0"
-
-            Else
-                mempass = "1"
-
-            End If
-
-        Catch ex As Exception
-
-        End Try
-
-
-        BackgroundWorker3.RunWorkerAsync()
-
-
-      
     End Sub
     Function centerForm(ByVal Form_to_Center As Form) As Point
         Dim pLocation As New Point
