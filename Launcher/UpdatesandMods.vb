@@ -47,6 +47,7 @@ Public Class UpdatesandMods
         readtxtfile()
         Try
             PictureBox1.ImageLocation = "http://tagcraftmc.net78.net/images/" + cbversions.SelectedItem.ToString + ".png"
+            lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
 
         Catch ex As Exception
             'unable to load the image
@@ -56,6 +57,7 @@ Public Class UpdatesandMods
     Private Sub cbversions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbversions.SelectedIndexChanged
         Try
             PictureBox1.ImageLocation = "http://tagcraftmc.net78.net/images/" + cbversions.SelectedItem.ToString + ".png"
+            lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
 
         Catch ex As Exception
             'unable to load the image
@@ -65,6 +67,7 @@ Public Class UpdatesandMods
     Private Sub cbversions_MouseHover(sender As Object, e As EventArgs) Handles cbversions.MouseHover
         Try
             PictureBox1.ImageLocation = "http://tagcraftmc.net78.net/images/" + cbversions.SelectedItem.ToString + ".png"
+            lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
 
         Catch ex As Exception
             'unable to load the image
@@ -103,12 +106,14 @@ Public Class UpdatesandMods
             btnstart.Enabled = True
             btncancel.Enabled = False
             lblstatus.Text = "Finished"
-            MessageBox.Show("Debug: Download Complete")
+            lblspeed.Text = "0 KB/s"
+            'MessageBox.Show("Debug: Download Complete")
             SW.Stop()
         ElseIf lblstatus.Text = "Canceled" Then
             'nothing
         Else
             lblstatus.Text = "Failed"
+            lblspeed.Text = "0 KB/s"
             btncancel.Enabled = False
             btnstart.Enabled = True
             SW.Stop()
