@@ -170,6 +170,7 @@ Partial Class UpdatesandMods
         '
         'cbversions
         '
+        Me.cbversions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbversions.FormattingEnabled = True
         Me.cbversions.Location = New System.Drawing.Point(12, 115)
         Me.cbversions.Name = "cbversions"
