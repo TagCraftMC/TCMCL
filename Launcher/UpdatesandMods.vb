@@ -43,6 +43,12 @@ Public Class UpdatesandMods
         'populatebox()
 
         readtxtfile()
+        Try
+            PictureBox1.ImageLocation = "http://tagcraftmc.net78.net/images/" + cbversions.SelectedItem.ToString + ".png"
+
+        Catch ex As Exception
+            'unable to load the image
+        End Try
     End Sub
 
     Private Sub cbversions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbversions.SelectedIndexChanged
@@ -50,7 +56,16 @@ Public Class UpdatesandMods
             PictureBox1.ImageLocation = "http://tagcraftmc.net78.net/images/" + cbversions.SelectedItem.ToString + ".png"
 
         Catch ex As Exception
+            'unable to load the image
+        End Try
+    End Sub
 
+    Private Sub cbversions_MouseHover(sender As Object, e As EventArgs) Handles cbversions.MouseHover
+        Try
+            PictureBox1.ImageLocation = "http://tagcraftmc.net78.net/images/" + cbversions.SelectedItem.ToString + ".png"
+
+        Catch ex As Exception
+            'unable to load the image
         End Try
     End Sub
 End Class
