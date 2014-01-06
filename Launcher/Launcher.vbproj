@@ -284,6 +284,9 @@
     <None Include="Resources\syber.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Update.png" />
+    <None Include="Resources\VisitHover1.png" />
+    <None Include="Resources\UpdateHover.png" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />

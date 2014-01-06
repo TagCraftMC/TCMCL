@@ -66,6 +66,7 @@ Partial Class Form1
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,7 +81,7 @@ Partial Class Form1
         Me.Button1.BackgroundImage = Global.Launcher.My.Resources.Resources.Launch
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(294, 427)
+        Me.Button1.Location = New System.Drawing.Point(294, 449)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(196, 40)
         Me.Button1.TabIndex = 0
@@ -93,7 +94,7 @@ Partial Class Form1
         Me.TextBox1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(304, 259)
+        Me.TextBox1.Location = New System.Drawing.Point(304, 281)
         Me.TextBox1.MaxLength = 16
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(176, 22)
@@ -131,7 +132,7 @@ Partial Class Form1
         Me.Button2.BackgroundImage = Global.Launcher.My.Resources.Resources.Options
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(28, 310)
+        Me.Button2.Location = New System.Drawing.Point(28, 277)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(196, 40)
         Me.Button2.TabIndex = 2
@@ -143,7 +144,7 @@ Partial Class Form1
         Me.Button3.BackgroundImage = Global.Launcher.My.Resources.Resources.Exit_
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(28, 427)
+        Me.Button3.Location = New System.Drawing.Point(28, 449)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(196, 40)
         Me.Button3.TabIndex = 4
@@ -277,7 +278,7 @@ Partial Class Form1
         Me.HelpBTN.BackgroundImage = Global.Launcher.My.Resources.Resources.HelpandInfo
         Me.HelpBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.HelpBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HelpBTN.Location = New System.Drawing.Point(28, 369)
+        Me.HelpBTN.Location = New System.Drawing.Point(28, 391)
         Me.HelpBTN.Name = "HelpBTN"
         Me.HelpBTN.Size = New System.Drawing.Size(196, 40)
         Me.HelpBTN.TabIndex = 3
@@ -340,7 +341,7 @@ Partial Class Form1
         Me.Button4.BackgroundImage = Global.Launcher.My.Resources.Resources.Visit
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(28, 250)
+        Me.Button4.Location = New System.Drawing.Point(28, 218)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(196, 40)
         Me.Button4.TabIndex = 14
@@ -349,7 +350,7 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Launcher.My.Resources.Resources.TextBG2
-        Me.PictureBox1.Location = New System.Drawing.Point(294, 250)
+        Me.PictureBox1.Location = New System.Drawing.Point(294, 272)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(196, 40)
         Me.PictureBox1.TabIndex = 15
@@ -358,7 +359,7 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Launcher.My.Resources.Resources.TextBG2
-        Me.PictureBox2.Location = New System.Drawing.Point(294, 310)
+        Me.PictureBox2.Location = New System.Drawing.Point(294, 332)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(196, 40)
         Me.PictureBox2.TabIndex = 16
@@ -370,7 +371,7 @@ Partial Class Form1
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Image = Global.Launcher.My.Resources.Resources.AccountName2
-        Me.Label1.Location = New System.Drawing.Point(273, 232)
+        Me.Label1.Location = New System.Drawing.Point(273, 254)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 17)
         Me.Label1.TabIndex = 17
@@ -381,7 +382,7 @@ Partial Class Form1
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Image = Global.Launcher.My.Resources.Resources.MinecraftVersion
-        Me.Label2.Location = New System.Drawing.Point(273, 292)
+        Me.Label2.Location = New System.Drawing.Point(273, 314)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(237, 17)
         Me.Label2.TabIndex = 18
@@ -403,7 +404,7 @@ Partial Class Form1
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.CheckBox1.ForeColor = System.Drawing.Color.White
-        Me.CheckBox1.Location = New System.Drawing.Point(294, 355)
+        Me.CheckBox1.Location = New System.Drawing.Point(294, 377)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 20
@@ -415,7 +416,7 @@ Partial Class Form1
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Image = Global.Launcher.My.Resources.Resources.LatestNews
-        Me.Label5.Location = New System.Drawing.Point(533, 233)
+        Me.Label5.Location = New System.Drawing.Point(533, 200)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(237, 17)
         Me.Label5.TabIndex = 21
@@ -435,7 +436,7 @@ Partial Class Form1
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(301, 320)
+        Me.ComboBox1.Location = New System.Drawing.Point(301, 342)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(182, 21)
         Me.ComboBox1.TabIndex = 24
@@ -452,7 +453,7 @@ Partial Class Form1
         '
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Image = Global.Launcher.My.Resources.Resources.RememberAccount
-        Me.Label7.Location = New System.Drawing.Point(283, 353)
+        Me.Label7.Location = New System.Drawing.Point(283, 375)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(237, 17)
         Me.Label7.TabIndex = 26
@@ -471,15 +472,27 @@ Partial Class Form1
         Me.PictureBox4.ErrorImage = Global.Launcher.My.Resources.Resources.UnableToLoadNews
         Me.PictureBox4.ImageLocation = "http://files.enjin.com/256377/TagCraftMC_Launcher_Files/LauncherNews.png"
         Me.PictureBox4.InitialImage = Global.Launcher.My.Resources.Resources.LoadingNewsANIV2
-        Me.PictureBox4.Location = New System.Drawing.Point(556, 250)
+        Me.PictureBox4.Location = New System.Drawing.Point(556, 218)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(196, 217)
+        Me.PictureBox4.Size = New System.Drawing.Size(196, 271)
         Me.PictureBox4.TabIndex = 28
         Me.PictureBox4.TabStop = False
         '
         'BackgroundWorker3
         '
         Me.BackgroundWorker3.WorkerReportsProgress = True
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.Transparent
+        Me.Button5.BackgroundImage = Global.Launcher.My.Resources.Resources.Update
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Location = New System.Drawing.Point(28, 335)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(196, 40)
+        Me.Button5.TabIndex = 29
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -488,6 +501,7 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.ChalkieFinal_zps9ed55b9c
         Me.ClientSize = New System.Drawing.Size(784, 562)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.ComboBox1)
@@ -569,5 +583,6 @@ Partial Class Form1
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents BackgroundWorker3 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Button5 As System.Windows.Forms.Button
 
 End Class

@@ -613,6 +613,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Update() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Update", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property UpdateHover() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("UpdateHover", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Version130() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Version130", resourceCulture)
@@ -646,6 +666,16 @@ Namespace My.Resources
         Friend ReadOnly Property VisitHover() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("VisitHover", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property VisitHover1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("VisitHover1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

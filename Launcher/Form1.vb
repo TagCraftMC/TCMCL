@@ -591,6 +591,16 @@ Public Class Form1
         Button1.BackgroundImage = My.Resources.Launch
 
     End Sub
+    Private Sub Button5_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.MouseEnter
+
+        Button5.BackgroundImage = My.Resources.UpdateHover
+
+    End Sub
+    Private Sub Button5_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.MouseLeave
+
+        Button5.BackgroundImage = My.Resources.Update
+
+    End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         System.Diagnostics.Process.Start("http://www.tagcraftmc.com")
