@@ -201,7 +201,7 @@ Partial Class UpdatesandMods
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(530, 310)
+        Me.ClientSize = New System.Drawing.Size(548, 310)
         Me.Controls.Add(Me.lblversion)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.cbversions)
