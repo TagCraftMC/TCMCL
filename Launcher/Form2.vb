@@ -305,11 +305,26 @@ Public Class Form2
         Next
     End Sub
 
+    Public Sub readtxtfile()
+        Dim address As String = "http://tagcraftmc.net78.net/file/filex"
+        Dim client As WebClient = New WebClient()
+        Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
+        '   Dim R As IO.StreamReader
+       
+        '        ComboBox3.Items.Add(pewpew)
+
+        While (reader.Peek() > -1)
+            ComboBox3.Items.Add(reader.ReadLine)
+        End While
+        reader.Close()
+
+    End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         
-        downloadzipfile()
-        extractzipfile()
-        populatebox()
+        'downloadzipfile()
+        'extractzipfile()
+        'populatebox()
 
+        readtxtfile()
     End Sub
 End Class
