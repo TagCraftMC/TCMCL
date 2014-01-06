@@ -633,4 +633,8 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        accessOP = "1"
+        UpdatesandMods.Show()
+    End Sub
 End Class

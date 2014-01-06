@@ -128,6 +128,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UpdatesandMods.Designer.vb">
+      <DependentUpon>UpdatesandMods.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatesandMods.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Credit.resx">
@@ -147,6 +153,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatesandMods.resx">
+      <DependentUpon>UpdatesandMods.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -287,6 +296,7 @@
     <None Include="Resources\Update.png" />
     <None Include="Resources\VisitHover1.png" />
     <None Include="Resources\UpdateHover.png" />
+    <None Include="Resources\0.0.0.png" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />
