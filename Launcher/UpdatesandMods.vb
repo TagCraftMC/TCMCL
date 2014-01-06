@@ -134,4 +134,11 @@ Public Class UpdatesandMods
         btnstart.Text = "Start"
         SW.Stop()
     End Sub
+    Private Sub UpdatesandMods_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Try
+            readtxtfile()
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class
