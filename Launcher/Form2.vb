@@ -265,8 +265,8 @@ Public Class Form2
 
     Public Sub downloadzipfile()
         'zip file from www.tagcraftmc.com/files/x.zip gets downloaded everytime user opens form2
-        Dim remoteUri As String = "http://www.tagcraftmc.com/files/"
-        Dim fileName As String = "update.zip"
+        Dim remoteUri As String = "http://tagcraftmc.net78.net/MC_File/"
+        Dim fileName As String = "MC.zip"
         Dim myStringWebResource As String = Nothing
         Dim myWebClient As New WebClient()
         ' Concatenate the domain with the Web resource filename. Because DownloadFile  
@@ -281,7 +281,7 @@ Public Class Form2
 
     Public Sub extractzipfile()
         'extract content of zip file
-        Dim ZipToUnpack As String = "update.zip"
+        Dim ZipToUnpack As String = "MC.zip"
         Dim TargetDir As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/Updatelist/"
         Console.WriteLine("Extracting file {0} to {1}", ZipToUnpack, TargetDir)
         Using zip1 As ZipFile = ZipFile.Read(ZipToUnpack)
@@ -295,13 +295,21 @@ Public Class Form2
     End Sub
 
     Public Sub populatebox()
+        ComboBox3.Items.Clear()
 
         Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/Updatelist")
         For Each fi In finfo.GetFiles
 
-            ComboBox1.Items.Add(Path.GetFileNameWithoutExtension(fi.Name))
+            ComboBox3.Items.Add(Path.GetFileNameWithoutExtension(fi.Name))
 
         Next
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        
+        downloadzipfile()
+        extractzipfile()
+        populatebox()
 
     End Sub
 End Class
