@@ -312,10 +312,17 @@ Public Class Form2
         '   Dim R As IO.StreamReader
        
         '        ComboBox3.Items.Add(pewpew)
+        Dim newtext As String
 
         While (reader.Peek() > -1)
+
             ComboBox3.Items.Add(reader.ReadLine)
+            newtext = ComboBox3.Items.Item(0)
+            ComboBox3.Text = newtext
+
         End While
+       
+
         reader.Close()
 
     End Sub
