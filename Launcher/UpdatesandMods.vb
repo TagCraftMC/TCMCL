@@ -102,7 +102,7 @@ Public Class UpdatesandMods
     End Sub
     Private Sub WC_DownloadCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs) Handles WC.DownloadFileCompleted
         If ProgressBar1.Value = 100 Then
-            btnstart.Text = "Start"
+            btnstart.Text = "Download and Install"
             btnstart.Enabled = True
             btncancel.Enabled = False
             lblstatus.Text = "Finished"
@@ -131,7 +131,7 @@ Public Class UpdatesandMods
         lbleta.Text = "00:00:00"
         btncancel.Enabled = False
         btnstart.Enabled = True
-        btnstart.Text = "Start"
+        btnstart.Text = "Download and Install"
         SW.Stop()
     End Sub
     Private Sub UpdatesandMods_Load(sender As Object, e As EventArgs) Handles Me.Load

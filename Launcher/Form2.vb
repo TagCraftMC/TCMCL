@@ -130,7 +130,6 @@ Public Class Form2
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        readtxtfile()
 
         If Environment.Is64BitOperatingSystem = True Then
             'nothing
@@ -300,52 +299,13 @@ Public Class Form2
     End Sub
 
     Public Sub populatebox()
-        ComboBox3.Items.Clear()
+        'ComboBox3.Items.Clear()
 
         Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/Updatelist")
         For Each fi In finfo.GetFiles
 
-            ComboBox3.Items.Add(Path.GetFileNameWithoutExtension(fi.Name))
+            'ComboBox3.Items.Add(Path.GetFileNameWithoutExtension(fi.Name))
 
         Next
-    End Sub
-
-    Public Sub readtxtfile()
-        ComboBox3.Items.Clear()
-
-        Dim address As String = "http://tagcraftmc.net78.net/file/filex"
-        Dim client As WebClient = New WebClient()
-        Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
-        '   Dim R As IO.StreamReader
-
-        '        ComboBox3.Items.Add(pewpew)
-        Dim newtext As String
-
-        While (reader.Peek() > -1)
-
-            ComboBox3.Items.Add(reader.ReadLine)
-            newtext = ComboBox3.Items.Item(0)
-            ComboBox3.Text = newtext
-
-        End While
-
-
-        reader.Close()
-
-    End Sub
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        
-        'downloadzipfile()
-        'extractzipfile()
-        'populatebox()
-
-        readtxtfile()
-    End Sub
-
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        WC.DownloadFileAsync(New Uri("http://files.enjin.com/256377/Essentials.zip"), "DownloadedFile.zip")
-    End Sub
-    Private Sub WC_DownloadProgressChanged(ByVal sender As Object, ByVal e As DownloadProgressChangedEventArgs) Handles WC.DownloadProgressChanged
-        ProgressBar1.Value = e.ProgressPercentage
     End Sub
 End Class
