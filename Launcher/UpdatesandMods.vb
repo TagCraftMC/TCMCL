@@ -5,11 +5,10 @@ Public Class UpdatesandMods
     Dim timeLeftAverage As Double
     Dim timeLeft As TimeSpan
     Dim WithEvents WC As New WebClient
-
-    Dim address As String = "http://tagcraftmc.net78.net/file/filex?t=" + DateTime.Now.ToLocalTime() 'this now kinda clears the cache every time it's refreshed
     Dim client As WebClient = New WebClient()
-    Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
+    Dim reader As StreamReader
     Dim newtext As String
+
     Public Sub populatebox()
         cbversions.Items.Clear()
 
@@ -22,7 +21,7 @@ Public Class UpdatesandMods
     End Sub
 
     Public Sub readtxtfile()
-        cbversions.Items.Clear()
+        '  cbversions.Items.Clear()
         Me.BackgroundWorker1.RunWorkerAsync()
        
   
@@ -50,7 +49,7 @@ Public Class UpdatesandMods
             lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
 
         Catch ex As Exception
-            ' unable to load the image
+
         End Try
     End Sub
 
@@ -130,6 +129,15 @@ Public Class UpdatesandMods
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        reader = New StreamReader(client.OpenRead("http://tagcraftmc.net78.net/file/filex?t=" + DateTime.Now.ToLocalTime()))
+
+        'Dim client As WebClient = New WebClient()
+        '        Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
+        '  Dim newtext As String
+
     End Sub
 
     
