@@ -269,7 +269,7 @@ Partial Class Form1
         Me.c.ForeColor = System.Drawing.Color.White
         Me.c.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.c.Name = "c"
-        Me.c.Size = New System.Drawing.Size(100, 17)
+        Me.c.Size = New System.Drawing.Size(100, 16)
         Me.c.Text = "TeamSpeak"
         '
         'HelpBTN
