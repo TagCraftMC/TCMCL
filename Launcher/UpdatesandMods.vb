@@ -5,6 +5,11 @@ Public Class UpdatesandMods
     Dim timeLeftAverage As Double
     Dim timeLeft As TimeSpan
     Dim WithEvents WC As New WebClient
+
+    Dim address As String = "http://tagcraftmc.net78.net/file/filex?t=" + DateTime.Now.ToLocalTime() 'this now kinda clears the cache every time it's refreshed
+    Dim client As WebClient = New WebClient()
+    Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
+    Dim newtext As String
     Public Sub populatebox()
         cbversions.Items.Clear()
 
@@ -18,26 +23,9 @@ Public Class UpdatesandMods
 
     Public Sub readtxtfile()
         cbversions.Items.Clear()
-
-        Dim address As String = "http://tagcraftmc.net78.net/file/filex?t=" + DateTime.Now.ToLocalTime() 'this now kinda clears the cache every time it's refreshed
-        Dim client As WebClient = New WebClient()
-        Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
-        '   Dim R As IO.StreamReader
-
-        '        ComboBox3.Items.Add(pewpew)
-        Dim newtext As String
-
-        While (reader.Peek() > -1)
-
-            cbversions.Items.Add(reader.ReadLine)
-            newtext = cbversions.Items.Item(0)
-            cbversions.Text = newtext
-
-        End While
-
-
-        reader.Close()
-
+        Me.BackgroundWorker1.RunWorkerAsync()
+       
+  
     End Sub
     Private Sub btnrefresh_Click(sender As Object, e As EventArgs) Handles btnrefresh.Click
         'downloadzipfile()
@@ -54,13 +42,15 @@ Public Class UpdatesandMods
         End Try
     End Sub
 
+    
+
     Private Sub cbversions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbversions.SelectedIndexChanged
         Try
             PictureBox1.ImageLocation = "http://tagcraftmc.net78.net/images/" + cbversions.SelectedItem.ToString + ".png"
             lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
 
         Catch ex As Exception
-            'unable to load the image
+            ' unable to load the image
         End Try
     End Sub
 
@@ -140,5 +130,21 @@ Public Class UpdatesandMods
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        While (reader.Peek() > -1)
+
+            cbversions.Items.Add(reader.ReadLine)
+            newtext = cbversions.Items.Item(0)
+            cbversions.Text = newtext
+
+        End While
+
+
+        reader.Close()
+
     End Sub
 End Class

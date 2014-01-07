@@ -40,6 +40,7 @@ Partial Class UpdatesandMods
         Me.cbversions = New System.Windows.Forms.ComboBox()
         Me.lblversion = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -199,6 +200,9 @@ Partial Class UpdatesandMods
         Me.PictureBox1.TabIndex = 16
         Me.PictureBox1.TabStop = False
         '
+        'BackgroundWorker1
+        '
+        '
         'UpdatesandMods
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -246,4 +250,5 @@ Partial Class UpdatesandMods
     Friend WithEvents cbversions As System.Windows.Forms.ComboBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lblversion As System.Windows.Forms.Label
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class
