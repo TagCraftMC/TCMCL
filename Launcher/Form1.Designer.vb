@@ -61,7 +61,6 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -441,14 +440,6 @@ Partial Class Form1
         Me.ComboBox1.Size = New System.Drawing.Size(182, 21)
         Me.ComboBox1.TabIndex = 24
         '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(1, 541)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 25
-        Me.TextBox2.Visible = False
-        '
         'Label7
         '
         Me.Label7.BackColor = System.Drawing.Color.Transparent
@@ -503,7 +494,6 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label5)
@@ -578,7 +568,6 @@ Partial Class Form1
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox

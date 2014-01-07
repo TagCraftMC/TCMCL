@@ -275,11 +275,14 @@ Public Class Form1
         End Try
 
         Try
-            'Super dodgy work around since I could not work out how to convert the string to boolen correctly for the checkbox
+            Dim checkusernametick As String
+
+            ''Super dodgy work around since I could not work out how to convert the string to boolen correctly for the checkbox
+            'never do that again D:
             oReadc = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/rememberme.txt")
-            TextBox2.Text = Convert.ToBoolean(oReadc.ReadLine)
+            checkusernametick = Convert.ToBoolean(oReadc.ReadLine)
             oReadc.Close()
-            If TextBox2.Text = "True" Then
+            If checkusernametick = "True" Then
                 CheckBox1.Checked = True
             End If
 
