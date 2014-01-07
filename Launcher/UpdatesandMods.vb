@@ -10,7 +10,7 @@ Public Class UpdatesandMods
     Dim newtext As String
 
     Public Sub populatebox()
-        cbversions.Items.Clear()
+        'cbversions.Items.Clear()
 
         Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/Updatelist")
         For Each fi In finfo.GetFiles
@@ -21,28 +21,11 @@ Public Class UpdatesandMods
     End Sub
 
     Public Sub readtxtfile()
-        '  cbversions.Items.Clear()
+        'cbversions.Items.Clear()
         Me.BackgroundWorker1.RunWorkerAsync()
        
   
     End Sub
-    Private Sub btnrefresh_Click(sender As Object, e As EventArgs) Handles btnrefresh.Click
-        'downloadzipfile()
-        'extractzipfile()
-        'populatebox()
-
-        readtxtfile()
-        Try
-            PictureBox1.ImageLocation = "http://tagcraftmc.net78.net/images/" + cbversions.SelectedItem.ToString + ".png"
-            lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
-
-        Catch ex As Exception
-            'unable to load the image
-        End Try
-    End Sub
-
-    
-
     Private Sub cbversions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbversions.SelectedIndexChanged
         Try
             PictureBox1.ImageLocation = "http://tagcraftmc.net78.net/images/" + cbversions.SelectedItem.ToString + ".png"
@@ -132,8 +115,8 @@ Public Class UpdatesandMods
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        reader = New StreamReader(client.OpenRead("http://tagcraftmc.net78.net/file/filex?t=" + DateTime.Now.ToLocalTime()))
 
+        reader = New StreamReader(client.OpenRead("http://tagcraftmc.net78.net/file/filex?t=" + DateTime.Now.ToLocalTime()))
         'Dim client As WebClient = New WebClient()
         '        Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
         '  Dim newtext As String
@@ -144,7 +127,7 @@ Public Class UpdatesandMods
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         While (reader.Peek() > -1)
-
+            cbversions.Enabled = True
             cbversions.Items.Add(reader.ReadLine)
             newtext = cbversions.Items.Item(0)
             cbversions.Text = newtext

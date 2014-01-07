@@ -36,7 +36,6 @@ Partial Class UpdatesandMods
         Me.lblstatus = New System.Windows.Forms.Label()
         Me.btnstart = New System.Windows.Forms.Button()
         Me.btncancel = New System.Windows.Forms.Button()
-        Me.btnrefresh = New System.Windows.Forms.Button()
         Me.cbversions = New System.Windows.Forms.ComboBox()
         Me.lblversion = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -161,18 +160,10 @@ Partial Class UpdatesandMods
         Me.btncancel.Text = "Cancel"
         Me.btncancel.UseVisualStyleBackColor = True
         '
-        'btnrefresh
-        '
-        Me.btnrefresh.Location = New System.Drawing.Point(12, 142)
-        Me.btnrefresh.Name = "btnrefresh"
-        Me.btnrefresh.Size = New System.Drawing.Size(75, 23)
-        Me.btnrefresh.TabIndex = 13
-        Me.btnrefresh.Text = "Refresh List"
-        Me.btnrefresh.UseVisualStyleBackColor = True
-        '
         'cbversions
         '
         Me.cbversions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbversions.Enabled = False
         Me.cbversions.FormattingEnabled = True
         Me.cbversions.Location = New System.Drawing.Point(12, 115)
         Me.cbversions.Name = "cbversions"
@@ -211,7 +202,6 @@ Partial Class UpdatesandMods
         Me.Controls.Add(Me.lblversion)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.cbversions)
-        Me.Controls.Add(Me.btnrefresh)
         Me.Controls.Add(Me.btncancel)
         Me.Controls.Add(Me.btnstart)
         Me.Controls.Add(Me.lblstatus)
@@ -246,7 +236,6 @@ Partial Class UpdatesandMods
     Friend WithEvents lblstatus As System.Windows.Forms.Label
     Friend WithEvents btnstart As System.Windows.Forms.Button
     Friend WithEvents btncancel As System.Windows.Forms.Button
-    Friend WithEvents btnrefresh As System.Windows.Forms.Button
     Friend WithEvents cbversions As System.Windows.Forms.ComboBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lblversion As System.Windows.Forms.Label
