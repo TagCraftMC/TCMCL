@@ -267,45 +267,6 @@ Public Class Form2
         Credit.Show()
     End Sub
 
-    Public Sub downloadzipfile()
-        'zip file from www.tagcraftmc.com/files/x.zip gets downloaded everytime user opens form2
-        Dim remoteUri As String = "http://tagcraftmc.net78.net/MC_File/"
-        Dim fileName As String = "MC.zip"
-        Dim myStringWebResource As String = Nothing
-        Dim myWebClient As New WebClient()
-        ' Concatenate the domain with the Web resource filename. Because DownloadFile  
-        'requires a fully qualified resource name, concatenate the domain with the Web resource file name.
-        myStringWebResource = remoteUri + fileName
-        Console.WriteLine("Downloading File ""{0}"" from ""{1}"" ......." + ControlChars.Cr + ControlChars.Cr, fileName, myStringWebResource)
-        ' The DownloadFile() method downloads the Web resource and saves it into the current file-system folder.
-        myWebClient.DownloadFile(myStringWebResource, fileName)
-        Console.WriteLine("Successfully Downloaded file ""{0}"" from ""{1}""", fileName, myStringWebResource)
-        Console.WriteLine((ControlChars.Cr + "Downloaded file saved in the following file system folder:" + ControlChars.Cr + ControlChars.Tab + Application.StartupPath))
-    End Sub
 
-    Public Sub extractzipfile()
-        'extract content of zip file
-        Dim ZipToUnpack As String = "MC.zip"
-        Dim TargetDir As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/Updatelist/"
-        Console.WriteLine("Extracting file {0} to {1}", ZipToUnpack, TargetDir)
-        Using zip1 As ZipFile = ZipFile.Read(ZipToUnpack)
-            Dim e As ZipEntry
-            ' here, we extract every entry, but we could extract    
-            ' based on entry name, size, date, etc.   
-            For Each e In zip1
-                e.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
-            Next
-        End Using
-    End Sub
 
-    Public Sub populatebox()
-        'ComboBox3.Items.Clear()
-
-        Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/Updatelist")
-        For Each fi In finfo.GetFiles
-
-            'ComboBox3.Items.Add(Path.GetFileNameWithoutExtension(fi.Name))
-
-        Next
-    End Sub
 End Class

@@ -1,5 +1,6 @@
 ﻿Imports System.Net
 Imports System.IO
+Imports Ionic.Zip
 
 Public Class UpdatesandMods
     Dim timeLeftAverage As Double
@@ -8,6 +9,10 @@ Public Class UpdatesandMods
     Dim client As WebClient = New WebClient()
     Dim reader As StreamReader
     Dim newtext As String
+
+    Dim oFiley As System.IO.File
+    Dim oWritey As System.IO.StreamWriter
+    Dim oReady As System.IO.StreamReader
 
     Public Sub populatebox()
         'cbversions.Items.Clear()
@@ -23,8 +28,8 @@ Public Class UpdatesandMods
     Public Sub readtxtfile()
         'cbversions.Items.Clear()
         Me.BackgroundWorker1.RunWorkerAsync()
-       
-  
+
+
     End Sub
     Private Sub cbversions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbversions.SelectedIndexChanged
         Try
@@ -72,6 +77,45 @@ Public Class UpdatesandMods
         timeLeft = TimeSpan.FromSeconds(timeLeftAverage * (e.TotalBytesToReceive - e.BytesReceived))
         lbleta.Text = String.Format("{0:00}:{1:00}:{2:00}", timeLeft.TotalHours, timeLeft.Minutes, timeLeft.Seconds)
     End Sub
+
+
+    Public Sub extractzipfile()
+        'extract content of zip file
+        Dim ZipToUnpack As String = "DownloadedFile.zip"
+        'minecraft path comes here!
+        Dim TargetDir As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions/"
+        'this line will be changed to ./minecraft/
+        Console.WriteLine("Extracting file {0} to {1}", ZipToUnpack, TargetDir)
+        Using zip1 As ZipFile = ZipFile.Read(ZipToUnpack)
+            Dim e As ZipEntry
+            ' here, we extract every entry, but we could extract    
+            ' based on entry name, size, date, etc.   
+            For Each e In zip1
+                e.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
+            Next
+        End Using
+    End Sub
+
+    Public Sub refreshform1()
+        Form1.ComboBox1.Items.Clear()
+
+
+        Dim di As New DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions")
+        For Each subdi As DirectoryInfo In di.GetDirectories
+
+            'MsgBox(subdi.Name)
+            Form1.ComboBox1.Items.Add(subdi.Name)
+        Next
+
+        Try
+            oReady = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
+            Form1.ComboBox1.Text = oReady.ReadLine
+            oReady.Close()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
     Private Sub WC_DownloadCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs) Handles WC.DownloadFileCompleted
         If ProgressBar1.Value = 100 Then
             btnstart.Text = "Download and Install"
@@ -81,6 +125,10 @@ Public Class UpdatesandMods
             lblspeed.Text = "0 KB/s"
             'MessageBox.Show("Debug: Download Complete")
             SW.Stop()
+
+            extractzipfile()
+            refreshform1()
+
         ElseIf lblstatus.Text = "Canceled" Then
             'nothing
         Else
@@ -123,7 +171,7 @@ Public Class UpdatesandMods
 
     End Sub
 
-    
+
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         While (reader.Peek() > -1)
