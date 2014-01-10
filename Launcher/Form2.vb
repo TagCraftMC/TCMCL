@@ -30,89 +30,82 @@ Public Class Form2
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Try
+     
 
-            Dim objReader As StreamWriter
+            'read options.txt if value is not gamma:10.0 then
+            'combobox1.text disabled
+            'else
+            'combobox1.text enabled
+
+            Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+            Dim a As String
+        Dim b As String = ""
 
 
-            objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/tagoptions.txt")
-            objReader.Write(ComboBox1.Text)
-            objReader.Close()
+            Do
+                a = reader.ReadLine
+                'MsgBox(a)
+                Try
+                    If a.Contains("gamma:") Then
+                        b = a
+                        'MsgBox(a)
+                    End If
+                Catch ex As Exception
+                    'a is nothing now...
+                End Try
 
+            Loop Until a Is Nothing
 
-            Dim lines As New List(Of String)(IO.File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt"))
-            'Remove the line to delete, e.g.
+            reader.Close()
 
-            '            lines.RemoveAt(5)
-            IO.File.WriteAllLines((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt"), lines.ToArray())
-
+        '
             Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
                 line = sr.ReadToEnd()
-                '            MsgBox(line)
             End Using
 
             If ComboBox1.Text = "Enabled" Then
-                '                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-                '               objReader.Write("gamma:" + "10" & Environment.NewLine & line)
 
-                'objReader.Close()
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
-                Try
-                    objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-                    objReader.Write(line.Replace("gamma:0.0", "gamma:10.0"))
-                    objReader.Close()
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "gamma:10.0"))
+            objReader.Close()
 
-                Catch ex As Exception
-                    'MsgBox("Please change your brightness settings in minecraft to moody")
-                End Try
+        ElseIf ComboBox1.Text = "Disabled" Then
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
-
-
-            ElseIf ComboBox1.Text = "Disabled" Then
-                '                objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-                '               objReader.Write("gamma:" + "1" & Environment.NewLine & line)
-
-                'objReader.Close()
-
-                Try
-
-                    objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-                    objReader.Write(line.Replace("gamma:10.0", "gamma:0.0"))
-                    objReader.Close()
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "gamma:0.0"))
+            objReader.Close()
 
 
-                Catch ex As Exception
-                    'MsgBox("Please change your brightness settings in minecraft to moody")
-                End Try
-
-
-
-            End If
-
-        Catch ex As Exception
-
-        End Try
-
-        Dim objReaderx As StreamWriter
-
-
-        objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
-        objReaderx.Write(ComboBox2.Text)
-        objReaderx.Close()
-
-
-
-        Me.Hide()
-        '    ComboBox1.Enabled = False
-        x = ComboBox1.Text
-        y = ComboBox2.Text
-
-
-        If CheckBox1.Checked = True Then
-            check = True
-        ElseIf CheckBox1.Checked = False Then
-            check = False
         End If
+
+            '--------------------------------------------------------------------
+
+
+
+            Dim objReaderx As StreamWriter
+
+
+            objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
+            objReaderx.Write(ComboBox2.Text)
+            objReaderx.Close()
+
+
+
+            Me.Hide()
+            '    ComboBox1.Enabled = False
+            x = ComboBox1.Text
+            y = ComboBox2.Text
+
+
+            If CheckBox1.Checked = True Then
+                check = True
+            ElseIf CheckBox1.Checked = False Then
+                check = False
+            End If
 
     End Sub
 
@@ -142,11 +135,42 @@ Public Class Form2
         ComboBox2.Text = "512M"
 
         Try
-            oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/tagoptions.txt")
-            ComboBox1.Text = oRead.ReadLine
+
+            Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+            Dim a As String
+            '        Dim b As String = ""
+
+            '    ComboBox1.Text = "Disabled"
+
+            Do
+                a = reader.ReadLine
+                'MsgBox(a)
+
+                Try
+                    If a = ("gamma:10.0") Then
+                        ComboBox1.Text = "Enabled"
+                    Else
+                        ' do nothing!
+
+                        '            b = a
+                        'MsgBox(a)
+                    End If
+                Catch ex As Exception
+                    'a is nothing now...
+                End Try
+
+            Loop Until a Is Nothing
+
+            reader.Close()
 
 
-            oRead.Close()
+
+            '            oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/tagoptions.txt")
+            '            ComboBox1.Text = oRead.ReadLine
+
+
+            '            oRead.Close()
 
             oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
             ComboBox2.Text = oReadx.ReadLine
