@@ -4,6 +4,7 @@ Imports System.Net
 Imports Ionic.Zip
 
 Public Class Form2
+    Dim w As String
     Dim x As String
     Dim y As String
     Dim z As String
@@ -28,43 +29,35 @@ Public Class Form2
     Dim oReady As System.IO.StreamReader
     Dim WithEvents WC As New WebClient
 
+    Public Sub gamma()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-     
-
-            'read options.txt if value is not gamma:10.0 then
-            'combobox1.text disabled
-            'else
-            'combobox1.text enabled
-
-            Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-
-            Dim a As String
+        Dim a As String
         Dim b As String = ""
 
 
-            Do
-                a = reader.ReadLine
-                'MsgBox(a)
-                Try
-                    If a.Contains("gamma:") Then
-                        b = a
-                        'MsgBox(a)
-                    End If
-                Catch ex As Exception
-                    'a is nothing now...
-                End Try
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("gamma:") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
 
-            Loop Until a Is Nothing
+        Loop Until a Is Nothing
 
-            reader.Close()
+        reader.Close()
 
         '
-            Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-                line = sr.ReadToEnd()
-            End Using
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            line = sr.ReadToEnd()
+        End Using
 
-            If ComboBox1.Text = "Enabled" Then
+        If ComboBox1.Text = "Enabled" Then
 
             Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
@@ -82,9 +75,63 @@ Public Class Form2
 
         End If
 
-            '--------------------------------------------------------------------
+
+    End Sub
 
 
+    Public Sub tooltip()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+        Dim a As String
+        Dim b As String = ""
+
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("advancedItemTooltips:") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            line = sr.ReadToEnd()
+        End Using
+
+        If ComboBox3.Text = "Enabled" Then
+
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "advancedItemTooltips:true"))
+            objReader.Close()
+
+        ElseIf ComboBox3.Text = "Disabled" Then
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "advancedItemTooltips:false"))
+            objReader.Close()
+
+
+        End If
+
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        gamma()
+        tooltip()
 
             Dim objReaderx As StreamWriter
 
@@ -97,8 +144,9 @@ Public Class Form2
 
             Me.Hide()
             '    ComboBox1.Enabled = False
-            x = ComboBox1.Text
-            y = ComboBox2.Text
+        x = ComboBox1.Text
+        y = ComboBox2.Text
+        w = ComboBox2.Text
 
 
             If CheckBox1.Checked = True Then
@@ -122,8 +170,7 @@ Public Class Form2
     'End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
-
-
+        
         If Environment.Is64BitOperatingSystem = True Then
             'nothing
         ElseIf Environment.Is64BitOperatingSystem = False Then
@@ -133,6 +180,7 @@ Public Class Form2
 
         ComboBox1.Text = "Disabled"
         ComboBox2.Text = "512M"
+        ComboBox3.Text = "Disabled"
 
         Try
 
@@ -155,6 +203,11 @@ Public Class Form2
 
                         '            b = a
                         'MsgBox(a)
+                    End If
+                    If a = ("advancedItemTooltips:true") Then
+                        ComboBox3.Text = "Enabled"
+                    Else
+                        ' do nothing!
                     End If
                 Catch ex As Exception
                     'a is nothing now...
@@ -187,6 +240,7 @@ Public Class Form2
 
         y = ComboBox2.Text
 
+        w = ComboBox3.Text
 
         'MsgBox(computer_info.AvailablePhysicalMemory)
         Me.Location = Form1.centerForm(Me) '// center Form of Main Form.
@@ -198,6 +252,7 @@ Public Class Form2
             e.Cancel = True
             ComboBox1.Text = x
             ComboBox2.Text = y
+            ComboBox3.Text = w
 
             If check = True Then
                 CheckBox1.Checked = True
@@ -211,6 +266,8 @@ Public Class Form2
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         ComboBox1.Text = x
         ComboBox2.Text = y
+        ComboBox3.Text = w
+
         If check = True Then
             CheckBox1.Checked = True
         ElseIf check = False Then
