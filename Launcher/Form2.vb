@@ -4,6 +4,7 @@ Imports System.Net
 Imports Ionic.Zip
 
 Public Class Form2
+    Dim v As String
     Dim w As String
     Dim x As String
     Dim y As String
@@ -128,10 +129,60 @@ Public Class Form2
 
     End Sub
 
+    Public Sub heldtooltip()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+        Dim a As String
+        Dim b As String = ""
+
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("heldItemTooltips:") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            line = sr.ReadToEnd()
+        End Using
+
+        If ComboBox4.Text = "Enabled" Then
+
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "heldItemTooltips:true"))
+            objReader.Close()
+
+        ElseIf ComboBox4.Text = "Disabled" Then
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "heldItemTooltips:false"))
+            objReader.Close()
+
+
+        End If
+
+
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         gamma()
         tooltip()
+        heldtooltip()
 
             Dim objReaderx As StreamWriter
 
@@ -147,6 +198,7 @@ Public Class Form2
         x = ComboBox1.Text
         y = ComboBox2.Text
         w = ComboBox2.Text
+        v = ComboBox4.Text
 
 
             If CheckBox1.Checked = True Then
@@ -170,7 +222,8 @@ Public Class Form2
     'End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
-        
+
+
         If Environment.Is64BitOperatingSystem = True Then
             'nothing
         ElseIf Environment.Is64BitOperatingSystem = False Then
@@ -181,6 +234,7 @@ Public Class Form2
         ComboBox1.Text = "Disabled"
         ComboBox2.Text = "512M"
         ComboBox3.Text = "Disabled"
+        ComboBox4.Text = "Disabled"
 
         Try
 
@@ -209,6 +263,13 @@ Public Class Form2
                     Else
                         ' do nothing!
                     End If
+
+                    If a = ("heldItemTooltips:true") Then
+                        ComboBox4.Text = "Enabled"
+                    Else
+                        ' do nothing!
+                    End If
+
                 Catch ex As Exception
                     'a is nothing now...
                 End Try
@@ -242,6 +303,8 @@ Public Class Form2
 
         w = ComboBox3.Text
 
+        v = ComboBox4.Text
+
         'MsgBox(computer_info.AvailablePhysicalMemory)
         Me.Location = Form1.centerForm(Me) '// center Form of Main Form.
 
@@ -253,6 +316,7 @@ Public Class Form2
             ComboBox1.Text = x
             ComboBox2.Text = y
             ComboBox3.Text = w
+            ComboBox4.Text = v
 
             If check = True Then
                 CheckBox1.Checked = True
@@ -267,6 +331,7 @@ Public Class Form2
         ComboBox1.Text = x
         ComboBox2.Text = y
         ComboBox3.Text = w
+        ComboBox4.Text = v
 
         If check = True Then
             CheckBox1.Checked = True

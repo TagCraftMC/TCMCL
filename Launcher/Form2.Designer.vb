@@ -32,12 +32,14 @@ Partial Class Form2
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.OptionsToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -135,6 +137,19 @@ Partial Class Form2
         Me.OptionsToolTip.ForeColor = System.Drawing.Color.White
         Me.OptionsToolTip.OwnerDraw = True
         '
+        'ComboBox3
+        '
+        Me.ComboBox3.AllowDrop = True
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"Enabled", "Disabled"})
+        Me.ComboBox3.Location = New System.Drawing.Point(147, 181)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(94, 21)
+        Me.ComboBox3.TabIndex = 16
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox3, "Enable Or Disable Fullbright Mode.")
+        '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
@@ -187,18 +202,27 @@ Partial Class Form2
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Advanced Item Tooltips:"
         '
-        'ComboBox3
+        'Label6
         '
-        Me.ComboBox3.AllowDrop = True
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.ComboBox3.Location = New System.Drawing.Point(147, 181)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(94, 21)
-        Me.ComboBox3.TabIndex = 16
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox3, "Enable Or Disable Fullbright Mode.")
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(20, 217)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(93, 13)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "held Item Tooltips:"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.AllowDrop = True
+        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"Enabled", "Disabled"})
+        Me.ComboBox4.Location = New System.Drawing.Point(147, 214)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(94, 21)
+        Me.ComboBox4.TabIndex = 18
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox4, "Enable Or Disable Fullbright Mode.")
         '
         'Form2
         '
@@ -207,6 +231,8 @@ Partial Class Form2
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.OptionsArea
         Me.ClientSize = New System.Drawing.Size(414, 466)
+        Me.Controls.Add(Me.ComboBox4)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
@@ -243,4 +269,6 @@ Partial Class Form2
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
 End Class
