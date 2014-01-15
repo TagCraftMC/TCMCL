@@ -131,7 +131,7 @@ Partial Class Form1
         Me.Button2.BackgroundImage = Global.Launcher.My.Resources.Resources.Options
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(71, 254)
+        Me.Button2.Location = New System.Drawing.Point(28, 286)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(196, 40)
         Me.Button2.TabIndex = 2
@@ -143,7 +143,7 @@ Partial Class Form1
         Me.Button3.BackgroundImage = Global.Launcher.My.Resources.Resources.Exit_
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(542, 449)
+        Me.Button3.Location = New System.Drawing.Point(556, 378)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(196, 40)
         Me.Button3.TabIndex = 4
@@ -277,14 +277,11 @@ Partial Class Form1
         Me.HelpBTN.BackgroundImage = Global.Launcher.My.Resources.Resources.HelpandInfo
         Me.HelpBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.HelpBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HelpBTN.Location = New System.Drawing.Point(28, 391)
+        Me.HelpBTN.Location = New System.Drawing.Point(28, 378)
         Me.HelpBTN.Name = "HelpBTN"
         Me.HelpBTN.Size = New System.Drawing.Size(196, 40)
         Me.HelpBTN.TabIndex = 3
         Me.HelpBTN.UseVisualStyleBackColor = False
-        '
-        'BackgroundWorker1
-        '
         '
         'LauncherToolTip
         '
@@ -331,9 +328,6 @@ Partial Class Form1
         Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)
         Me.WebBrowser1.Visible = False
         Me.WebBrowser1.WebBrowserShortcutsEnabled = False
-        '
-        'BackgroundWorker2
-        '
         '
         'Button4
         '
@@ -458,7 +452,7 @@ Partial Class Form1
         Me.Button5.BackgroundImage = Global.Launcher.My.Resources.Resources.Update
         Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Location = New System.Drawing.Point(556, 281)
+        Me.Button5.Location = New System.Drawing.Point(556, 332)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(196, 40)
         Me.Button5.TabIndex = 29
