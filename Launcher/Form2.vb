@@ -10,8 +10,8 @@ Public Class Form2
     Dim y As String
     Dim z As String
 
-    Dim check As Boolean
-    Dim debuglog As String
+    Public Shared check As Boolean
+    Public Shared debuglog As String
 
     Dim locationx As String
 
@@ -31,106 +31,170 @@ Public Class Form2
     Dim WithEvents WC As New WebClient
 
     Public Sub gamma()
-        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+        Try
 
-        Dim a As String
-        Dim b As String = ""
+            Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
-
-        Do
-            a = reader.ReadLine
-            'MsgBox(a)
-            Try
-                If a.Contains("gamma:") Then
-                    b = a
-                    'MsgBox(a)
-                End If
-            Catch ex As Exception
-                'a is nothing now...
-            End Try
-
-        Loop Until a Is Nothing
-
-        reader.Close()
-
-        '
-        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-            line = sr.ReadToEnd()
-        End Using
-
-        If ComboBox1.Text = "Enabled" Then
-
-            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-
-            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-            objReader.Write(line.Replace(b, "gamma:10.0"))
-            objReader.Close()
-
-        ElseIf ComboBox1.Text = "Disabled" Then
-            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-
-            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-            objReader.Write(line.Replace(b, "gamma:0.0"))
-            objReader.Close()
+            Dim a As String
+            Dim b As String = ""
 
 
-        End If
+            Do
+                a = reader.ReadLine
+                'MsgBox(a)
+                Try
+                    If a.Contains("gamma:") Then
+                        b = a
+                        'MsgBox(a)
+                    End If
+                Catch ex As Exception
+                    'a is nothing now...
+                End Try
+
+            Loop Until a Is Nothing
+
+            reader.Close()
+
+            '
+            Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                line = sr.ReadToEnd()
+            End Using
+
+            If ComboBox1.Text = "Enabled" Then
+
+                Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+                'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                objReader.Write(line.Replace(b, "gamma:10.0"))
+                objReader.Close()
+
+            ElseIf ComboBox1.Text = "Disabled" Then
+                Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+                'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                objReader.Write(line.Replace(b, "gamma:0.0"))
+                objReader.Close()
 
 
+            End If
+
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 
-
     Public Sub tooltip()
-        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+        Try
 
-        Dim a As String
-        Dim b As String = ""
+            Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
-
-        Do
-            a = reader.ReadLine
-            'MsgBox(a)
-            Try
-                If a.Contains("advancedItemTooltips:") Then
-                    b = a
-                    'MsgBox(a)
-                End If
-            Catch ex As Exception
-                'a is nothing now...
-            End Try
-
-        Loop Until a Is Nothing
-
-        reader.Close()
-
-        '
-        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-            line = sr.ReadToEnd()
-        End Using
-
-        If ComboBox3.Text = "Enabled" Then
-
-            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-
-            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-            objReader.Write(line.Replace(b, "advancedItemTooltips:true"))
-            objReader.Close()
-
-        ElseIf ComboBox3.Text = "Disabled" Then
-            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-
-            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-            objReader.Write(line.Replace(b, "advancedItemTooltips:false"))
-            objReader.Close()
+            Dim a As String
+            Dim b As String = ""
 
 
-        End If
+            Do
+                a = reader.ReadLine
+                'MsgBox(a)
+                Try
+                    If a.Contains("advancedItemTooltips:") Then
+                        b = a
+                        'MsgBox(a)
+                    End If
+                Catch ex As Exception
+                    'a is nothing now...
+                End Try
+
+            Loop Until a Is Nothing
+
+            reader.Close()
+
+            '
+            Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                line = sr.ReadToEnd()
+            End Using
+
+            If ComboBox3.Text = "Enabled" Then
+
+                Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+                'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                objReader.Write(line.Replace(b, "advancedItemTooltips:true"))
+                objReader.Close()
+
+            ElseIf ComboBox3.Text = "Disabled" Then
+                Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+                'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                objReader.Write(line.Replace(b, "advancedItemTooltips:false"))
+                objReader.Close()
+
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
 
 
     End Sub
 
     Public Sub heldtooltip()
-        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+        Try
+
+            Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+            Dim a As String
+            Dim b As String = ""
+
+
+            Do
+                a = reader.ReadLine
+                'MsgBox(a)
+                Try
+                    If a.Contains("heldItemTooltips:") Then
+                        b = a
+                        'MsgBox(a)
+                    End If
+                Catch ex As Exception
+                    'a is nothing now...
+                End Try
+
+            Loop Until a Is Nothing
+
+            reader.Close()
+
+            '
+            Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                line = sr.ReadToEnd()
+            End Using
+
+            If ComboBox4.Text = "Enabled" Then
+
+                Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+                'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                objReader.Write(line.Replace(b, "heldItemTooltips:true"))
+                objReader.Close()
+
+            ElseIf ComboBox4.Text = "Disabled" Then
+                Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+
+                'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+                objReader.Write(line.Replace(b, "heldItemTooltips:false"))
+                objReader.Close()
+
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Public Sub memorywriter()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
 
         Dim a As String
         Dim b As String = ""
@@ -140,7 +204,7 @@ Public Class Form2
             a = reader.ReadLine
             'MsgBox(a)
             Try
-                If a.Contains("heldItemTooltips:") Then
+                If a.Contains("memory:") Then
                     b = a
                     'MsgBox(a)
                 End If
@@ -153,25 +217,72 @@ Public Class Form2
         reader.Close()
 
         '
-        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
             line = sr.ReadToEnd()
         End Using
 
-        If ComboBox4.Text = "Enabled" Then
-
-            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-
-            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-            objReader.Write(line.Replace(b, "heldItemTooltips:true"))
+        Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+        If check = True Then
+            objReader.Write(line.Replace(b, "memory:512M"))
+            Form1.memory = "512M"
+            objReader.Close()
+        ElseIf check = False Then
+            objReader.Write(line.Replace(b, "memory:" + ComboBox2.Text))
+            Form1.memory = ComboBox2.Text
             objReader.Close()
 
-        ElseIf ComboBox4.Text = "Disabled" Then
-            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+        End If
+
+    End Sub
+
+    Public Sub debugmodewriter()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+        Dim a As String
+        Dim b As String = ""
+
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("debugmode:") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+            line = sr.ReadToEnd()
+        End Using
+        If CheckBox1.Checked = True And b = "debugmode:false" Then
+
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
 
             'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-            objReader.Write(line.Replace(b, "heldItemTooltips:false"))
-            objReader.Close()
+            objReader.Write(line.Replace(b, "debugmode:true"))
 
+            Form1.debugmode = "true"
+            objReader.Close()
+            check = True
+
+        ElseIf CheckBox1.Checked = False And b = "debugmode:true" Then
+
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "debugmode:false"))
+
+            Form1.debugmode = "false"
+            objReader.Close()
+            check = False
 
         End If
 
@@ -184,13 +295,9 @@ Public Class Form2
         tooltip()
         heldtooltip()
 
-            Dim objReaderx As StreamWriter
+        debugmodewriter()
 
-
-            objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
-            objReaderx.Write(ComboBox2.Text)
-            objReaderx.Close()
-
+        memorywriter()
 
 
             Me.Hide()
@@ -199,13 +306,6 @@ Public Class Form2
         y = ComboBox2.Text
         w = ComboBox2.Text
         v = ComboBox4.Text
-
-
-            If CheckBox1.Checked = True Then
-                check = True
-            ElseIf CheckBox1.Checked = False Then
-                check = False
-            End If
 
     End Sub
 
@@ -232,7 +332,6 @@ Public Class Form2
         End If
 
         ComboBox1.Text = "Disabled"
-        ComboBox2.Text = "512M"
         ComboBox3.Text = "Disabled"
         ComboBox4.Text = "Disabled"
 
@@ -277,20 +376,6 @@ Public Class Form2
             Loop Until a Is Nothing
 
             reader.Close()
-
-
-
-            '            oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/tagoptions.txt")
-            '            ComboBox1.Text = oRead.ReadLine
-
-
-            '            oRead.Close()
-
-            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
-            ComboBox2.Text = oReadx.ReadLine
-
-
-            oReadx.Close()
 
 
         Catch ex As Exception
@@ -412,7 +497,5 @@ Public Class Form2
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Credit.Show()
     End Sub
-
-
 
 End Class

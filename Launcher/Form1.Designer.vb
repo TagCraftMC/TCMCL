@@ -65,14 +65,13 @@ Partial Class Form1
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -144,7 +143,7 @@ Partial Class Form1
         Me.Button3.BackgroundImage = Global.Launcher.My.Resources.Resources.Exit_
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(28, 208)
+        Me.Button3.Location = New System.Drawing.Point(542, 449)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(196, 40)
         Me.Button3.TabIndex = 4
@@ -269,7 +268,7 @@ Partial Class Form1
         Me.c.ForeColor = System.Drawing.Color.White
         Me.c.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.c.Name = "c"
-        Me.c.Size = New System.Drawing.Size(100, 17)
+        Me.c.Size = New System.Drawing.Size(100, 16)
         Me.c.Text = "TeamSpeak"
         '
         'HelpBTN
@@ -284,6 +283,9 @@ Partial Class Form1
         Me.HelpBTN.TabIndex = 3
         Me.HelpBTN.UseVisualStyleBackColor = False
         '
+        'BackgroundWorker1
+        '
+        '
         'LauncherToolTip
         '
         Me.LauncherToolTip.BackColor = System.Drawing.Color.DodgerBlue
@@ -293,6 +295,7 @@ Partial Class Form1
         'lvLBL
         '
         Me.lvLBL.BackColor = System.Drawing.Color.Transparent
+        Me.lvLBL.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lvLBL.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
         Me.lvLBL.ForeColor = System.Drawing.Color.Red
         Me.lvLBL.Image = Global.Launcher.My.Resources.Resources.OutOfDate
@@ -455,7 +458,7 @@ Partial Class Form1
         Me.Button5.BackgroundImage = Global.Launcher.My.Resources.Resources.Update
         Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Location = New System.Drawing.Point(28, 449)
+        Me.Button5.Location = New System.Drawing.Point(556, 281)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(196, 40)
         Me.Button5.TabIndex = 29
@@ -464,30 +467,13 @@ Partial Class Form1
         'Timer2
         '
         '
-        'RichTextBox1
+        'PictureBox4
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(526, 193)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(258, 170)
-        Me.RichTextBox1.TabIndex = 30
-        Me.RichTextBox1.Text = ""
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(616, 483)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 31
-        Me.Button6.Text = "Get Text"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(526, 369)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(256, 108)
-        Me.TextBox2.TabIndex = 32
+        Me.PictureBox4.Location = New System.Drawing.Point(-8, -25)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(800, 600)
+        Me.PictureBox4.TabIndex = 30
+        Me.PictureBox4.TabStop = False
         '
         'Form1
         '
@@ -496,9 +482,6 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.ChalkieFinal_zps9ed55b9c
         Me.ClientSize = New System.Drawing.Size(784, 562)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ComboBox1)
@@ -519,6 +502,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.StatusStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -531,6 +515,7 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -576,8 +561,6 @@ Partial Class Form1
     Friend WithEvents BackgroundWorker3 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
 
 End Class

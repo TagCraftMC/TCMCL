@@ -6,6 +6,8 @@ Imports System.Reflection
 
 Module Module1
 
+    '  Public x As String
+
 
     'Format for version list.
     'for 1.6.2
@@ -171,7 +173,7 @@ Module Module1
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
 
 
-        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe", "-Xmx" + Form1.mem + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
+        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe", "-Xmx" + Form1.memory + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
 
         End
 
@@ -185,13 +187,13 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim process As New Process
         Dim info As New ProcessStartInfo
         'info.FileName = "javaw"
         info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
         info.CreateNoWindow = True
-        info.Arguments = "-Xmx" + Form1.mem + " " + Form1.version
+        info.Arguments = "-Xmx" + Form1.memory + " " + Form1.version
 
 
 
@@ -212,13 +214,13 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
-   
+
         retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe", "-Xmx512m " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
-   
+
         End
 
     End Sub
@@ -230,7 +232,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim process As New Process
         Dim info As New ProcessStartInfo
         'info.FileName = "javaw"
@@ -253,13 +255,13 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
 
 
-        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe", "-Xmx" + Form1.mem + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
+        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe", "-Xmx" + Form1.memory + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
         End
 
 
@@ -274,13 +276,13 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim process As New Process
         Dim info As New ProcessStartInfo
         'info.FileName = "javaw"
         info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\javaw.exe"
         info.CreateNoWindow = True
-        info.Arguments = "-Xmx" + Form1.mem + " " + Form1.version
+        info.Arguments = "-Xmx" + Form1.memory + " " + Form1.version
 
         process.StartInfo = info
         process.Start()
@@ -299,7 +301,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -317,7 +319,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         '  Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim process As New Process
         Dim info As New ProcessStartInfo
         info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
@@ -341,7 +343,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -360,7 +362,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim process As New Process
         Dim info As New ProcessStartInfo
         '         info.FileName = "javaw"
@@ -384,7 +386,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
 
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
@@ -406,7 +408,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim process As New Process
         Dim info As New ProcessStartInfo
         '                info.FileName = "javaw"
@@ -431,7 +433,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -451,7 +453,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim process As New Process
         Dim info As New ProcessStartInfo
         info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
@@ -476,13 +478,13 @@ Module Module1
         '   Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         '  Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
 
 
-        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe", "-Xmx" + Form1.mem + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
+        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe", "-Xmx" + Form1.memory + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
         End
 
     End Sub
@@ -495,13 +497,13 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim process As New Process
         Dim info As New ProcessStartInfo
         '                info.FileName = "javaw"
         info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
         info.CreateNoWindow = True
-        info.Arguments = "-Xmx" + Form1.mem + " " + Form1.version
+        info.Arguments = "-Xmx" + Form1.memory + " " + Form1.version
 
         process.StartInfo = info
         process.Start()
@@ -519,7 +521,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -539,7 +541,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         'Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         'Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim process As New Process
         Dim info As New ProcessStartInfo
         '         info.FileName = "javaw"
@@ -562,13 +564,13 @@ Module Module1
         '  Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         '  Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         '  Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
 
 
-        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe", "-Xmx" + Form1.mem + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
+        retValue = CreateProcess(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe", "-Xmx" + Form1.memory + " " + Form1.version, IntPtr.Zero, IntPtr.Zero, False, 0, IntPtr.Zero, Nothing, sInfo, pInfo)
         End
 
 
@@ -581,13 +583,13 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim process As New Process
         Dim info As New ProcessStartInfo
         '                info.FileName = "javaw"
         info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
         info.CreateNoWindow = True
-        info.Arguments = "-Xmx" + Form1.mem + " " + Form1.version
+        info.Arguments = "-Xmx" + Form1.memory + " " + Form1.version
 
         process.StartInfo = info
         process.Start()
@@ -605,7 +607,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim retValue As Boolean
         Dim pInfo As PROCESS_INFORMATION = New PROCESS_INFORMATION()
         Dim sInfo As STARTUPINFO = New STARTUPINFO()
@@ -626,7 +628,7 @@ Module Module1
         ' Form1.version = Form1.version.Replace("|", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft" + q)
         ' Form1.version = Form1.version.Replace("~", Form1.TextBox1.Text)
         ' Form1.version = Form1.version.Replace("[]", q + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/" + q)
-       
+
         Dim process As New Process
         Dim info As New ProcessStartInfo
         info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\Java\jre7\bin\javaw.exe"
@@ -645,134 +647,45 @@ Module Module1
     Sub mainx()
         Dim process As New Process
         Dim info As New ProcessStartInfo
-       
-            If Environment.Is64BitOperatingSystem = True Then
 
-                Try
-                    If Form1.mempass = "0" Then
-                        '  info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
-                        'programfiles for 64 bit
-                        'x86 for 32
-                        If Form1.accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                            yasir1()
+        If Environment.Is64BitOperatingSystem = True Then
 
-                        ElseIf Form1.accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                            yasir2()
-
-                        ElseIf Form2.CheckBox1.Checked = True Then
-                            yasir3()
-
-
-                        End If
-
-
-                    ElseIf Form1.mempass = "1" Then
-
-                        If Form1.accessOP = "0" And Form2.CheckBox1.Checked = False And Form1.mempass = "1" Then
-
-                            yasir4()
-
-
-                        ElseIf Form1.accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                            yasir5()
-
-
-                        ElseIf Form1.accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                            yasir6()
-
-
-                        ElseIf Form2.CheckBox1.Checked = True Then
-
-                            yasir7()
-
-
-                        End If
-
-
-
-                    End If
-
-
-
-
-
-                Catch ex As Exception
-
-                    If Form1.mempass = "0" Then
-
-                        If Form1.accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                        ammar8()
-
-
-                        ElseIf Form1.accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                        ammar9()
-
-
-                        ElseIf Form2.CheckBox1.Checked = True Then
-
-                        ammar10()
-
-                        End If
-
-                    ElseIf Form1.mempass = "1" Then
-                        If Form1.accessOP = "0" And Form2.CheckBox1.Checked = False And Form1.mempass = "1" Then
-                        ammar11()
-
-
-                        ElseIf Form1.accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                        ammar12()
-
-                        ElseIf Form1.accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                        ammar13()
-
-                        ElseIf Form2.CheckBox1.Checked = True Then
-
-                        ammar14()
-
-                        End If
-
-                    End If
-                End Try
-
-
-            ElseIf Environment.Is64BitOperatingSystem = False Then
-
-
-                If Form1.mempass = "0" Then
+            Try
+                If Form1.memorypass = "false" Then
                     '  info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
                     'programfiles for 64 bit
                     'x86 for 32
-                    If Form1.accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                        ammar1()
+                    If Form1.tagoptions = "false" And Form1.debugmode = "false" Then
+                        yasir1()
 
-                    ElseIf Form1.accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                        ammar2()
+                    ElseIf Form1.tagoptions = "true" And Form1.debugmode = "false" Then
+                        yasir2()
 
-                    ElseIf Form2.CheckBox1.Checked = True Then
-                        ammar3()
+                    ElseIf Form1.debugmode = "true" Then
+                        yasir3()
 
 
                     End If
 
 
-                ElseIf Form1.mempass = "1" Then
+                ElseIf Form1.memorypass = "true" Then
 
-                    If Form1.accessOP = "0" And Form2.CheckBox1.Checked = False And Form1.mempass = "1" Then
+                    If Form1.tagoptions = "false" And Form1.debugmode = "false" And Form1.memorypass = "true" Then
 
-                        ammar4()
-
-
-                    ElseIf Form1.accessOP = "0" And Form2.CheckBox1.Checked = False Then
-                        ammar5()
+                        yasir4()
 
 
-                    ElseIf Form1.accessOP = "1" And Form2.CheckBox1.Checked = False Then
-                        ammar6()
+                    ElseIf Form1.tagoptions = "false" And Form1.debugmode = "false" Then
+                        yasir5()
 
 
-                    ElseIf Form2.CheckBox1.Checked = True Then
+                    ElseIf Form1.tagoptions = "true" And Form1.debugmode = "false" Then
+                        yasir6()
 
-                    ammar7()
+
+                    ElseIf Form1.debugmode = "true" Then
+
+                        yasir7()
 
 
                     End If
@@ -785,7 +698,96 @@ Module Module1
 
 
 
+            Catch ex As Exception
+
+                If Form1.memorypass = "false" Then
+
+                    If Form1.tagoptions = "false" And Form1.debugmode = "false" Then
+                        ammar8()
+
+
+                    ElseIf Form1.tagoptions = "true" And Form1.debugmode = "false" Then
+                        ammar9()
+
+
+                    ElseIf Form1.debugmode = "true" Then
+
+                        ammar10()
+
+                    End If
+
+                ElseIf Form1.memorypass = "true" Then
+                    If Form1.tagoptions = "false" And Form1.debugmode = "false" And Form1.memorypass = "true" Then
+                        ammar11()
+
+
+                    ElseIf Form1.tagoptions = "false" And Form1.debugmode = "false" Then
+                        ammar12()
+
+                    ElseIf Form1.tagoptions = "true" And Form1.debugmode = "false" Then
+                        ammar13()
+
+                    ElseIf Form1.debugmode = "true" Then
+
+                        ammar14()
+
+                    End If
+
+                End If
+            End Try
+
+
+        ElseIf Environment.Is64BitOperatingSystem = False Then
+
+
+            If Form1.memorypass = "false" Then
+                '  info.FileName = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\Java\jre7\bin\java.exe"
+                'programfiles for 64 bit
+                'x86 for 32
+                If Form1.tagoptions = "false" And Form1.debugmode = "false" Then
+                    ammar1()
+
+                ElseIf Form1.tagoptions = "true" And Form1.debugmode = "false" Then
+                    ammar2()
+
+                ElseIf Form1.debugmode = "true" Then
+                    ammar3()
+
+
+                End If
+
+
+            ElseIf Form1.memorypass = "true" Then
+
+                If Form1.tagoptions = "false" And Form1.debugmode = "false" And Form1.memorypass = "true" Then
+
+                    ammar4()
+
+
+                ElseIf Form1.tagoptions = "false" And Form1.debugmode = "false" Then
+                    ammar5()
+
+
+                ElseIf Form1.tagoptions = "true" And Form1.debugmode = "false" Then
+                    ammar6()
+
+
+                ElseIf Form1.debugmode = "true" Then
+
+                    ammar7()
+
+
+                End If
+
+
+
             End If
+
+
+
+
+
+        End If
 
 
     End Sub

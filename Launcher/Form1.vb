@@ -65,7 +65,7 @@ Public Class Form1
 
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click      
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             If TextBox1.Text = "" Then
                 MessageBox.Show("Please choose an Account Name. This is needed even if you're just playing Single Player", "Are you my mommy?")
@@ -73,91 +73,20 @@ Public Class Form1
                 MessageBox.Show("Please choose a Version. This is needed even if you're just playing Single Player", "Are you my mommy?")
             Else
                 Button1.Enabled = False
-                Try
-                    Dim objReaderz As StreamWriter
-                    objReaderz = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
-                    objReaderz.Write(ComboBox1.Text)
-                    objReaderz.Close()
-                Catch ex As Exception
-                    MessageBox.Show("Please report this error this to www.tagcraftmc.com", "Error: Unable to save Version")
-                End Try
 
+                versionnumberwriter()
+                rememberaccountwriter()
+                usernamewriter()
 
-                Dim q As String
-                q = Chr(34)
-                Dim objReader As StreamWriter
-                Try
-                    If CheckBox1.Checked = True Then
-                        objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/rememberme.txt")
-                        objReader.Write("True")
-                        objReader.Close()
-                    Else
-                        objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/rememberme.txt")
-                        objReader.Write("False")
-                        objReader.Close()
-                    End If
-                    objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/taguser.txt")
-                    objReader.Write(TextBox1.Text)
-                    objReader.Close()
-
-                Catch ex As Exception
-                    MessageBox.Show("")
-
-                End Try
-
-
-
-                Try
-
-                    oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
-                    mem = oReadx.ReadLine
-
-
-                    oReadx.Close()
-
-                    oReady = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
-                    ver = oReady.ReadLine
-
-
-                    oReady.Close()
-
-
-
-                    'removed so that it is easy to set version number without editing the program.
-                    '    If ver = vbNullString Then
-                    ' ver = "1.6.2"
-                    ' Else
-                    ' End If
-
-
-
-
-
-
-                    If mem = vbNullString Then
-                        mempass = "0"
-
-                    Else
-                        mempass = "1"
-
-                    End If
-
-                Catch ex As Exception
-
-                End Try
-
-
+                '-------------------------- Memory check old config
+                memorypasswriter()
+                '-------------------------- Memory check ends
                 BackgroundWorker3.RunWorkerAsync()
 
             End If
         Catch ex As Exception
 
         End Try
-
-        'progresshere = 100
-        'While (progresshere < 100)
-        'do nothing!
-        'End While
 
 
     End Sub
@@ -185,6 +114,140 @@ Public Class Form1
     'e.ToolTipSize = New Size(300, 300)
     'End Sub
     Dim pfc As New PrivateFontCollection()
+
+
+
+
+
+    'Read up
+    '-----------------------------------------------------------------------
+    'Write down
+
+    Public Sub usernamewriter()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+        Dim a As String
+        Dim b As String = ""
+
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("username:") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+            line = sr.ReadToEnd()
+        End Using
+
+        Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+        'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+        objReader.Write(line.Replace(b, "username:" + TextBox1.Text))
+        objReader.Close()
+
+
+    End Sub
+
+
+    Public Sub rememberaccountwriter()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+        Dim a As String
+        Dim b As String = ""
+
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("rememberaccount:") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+            line = sr.ReadToEnd()
+        End Using
+
+        If CheckBox1.Checked = True Then
+
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "rememberaccount:true"))
+            objReader.Close()
+        ElseIf CheckBox1.Checked = False Then
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "rememberaccount:false"))
+            objReader.Close()
+
+        End If
+
+
+    End Sub
+
+
+    Public Sub versionnumberwriter()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+        Dim a As String
+        Dim b As String = ""
+
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("versionnumber:") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+            line = sr.ReadToEnd()
+        End Using
+
+        Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+        'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+        objReader.Write(line.Replace(b, "versionnumber:" + ComboBox1.Text))
+        objReader.Close()
+
+
+    End Sub
+    'Private Sub ToolTip1_Popup(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PopupEventArgs) Handles LauncherToolTip.Popup
+    'e.ToolTipSize = New Size(300, 300)
+    'End Sub
     Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
 
         Dim i As Integer
@@ -228,26 +291,137 @@ Public Class Form1
 
     End Sub
     'Dim Timer2 As Timer
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
-        'Timer2.Enabled = True
-        'Timer2.Interval = 1000
-        'lvLBL.Parent = PictureBox4
-        'PictureBox3.Parent = PictureBox4
 
-        'lvLBL.BackColor = Color.Transparent
-        'Dim minecraftfont As PrivateFontCollection = New PrivateFontCollection
-        'minecraftfont.AddFontFile("C:\minecraft_font.ttf")
-        'lvLBL.Font = New Font(minecraftfont.Families(0), 6.25)
-        'LinkLabel1.Font = New Font(minecraftfont.Families(0), 6.25)
-        'Label1.Font = New Font(minecraftfont.Families(0), 9.75)
-        'Label2.Font = New Font(minecraftfont.Families(0), 9.75)
-        'CheckBox1.Font = New Font(minecraftfont.Families(0), 9.75)
-        'Label5.Font = New Font(minecraftfont.Families(0), 9.75)
-        'Label6.Font = New Font(minecraftfont.Families(0), 8.25)
-        'Label4.Font = New Font(minecraftfont.Families(0), 9.75)
-        'Label3.Font = New Font(minecraftfont.Families(0), 9.75)
-        'TextBox1.Font = New Font(minecraftfont.Families(0), 12)
-        'ComboBox1.Font = New Font(minecraftfont.Families(0), 8.25)
+    Public Sub runtimecatchwriter()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+       
+
+        Dim a As String
+        Dim b As String = ""
+
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("runtimecatch:") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+            line = sr.ReadToEnd()
+        End Using
+
+        If b = "runtimecatch:false" Then
+
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "runtimecatch:true"))
+            objReader.Close()
+
+        End If
+
+
+    End Sub
+
+
+    Public Sub tagoptionswriter()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+        Dim a As String
+        Dim b As String = ""
+
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("tagoptions:") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+            line = sr.ReadToEnd()
+        End Using
+
+        If b = "tagoptions:false" Then
+
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "tagoptions:true"))
+            objReader.Close()
+
+        End If
+
+
+    End Sub
+
+
+    Public Sub memorypasswriter()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+        Dim a As String
+        Dim b As String = ""
+
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("memorypass:") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+            line = sr.ReadToEnd()
+        End Using
+
+        If b = "memorypass:false" Then
+
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+            'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+            objReader.Write(line.Replace(b, "memorypass:true"))
+            objReader.Close()
+
+        End If
+
+
+    End Sub
+
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+
 
 
         Dim di As New DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions")
@@ -258,102 +432,25 @@ Public Class Form1
         Next
 
 
-        Try
-            oReady = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
-            ComboBox1.Text = oReady.ReadLine
-            oReady.Close()
-        Catch ex As Exception
+        readoptions()
 
-        End Try
-        accessOP = "0"
 
+
+        BackgroundWorker1.RunWorkerAsync()
         BackgroundWorker2.RunWorkerAsync()
 
-        'SavedTooltilForeColor = GetSysColor(COLOR_INFOTEXT) 'save fore color
-
-        'Try
-        'Dim toolTip1 As New ToolTip()
-        'toolTip1.AutoPopDelay = 5000
-        'toolTip1.InitialDelay = 1000
-        'toolTip1.ReshowDelay = 500
-        'toolTip1.ShowAlways = True
-        'toolTip1.SetToolTip(Me.Button1, "My button1")
-        'toolTip1.SetToolTip(Me.Button2, "My Button1")
-        'toolTip1.ToolTipTitle("help")
-        'Catch ex As Exception
-
-        'End Try
-        Try
-            oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/runtimecatch.txt")
-            '            ComboBox2.Text = oReadx.ReadLine
-
-            nomx = oReadx.ReadLine
 
 
-            oReadx.Close()
-
-
-
-        Catch ex As Exception
-
-        End Try
-
-
-        If nomx = "" Then
+        If runtimecatch = "false" Then
             WebBrowser1.Navigate(New Uri("http://www.tagcraftmc.com/launcherhits"))
-        ElseIf nomx = "firsttime" Then
+        ElseIf runtimecatch = "true" Then
             WebBrowser1.Navigate(New Uri("http://www.tagcraftmc.com/launcherads"))
-
         End If
 
+        '------------------------------------------------------------
 
-        Try
+        runtimecatchwriter()
 
-            Dim objReaderx As StreamWriter
-
-
-            objReaderx = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/runtimecatch.txt")
-            objReaderx.Write("firsttime")
-            objReaderx.Close()
-
-        Catch ex As Exception
-
-        End Try
-
-        Try
-            Dim checkusernametick As String
-
-            ''Super dodgy work around since I could not work out how to convert the string to boolen correctly for the checkbox
-            'never do that again D:
-            oReadc = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/rememberme.txt")
-            checkusernametick = Convert.ToBoolean(oReadc.ReadLine)
-            oReadc.Close()
-            If checkusernametick = "True" Then
-                CheckBox1.Checked = True
-            End If
-
-            If CheckBox1.Checked = True Then
-
-                oRead = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/taguser.txt")
-                TextBox1.Text = oRead.ReadLine
-
-
-                oRead.Close()
-
-
-                oReadx = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/memory.txt")
-                mem = oReadx.ReadLine
-
-
-                oReadx.Close()
-
-            End If
-
-
-
-        Catch ex As Exception
-            MessageBox.Show("nope")
-        End Try
 
         If TextBox1.Text = "" Then
             TextBox1.Select()
@@ -361,17 +458,6 @@ Public Class Form1
             'nothing
         End If
 
-        If mem = vbNullString Then
-            mempass = "0"
-
-        Else
-            mempass = "1"
-
-        End If
-
-        '        x()
-        '       y()
-        '      z()
     End Sub
     Public Sub lv()
         Dim client As WebClient = New WebClient()
@@ -418,7 +504,7 @@ Public Class Form1
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        accessOP = "1"
+        tagoptionswriter()
         Form2.Show()
     End Sub
 
@@ -438,32 +524,6 @@ Public Class Form1
 
     Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
         TextBox1.Paste()
-
-    End Sub
-
-    Private Sub BackgroundWorker2_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker2.DoWork
-
-        InternetConnection()
-        lv()
-
-    End Sub
-    Private Sub BackgroundWorker2_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
-        Try
-            lvLBL.Visible = False
-
-        Catch ex As Exception
-
-        End Try
-
-        If LauncherVersion = True Then
-            lvLBL.Visible = False
-
-
-        Else
-            lvLBL.Visible = True
-
-        End If
-
 
     End Sub
     Private Sub lvLBL_MouseDown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lvLBL.MouseDown
@@ -544,40 +604,165 @@ Public Class Form1
 
     Private Sub BackgroundWorker3_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker3.DoWork
         progresshere = 0
+        TagAPIx.Class1.optionreader()
         TagAPIx.Class1.main()
         TagAPIx.Class1.extractfile()
-        oReadp = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ver + ".txt")
-        version = oReadp.ReadLine
-
-
-        oReadp.Close()
-        aftereverything()
-
 
 
     End Sub
 
     Public Sub aftereverything()
         mainx()
-
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        accessOP = "1"
         UpdatesandMods.Show()
     End Sub
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Dim client As WebClient = New WebClient()
-        Try
-            Dim URL As String = "http://tagcraftmc.net78.net/info/test.rtf"
-            Dim updatesinfo As String = client.DownloadString(URL)
 
-            TextBox2.Text = updatesinfo
-            RichTextBox1.Rtf = updatesinfo
+    Public Shared username As String
+    Public Shared versionnumber As String
+    Public Shared rememberaccount As String
+    Public Shared debugmode As String
+    Public Shared memory As String
+    Public Shared memorypass As String
+    Public Shared tagoptions As String
+    Public Shared runtimecatch As String
+    'structure of options.txt
+    'username:Ammar_Ahmad
+    'versionnumber:
+    'rememberaccount:
+    'debugmode:
+    'memory:
+    'tagoptions:
+    'runtimecatch:
+
+
+    Public Sub readoptions()
+        'how options will work...
+        '1 file read. it has options in this format (option):(value)
+        'vb project saves ONLY! (read on load!)
+        'C# api reads ONLY!
+
+        Try
+
+            Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+            Dim a As String
+
+            Do
+                a = reader.ReadLine
+
+                Try
+                    If a.Contains("username:") Then
+                        username = a.Replace("username:", "")
+
+                        TextBox1.Text = username
+
+                    Else
+                        ' do nothing!
+                    End If
+
+                    If a.Contains("versionnumber:") Then
+                        versionnumber = a.Replace("versionnumber:", "")
+
+                        ComboBox1.Text = versionnumber
+
+                    Else
+                        ' do nothing!
+                    End If
+
+                    If a.Contains("rememberaccount:") Then
+                        rememberaccount = a.Replace("rememberaccount:", "")
+
+                        If rememberaccount = "true" Then
+                            CheckBox1.Checked = True
+                        ElseIf rememberaccount = "false" Then
+                            CheckBox1.Checked = False
+                            TextBox1.Text = ""
+                        Else
+                            CheckBox1.Checked = False
+                            TextBox1.Text = ""
+                        End If
+
+                    Else
+                        ' do nothing!
+                    End If
+
+                    If a.Contains("debugmode:") Then
+                        debugmode = a.Replace("debugmode:", "")
+
+                        If debugmode = "true" Then
+                            Form2.CheckBox1.Checked = True
+                            Form2.check = True
+
+                        ElseIf debugmode = "false" Then
+                            Form2.CheckBox1.Checked = False
+                            Form2.check = False
+
+                        Else
+                            Form2.CheckBox1.Checked = False
+                            Form2.check = False
+
+                        End If
+
+                    Else
+                        ' do nothing!
+                    End If
+
+                    If a.Contains("memory:") Then
+                        memory = a.Replace("memory:", "")
+                        If debugmode = "true" Then
+                            Form2.ComboBox2.Text = "512M"
+                        ElseIf debugmode = "false" Then
+                            Form2.ComboBox2.Text = memory
+                        End If
+
+                    Else
+                        ' do nothing!
+                    End If
+
+                    If a.Contains("memorypass:") Then
+                        memorypass = a.Replace("memorypass:", "")
+
+                    Else
+                        ' do nothing!
+                    End If
+
+                    If a.Contains("tagoptions:") Then
+                        tagoptions = a.Replace("tagoptions:", "")
+
+                    Else
+                        ' do nothing!
+                    End If
+
+                    If a.Contains("runtimecatch:") Then
+                        runtimecatch = a.Replace("runtimecatch:", "")
+
+                    Else
+                        ' do nothing!
+                    End If
+
+                Catch ex As Exception
+                    'a is nothing now...
+                End Try
+
+            Loop Until a Is Nothing
+
+            reader.Close()
+
 
         Catch ex As Exception
-            'nothin
-        End Try
 
+        End Try
     End Sub
+
+    Private Sub BackgroundWorker3_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker3.RunWorkerCompleted
+        oReadp = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ComboBox1.Text + ".txt")
+        version = oReadp.ReadLine
+
+
+        oReadp.Close()
+        aftereverything()
+    End Sub
+
 End Class
