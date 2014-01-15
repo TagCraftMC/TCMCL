@@ -231,8 +231,8 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Timer2.Enabled = True
         'Timer2.Interval = 1000
-        lvLBL.Parent = PictureBox4
-        PictureBox3.Parent = PictureBox4
+        'lvLBL.Parent = PictureBox4
+        'PictureBox3.Parent = PictureBox4
 
         'lvLBL.BackColor = Color.Transparent
         'Dim minecraftfont As PrivateFontCollection = New PrivateFontCollection
@@ -565,5 +565,19 @@ Public Class Form1
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         accessOP = "1"
         UpdatesandMods.Show()
+    End Sub
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim client As WebClient = New WebClient()
+        Try
+            Dim URL As String = "http://tagcraftmc.net78.net/info/test.rtf"
+            Dim updatesinfo As String = client.DownloadString(URL)
+
+            TextBox2.Text = updatesinfo
+            RichTextBox1.Rtf = updatesinfo
+
+        Catch ex As Exception
+            'nothin
+        End Try
+
     End Sub
 End Class
