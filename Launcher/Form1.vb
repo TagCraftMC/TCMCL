@@ -765,4 +765,17 @@ Public Class Form1
         aftereverything()
     End Sub
 
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim client As WebClient = New WebClient()
+        Try
+            Dim URL As String = "http://tagcraftmc.net78.net/info/test.rtf"
+            Dim updatesinfo As String = client.DownloadString(URL)
+
+            TransparentRichTextBox1.Rtf = updatesinfo
+
+        Catch ex As Exception
+            'nothin
+        End Try
+
+    End Sub
 End Class

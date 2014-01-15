@@ -128,6 +128,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="StealthModeRTB.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UpdatesandMods.Designer.vb">
       <DependentUpon>UpdatesandMods.vb</DependentUpon>
     </Compile>

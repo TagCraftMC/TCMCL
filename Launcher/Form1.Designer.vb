@@ -65,13 +65,13 @@ Partial Class Form1
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.TransparentRichTextBox1 = New Launcher.TransparentRichTextBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -143,7 +143,7 @@ Partial Class Form1
         Me.Button3.BackgroundImage = Global.Launcher.My.Resources.Resources.Exit_
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(556, 378)
+        Me.Button3.Location = New System.Drawing.Point(28, 470)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(196, 40)
         Me.Button3.TabIndex = 4
@@ -268,7 +268,7 @@ Partial Class Form1
         Me.c.ForeColor = System.Drawing.Color.White
         Me.c.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.c.Name = "c"
-        Me.c.Size = New System.Drawing.Size(100, 16)
+        Me.c.Size = New System.Drawing.Size(100, 17)
         Me.c.Text = "TeamSpeak"
         '
         'HelpBTN
@@ -452,7 +452,7 @@ Partial Class Form1
         Me.Button5.BackgroundImage = Global.Launcher.My.Resources.Resources.Update
         Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Location = New System.Drawing.Point(556, 332)
+        Me.Button5.Location = New System.Drawing.Point(28, 424)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(196, 40)
         Me.Button5.TabIndex = 29
@@ -461,13 +461,23 @@ Partial Class Form1
         'Timer2
         '
         '
-        'PictureBox4
+        'Button6
         '
-        Me.PictureBox4.Location = New System.Drawing.Point(-8, -25)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(800, 600)
-        Me.PictureBox4.TabIndex = 30
-        Me.PictureBox4.TabStop = False
+        Me.Button6.Location = New System.Drawing.Point(541, 495)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(231, 23)
+        Me.Button6.TabIndex = 31
+        Me.Button6.Text = "Get Me News Test"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'TransparentRichTextBox1
+        '
+        Me.TransparentRichTextBox1.Location = New System.Drawing.Point(541, 254)
+        Me.TransparentRichTextBox1.Name = "TransparentRichTextBox1"
+        Me.TransparentRichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
+        Me.TransparentRichTextBox1.Size = New System.Drawing.Size(231, 235)
+        Me.TransparentRichTextBox1.TabIndex = 32
+        Me.TransparentRichTextBox1.Text = ""
         '
         'Form1
         '
@@ -476,6 +486,8 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.ChalkieFinal_zps9ed55b9c
         Me.ClientSize = New System.Drawing.Size(784, 562)
+        Me.Controls.Add(Me.TransparentRichTextBox1)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ComboBox1)
@@ -496,7 +508,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.StatusStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -509,7 +520,6 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -555,6 +565,7 @@ Partial Class Form1
     Friend WithEvents BackgroundWorker3 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
-    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents TransparentRichTextBox1 As Launcher.TransparentRichTextBox
 
 End Class
