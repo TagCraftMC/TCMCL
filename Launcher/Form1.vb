@@ -185,8 +185,56 @@ Public Class Form1
     'e.ToolTipSize = New Size(300, 300)
     'End Sub
     Dim pfc As New PrivateFontCollection()
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
 
+        Dim i As Integer
+        i = Rnd() * 15 + 1
+
+        Select Case i
+
+            Case 1
+                Me.BackgroundImage = My.Resources.Version130
+            Case 2
+                Me.BackgroundImage = My.Resources.UpdateHover
+            Case 3
+                Me.BackgroundImage = My.Resources.Visit
+            Case 4
+                Me.BackgroundImage = My.Resources.VisitHover
+            Case 5
+                Me.BackgroundImage = My.Resources.VisitHover1
+            Case 6
+                Me.BackgroundImage = My.Resources.Warning
+            Case 7
+                Me.BackgroundImage = My.Resources.UnableToLoadNews
+            Case 8
+                Me.BackgroundImage = My.Resources.Thanks2
+            Case 9
+                Me.BackgroundImage = My.Resources.TextBG2
+            Case 10
+                Me.BackgroundImage = My.Resources.Promise
+            Case 11
+                Me.BackgroundImage = My.Resources.OutOfDate
+            Case 12
+                Me.BackgroundImage = My.Resources.OptionsHover
+            Case 13
+                Me.BackgroundImage = My.Resources.Options1
+            Case 14
+                Me.BackgroundImage = My.Resources.online
+            Case 15
+                Me.BackgroundImage = My.Resources.ModsHover
+
+
+        End Select
+
+    End Sub
+    'Dim Timer2 As Timer
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'Timer2.Enabled = True
+        'Timer2.Interval = 1000
+        lvLBL.Parent = PictureBox4
+        PictureBox3.Parent = PictureBox4
+
+        'lvLBL.BackColor = Color.Transparent
         'Dim minecraftfont As PrivateFontCollection = New PrivateFontCollection
         'minecraftfont.AddFontFile("C:\minecraft_font.ttf")
         'lvLBL.Font = New Font(minecraftfont.Families(0), 6.25)
@@ -202,14 +250,13 @@ Public Class Form1
         'ComboBox1.Font = New Font(minecraftfont.Families(0), 8.25)
 
 
-
         Dim di As New DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions")
         For Each subdi As DirectoryInfo In di.GetDirectories
 
             'MsgBox(subdi.Name)
             ComboBox1.Items.Add(subdi.Name)
         Next
-       
+
 
         Try
             oReady = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
@@ -220,7 +267,6 @@ Public Class Form1
         End Try
         accessOP = "0"
 
-        BackgroundWorker1.RunWorkerAsync()
         BackgroundWorker2.RunWorkerAsync()
 
         'SavedTooltilForeColor = GetSysColor(COLOR_INFOTEXT) 'save fore color
@@ -327,62 +373,6 @@ Public Class Form1
         '       y()
         '      z()
     End Sub
-
-
-
-
-    Public Sub x()
-        Dim tcpClient As TcpClient = New TcpClient()
-        Try
-            '     tcpClient.Connect("192.95.29.101", 25565)
-            tcpClient.Connect("play.tagcraftmc.com", 25565)
-
-            'main   
-            '            ToolStripStatusLabel1.Visible = True
-            server = True
-
-        Catch ex As Exception
-            'ToolStripStatusLabel3.Visible = True
-            server = False
-
-
-        End Try
-    End Sub
-
-    Public Sub y()
-        Dim tcpClient As TcpClient = New TcpClient()
-        Try
-            ' tcpClient.Connect("192.95.29.101", 25566)
-            tcpClient.Connect("play.tagcraftmc.com", 25565)
-
-            'HG
-            ' ToolStripStatusLabel2.Visible = True
-            HG = True
-
-        Catch ex As Exception
-            'ToolStripStatusLabel4.Visible = True
-            HG = False
-
-
-        End Try
-    End Sub
-
-    Public Sub z()
-        Dim tcpClient As TcpClient = New TcpClient()
-        Try
-            ' tcpClient.Connect("192.95.29.101", 25566)
-            tcpClient.Connect("tsq.tagcraftmc.com", 10011)
-
-            'TS
-            '       ToolStripStatusLabel5.Visible = True
-            TS = True
-
-        Catch ex As Exception
-            'ToolStripStatusLabel6.Visible = True
-            TS = False
-
-        End Try
-    End Sub
     Public Sub lv()
         Dim client As WebClient = New WebClient()
         If InternetConnection() = False Then
@@ -473,70 +463,6 @@ Public Class Form1
             lvLBL.Visible = True
 
         End If
-
-
-    End Sub
-
-
-    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-
-        '       System.Threading.Thread.Sleep(10)
-        x()
-        y()
-        z()
-        '    InternetConnection()
-        '   lv()
-
-    End Sub
-
-    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-
-
-        Try
-            a.Visible = False
-            b.Visible = False
-            c.Visible = False
-
-        Catch ex As Exception
-
-        End Try
-
-        If server = True Then
-            ToolStripStatusLabel1.Visible = True
-            ToolStripStatusLabel3.Visible = False
-
-
-        Else
-            ToolStripStatusLabel3.Visible = True
-            ToolStripStatusLabel1.Visible = False
-
-
-        End If
-
-        If HG = True Then
-            ToolStripStatusLabel2.Visible = True
-            ToolStripStatusLabel4.Visible = False
-
-
-        Else
-            ToolStripStatusLabel4.Visible = True
-            ToolStripStatusLabel2.Visible = False
-
-
-        End If
-
-        If TS = True Then
-            ToolStripStatusLabel5.Visible = True
-            ToolStripStatusLabel6.Visible = False
-
-
-        Else
-            ToolStripStatusLabel6.Visible = True
-            ToolStripStatusLabel5.Visible = False
-
-        End If
-
-        BackgroundWorker1.RunWorkerAsync()
 
 
     End Sub

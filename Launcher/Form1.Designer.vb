@@ -58,14 +58,14 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,7 +131,7 @@ Partial Class Form1
         Me.Button2.BackgroundImage = Global.Launcher.My.Resources.Resources.Options
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(28, 277)
+        Me.Button2.Location = New System.Drawing.Point(71, 254)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(196, 40)
         Me.Button2.TabIndex = 2
@@ -143,7 +143,7 @@ Partial Class Form1
         Me.Button3.BackgroundImage = Global.Launcher.My.Resources.Resources.Exit_
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(28, 449)
+        Me.Button3.Location = New System.Drawing.Point(542, 449)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(196, 40)
         Me.Button3.TabIndex = 4
@@ -340,7 +340,7 @@ Partial Class Form1
         Me.Button4.BackgroundImage = Global.Launcher.My.Resources.Resources.Visit
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(28, 218)
+        Me.Button4.Location = New System.Drawing.Point(28, 332)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(196, 40)
         Me.Button4.TabIndex = 14
@@ -409,17 +409,6 @@ Partial Class Form1
         Me.CheckBox1.TabIndex = 20
         Me.CheckBox1.UseVisualStyleBackColor = False
         '
-        'Label5
-        '
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Image = Global.Launcher.My.Resources.Resources.LatestNews
-        Me.Label5.Location = New System.Drawing.Point(533, 200)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(237, 17)
-        Me.Label5.TabIndex = 21
-        '
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
@@ -458,17 +447,6 @@ Partial Class Form1
         Me.Label8.Size = New System.Drawing.Size(237, 17)
         Me.Label8.TabIndex = 27
         '
-        'PictureBox4
-        '
-        Me.PictureBox4.ErrorImage = Global.Launcher.My.Resources.Resources.UnableToLoadNews
-        Me.PictureBox4.ImageLocation = "http://files.enjin.com/256377/TagCraftMC_Launcher_Files/LauncherNews.png"
-        Me.PictureBox4.InitialImage = Global.Launcher.My.Resources.Resources.LoadingNewsANIV2
-        Me.PictureBox4.Location = New System.Drawing.Point(556, 218)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(196, 271)
-        Me.PictureBox4.TabIndex = 28
-        Me.PictureBox4.TabStop = False
-        '
         'BackgroundWorker3
         '
         Me.BackgroundWorker3.WorkerReportsProgress = True
@@ -479,11 +457,22 @@ Partial Class Form1
         Me.Button5.BackgroundImage = Global.Launcher.My.Resources.Resources.Update
         Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Location = New System.Drawing.Point(28, 335)
+        Me.Button5.Location = New System.Drawing.Point(556, 281)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(196, 40)
         Me.Button5.TabIndex = 29
         Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Timer2
+        '
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Location = New System.Drawing.Point(-8, -25)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(800, 600)
+        Me.PictureBox4.TabIndex = 30
+        Me.PictureBox4.TabStop = False
         '
         'Form1
         '
@@ -496,7 +485,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -565,13 +553,13 @@ Partial Class Form1
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents BackgroundWorker3 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Timer2 As System.Windows.Forms.Timer
+    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
 
 End Class

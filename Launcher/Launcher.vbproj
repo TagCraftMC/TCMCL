@@ -297,6 +297,7 @@
     <None Include="Resources\VisitHover1.png" />
     <None Include="Resources\UpdateHover.png" />
     <None Include="Resources\0.0.0.png" />
+    <None Include="Resources\Untitled-1.gif" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />
