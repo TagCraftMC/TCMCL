@@ -300,6 +300,10 @@
     <None Include="Resources\VisitHover1.png" />
     <None Include="Resources\UpdateHover.png" />
     <None Include="Resources\0.0.0.png" />
+    <None Include="Resources\NewsBGV1.png" />
+    <None Include="Resources\NewsBGV11.png" />
+    <None Include="Resources\NewsBGV12.png" />
+    <None Include="Resources\NewsBGV13.png" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />
