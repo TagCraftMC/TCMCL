@@ -52,7 +52,7 @@ Partial Class Form1
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.TransparentRichTextBox2 = New Launcher.TransparentRichTextBox()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -328,25 +328,21 @@ Partial Class Form1
         'Timer2
         '
         '
-        'Button6
+        'BackgroundWorker2
         '
-        Me.Button6.Location = New System.Drawing.Point(541, 505)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(231, 23)
-        Me.Button6.TabIndex = 31
-        Me.Button6.Text = "Get Me News Test"
-        Me.Button6.UseVisualStyleBackColor = True
         '
         'TransparentRichTextBox2
         '
         Me.TransparentRichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TransparentRichTextBox2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TransparentRichTextBox2.ForeColor = System.Drawing.Color.White
         Me.TransparentRichTextBox2.Location = New System.Drawing.Point(559, 264)
         Me.TransparentRichTextBox2.Name = "TransparentRichTextBox2"
         Me.TransparentRichTextBox2.ReadOnly = True
         Me.TransparentRichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
         Me.TransparentRichTextBox2.Size = New System.Drawing.Size(192, 226)
         Me.TransparentRichTextBox2.TabIndex = 33
-        Me.TransparentRichTextBox2.Text = ""
+        Me.TransparentRichTextBox2.Text = "Loading News, Please Wait..."
         '
         'Form1
         '
@@ -356,7 +352,6 @@ Partial Class Form1
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.NewsBGV9
         Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.TransparentRichTextBox2)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ComboBox1)
@@ -418,7 +413,7 @@ Partial Class Form1
     Friend WithEvents BackgroundWorker3 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
-    Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents TransparentRichTextBox2 As Launcher.TransparentRichTextBox
+    Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
 
 End Class

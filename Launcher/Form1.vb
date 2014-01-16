@@ -39,6 +39,9 @@ Public Class Form1
     Dim TS As Boolean
 
     Dim LauncherVersion As Boolean
+    Dim updatenonet As Boolean
+    Dim updatesinfo As String
+    Dim updatesinforesult As String
 
 
     Public Shared accessOP As String
@@ -437,7 +440,7 @@ Public Class Form1
 
 
         BackgroundWorker1.RunWorkerAsync()
-        'BackgroundWorker2.RunWorkerAsync()
+        BackgroundWorker2.RunWorkerAsync()
 
 
 
@@ -609,6 +612,7 @@ Public Class Form1
         TagAPIx.Class1.extractfile()
 
 
+
     End Sub
 
     Public Sub aftereverything()
@@ -764,23 +768,27 @@ Public Class Form1
         oReadp.Close()
         aftereverything()
     End Sub
-
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Public Sub newsupdate()
         Dim client As WebClient = New WebClient()
-        Try
-            Dim URL As String = "http://tagcraftmc.net78.net/info/test.html?t=" + DateTime.Now.ToLocalTime()
-            Dim updatesinfo As String = client.DownloadString(URL)
+        If InternetConnection() = False Then
+            updatenonet = True
 
-            TransparentRichTextBox2.Rtf = updatesinfo
+        Else
+            Try
+                Dim URL As String = "http://tagcraftmc.net78.net/info/test.html?t=" + DateTime.Now.ToLocalTime()
+                updatesinforesult = client.DownloadString(URL)
 
-        Catch ex As Exception
-            'nothin
-        End Try
+                'updatesinforesult = updatesinfo
 
+            Catch ex As Exception
+                '
+            End Try
+        End If
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         lv()
+
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
@@ -789,5 +797,21 @@ Public Class Form1
         ElseIf LauncherVersion = True Then
             lvLBL.Visible = False
         End If
+    End Sub
+
+    Private Sub BackgroundWorker2_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker2.DoWork
+        newsupdate()
+    End Sub
+    Private Sub BackgroundWorker2_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
+        If updatenonet = True Then
+            TransparentRichTextBox2.Text = "Unable to get the news, sorry"
+        Else
+            TransparentRichTextBox2.Rtf = updatesinforesult
+        End If
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class
