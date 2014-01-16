@@ -66,7 +66,7 @@ Partial Class Form1
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.TransparentRichTextBox1 = New Launcher.TransparentRichTextBox()
+        Me.TransparentRichTextBox2 = New Launcher.TransparentRichTextBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -268,7 +268,7 @@ Partial Class Form1
         Me.c.ForeColor = System.Drawing.Color.White
         Me.c.Image = Global.Launcher.My.Resources.Resources.unknown
         Me.c.Name = "c"
-        Me.c.Size = New System.Drawing.Size(100, 17)
+        Me.c.Size = New System.Drawing.Size(100, 16)
         Me.c.Text = "TeamSpeak"
         '
         'HelpBTN
@@ -463,31 +463,31 @@ Partial Class Form1
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(533, 487)
+        Me.Button6.Location = New System.Drawing.Point(541, 505)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(231, 23)
         Me.Button6.TabIndex = 31
         Me.Button6.Text = "Get Me News Test"
         Me.Button6.UseVisualStyleBackColor = True
         '
-        'TransparentRichTextBox1
+        'TransparentRichTextBox2
         '
-        Me.TransparentRichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TransparentRichTextBox1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.TransparentRichTextBox1.Location = New System.Drawing.Point(541, 234)
-        Me.TransparentRichTextBox1.Name = "TransparentRichTextBox1"
-        Me.TransparentRichTextBox1.Size = New System.Drawing.Size(223, 246)
-        Me.TransparentRichTextBox1.TabIndex = 32
-        Me.TransparentRichTextBox1.Text = ""
+        Me.TransparentRichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TransparentRichTextBox2.Location = New System.Drawing.Point(558, 264)
+        Me.TransparentRichTextBox2.Name = "TransparentRichTextBox2"
+        Me.TransparentRichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
+        Me.TransparentRichTextBox2.Size = New System.Drawing.Size(193, 226)
+        Me.TransparentRichTextBox2.TabIndex = 33
+        Me.TransparentRichTextBox2.Text = ""
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.BackgroundImage = Global.Launcher.My.Resources.Resources.ChalkieFinal_zps9ed55b9c
+        Me.BackgroundImage = Global.Launcher.My.Resources.Resources.NewsBGV8
         Me.ClientSize = New System.Drawing.Size(784, 562)
-        Me.Controls.Add(Me.TransparentRichTextBox1)
+        Me.Controls.Add(Me.TransparentRichTextBox2)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label8)
@@ -567,6 +567,6 @@ Partial Class Form1
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents TransparentRichTextBox1 As Launcher.TransparentRichTextBox
+    Friend WithEvents TransparentRichTextBox2 As Launcher.TransparentRichTextBox
 
 End Class

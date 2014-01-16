@@ -771,7 +771,7 @@ Public Class Form1
             Dim URL As String = "http://tagcraftmc.net78.net/info/test.rtf"
             Dim updatesinfo As String = client.DownloadString(URL)
 
-            TransparentRichTextBox1.Rtf = updatesinfo
+            TransparentRichTextBox2.Rtf = updatesinfo
 
         Catch ex As Exception
             'nothin
