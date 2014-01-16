@@ -801,4 +801,12 @@ Public Class Form1
     Private Sub TransparentRichTextBox2_LinkClicked(sender As Object, e As LinkClickedEventArgs) Handles TransparentRichTextBox2.LinkClicked
         System.Diagnostics.Process.Start(e.LinkText)
     End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+        If CheckBox1.Checked = True Then
+            CheckBox1.Checked = False
+        ElseIf CheckBox1.Checked = False Then
+            CheckBox1.Checked = True
+        End If
+    End Sub
 End Class
