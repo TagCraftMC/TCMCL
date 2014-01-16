@@ -437,7 +437,7 @@ Public Class Form1
 
 
         BackgroundWorker1.RunWorkerAsync()
-        BackgroundWorker2.RunWorkerAsync()
+        'BackgroundWorker2.RunWorkerAsync()
 
 
 
@@ -777,5 +777,17 @@ Public Class Form1
             'nothin
         End Try
 
+    End Sub
+
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        lv()
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        If LauncherVersion = False Then
+            lvLBL.Visible = True
+        ElseIf LauncherVersion = True Then
+            lvLBL.Visible = False
+        End If
     End Sub
 End Class

@@ -38,7 +38,6 @@ Partial Class Form1
         Me.lvLBL = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -147,6 +146,9 @@ Partial Class Form1
         Me.HelpBTN.Size = New System.Drawing.Size(196, 40)
         Me.HelpBTN.TabIndex = 3
         Me.HelpBTN.UseVisualStyleBackColor = False
+        '
+        'BackgroundWorker1
+        '
         '
         'LauncherToolTip
         '
@@ -402,7 +404,6 @@ Partial Class Form1
     Friend WithEvents lvLBL As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
-    Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
