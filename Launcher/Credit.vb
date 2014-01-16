@@ -39,10 +39,7 @@ Public Class Credit
         Me.Location = Form2.centerForm(Me) '// center Form of Main Form.
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-    Private Sub Label4_Click_1(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
         System.Diagnostics.Process.Start("https://www.youtube.com/user/CyborgPancakeZ")
     End Sub
 

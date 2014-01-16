@@ -16,18 +16,8 @@ Public Class Form2
     Dim locationx As String
 
     Dim computer_info As New Devices.ComputerInfo
-    Dim oFile As System.IO.File
-    Dim oWrite As System.IO.StreamWriter
-    Dim oRead As System.IO.StreamReader
     Dim line As String
 
-    Dim oFilex As System.IO.File
-    Dim oWritex As System.IO.StreamWriter
-    Dim oReadx As System.IO.StreamReader
-
-    Dim oFiley As System.IO.File
-    Dim oWritey As System.IO.StreamWriter
-    Dim oReady As System.IO.StreamReader
     Dim WithEvents WC As New WebClient
 
     Public Sub gamma()

@@ -45,22 +45,8 @@ Public Class Form1
 
 
     Public Shared accessOP As String
-    Dim oFile As System.IO.File
-    Dim oWrite As System.IO.StreamWriter
-    Dim oRead As System.IO.StreamReader
+  
     Dim line As String
-
-    Dim oFilex As System.IO.File
-    Dim oWritex As System.IO.StreamWriter
-    Dim oReadx As System.IO.StreamReader
-
-    Dim oFilec As System.IO.File
-    Dim oWritec As System.IO.StreamWriter
-    Dim oReadc As System.IO.StreamReader
-
-    Dim oFiley As System.IO.File
-    Dim oWritey As System.IO.StreamWriter
-    Dim oReady As System.IO.StreamReader
 
     Dim oFilep As System.IO.File
     Dim oWritep As System.IO.StreamWriter
@@ -811,7 +797,8 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs)
 
+    Private Sub TransparentRichTextBox2_LinkClicked(sender As Object, e As LinkClickedEventArgs) Handles TransparentRichTextBox2.LinkClicked
+        System.Diagnostics.Process.Start(e.LinkText)
     End Sub
 End Class
