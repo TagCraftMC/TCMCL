@@ -131,7 +131,7 @@ Partial Class Form1
         Me.Button2.BackgroundImage = Global.Launcher.My.Resources.Resources.Options
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(28, 286)
+        Me.Button2.Location = New System.Drawing.Point(28, 265)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(196, 40)
         Me.Button2.TabIndex = 2
@@ -143,7 +143,7 @@ Partial Class Form1
         Me.Button3.BackgroundImage = Global.Launcher.My.Resources.Resources.Exit_
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(28, 470)
+        Me.Button3.Location = New System.Drawing.Point(28, 449)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(196, 40)
         Me.Button3.TabIndex = 4
@@ -277,7 +277,7 @@ Partial Class Form1
         Me.HelpBTN.BackgroundImage = Global.Launcher.My.Resources.Resources.HelpandInfo
         Me.HelpBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.HelpBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HelpBTN.Location = New System.Drawing.Point(28, 378)
+        Me.HelpBTN.Location = New System.Drawing.Point(28, 357)
         Me.HelpBTN.Name = "HelpBTN"
         Me.HelpBTN.Size = New System.Drawing.Size(196, 40)
         Me.HelpBTN.TabIndex = 3
@@ -335,7 +335,7 @@ Partial Class Form1
         Me.Button4.BackgroundImage = Global.Launcher.My.Resources.Resources.Visit
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(28, 332)
+        Me.Button4.Location = New System.Drawing.Point(28, 311)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(196, 40)
         Me.Button4.TabIndex = 14
@@ -452,7 +452,7 @@ Partial Class Form1
         Me.Button5.BackgroundImage = Global.Launcher.My.Resources.Resources.Update
         Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Location = New System.Drawing.Point(28, 424)
+        Me.Button5.Location = New System.Drawing.Point(28, 403)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(196, 40)
         Me.Button5.TabIndex = 29
@@ -463,7 +463,7 @@ Partial Class Form1
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(541, 495)
+        Me.Button6.Location = New System.Drawing.Point(533, 487)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(231, 23)
         Me.Button6.TabIndex = 31
@@ -472,8 +472,9 @@ Partial Class Form1
         '
         'TransparentRichTextBox1
         '
+        Me.TransparentRichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TransparentRichTextBox1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.TransparentRichTextBox1.Location = New System.Drawing.Point(549, 234)
+        Me.TransparentRichTextBox1.Location = New System.Drawing.Point(541, 234)
         Me.TransparentRichTextBox1.Name = "TransparentRichTextBox1"
         Me.TransparentRichTextBox1.Size = New System.Drawing.Size(223, 246)
         Me.TransparentRichTextBox1.TabIndex = 32
