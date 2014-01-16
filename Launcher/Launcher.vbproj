@@ -308,6 +308,8 @@
     <None Include="Resources\NewsBGV6.png" />
     <None Include="Resources\NewsBGV7.png" />
     <None Include="Resources\NewsBGV8.png" />
+    <None Include="Resources\NewsBGVAMMAR.jpg" />
+    <None Include="Resources\NewsBGV9.jpg" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />

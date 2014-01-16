@@ -282,7 +282,7 @@ Public Class Form1
             Case 13
                 Me.BackgroundImage = My.Resources.Options1
             Case 14
-                Me.BackgroundImage = My.Resources.online
+                Me.BackgroundImage = My.Resources.NewsBGV9
             Case 15
                 Me.BackgroundImage = My.Resources.ModsHover
 
@@ -768,7 +768,7 @@ Public Class Form1
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim client As WebClient = New WebClient()
         Try
-            Dim URL As String = "http://tagcraftmc.net78.net/info/test.rtf"
+            Dim URL As String = "http://tagcraftmc.net78.net/info/test.html?t=" + DateTime.Now.ToLocalTime()
             Dim updatesinfo As String = client.DownloadString(URL)
 
             TransparentRichTextBox2.Rtf = updatesinfo
