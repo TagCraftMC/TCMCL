@@ -82,6 +82,48 @@ Public Class UpdatesandMods
         End Using
     End Sub
 
+    Dim versionnumber As String
+
+    Public Sub readversions()
+        'how options will work...
+        '1 file read. it has options in this format (option):(value)
+        'vb project saves ONLY! (read on load!)
+        'C# api reads ONLY!
+
+        Try
+
+            Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+            Dim a As String
+
+            Do
+                a = reader.ReadLine
+
+                Try
+
+                    If a.Contains("versionnumber:") Then
+                        versionnumber = a.Replace("versionnumber:", "")
+
+                        Form1.ComboBox1.Text = versionnumber
+
+                    Else
+                        ' do nothing!
+                    End If
+
+                Catch ex As Exception
+                    'a is nothing now...
+                End Try
+
+            Loop Until a Is Nothing
+
+            reader.Close()
+
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
     Public Sub refreshform1()
         Form1.ComboBox1.Items.Clear()
 
@@ -93,13 +135,8 @@ Public Class UpdatesandMods
             Form1.ComboBox1.Items.Add(subdi.Name)
         Next
 
-        Try
-            oReady = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versionselect.txt")
-            Form1.ComboBox1.Text = oReady.ReadLine
-            oReady.Close()
-        Catch ex As Exception
+        readversions()
 
-        End Try
     End Sub
 
     Private Sub WC_DownloadCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs) Handles WC.DownloadFileCompleted
