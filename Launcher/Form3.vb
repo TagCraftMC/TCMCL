@@ -22,7 +22,7 @@ Public Class Form3
     End Sub
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         Try
-            TextBox1.Text = changelogforupdates
+            TransparentRichTextBox1.Text = changelogforupdates
 
 
         Catch ex As Exception
@@ -45,9 +45,9 @@ Public Class Form3
             Form1.Enabled = False
             WC.DownloadFileAsync(New Uri("http://files.tagcraftmc.com/launcher/client/latest.zip"), "ClientUpdate.zip")
             ProgressBar1.Visible = True
-            Label7.Visible = True
-            Label5.Visible = True
-            Label6.Visible = True
+            'Label7.Visible = True
+            'Label5.Visible = True
+            'Label6.Visible = True
             Button1.Enabled = False
             Button2.Enabled = False
             SW = Stopwatch.StartNew

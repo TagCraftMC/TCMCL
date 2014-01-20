@@ -88,6 +88,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
+    <Compile Include="TransparentRichTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Credit.Designer.vb">
       <DependentUpon>Credit.vb</DependentUpon>
     </Compile>
@@ -133,9 +136,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="TransparentRichTextBox.vb">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UpdatesandMods.Designer.vb">
       <DependentUpon>UpdatesandMods.vb</DependentUpon>
@@ -319,6 +319,15 @@
     <None Include="Resources\NewsBGV8.png" />
     <None Include="Resources\NewsBGVAMMAR.jpg" />
     <None Include="Resources\NewsBGV9.jpg" />
+    <None Include="Resources\AutoUpdaterText.png" />
+    <None Include="Resources\AutoUpdaterText1.png" />
+    <None Include="Resources\AutoUpdaterText2.png" />
+    <None Include="Resources\AutoUpdaterText3.png" />
+    <None Include="Resources\AutoUpdaterText4.png" />
+    <None Include="Resources\AutoUpdaterText11.png" />
+    <None Include="Resources\AutoUpdaterText21.png" />
+    <None Include="Resources\AutoUpdaterText31.png" />
+    <None Include="Resources\AutoUpdaterText41.png" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />

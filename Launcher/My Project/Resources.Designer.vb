@@ -93,6 +93,96 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property AutoUpdaterText() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AutoUpdaterText", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AutoUpdaterText1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AutoUpdaterText1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AutoUpdaterText11() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AutoUpdaterText11", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AutoUpdaterText2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AutoUpdaterText2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AutoUpdaterText21() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AutoUpdaterText21", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AutoUpdaterText3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AutoUpdaterText3", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AutoUpdaterText31() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AutoUpdaterText31", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AutoUpdaterText4() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AutoUpdaterText4", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AutoUpdaterText41() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AutoUpdaterText41", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property blaze() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("blaze", resourceCulture)
