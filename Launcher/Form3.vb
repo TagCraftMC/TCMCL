@@ -70,12 +70,27 @@ Public Class Form3
     Private Sub WC_DownloadCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs) Handles WC.DownloadFileCompleted
         If ProgressBar1.Value = 100 Then
             SW.Stop()
+            'rename file
+            Try
+                My.Computer.FileSystem.RenameFile("launcher.exe", "launcher.old.exe")
+            Catch ex As Exception
+
+            End Try
             extractzipfile()
+            MsgBox("Update complete! Launcher will now restart!")
+
+            runlauncher()
+            End
         Else
 
         End If
 
     End Sub
+
+    Public Sub runlauncher()
+        Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/launcher.exe")
+    End Sub
+
     Public Sub extractzipfile()
         Label7.Text = "Update Status: Installing"
         'extract content of zip file
