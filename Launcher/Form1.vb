@@ -30,7 +30,8 @@ Public Class Form1
 
     'Dim mem As String
     Public Shared mempass As String
-
+    Public Shared URL As String
+    Public Shared result As String
 
     Dim server As Boolean
 
@@ -455,8 +456,8 @@ Public Class Form1
 
         Else
             Try
-                Dim URL As String = "http://cp.tagcraftmc.com/status/LauncherVersion/Version.http"
-                Dim result As String = client.DownloadString(URL)
+                URL = "http://cp.tagcraftmc.com/status/LauncherVersion/Version.http"
+                result = client.DownloadString(URL)
                 'Debug.Print("DEBUG CHECK STRING DOWNLOAD: {0}", result)
                 If (LCase(Label4.Text) = result) Then 'lower case it all incase I am drunk and do VeRsIoN 9001
 
@@ -515,10 +516,7 @@ Public Class Form1
         TextBox1.Paste()
 
     End Sub
-    Private Sub lvLBL_MouseDown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lvLBL.MouseDown
-        System.Diagnostics.Process.Start("http://www.tagcraftmc.com/launcherupdate")
-    End Sub
-
+   
     Private Sub Button4_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.MouseEnter
 
         Button4.BackgroundImage = My.Resources.VisitHover
@@ -779,9 +777,11 @@ Public Class Form1
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         If LauncherVersion = False Then
-            lvLBL.Visible = True
+            'lvLBL.Visible = True
+            Form3.Show()
+
         ElseIf LauncherVersion = True Then
-            lvLBL.Visible = False
+            'lvLBL.Visible = False
         End If
     End Sub
 
