@@ -46,7 +46,7 @@ Partial Class UpdatesandMods
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(387, 70)
+        Me.Label1.Location = New System.Drawing.Point(397, 70)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(116, 13)
         Me.Label1.TabIndex = 0
@@ -55,7 +55,7 @@ Partial Class UpdatesandMods
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(387, 57)
+        Me.Label2.Location = New System.Drawing.Point(397, 57)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 13)
         Me.Label2.TabIndex = 1
@@ -64,7 +64,7 @@ Partial Class UpdatesandMods
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(387, 83)
+        Me.Label3.Location = New System.Drawing.Point(397, 83)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(92, 13)
         Me.Label3.TabIndex = 2
@@ -73,7 +73,7 @@ Partial Class UpdatesandMods
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(387, 97)
+        Me.Label4.Location = New System.Drawing.Point(397, 97)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(86, 13)
         Me.Label4.TabIndex = 3
@@ -84,22 +84,22 @@ Partial Class UpdatesandMods
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(175, 99)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(91, 13)
+        Me.Label5.Size = New System.Drawing.Size(142, 13)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Download Status:"
+        Me.Label5.Text = "Download and Install Status:"
         '
         'ProgressBar1
         '
         Me.ProgressBar1.Location = New System.Drawing.Point(178, 83)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(203, 13)
+        Me.ProgressBar1.Size = New System.Drawing.Size(217, 13)
         Me.ProgressBar1.TabIndex = 5
         '
         'lblpct
         '
         Me.lblpct.AutoSize = True
         Me.lblpct.BackColor = System.Drawing.Color.Transparent
-        Me.lblpct.Location = New System.Drawing.Point(500, 70)
+        Me.lblpct.Location = New System.Drawing.Point(510, 70)
         Me.lblpct.Name = "lblpct"
         Me.lblpct.Size = New System.Drawing.Size(21, 13)
         Me.lblpct.TabIndex = 6
@@ -108,7 +108,7 @@ Partial Class UpdatesandMods
         'lblspeed
         '
         Me.lblspeed.AutoSize = True
-        Me.lblspeed.Location = New System.Drawing.Point(476, 83)
+        Me.lblspeed.Location = New System.Drawing.Point(486, 83)
         Me.lblspeed.Name = "lblspeed"
         Me.lblspeed.Size = New System.Drawing.Size(40, 13)
         Me.lblspeed.TabIndex = 7
@@ -117,7 +117,7 @@ Partial Class UpdatesandMods
         'lblsize
         '
         Me.lblsize.AutoSize = True
-        Me.lblsize.Location = New System.Drawing.Point(442, 57)
+        Me.lblsize.Location = New System.Drawing.Point(452, 57)
         Me.lblsize.Name = "lblsize"
         Me.lblsize.Size = New System.Drawing.Size(68, 13)
         Me.lblsize.TabIndex = 8
@@ -126,7 +126,7 @@ Partial Class UpdatesandMods
         'lbleta
         '
         Me.lbleta.AutoSize = True
-        Me.lbleta.Location = New System.Drawing.Point(470, 99)
+        Me.lbleta.Location = New System.Drawing.Point(480, 99)
         Me.lbleta.Name = "lbleta"
         Me.lbleta.Size = New System.Drawing.Size(49, 13)
         Me.lbleta.TabIndex = 9
@@ -134,10 +134,9 @@ Partial Class UpdatesandMods
         '
         'lblstatus
         '
-        Me.lblstatus.AutoSize = True
-        Me.lblstatus.Location = New System.Drawing.Point(263, 99)
+        Me.lblstatus.Location = New System.Drawing.Point(313, 99)
         Me.lblstatus.Name = "lblstatus"
-        Me.lblstatus.Size = New System.Drawing.Size(24, 13)
+        Me.lblstatus.Size = New System.Drawing.Size(82, 13)
         Me.lblstatus.TabIndex = 10
         Me.lblstatus.Text = "Idle"
         '
@@ -155,7 +154,7 @@ Partial Class UpdatesandMods
         Me.btncancel.Enabled = False
         Me.btncancel.Location = New System.Drawing.Point(306, 56)
         Me.btncancel.Name = "btncancel"
-        Me.btncancel.Size = New System.Drawing.Size(75, 23)
+        Me.btncancel.Size = New System.Drawing.Size(89, 23)
         Me.btncancel.TabIndex = 12
         Me.btncancel.Text = "Cancel"
         Me.btncancel.UseVisualStyleBackColor = True
@@ -198,7 +197,7 @@ Partial Class UpdatesandMods
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(548, 185)
+        Me.ClientSize = New System.Drawing.Size(569, 185)
         Me.Controls.Add(Me.lblversion)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.cbversions)

@@ -66,6 +66,7 @@ Public Class UpdatesandMods
         lbleta.Text = String.Format("{0:00}:{1:00}:{2:00}", timeLeft.TotalHours, timeLeft.Minutes, timeLeft.Seconds)
     End Sub
     Public Sub extractzipfile()
+        lblstatus.Text = "Installing"
         'extract content of zip file
         Dim ZipToUnpack As String = "DownloadedFile.zip"
         'minecraft path comes here!
@@ -79,6 +80,7 @@ Public Class UpdatesandMods
             For Each e In zip1
                 e.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
             Next
+            lblstatus.Text = "Install Finished"
         End Using
     End Sub
 
@@ -144,8 +146,8 @@ Public Class UpdatesandMods
             btnstart.Text = "Download and Install"
             btnstart.Enabled = True
             btncancel.Enabled = False
-            lblstatus.Text = "Finished"
             lblspeed.Text = "0 KB/s"
+            lblstatus.Text = "Download Finished"
             'MessageBox.Show("Debug: Download Complete")
             SW.Stop()
 
