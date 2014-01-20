@@ -412,12 +412,20 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
             File.Delete("launcher.old.exe")
-
         Catch ex As Exception
 
-            'nomnomnom don't care error handle yolo!
         End Try
-       
+        Try
+            File.Delete("ClientUpdate.zip")
+        Catch ex As Exception
+
+        End Try
+        Try
+            File.Delete("MinecraftUpdate.zip")
+        Catch ex As Exception
+
+        End Try
+
 
 
 

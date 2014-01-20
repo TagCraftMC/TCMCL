@@ -76,11 +76,9 @@ Public Class Form3
             Catch ex As Exception
 
             End Try
-            extractzipfile()
-            MsgBox("Update complete! Launcher will now restart!")
+            'moved to background worker.
+            BackgroundWorker2.RunWorkerAsync()
 
-            runlauncher()
-            End
         Else
 
         End If
@@ -108,5 +106,16 @@ Public Class Form3
             Next
             Label7.Text = "Update Status: Finished"
         End Using
+    End Sub
+
+    Private Sub BackgroundWorker2_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker2.DoWork
+        extractzipfile()
+    End Sub
+
+    Private Sub BackgroundWorker2_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
+        MsgBox("Update complete! Launcher will now restart!")
+
+        runlauncher()
+        End
     End Sub
 End Class
