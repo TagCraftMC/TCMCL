@@ -91,7 +91,7 @@ Public Class Form3
     End Sub
 
     Public Sub extractzipfile()
-        Label7.Text = "Update Status: Installing"
+        'Label7.Text = "Update Status: Installing"
         'extract content of zip file
         Dim ZipToUnpack As String = "ClientUpdate.zip"
         'minecraft path comes here!
@@ -105,7 +105,7 @@ Public Class Form3
             For Each e In zip1
                 e.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
             Next
-            Label7.Text = "Update Status: Completed"
+            'Label7.Text = "Update Status: Completed"
         End Using
     End Sub
 
@@ -114,7 +114,7 @@ Public Class Form3
     End Sub
 
     Private Sub BackgroundWorker2_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
-        Label7.Text = "Update Status: Download Complete"
+        Label7.Text = "Update Status: Completed"
         MsgBox("The Launcher will now restart for the update to take effect.", MsgBoxStyle.Exclamation, "Launcher Download Complete")
         runlauncher()
         End
