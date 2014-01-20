@@ -27,6 +27,8 @@ Partial Class Form3
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.TransparentRichTextBox1 = New Launcher.TransparentRichTextBox()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.SuspendLayout()
         '
         'Button1
@@ -74,11 +76,26 @@ Partial Class Form3
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Click on Install Now to download the new version."
         '
+        'TransparentRichTextBox1
+        '
+        Me.TransparentRichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TransparentRichTextBox1.Location = New System.Drawing.Point(25, 103)
+        Me.TransparentRichTextBox1.Name = "TransparentRichTextBox1"
+        Me.TransparentRichTextBox1.Size = New System.Drawing.Size(391, 124)
+        Me.TransparentRichTextBox1.TabIndex = 5
+        Me.TransparentRichTextBox1.Text = ""
+        '
+        'BackgroundWorker1
+        '
+        Me.BackgroundWorker1.WorkerReportsProgress = True
+        Me.BackgroundWorker1.WorkerSupportsCancellation = True
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(428, 281)
+        Me.Controls.Add(Me.TransparentRichTextBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -95,4 +112,6 @@ Partial Class Form3
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents TransparentRichTextBox1 As Launcher.TransparentRichTextBox
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class
