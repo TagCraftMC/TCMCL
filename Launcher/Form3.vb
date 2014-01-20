@@ -42,6 +42,7 @@ Public Class Form3
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
+            Form1.Enabled = False
             WC.DownloadFileAsync(New Uri("http://files.tagcraftmc.com/launcher/client/latest.zip"), "ClientUpdate.zip")
             ProgressBar1.Visible = True
             Label7.Visible = True
@@ -104,7 +105,7 @@ Public Class Form3
             For Each e In zip1
                 e.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
             Next
-            Label7.Text = "Update Status: Finished"
+            Label7.Text = "Update Status: Completed"
         End Using
     End Sub
 
@@ -113,8 +114,8 @@ Public Class Form3
     End Sub
 
     Private Sub BackgroundWorker2_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
-        MsgBox("Update complete! Launcher will now restart!")
-
+        Label7.Text = "Update Status: Download Complete"
+        MsgBox("The Launcher will now restart for the update to take effect.", MsgBoxStyle.Exclamation, "Launcher Download Complete")
         runlauncher()
         End
     End Sub

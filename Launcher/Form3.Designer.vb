@@ -39,7 +39,7 @@ Partial Class Form3
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(176, 248)
+        Me.Button1.Location = New System.Drawing.Point(176, 220)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(142, 23)
         Me.Button1.TabIndex = 0
@@ -48,7 +48,7 @@ Partial Class Form3
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(324, 248)
+        Me.Button2.Location = New System.Drawing.Point(324, 220)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(95, 23)
         Me.Button2.TabIndex = 1
@@ -67,7 +67,7 @@ Partial Class Form3
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 30)
+        Me.Label2.Location = New System.Drawing.Point(267, 12)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 13)
         Me.Label2.TabIndex = 3
@@ -76,7 +76,7 @@ Partial Class Form3
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 49)
+        Me.Label3.Location = New System.Drawing.Point(9, 31)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(242, 13)
         Me.Label3.TabIndex = 4
@@ -85,7 +85,7 @@ Partial Class Form3
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 68)
+        Me.Label4.Location = New System.Drawing.Point(9, 50)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(66, 13)
         Me.Label4.TabIndex = 5
@@ -93,7 +93,7 @@ Partial Class Form3
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(12, 194)
+        Me.ProgressBar1.Location = New System.Drawing.Point(12, 176)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(404, 17)
         Me.ProgressBar1.TabIndex = 6
@@ -102,7 +102,7 @@ Partial Class Form3
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(173, 218)
+        Me.Label5.Location = New System.Drawing.Point(202, 200)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(86, 13)
         Me.Label5.TabIndex = 7
@@ -112,7 +112,7 @@ Partial Class Form3
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(321, 218)
+        Me.Label6.Location = New System.Drawing.Point(333, 200)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 13)
         Me.Label6.TabIndex = 8
@@ -122,7 +122,7 @@ Partial Class Form3
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(9, 218)
+        Me.Label7.Location = New System.Drawing.Point(9, 200)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(98, 13)
         Me.Label7.TabIndex = 9
@@ -131,7 +131,7 @@ Partial Class Form3
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 95)
+        Me.TextBox1.Location = New System.Drawing.Point(12, 77)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
@@ -151,7 +151,7 @@ Partial Class Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(428, 281)
+        Me.ClientSize = New System.Drawing.Size(428, 249)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -164,7 +164,7 @@ Partial Class Form3
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form3"
-        Me.Text = "Update available"
+        Me.Text = "Launcher Update Available"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
