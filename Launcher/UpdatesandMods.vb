@@ -148,8 +148,9 @@ Public Class UpdatesandMods
             lblspeed.Text = "0 KB/s"
             'MessageBox.Show("Debug: Download Complete")
             SW.Stop()
-            'moved this to bgworker... this was making the application too much gassy.
-            BackgroundWorker2.RunWorkerAsync()
+
+            extractzipfile()
+            refreshform1()
 
         ElseIf lblstatus.Text = "Canceled" Then
             'nothing
@@ -207,15 +208,5 @@ Public Class UpdatesandMods
 
         reader.Close()
 
-    End Sub
-
-    Private Sub BackgroundWorker2_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker2.DoWork
-        extractzipfile()
-
-
-    End Sub
-
-    Private Sub BackgroundWorker2_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
-        refreshform1()
     End Sub
 End Class
