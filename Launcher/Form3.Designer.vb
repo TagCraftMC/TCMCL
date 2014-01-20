@@ -22,6 +22,7 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -78,14 +79,14 @@ Partial Class Form3
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(9, 31)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(242, 13)
+        Me.Label3.Size = New System.Drawing.Size(292, 13)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Click on Install Now to download the new version."
+        Me.Label3.Text = "Click on Install Now to download and install the new version."
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 50)
+        Me.Label4.Location = New System.Drawing.Point(9, 62)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(66, 13)
         Me.Label4.TabIndex = 5
@@ -135,6 +136,7 @@ Partial Class Form3
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
+        Me.TextBox1.ShortcutsEnabled = False
         Me.TextBox1.Size = New System.Drawing.Size(404, 93)
         Me.TextBox1.TabIndex = 10
         Me.TextBox1.Text = "Loading the changelog news."
@@ -163,6 +165,7 @@ Partial Class Form3
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form3"
         Me.Text = "Launcher Update Available"
         Me.ResumeLayout(False)
