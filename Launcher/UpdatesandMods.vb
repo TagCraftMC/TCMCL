@@ -41,7 +41,7 @@ Public Class UpdatesandMods
 
     Private Sub btnstart_Click(sender As Object, e As EventArgs) Handles btnstart.Click
         Try
-            WC.DownloadFileAsync(New Uri("http://files.tagcraftmc.com/launcher/minecraft/" + cbversions.SelectedItem.ToString + ".zip"), "DownloadedFile.zip")
+            WC.DownloadFileAsync(New Uri("http://files.tagcraftmc.com/launcher/minecraft/" + cbversions.SelectedItem.ToString + ".zip"), "MinecraftUpdate.zip")
             btnstart.Text = "Downloading"
             btnstart.Enabled = False
             btncancel.Enabled = True
@@ -68,7 +68,7 @@ Public Class UpdatesandMods
     Public Sub extractzipfile()
         lblstatus.Text = "Installing"
         'extract content of zip file
-        Dim ZipToUnpack As String = "DownloadedFile.zip"
+        Dim ZipToUnpack As String = "MinecraftUpdate.zip"
         'minecraft path comes here!
         Dim TargetDir As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/"
         'this line will be changed to ./minecraft/

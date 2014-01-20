@@ -123,9 +123,9 @@ Partial Class Form3
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(9, 218)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(111, 13)
+        Me.Label7.Size = New System.Drawing.Size(98, 13)
         Me.Label7.TabIndex = 9
-        Me.Label7.Text = "Download Status: Idle"
+        Me.Label7.Text = "Update Status: Idle"
         Me.Label7.Visible = False
         '
         'TextBox1

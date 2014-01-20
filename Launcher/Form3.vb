@@ -1,4 +1,5 @@
 ﻿Imports System.Net
+Imports Ionic.Zip
 
 Public Class Form3
     Dim changelogforupdates As String
@@ -41,7 +42,7 @@ Public Class Form3
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
-            WC.DownloadFileAsync(New Uri("http://files.tagcraftmc.com/launcher/client/latest.zip"), "DownloadedFile.zip")
+            WC.DownloadFileAsync(New Uri("http://files.tagcraftmc.com/launcher/client/latest.zip"), "ClientUpdate.zip")
             ProgressBar1.Visible = True
             Label7.Visible = True
             Label5.Visible = True
@@ -55,7 +56,7 @@ Public Class Form3
     End Sub
     Dim SW As Stopwatch
     Private Sub WC_DownloadProgressChanged(ByVal sender As Object, ByVal e As DownloadProgressChangedEventArgs) Handles WC.DownloadProgressChanged
-        Label7.Text = "Download Status: Downloading"
+        Label7.Text = "Update Status: Downloading"
         ProgressBar1.Value = e.ProgressPercentage
 
         'lblpct.Text = e.ProgressPercentage.ToString + "%"
@@ -69,10 +70,28 @@ Public Class Form3
     Private Sub WC_DownloadCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs) Handles WC.DownloadFileCompleted
         If ProgressBar1.Value = 100 Then
             SW.Stop()
-            'extractzipfile()
+            extractzipfile()
         Else
 
         End If
 
+    End Sub
+    Public Sub extractzipfile()
+        Label7.Text = "Update Status: Installing"
+        'extract content of zip file
+        Dim ZipToUnpack As String = "ClientUpdate.zip"
+        'minecraft path comes here!
+        Dim TargetDir As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/"
+        'this line will be changed to ./minecraft/
+        Console.WriteLine("Extracting file {0} to {1}", ZipToUnpack, TargetDir)
+        Using zip1 As ZipFile = ZipFile.Read(ZipToUnpack)
+            Dim e As ZipEntry
+            ' here, we extract every entry, but we could extract    
+            ' based on entry name, size, date, etc.   
+            For Each e In zip1
+                e.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
+            Next
+            Label7.Text = "Update Status: Finished"
+        End Using
     End Sub
 End Class
