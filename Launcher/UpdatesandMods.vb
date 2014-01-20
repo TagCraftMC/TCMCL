@@ -13,18 +13,6 @@ Public Class UpdatesandMods
     Dim oFiley As System.IO.File
     Dim oWritey As System.IO.StreamWriter
     Dim oReady As System.IO.StreamReader
-
-    Public Sub populatebox()
-        'cbversions.Items.Clear()
-
-        Dim finfo As New IO.DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/Updatelist")
-        For Each fi In finfo.GetFiles
-
-            cbversions.Items.Add(Path.GetFileNameWithoutExtension(fi.Name))
-
-        Next
-    End Sub
-
     Public Sub readtxtfile()
         'cbversions.Items.Clear()
         Me.BackgroundWorker1.RunWorkerAsync()
@@ -33,7 +21,7 @@ Public Class UpdatesandMods
     End Sub
     Private Sub cbversions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbversions.SelectedIndexChanged
         Try
-            PictureBox1.ImageLocation = "http://tagcraftmc.net78.net/images/" + cbversions.SelectedItem.ToString + ".png"
+            PictureBox1.ImageLocation = "http://files.tagcraftmc.com/launcher/images/" + cbversions.SelectedItem.ToString + ".png"
             lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
 
         Catch ex As Exception
@@ -43,7 +31,7 @@ Public Class UpdatesandMods
 
     Private Sub cbversions_MouseHover(sender As Object, e As EventArgs) Handles cbversions.MouseHover
         Try
-            PictureBox1.ImageLocation = "http://tagcraftmc.net78.net/images/" + cbversions.SelectedItem.ToString + ".png"
+            PictureBox1.ImageLocation = "http://files.tagcraftmc.com/launcher/images/" + cbversions.SelectedItem.ToString + ".png"
             lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
 
         Catch ex As Exception
@@ -53,7 +41,7 @@ Public Class UpdatesandMods
 
     Private Sub btnstart_Click(sender As Object, e As EventArgs) Handles btnstart.Click
         Try
-            WC.DownloadFileAsync(New Uri("http://tagcraftmc.net78.net/download/minecraft/" + cbversions.SelectedItem.ToString + ".zip"), "DownloadedFile.zip")
+            WC.DownloadFileAsync(New Uri("http://files.tagcraftmc.com/launcher/minecraft/" + cbversions.SelectedItem.ToString + ".zip"), "DownloadedFile.zip")
             btnstart.Text = "Downloading"
             btnstart.Enabled = False
             btncancel.Enabled = True
@@ -77,13 +65,11 @@ Public Class UpdatesandMods
         timeLeft = TimeSpan.FromSeconds(timeLeftAverage * (e.TotalBytesToReceive - e.BytesReceived))
         lbleta.Text = String.Format("{0:00}:{1:00}:{2:00}", timeLeft.TotalHours, timeLeft.Minutes, timeLeft.Seconds)
     End Sub
-
-
     Public Sub extractzipfile()
         'extract content of zip file
         Dim ZipToUnpack As String = "DownloadedFile.zip"
         'minecraft path comes here!
-        Dim TargetDir As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions/"
+        Dim TargetDir As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/"
         'this line will be changed to ./minecraft/
         Console.WriteLine("Extracting file {0} to {1}", ZipToUnpack, TargetDir)
         Using zip1 As ZipFile = ZipFile.Read(ZipToUnpack)
@@ -164,7 +150,7 @@ Public Class UpdatesandMods
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
 
-        reader = New StreamReader(client.OpenRead("http://tagcraftmc.net78.net/file/filex?t=" + DateTime.Now.ToLocalTime()))
+        reader = New StreamReader(client.OpenRead("http://files.tagcraftmc.com/launcher/minecraftversions.html?t=" + DateTime.Now.ToLocalTime()))
         'Dim client As WebClient = New WebClient()
         '        Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
         '  Dim newtext As String
