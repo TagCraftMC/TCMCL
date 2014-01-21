@@ -119,4 +119,8 @@ Public Class Form3
         runlauncher()
         End
     End Sub
+
+    Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
+        TransparentRichTextBox1.Copy()
+    End Sub
 End Class

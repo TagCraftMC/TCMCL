@@ -203,7 +203,7 @@ Partial Class UpdatesandMods
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(569, 185)
+        Me.ClientSize = New System.Drawing.Size(569, 158)
         Me.Controls.Add(Me.lblversion)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.cbversions)
@@ -220,7 +220,9 @@ Partial Class UpdatesandMods
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "UpdatesandMods"
         Me.Text = "Updates and Mods"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
