@@ -193,6 +193,8 @@ Partial Class UpdatesandMods
         '
         'BackgroundWorker1
         '
+        Me.BackgroundWorker1.WorkerReportsProgress = True
+        Me.BackgroundWorker1.WorkerSupportsCancellation = True
         '
         'BackgroundWorker2
         '

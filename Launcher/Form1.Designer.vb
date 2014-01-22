@@ -149,6 +149,8 @@ Partial Class Form1
         '
         'BackgroundWorker1
         '
+        Me.BackgroundWorker1.WorkerReportsProgress = True
+        Me.BackgroundWorker1.WorkerSupportsCancellation = True
         '
         'LauncherToolTip
         '
@@ -312,6 +314,7 @@ Partial Class Form1
         'BackgroundWorker3
         '
         Me.BackgroundWorker3.WorkerReportsProgress = True
+        Me.BackgroundWorker3.WorkerSupportsCancellation = True
         '
         'Button5
         '
@@ -330,6 +333,8 @@ Partial Class Form1
         '
         'BackgroundWorker2
         '
+        Me.BackgroundWorker2.WorkerReportsProgress = True
+        Me.BackgroundWorker2.WorkerSupportsCancellation = True
         '
         'TransparentRichTextBox2
         '
