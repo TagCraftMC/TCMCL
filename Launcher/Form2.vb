@@ -4,21 +4,10 @@ Imports System.Net
 Imports Ionic.Zip
 
 Public Class Form2
-    Dim v As String
-    Dim w As String
-    Dim x As String
-    Dim y As String
-    Dim z As String
 
     Public Shared check As Boolean
-    Public Shared debuglog As String
-
-    Dim locationx As String
-
-    Dim computer_info As New Devices.ComputerInfo
     Dim line As String
 
-    Dim WithEvents WC As New WebClient
 
     Public Sub gamma()
         Try
@@ -50,7 +39,7 @@ Public Class Form2
                 line = sr.ReadToEnd()
             End Using
 
-            If ComboBox1.Text = "Enabled" Then
+            If ComboBox1x.Text = "Enabled" Then
 
                 Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
@@ -58,7 +47,7 @@ Public Class Form2
                 objReader.Write(line.Replace(b, "gamma:10.0"))
                 objReader.Close()
 
-            ElseIf ComboBox1.Text = "Disabled" Then
+            ElseIf ComboBox1x.Text = "Disabled" Then
                 Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
                 'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
@@ -104,7 +93,7 @@ Public Class Form2
                 line = sr.ReadToEnd()
             End Using
 
-            If ComboBox3.Text = "Enabled" Then
+            If ComboBox2x.Text = "Enabled" Then
 
                 Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
@@ -112,7 +101,7 @@ Public Class Form2
                 objReader.Write(line.Replace(b, "advancedItemTooltips:true"))
                 objReader.Close()
 
-            ElseIf ComboBox3.Text = "Disabled" Then
+            ElseIf ComboBox2x.Text = "Disabled" Then
                 Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
                 'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
@@ -159,7 +148,7 @@ Public Class Form2
                 line = sr.ReadToEnd()
             End Using
 
-            If ComboBox4.Text = "Enabled" Then
+            If ComboBox3x.Text = "Enabled" Then
 
                 Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
@@ -167,7 +156,7 @@ Public Class Form2
                 objReader.Write(line.Replace(b, "heldItemTooltips:true"))
                 objReader.Close()
 
-            ElseIf ComboBox4.Text = "Disabled" Then
+            ElseIf ComboBox3x.Text = "Disabled" Then
                 Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
                 'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
@@ -212,16 +201,11 @@ Public Class Form2
         End Using
 
         Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
-        If check = True Then
-            objReader.Write(line.Replace(b, "memory:512M"))
-            Form1.memory = "512M"
-            objReader.Close()
-        ElseIf check = False Then
-            objReader.Write(line.Replace(b, "memory:" + ComboBox2.Text))
-            Form1.memory = ComboBox2.Text
-            objReader.Close()
 
-        End If
+        objReader.Write(line.Replace(b, "memory:" + NumericUpDown1.Value.ToString + "M"))
+        Form1.memory = NumericUpDown1.Value.ToString + "M"
+        objReader.Close()
+
 
     End Sub
 
@@ -248,11 +232,12 @@ Public Class Form2
 
         reader.Close()
 
-        '
+        '   
+
         Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
             line = sr.ReadToEnd()
         End Using
-        If CheckBox1.Checked = True And b = "debugmode:false" Then
+        If ComboBox4x.Text = "Enabled" And b = "debugmode:false" Then
 
             Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
 
@@ -263,7 +248,7 @@ Public Class Form2
             objReader.Close()
             check = True
 
-        ElseIf CheckBox1.Checked = False And b = "debugmode:true" Then
+        ElseIf ComboBox4x.Text = "Disabled" And b = "debugmode:true" Then
 
             Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
 
@@ -279,166 +264,68 @@ Public Class Form2
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Public Sub loadoptions()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
 
-        gamma()
-        tooltip()
-        heldtooltip()
+        Dim a As String
 
-        debugmodewriter()
+        Do
+            a = reader.ReadLine
 
-        memorywriter()
+            Try
+                If a = ("gamma:10.0") Then
+                    ComboBox1x.Text = "Enabled"
+
+                Else
+                    ' do nothing!
+                End If
+                If a = ("advancedItemTooltips:true") Then
+                    ComboBox2x.Text = "Enabled"
+
+                Else
+                    ' do nothing!
+                End If
+
+                If a = ("heldItemTooltips:true") Then
+                    ComboBox3x.Text = "Enabled"
+
+                Else
+                    ' do nothing!
+                End If
 
 
-            Me.Hide()
-            '    ComboBox1.Enabled = False
-        x = ComboBox1.Text
-        y = ComboBox2.Text
-        w = ComboBox2.Text
-        v = ComboBox4.Text
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
 
     End Sub
 
-    Function centerForm(ByVal Form_to_Center As Form) As Point
-        Dim pLocation As New Point
-        pLocation.X = (Me.Left + (Me.Width - Form_to_Center.Width) / 2) '// set the X coordinates.
-        pLocation.Y = (Me.Top + (Me.Height - Form_to_Center.Height) / 1) '// set the Y coordinates.
-        Return pLocation '// return the Location to the Form it was called from.
-    End Function
-
-    'Private Sub Launch_Draw(sender As Object, e As System.Windows.Forms.DrawToolTipEventArgs) Handles OptionsToolTip.Draw
-    '   e.DrawBackground()
-    '   e.DrawText()
-    'End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
-
-
         If Environment.Is64BitOperatingSystem = True Then
             'nothing
         ElseIf Environment.Is64BitOperatingSystem = False Then
-            ComboBox2.Enabled = False
+            ComboBox1x.Text = "Disabled"
 
         End If
 
-        ComboBox1.Text = "Disabled"
-        ComboBox3.Text = "Disabled"
-        ComboBox4.Text = "Disabled"
+        ComboBox1x.Text = "Disabled"
+        ComboBox2x.Text = "Disabled"
+        ComboBox3x.Text = "Disabled"
 
         Try
-
-            Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
-
-            Dim a As String
-            '        Dim b As String = ""
-
-            '    ComboBox1.Text = "Disabled"
-
-            Do
-                a = reader.ReadLine
-                'MsgBox(a)
-
-                Try
-                    If a = ("gamma:10.0") Then
-                        ComboBox1.Text = "Enabled"
-                    Else
-                        ' do nothing!
-
-                        '            b = a
-                        'MsgBox(a)
-                    End If
-                    If a = ("advancedItemTooltips:true") Then
-                        ComboBox3.Text = "Enabled"
-                    Else
-                        ' do nothing!
-                    End If
-
-                    If a = ("heldItemTooltips:true") Then
-                        ComboBox4.Text = "Enabled"
-                    Else
-                        ' do nothing!
-                    End If
-
-                Catch ex As Exception
-                    'a is nothing now...
-                End Try
-
-            Loop Until a Is Nothing
-
-            reader.Close()
-
-
+            loadoptions()
         Catch ex As Exception
 
         End Try
 
-        x = ComboBox1.Text
-
-        y = ComboBox2.Text
-
-        w = ComboBox3.Text
-
-        v = ComboBox4.Text
-
-        'MsgBox(computer_info.AvailablePhysicalMemory)
-        Me.Location = Form1.centerForm(Me) '// center Form of Main Form.
-
     End Sub
 
-    Private Sub Form2_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        If e.CloseReason = CloseReason.UserClosing Then
-            e.Cancel = True
-            ComboBox1.Text = x
-            ComboBox2.Text = y
-            ComboBox3.Text = w
-            ComboBox4.Text = v
-
-            If check = True Then
-                CheckBox1.Checked = True
-            ElseIf check = False Then
-                CheckBox1.Checked = False
-            End If
-            Me.Hide()
-        End If
-    End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        ComboBox1.Text = x
-        ComboBox2.Text = y
-        ComboBox3.Text = w
-        ComboBox4.Text = v
-
-        If check = True Then
-            CheckBox1.Checked = True
-        ElseIf check = False Then
-            CheckBox1.Checked = False
-        End If
-
-        Me.Hide()
-
-    End Sub
-
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If Environment.Is64BitOperatingSystem = True Then
-            'nothing
-        ElseIf Environment.Is64BitOperatingSystem = False Then
-            ComboBox2.Enabled = False
-            debuglog = ComboBox2.Text
-            ComboBox2.Text = "512M"
-            Exit Sub
-
-        End If
-
-        If CheckBox1.Checked = True Then
-            ComboBox2.Enabled = False
-            debuglog = ComboBox2.Text
-            ComboBox2.Text = "512M"
-        ElseIf CheckBox1.Checked = False Then
-            ComboBox2.Enabled = True
-            ComboBox2.Text = debuglog
-
-        End If
-    End Sub
     Private Sub Button5_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.MouseEnter
 
         Button5.BackgroundImage = My.Resources.ExitHover
@@ -488,4 +375,19 @@ Public Class Form2
         Credit.Show()
     End Sub
 
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Me.Dispose()
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        gamma()
+        tooltip()
+        heldtooltip()
+        debugmodewriter()
+        memorywriter()
+
+        Me.Hide()
+
+    End Sub
 End Class

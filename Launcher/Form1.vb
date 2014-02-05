@@ -507,9 +507,68 @@ Public Class Form1
         End Try
     End Function
 
+    Public Sub readoptionsforoptions()
+
+        Try
+
+            Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+            Dim a As String
+
+            Do
+                a = reader.ReadLine
+
+                Try
+
+                    If a.Contains("debugmode:") Then
+                        debugmode = a.Replace("debugmode:", "")
+
+                        If debugmode = "true" Then
+                            Form2.ComboBox4x.Text = "Enabled"
+                            Form2.check = True
+
+                        ElseIf debugmode = "false" Then
+                            Form2.ComboBox4x.Text = "Disabled"
+                            Form2.check = False
+
+                        Else
+                            Form2.ComboBox4x.Text = "Disabled"
+                            Form2.check = False
+
+                        End If
+
+                    Else
+                        ' do nothing!
+                    End If
+
+                    If a.Contains("memory:") Then
+                        memory = a.Replace("memory:", "")
+                        memory = memory.Replace("M", "")
+                        memoryx = CInt(memory)
+                        Form2.NumericUpDown1.Value = memoryx
+
+                    Else
+                        ' do nothing!
+                    End If
+
+
+                Catch ex As Exception
+
+                End Try
+
+            Loop Until a Is Nothing
+
+            reader.Close()
+
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         tagoptionswriter()
+        readoptionsforoptions()
         Form2.Show()
     End Sub
 
@@ -627,6 +686,7 @@ Public Class Form1
     Public Shared rememberaccount As String
     Public Shared debugmode As String
     Public Shared memory As String
+    Public Shared memoryx As Integer
     Public Shared memorypass As String
     Public Shared tagoptions As String
     Public Shared runtimecatch As String
@@ -641,10 +701,6 @@ Public Class Form1
 
 
     Public Sub readoptions()
-        'how options will work...
-        '1 file read. it has options in this format (option):(value)
-        'vb project saves ONLY! (read on load!)
-        'C# api reads ONLY!
 
         Try
 
@@ -695,15 +751,15 @@ Public Class Form1
                         debugmode = a.Replace("debugmode:", "")
 
                         If debugmode = "true" Then
-                            Form2.CheckBox1.Checked = True
+                            Form2.ComboBox4x.Text = "Enabled"
                             Form2.check = True
 
                         ElseIf debugmode = "false" Then
-                            Form2.CheckBox1.Checked = False
+                            Form2.ComboBox4x.Text = "Disabled"
                             Form2.check = False
 
                         Else
-                            Form2.CheckBox1.Checked = False
+                            Form2.ComboBox4x.Text = "Disabled"
                             Form2.check = False
 
                         End If
@@ -714,11 +770,9 @@ Public Class Form1
 
                     If a.Contains("memory:") Then
                         memory = a.Replace("memory:", "")
-                        If debugmode = "true" Then
-                            Form2.ComboBox2.Text = "512M"
-                        ElseIf debugmode = "false" Then
-                            Form2.ComboBox2.Text = memory
-                        End If
+                        memory = memory.Replace("M", "")
+                        memoryx = CInt(memory)
+                        Form2.NumericUpDown1.Value = memoryx
 
                     Else
                         ' do nothing!

@@ -35,10 +35,6 @@ Public Class Credit
         Me.Close()
     End Sub
 
-    Private Sub Credit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Location = Form2.centerForm(Me) '// center Form of Main Form.
-    End Sub
-
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
         System.Diagnostics.Process.Start("https://www.youtube.com/user/CyborgPancakeZ")
     End Sub

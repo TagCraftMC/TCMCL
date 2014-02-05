@@ -24,36 +24,37 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1x = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.OptionsToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2x = New System.Windows.Forms.ComboBox()
+        Me.ComboBox3x = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.ComboBox4x = New System.Windows.Forms.ComboBox()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'ComboBox1x
         '
-        Me.ComboBox1.AllowDrop = True
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.ComboBox1.Location = New System.Drawing.Point(130, 103)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(94, 21)
-        Me.ComboBox1.TabIndex = 0
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox1, "Enable Or Disable Fullbright Mode.")
+        Me.ComboBox1x.AllowDrop = True
+        Me.ComboBox1x.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1x.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1x.FormattingEnabled = True
+        Me.ComboBox1x.Items.AddRange(New Object() {"Enabled", "Disabled"})
+        Me.ComboBox1x.Location = New System.Drawing.Point(144, 103)
+        Me.ComboBox1x.Name = "ComboBox1x"
+        Me.ComboBox1x.Size = New System.Drawing.Size(94, 21)
+        Me.ComboBox1x.TabIndex = 0
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox1x, "Enable Or Disable Fullbright Mode.")
         '
         'Label1
         '
@@ -86,37 +87,11 @@ Partial Class Form2
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Image = Global.Launcher.My.Resources.Resources.Memory
-        Me.Label2.Location = New System.Drawing.Point(231, 107)
+        Me.Label2.Location = New System.Drawing.Point(16, 297)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(77, 17)
         Me.Label2.TabIndex = 4
         Me.OptionsToolTip.SetToolTip(Me.Label2, "Choose the ammount of ram you want Minecraft to use")
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.AllowDrop = True
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"512M", "1024M", "1536M", "2048M", "3072M", "4096M", "6144M", "5120M", "7168M", "8192M"})
-        Me.ComboBox2.Location = New System.Drawing.Point(314, 103)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(94, 21)
-        Me.ComboBox2.TabIndex = 3
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox2, "Choose the ammount of ram you want Minecraft to use")
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
-        Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.CheckBox1.ForeColor = System.Drawing.Color.White
-        Me.CheckBox1.Location = New System.Drawing.Point(140, 143)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(16, 16)
-        Me.CheckBox1.TabIndex = 5
-        Me.OptionsToolTip.SetToolTip(Me.CheckBox1, "Brings up Java's debug console when launching Minecraft")
-        Me.CheckBox1.UseVisualStyleBackColor = False
         '
         'Button5
         '
@@ -137,31 +112,31 @@ Partial Class Form2
         Me.OptionsToolTip.ForeColor = System.Drawing.Color.White
         Me.OptionsToolTip.OwnerDraw = True
         '
-        'ComboBox3
+        'ComboBox2x
         '
-        Me.ComboBox3.AllowDrop = True
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.ComboBox3.Location = New System.Drawing.Point(147, 181)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(94, 21)
-        Me.ComboBox3.TabIndex = 16
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox3, "Enable Or Disable Fullbright Mode.")
+        Me.ComboBox2x.AllowDrop = True
+        Me.ComboBox2x.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2x.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2x.FormattingEnabled = True
+        Me.ComboBox2x.Items.AddRange(New Object() {"Enabled", "Disabled"})
+        Me.ComboBox2x.Location = New System.Drawing.Point(144, 141)
+        Me.ComboBox2x.Name = "ComboBox2x"
+        Me.ComboBox2x.Size = New System.Drawing.Size(94, 21)
+        Me.ComboBox2x.TabIndex = 16
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox2x, "Enable Or Disable Fullbright Mode.")
         '
-        'ComboBox4
+        'ComboBox3x
         '
-        Me.ComboBox4.AllowDrop = True
-        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.ComboBox4.Location = New System.Drawing.Point(147, 214)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(94, 21)
-        Me.ComboBox4.TabIndex = 18
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox4, "Enable Or Disable Fullbright Mode.")
+        Me.ComboBox3x.AllowDrop = True
+        Me.ComboBox3x.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3x.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox3x.FormattingEnabled = True
+        Me.ComboBox3x.Items.AddRange(New Object() {"Enabled", "Disabled"})
+        Me.ComboBox3x.Location = New System.Drawing.Point(144, 173)
+        Me.ComboBox3x.Name = "ComboBox3x"
+        Me.ComboBox3x.Size = New System.Drawing.Size(94, 21)
+        Me.ComboBox3x.TabIndex = 18
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox3x, "Enable Or Disable Fullbright Mode.")
         '
         'Label3
         '
@@ -201,7 +176,7 @@ Partial Class Form2
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Image = Global.Launcher.My.Resources.Resources.Debug
-        Me.Label5.Location = New System.Drawing.Point(6, 142)
+        Me.Label5.Location = New System.Drawing.Point(12, 214)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(136, 17)
         Me.Label5.TabIndex = 14
@@ -209,7 +184,7 @@ Partial Class Form2
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(19, 184)
+        Me.Label4.Location = New System.Drawing.Point(16, 144)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(122, 13)
         Me.Label4.TabIndex = 15
@@ -218,11 +193,32 @@ Partial Class Form2
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(20, 217)
+        Me.Label6.Location = New System.Drawing.Point(16, 176)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(95, 13)
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Held Item Tooltips:"
+        '
+        'ComboBox4x
+        '
+        Me.ComboBox4x.AllowDrop = True
+        Me.ComboBox4x.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox4x.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox4x.FormattingEnabled = True
+        Me.ComboBox4x.Items.AddRange(New Object() {"Enabled", "Disabled"})
+        Me.ComboBox4x.Location = New System.Drawing.Point(144, 210)
+        Me.ComboBox4x.Name = "ComboBox4x"
+        Me.ComboBox4x.Size = New System.Drawing.Size(94, 21)
+        Me.ComboBox4x.TabIndex = 19
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox4x, "Enable Or Disable Fullbright Mode.")
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Location = New System.Drawing.Point(146, 297)
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {99999, 0, 0, 0})
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(92, 20)
+        Me.NumericUpDown1.TabIndex = 20
         '
         'Form2
         '
@@ -231,19 +227,19 @@ Partial Class Form2
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.OptionsArea
         Me.ClientSize = New System.Drawing.Size(414, 466)
-        Me.Controls.Add(Me.ComboBox4)
+        Me.Controls.Add(Me.NumericUpDown1)
+        Me.Controls.Add(Me.ComboBox4x)
+        Me.Controls.Add(Me.ComboBox3x)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.ComboBox3)
+        Me.Controls.Add(Me.ComboBox2x)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ComboBox1x)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -251,16 +247,15 @@ Partial Class Form2
         Me.MaximizeBox = False
         Me.Name = "Form2"
         Me.Text = "Minecraft Launcher Options"
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox1x As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents OptionsToolTip As System.Windows.Forms.ToolTip
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -268,7 +263,9 @@ Partial Class Form2
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox2x As System.Windows.Forms.ComboBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox3x As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox4x As System.Windows.Forms.ComboBox
+    Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
 End Class
