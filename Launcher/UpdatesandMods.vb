@@ -192,28 +192,37 @@ Public Class UpdatesandMods
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        Try
 
-        reader = New StreamReader(client.OpenRead("http://files.tagcraftmc.com/launcher/minecraftversions.html?t=" + DateTime.Now.ToLocalTime()))
-        'Dim client As WebClient = New WebClient()
-        '        Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
-        '  Dim newtext As String
+            reader = New StreamReader(client.OpenRead("http://files.tagcraftmc.com/launcher/minecraftversions.html?t=" + DateTime.Now.ToLocalTime()))
+            'Dim client As WebClient = New WebClient()
+            '        Dim reader As StreamReader = New StreamReader(client.OpenRead(address))
+            '  Dim newtext As String
 
+        Catch ex As Exception
+
+        End Try
     End Sub
 
 
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        While (reader.Peek() > -1)
-            cbversions.Enabled = True
-            cbversions.Items.Add(reader.ReadLine)
-            newtext = cbversions.Items.Item(0)
-            cbversions.Text = newtext
+        Try
 
-        End While
+            While (reader.Peek() > -1)
+                cbversions.Enabled = True
+                cbversions.Items.Add(reader.ReadLine)
+                newtext = cbversions.Items.Item(0)
+                cbversions.Text = newtext
+
+            End While
 
 
-        reader.Close()
+            reader.Close()
 
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub BackgroundWorker2_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker2.DoWork
