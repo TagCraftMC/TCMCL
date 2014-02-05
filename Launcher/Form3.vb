@@ -91,22 +91,28 @@ Public Class Form3
     End Sub
 
     Public Sub extractzipfile()
-        'Label7.Text = "Update Status: Installing"
-        'extract content of zip file
-        Dim ZipToUnpack As String = "ClientUpdate.zip"
-        'minecraft path comes here!
-        Dim TargetDir As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/"
-        'this line will be changed to ./minecraft/
-        Console.WriteLine("Extracting file {0} to {1}", ZipToUnpack, TargetDir)
-        Using zip1 As ZipFile = ZipFile.Read(ZipToUnpack)
-            Dim e As ZipEntry
-            ' here, we extract every entry, but we could extract    
-            ' based on entry name, size, date, etc.   
-            For Each e In zip1
-                e.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
-            Next
-            'Label7.Text = "Update Status: Completed"
-        End Using
+        Try
+
+            'Label7.Text = "Update Status: Installing"
+            'extract content of zip file
+            Dim ZipToUnpack As String = "ClientUpdate.zip"
+            'minecraft path comes here!
+            Dim TargetDir As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/"
+            'this line will be changed to ./minecraft/
+            Console.WriteLine("Extracting file {0} to {1}", ZipToUnpack, TargetDir)
+            Using zip1 As ZipFile = ZipFile.Read(ZipToUnpack)
+                Dim e As ZipEntry
+                ' here, we extract every entry, but we could extract    
+                ' based on entry name, size, date, etc.   
+                For Each e In zip1
+                    e.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
+                Next
+                'Label7.Text = "Update Status: Completed"
+            End Using
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub BackgroundWorker2_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker2.DoWork
