@@ -3,12 +3,14 @@ Imports System.IO
 Imports Ionic.Zip
 
 Public Class UpdatesandMods
+    Dim versioninfo As String
     Dim timeLeftAverage As Double
     Dim timeLeft As TimeSpan
     Dim WithEvents WC As New WebClient
     Dim client As WebClient = New WebClient()
     Dim reader As StreamReader
     Dim newtext As String
+    Dim selectedversion As String
 
     Dim oFiley As System.IO.File
     Dim oWritey As System.IO.StreamWriter
@@ -21,8 +23,13 @@ Public Class UpdatesandMods
     End Sub
     Private Sub cbversions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbversions.SelectedIndexChanged
         Try
+            TransparentRichTextBox1.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\i\f0\fs22 Loading info, Please wait...\i0\par}"
+
+            BackgroundWorker3.RunWorkerAsync()
+            selectedversion = cbversions.SelectedItem.ToString
             PictureBox1.ImageLocation = "http://files.tagcraftmc.com/launcher/images/" + cbversions.SelectedItem.ToString + ".png"
-            lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
+            'lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
+
 
         Catch ex As Exception
 
@@ -32,7 +39,7 @@ Public Class UpdatesandMods
     Private Sub cbversions_MouseHover(sender As Object, e As EventArgs) Handles cbversions.MouseHover
         Try
             PictureBox1.ImageLocation = "http://files.tagcraftmc.com/launcher/images/" + cbversions.SelectedItem.ToString + ".png"
-            lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
+            'lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
 
         Catch ex As Exception
             'unable to load the image
@@ -185,7 +192,9 @@ Public Class UpdatesandMods
     End Sub
     Private Sub UpdatesandMods_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
+            'TransparentRichTextBox1.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\i\f0\fs22 Loading info, Please wait...\i0\par}"
             readtxtfile()
+
         Catch ex As Exception
 
         End Try
@@ -231,5 +240,27 @@ Public Class UpdatesandMods
 
     Private Sub BackgroundWorker2_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
         refreshform1()
+    End Sub
+    Public Sub updateversioninfo()
+        Dim client As WebClient = New WebClient()
+        Try
+            Dim URL As String = "http://files.tagcraftmc.com/launcher/info/" + selectedversion + ".html?t=" + DateTime.Now.ToLocalTime()
+            versioninfo = client.DownloadString(URL)
+
+        Catch ex As Exception
+            '
+        End Try
+    End Sub
+    Private Sub BackgroundWorker3_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker3.RunWorkerCompleted
+        Try
+            TransparentRichTextBox1.Rtf = versioninfo
+
+
+        Catch ex As Exception
+            '
+        End Try
+    End Sub
+    Private Sub BackgroundWorker3_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker3.DoWork
+        updateversioninfo()
     End Sub
 End Class

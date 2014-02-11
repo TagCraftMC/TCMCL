@@ -136,6 +136,9 @@
   <data name="Thanks2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thanks2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ModsV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ModsV1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Visit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Visit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,6 +217,9 @@
   <data name="SaveOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveOptions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ModsV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ModsV2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AccountName" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AccountName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,8 +229,8 @@
   <data name="Cyborg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cyborg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Debug" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Debug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="VisitHover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VisitHover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AutoUpdaterText31" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AutoUpdaterText31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,6 +259,9 @@
   <data name="OptionsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OptionsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Debug" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Debug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ExitHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ExitHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -261,6 +270,9 @@
   </data>
   <data name="AutoUpdaterText11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AutoUpdaterText11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AutoUpdaterText41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AutoUpdaterText41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AutoUpdaterText2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AutoUpdaterText2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,8 +304,8 @@
   <data name="SaveOptionsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveOptionsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="VisitHover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VisitHover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Promise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Promise.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -303,9 +315,6 @@
   </data>
   <data name="LaunchHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LaunchHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Promise" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Promise.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AutoUpdaterText4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AutoUpdaterText4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -322,7 +331,7 @@
   <data name="blaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AutoUpdaterText41" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AutoUpdaterText41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ModsV3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ModsV3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

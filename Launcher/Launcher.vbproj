@@ -328,6 +328,9 @@
     <None Include="Resources\AutoUpdaterText21.png" />
     <None Include="Resources\AutoUpdaterText31.png" />
     <None Include="Resources\AutoUpdaterText41.png" />
+    <None Include="Resources\ModsV1.png" />
+    <None Include="Resources\ModsV2.png" />
+    <None Include="Resources\ModsV3.png" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />
