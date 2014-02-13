@@ -192,7 +192,7 @@ Partial Class Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Launcher.My.Resources.Resources.AutoUpdaterText41
+        Me.BackgroundImage = Global.Launcher.My.Resources.Resources.AutoUpdaterGUI_Final
         Me.ClientSize = New System.Drawing.Size(428, 256)
         Me.Controls.Add(Me.TransparentRichTextBox1)
         Me.Controls.Add(Me.Label7)

@@ -230,7 +230,7 @@ Partial Class UpdatesandMods
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Launcher.My.Resources.Resources.ModsV3
+        Me.BackgroundImage = Global.Launcher.My.Resources.Resources.ModsGUI_Final
         Me.ClientSize = New System.Drawing.Size(584, 183)
         Me.Controls.Add(Me.TransparentRichTextBox1)
         Me.Controls.Add(Me.PictureBox1)
