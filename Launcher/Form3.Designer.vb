@@ -39,6 +39,7 @@ Partial Class Form3
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransparentRichTextBox1 = New Launcher.TransparentRichTextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -188,12 +189,25 @@ Partial Class Form3
         Me.TransparentRichTextBox1.TabIndex = 11
         Me.TransparentRichTextBox1.Text = "Loading the changelog news."
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(338, 225)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(68, 16)
+        Me.Label8.TabIndex = 12
+        Me.Label8.Text = "Ignore Me"
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.AutoUpdaterGUI_Final
         Me.ClientSize = New System.Drawing.Size(428, 256)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TransparentRichTextBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -230,4 +244,5 @@ Partial Class Form3
     Friend WithEvents TransparentRichTextBox1 As Launcher.TransparentRichTextBox
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents CopyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

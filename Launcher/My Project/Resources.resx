@@ -136,9 +136,6 @@
   <data name="Thanks2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thanks2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ModsV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ModsV1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Visit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Visit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,9 +181,6 @@
   <data name="CopyrightMojang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CopyrightMojang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AutoUpdaterText21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AutoUpdaterText21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="NewsBGV9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewsBGV9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,12 +199,6 @@
   <data name="Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ModsV3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ModsV3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AutoUpdaterText1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AutoUpdaterText1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="InstallModsV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InstallModsV21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,17 +211,11 @@
   <data name="AccountName" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AccountName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ModsV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ModsV2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Cyborg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cyborg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="VisitHover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VisitHover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AutoUpdaterText31" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AutoUpdaterText31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mods" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -243,9 +225,6 @@
   </data>
   <data name="Credits" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Credits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AutoUpdaterText" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AutoUpdaterText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OurLauncher" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OurLauncher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -267,15 +246,6 @@
   </data>
   <data name="minecraft_font" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minecraft_font.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="AutoUpdaterText11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AutoUpdaterText11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AutoUpdaterText41" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AutoUpdaterText41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AutoUpdaterText2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AutoUpdaterText2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CreditsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CreditsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -310,17 +280,11 @@
   <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AutoUpdaterText3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AutoUpdaterText3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LaunchHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LaunchHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AutoUpdaterGUI_Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AutoUpdaterGUI_Final.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AutoUpdaterText4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AutoUpdaterText4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="syber" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\syber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

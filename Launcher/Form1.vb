@@ -471,20 +471,23 @@ Public Class Form1
 
         Else
             Try
-                URL = "http://cp.tagcraftmc.com/status/LauncherVersion/Version.http"
-                result = client.DownloadString(URL)
+                URL = "http://files.tagcraftmc.com/launcher/clientversions.html?t=" + DateTime.Now.ToLocalTime()
+                result = (LCase(client.DownloadString(URL)))
                 'Debug.Print("DEBUG CHECK STRING DOWNLOAD: {0}", result)
                 If (LCase(Label4.Text) = result) Then 'lower case it all incase I am drunk and do VeRsIoN 9001
 
                     LauncherVersion = True
+                    'Debug.Print("Worked")
                 Else
 
                     LauncherVersion = False
+                    'Debug.Print("Failed")
                 End If
 
             Catch ex As Exception
 
                 LauncherVersion = False
+                'Debug.Print("Crash")
 
             End Try
         End If
@@ -494,7 +497,7 @@ Public Class Form1
 
 
     Private Function InternetConnection() As Boolean
-        Dim req As System.Net.WebRequest = System.Net.WebRequest.Create("http://cp.tagcraftmc.com/status/LauncherVersion/Version.http")
+        Dim req As System.Net.WebRequest = System.Net.WebRequest.Create("http://files.tagcraftmc.com/launcher/clientversions.html?t=" + DateTime.Now.ToLocalTime())
         Dim resp As System.Net.WebResponse
         Try
             resp = req.GetResponse()
@@ -828,7 +831,7 @@ Public Class Form1
 
         Else
             Try
-                Dim URL As String = "http://tagcraftmc.net78.net/info/test.html?t=" + DateTime.Now.ToLocalTime()
+                Dim URL As String = "http://files.tagcraftmc.com/launcher/minecraftnews.html?t=" + DateTime.Now.ToLocalTime()
                 updatesinforesult = client.DownloadString(URL)
 
                 'updatesinforesult = updatesinfo
