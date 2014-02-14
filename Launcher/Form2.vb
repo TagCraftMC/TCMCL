@@ -201,17 +201,10 @@ Public Class Form2
         End Using
 
         Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
-        If NumericUpDown1.Value < 512 Then
-            NumericUpDown1.Value = 512
-            objReader.Write(line.Replace(b, "memory:" + NumericUpDown1.Value.ToString + "M"))
-            Form1.memory = NumericUpDown1.Value.ToString + "M"
-            objReader.Close()
-        Else
-            objReader.Write(line.Replace(b, "memory:" + NumericUpDown1.Value.ToString + "M"))
-            Form1.memory = NumericUpDown1.Value.ToString + "M"
-            objReader.Close()
-
-        End If
+    
+        objReader.Write(line.Replace(b, "memory:" + ComboBox1.Text))
+        Form1.memory = ComboBox1.Text
+        objReader.Close()
 
 
     End Sub

@@ -9,6 +9,14 @@ Imports System.Drawing.Text
 Imports TagAPIx
 Imports Newtonsoft.Json
 
+'username:Ammar_Ahmad
+'versionnumber:1.7.4
+'rememberaccount:true
+'debugmode:true
+'memorypass:true
+'memory:1024M
+'tagoptions:true
+'runtimecatch:true
 
 Public Class Form1
 
@@ -46,7 +54,7 @@ Public Class Form1
 
 
     Public Shared accessOP As String
-  
+
     Dim line As String
 
     Dim oFilep As System.IO.File
@@ -284,7 +292,7 @@ Public Class Form1
 
     Public Sub runtimecatchwriter()
         Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
-       
+
 
         Dim a As String
         Dim b As String = ""
@@ -546,9 +554,7 @@ Public Class Form1
 
                     If a.Contains("memory:") Then
                         memory = a.Replace("memory:", "")
-                        memory = memory.Replace("M", "")
-                        memoryx = CInt(memory)
-                        Form2.NumericUpDown1.Value = memoryx
+                        Form2.ComboBox1.Text = memory
 
                     Else
                         ' do nothing!
@@ -593,7 +599,7 @@ Public Class Form1
         TextBox1.Paste()
 
     End Sub
-   
+
     Private Sub Button4_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.MouseEnter
 
         Button4.BackgroundImage = My.Resources.VisitHover
@@ -773,9 +779,7 @@ Public Class Form1
 
                     If a.Contains("memory:") Then
                         memory = a.Replace("memory:", "")
-                        memory = memory.Replace("M", "")
-                        memoryx = CInt(memory)
-                        Form2.NumericUpDown1.Value = memoryx
+                        Form2.ComboBox1.Text = memory
 
                     Else
                         ' do nothing!
