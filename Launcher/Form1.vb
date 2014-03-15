@@ -820,13 +820,44 @@ Public Class Form1
         End Try
     End Sub
 
+    Public Sub readjsonforurl()
+        Dim FILE_NAME As String = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions/" + ComboBox1.Text + "/" + ComboBox1.Text + ".json")
+
+        Dim TextLine As String = ""
+
+            Dim objReader As New System.IO.StreamReader(FILE_NAME)
+
+            Do While objReader.Peek() <> -1
+
+                TextLine = TextLine & objReader.ReadLine() & vbNewLine
+
+            Loop
+
+        If TextLine.Contains("url") Then
+
+            DownloadR.Show()
+        Else
+            aftereverything()
+        End If
+
+        '        MsgBox("File Does Not Exist")
+
+    End Sub
+
     Private Sub BackgroundWorker3_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker3.RunWorkerCompleted
         oReadp = IO.File.OpenText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ComboBox1.Text + ".txt")
         version = oReadp.ReadLine
 
 
         oReadp.Close()
-        aftereverything()
+        '------------------ File resource downloader comes here...
+
+        'open file check if it contains any url in it. if it does do downloadr.show
+        ' else do aftereverything()
+
+        readjsonforurl()
+
+        ' 
     End Sub
     Public Sub newsupdate()
         Dim client As WebClient = New WebClient()
