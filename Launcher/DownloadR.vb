@@ -144,7 +144,8 @@ Public Class DownloadR
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-
+        'create file so that it does not download next time...
+        File.Create(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions/" + Form1.ComboBox1.Text + "/DownloadR.AMMAR").Dispose()
         Form1.aftereverything()
     End Sub
 End Class

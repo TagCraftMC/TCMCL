@@ -834,8 +834,13 @@ Public Class Form1
             Loop
 
         If TextLine.Contains("url") Then
+            If System.IO.File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions/" + ComboBox1.Text + "/DownloadR.AMMAR") = False Then
 
-            DownloadR.Show()
+                DownloadR.Show()
+            Else
+                aftereverything()
+            End If
+            ' DownloadR.Show()
         Else
             aftereverything()
         End If
