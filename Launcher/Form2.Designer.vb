@@ -33,13 +33,13 @@ Partial Class Form2
         Me.ComboBox2x = New System.Windows.Forms.ComboBox()
         Me.ComboBox3x = New System.Windows.Forms.ComboBox()
         Me.ComboBox4x = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'ComboBox1x
@@ -49,7 +49,7 @@ Partial Class Form2
         Me.ComboBox1x.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1x.FormattingEnabled = True
         Me.ComboBox1x.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.ComboBox1x.Location = New System.Drawing.Point(144, 103)
+        Me.ComboBox1x.Location = New System.Drawing.Point(308, 185)
         Me.ComboBox1x.Name = "ComboBox1x"
         Me.ComboBox1x.Size = New System.Drawing.Size(94, 21)
         Me.ComboBox1x.TabIndex = 0
@@ -61,7 +61,7 @@ Partial Class Form2
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Image = Global.Launcher.My.Resources.Resources.Fullbright
-        Me.Label1.Location = New System.Drawing.Point(12, 107)
+        Me.Label1.Location = New System.Drawing.Point(7, 189)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(108, 17)
         Me.Label1.TabIndex = 1
@@ -86,7 +86,7 @@ Partial Class Form2
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Image = Global.Launcher.My.Resources.Resources.Memory
-        Me.Label2.Location = New System.Drawing.Point(12, 253)
+        Me.Label2.Location = New System.Drawing.Point(8, 216)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(77, 17)
         Me.Label2.TabIndex = 4
@@ -118,7 +118,7 @@ Partial Class Form2
         Me.ComboBox2x.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2x.FormattingEnabled = True
         Me.ComboBox2x.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.ComboBox2x.Location = New System.Drawing.Point(144, 141)
+        Me.ComboBox2x.Location = New System.Drawing.Point(308, 104)
         Me.ComboBox2x.Name = "ComboBox2x"
         Me.ComboBox2x.Size = New System.Drawing.Size(94, 21)
         Me.ComboBox2x.TabIndex = 16
@@ -131,7 +131,7 @@ Partial Class Form2
         Me.ComboBox3x.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3x.FormattingEnabled = True
         Me.ComboBox3x.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.ComboBox3x.Location = New System.Drawing.Point(144, 173)
+        Me.ComboBox3x.Location = New System.Drawing.Point(308, 131)
         Me.ComboBox3x.Name = "ComboBox3x"
         Me.ComboBox3x.Size = New System.Drawing.Size(94, 21)
         Me.ComboBox3x.TabIndex = 18
@@ -144,11 +144,24 @@ Partial Class Form2
         Me.ComboBox4x.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox4x.FormattingEnabled = True
         Me.ComboBox4x.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.ComboBox4x.Location = New System.Drawing.Point(144, 210)
+        Me.ComboBox4x.Location = New System.Drawing.Point(308, 158)
         Me.ComboBox4x.Name = "ComboBox4x"
         Me.ComboBox4x.Size = New System.Drawing.Size(94, 21)
         Me.ComboBox4x.TabIndex = 19
         Me.OptionsToolTip.SetToolTip(Me.ComboBox4x, "Enable Or Disable Fullbright Mode.")
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.AllowDrop = True
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"512M", "1024M", "1536M", "2048M", "3072M", "4096M", "6144M", "5120M", "7168M", "8192M"})
+        Me.ComboBox1.Location = New System.Drawing.Point(308, 212)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(94, 21)
+        Me.ComboBox1.TabIndex = 21
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox1, "Enable Or Disable Fullbright Mode.")
         '
         'Label3
         '
@@ -188,41 +201,28 @@ Partial Class Form2
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Image = Global.Launcher.My.Resources.Resources.Debug
-        Me.Label5.Location = New System.Drawing.Point(3, 213)
+        Me.Label5.Location = New System.Drawing.Point(-2, 162)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(136, 17)
         Me.Label5.TabIndex = 14
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(16, 144)
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Image = Global.Launcher.My.Resources.Resources.AdvanceIT
+        Me.Label4.Location = New System.Drawing.Point(2, 108)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(122, 13)
+        Me.Label4.Size = New System.Drawing.Size(238, 17)
         Me.Label4.TabIndex = 15
-        Me.Label4.Text = "Advanced Item Tooltips:"
         '
         'Label6
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(16, 176)
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Image = Global.Launcher.My.Resources.Resources.HeldIT
+        Me.Label6.Location = New System.Drawing.Point(2, 135)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(95, 13)
+        Me.Label6.Size = New System.Drawing.Size(186, 17)
         Me.Label6.TabIndex = 17
-        Me.Label6.Text = "Held Item Tooltips:"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.AllowDrop = True
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"512M", "1024M", "1536M", "2048M", "3072M", "4096M", "6144M", "5120M", "7168M", "8192M"})
-        Me.ComboBox1.Location = New System.Drawing.Point(144, 252)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(94, 21)
-        Me.ComboBox1.TabIndex = 21
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox1, "Enable Or Disable Fullbright Mode.")
         '
         'Form2
         '
@@ -252,7 +252,6 @@ Partial Class Form2
         Me.Name = "Form2"
         Me.Text = "Minecraft Launcher Options"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ComboBox1x As System.Windows.Forms.ComboBox

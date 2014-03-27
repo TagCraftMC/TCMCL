@@ -93,6 +93,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property AdvanceIT() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AdvanceIT", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property AutoUpdaterGUI_Final() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("AutoUpdaterGUI_Final", resourceCulture)
@@ -226,6 +236,16 @@ Namespace My.Resources
         Friend ReadOnly Property Fullbright() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Fullbright", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property HeldIT() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("HeldIT", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

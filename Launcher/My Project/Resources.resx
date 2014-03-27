@@ -118,190 +118,196 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="UpdateHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UpdateHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AccountName2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AccountName2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TextBG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TextBG2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OptionsArea" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OptionsArea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fullbright" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fullbright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Thanks2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Thanks2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Visit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Visit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Thanks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thanks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CopyrightMojang2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CopyrightMojang2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Options1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Options1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LoadingNews" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoadingNews.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HelpandInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HelpandInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="UnableToLoadNews" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UnableToLoadNews.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="InstallModsV2Mouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\InstallModsV2Mouse1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ModsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ModsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="VisitHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VisitHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Update" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Launch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Launch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LatestNews" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LatestNews.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LoadingNewsANIV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoadingNewsANIV2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CopyrightMojang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CopyrightMojang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NewsBGV9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NewsBGV9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="font" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\font.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RememberAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RememberAccount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CopyrightMojang2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CopyrightMojang2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MinecraftVersion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MinecraftVersion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="InstallModsV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\InstallModsV21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Version140" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Version140.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SaveOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SaveOptions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AccountName" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AccountName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cyborg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cyborg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="VisitHover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VisitHover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mods" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Memory" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Memory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Credits" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Credits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OurLauncher" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OurLauncher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="creditsandthanks" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\creditsandthanks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unknown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OptionsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OptionsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Debug" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Debug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ExitHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ExitHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minecraft_font" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minecraft_font.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CreditsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CreditsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Version130" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Version130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Options2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Options2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LauncherVersion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LauncherVersion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="0.0.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\0.0.0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Exit_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Exit_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Thanks1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thanks1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SaveOptionsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SaveOptionsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NewsBGV9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewsBGV9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Promise" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Promise.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CopyrightMojang2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CopyrightMojang2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="VisitHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VisitHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LaunchHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LaunchHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UpdateHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UpdateHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AutoUpdaterGUI_Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AutoUpdaterGUI_Final.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Launch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Launch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="syber" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\syber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SaveOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveOptions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OutOfDate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OutOfDate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Visit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Visit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoadingNewsANI" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoadingNewsANI.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UnableToLoadNews" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UnableToLoadNews.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HelpandInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HelpandInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TextBG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextBG2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Update" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Options1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Options1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cyborg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cyborg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="font" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\font.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OptionsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OptionsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Version140" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Version140.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fullbright" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fullbright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MinecraftVersion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinecraftVersion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Thanks2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Thanks2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minecraft_font" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minecraft_font.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="HelpandInfoHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HelpandInfoHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ModsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ModsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveOptionsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveOptionsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AccountName2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AccountName2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mods" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Credits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Credits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exit_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OurLauncher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OurLauncher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LaunchHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LaunchHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoadingNewsANI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoadingNewsANI.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Memory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Memory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoadingNews" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoadingNews.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CopyrightMojang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CopyrightMojang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LauncherVersion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LauncherVersion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoadingNewsANIV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoadingNewsANIV2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AccountName" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AccountName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OutOfDate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OutOfDate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdvanceIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdvanceIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VisitHover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VisitHover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="syber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\syber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Version130" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Version130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AutoUpdaterGUI_Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AutoUpdaterGUI_Final.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InstallModsV2Mouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InstallModsV2Mouse1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Options2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Options2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="creditsandthanks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\creditsandthanks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExitHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ExitHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0.0.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0.0.0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LatestNews" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LatestNews.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RememberAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RememberAccount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unknown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CreditsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CreditsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OptionsArea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OptionsArea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Promise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Promise.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="blaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CopyrightMojang2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CopyrightMojang2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Debug" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Debug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InstallModsV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InstallModsV21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ModsGUI_Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ModsGUI_Final.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeldIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeldIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
