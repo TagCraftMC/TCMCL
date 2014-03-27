@@ -346,16 +346,6 @@ Public Class Form2
         Button1.BackgroundImage = My.Resources.SaveOptions
 
     End Sub
-    Private Sub Button2_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.MouseEnter
-
-        Button2.BackgroundImage = My.Resources.InstallModsV2Mouse
-
-    End Sub
-    Private Sub Button2_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.MouseLeave
-
-        Button2.BackgroundImage = My.Resources.InstallModsV2
-
-    End Sub
     Private Sub Button3_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.MouseEnter
 
         Button3.BackgroundImage = My.Resources.CreditsHover
@@ -367,7 +357,7 @@ Public Class Form2
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         System.Diagnostics.Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Help/")
     End Sub
 

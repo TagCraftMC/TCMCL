@@ -35,7 +35,6 @@ Partial Class Form2
         Me.ComboBox4x = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -53,7 +52,7 @@ Partial Class Form2
         Me.ComboBox1x.Name = "ComboBox1x"
         Me.ComboBox1x.Size = New System.Drawing.Size(94, 21)
         Me.ComboBox1x.TabIndex = 0
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox1x, "Enable Or Disable Fullbright Mode.")
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox1x, "Allows you to enable Full bright.")
         '
         'Label1
         '
@@ -65,7 +64,7 @@ Partial Class Form2
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(108, 17)
         Me.Label1.TabIndex = 1
-        Me.OptionsToolTip.SetToolTip(Me.Label1, "Enable Or Disable Fullbright Mode.")
+        Me.OptionsToolTip.SetToolTip(Me.Label1, "Allows you to enable Full bright." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This options makes it easy to see in caves.")
         '
         'Button1
         '
@@ -78,7 +77,8 @@ Partial Class Form2
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(196, 40)
         Me.Button1.TabIndex = 2
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.OptionsToolTip.SetToolTip(Me.Button1, "Save any Options you have changed.")
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -90,7 +90,8 @@ Partial Class Form2
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(77, 17)
         Me.Label2.TabIndex = 4
-        Me.OptionsToolTip.SetToolTip(Me.Label2, "Choose the ammount of ram you want Minecraft to use")
+        Me.OptionsToolTip.SetToolTip(Me.Label2, "Allows you to change how much memory you" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Allocate to Minecraft. Its good to incr" & _
+        "ease this" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "if you're using mods such as Forge.")
         '
         'Button5
         '
@@ -103,13 +104,13 @@ Partial Class Form2
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(196, 40)
         Me.Button5.TabIndex = 10
+        Me.OptionsToolTip.SetToolTip(Me.Button5, "Exit the Options menu without saving any changes.")
         Me.Button5.UseVisualStyleBackColor = False
         '
         'OptionsToolTip
         '
-        Me.OptionsToolTip.BackColor = System.Drawing.Color.DodgerBlue
-        Me.OptionsToolTip.ForeColor = System.Drawing.Color.White
-        Me.OptionsToolTip.OwnerDraw = True
+        Me.OptionsToolTip.BackColor = System.Drawing.Color.White
+        Me.OptionsToolTip.ForeColor = System.Drawing.Color.Black
         '
         'ComboBox2x
         '
@@ -122,7 +123,7 @@ Partial Class Form2
         Me.ComboBox2x.Name = "ComboBox2x"
         Me.ComboBox2x.Size = New System.Drawing.Size(94, 21)
         Me.ComboBox2x.TabIndex = 16
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox2x, "Enable Or Disable Fullbright Mode.")
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox2x, "Allows you to see all items ID's and damage values.")
         '
         'ComboBox3x
         '
@@ -135,7 +136,7 @@ Partial Class Form2
         Me.ComboBox3x.Name = "ComboBox3x"
         Me.ComboBox3x.Size = New System.Drawing.Size(94, 21)
         Me.ComboBox3x.TabIndex = 18
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox3x, "Enable Or Disable Fullbright Mode.")
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox3x, "Allows you to see held items ID's and damage values.")
         '
         'ComboBox4x
         '
@@ -148,7 +149,7 @@ Partial Class Form2
         Me.ComboBox4x.Name = "ComboBox4x"
         Me.ComboBox4x.Size = New System.Drawing.Size(94, 21)
         Me.ComboBox4x.TabIndex = 19
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox4x, "Enable Or Disable Fullbright Mode.")
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox4x, "Makes minecraft run in debug mode. This can help ")
         '
         'ComboBox1
         '
@@ -161,7 +162,7 @@ Partial Class Form2
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(94, 21)
         Me.ComboBox1.TabIndex = 21
-        Me.OptionsToolTip.SetToolTip(Me.ComboBox1, "Enable Or Disable Fullbright Mode.")
+        Me.OptionsToolTip.SetToolTip(Me.ComboBox1, "Allows you to change how much memory you")
         '
         'Label3
         '
@@ -174,27 +175,16 @@ Partial Class Form2
         Me.Label3.Size = New System.Drawing.Size(121, 30)
         Me.Label3.TabIndex = 11
         '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImage = Global.Launcher.My.Resources.Resources.InstallModsV2
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(6, 354)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(196, 40)
-        Me.Button2.TabIndex = 12
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'Button3
         '
         Me.Button3.BackgroundImage = Global.Launcher.My.Resources.Resources.Credits
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(212, 354)
+        Me.Button3.Location = New System.Drawing.Point(109, 354)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(196, 40)
         Me.Button3.TabIndex = 13
+        Me.OptionsToolTip.SetToolTip(Me.Button3, "Brings up Credits and Thanks area.")
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Label5
@@ -205,6 +195,7 @@ Partial Class Form2
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(136, 17)
         Me.Label5.TabIndex = 14
+        Me.OptionsToolTip.SetToolTip(Me.Label5, "Makes minecraft run in debug mode. This can help " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "when looking for errors.")
         '
         'Label4
         '
@@ -214,6 +205,7 @@ Partial Class Form2
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(238, 17)
         Me.Label4.TabIndex = 15
+        Me.OptionsToolTip.SetToolTip(Me.Label4, "Allows you to see all items ID's and damage values.")
         '
         'Label6
         '
@@ -223,6 +215,7 @@ Partial Class Form2
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(186, 17)
         Me.Label6.TabIndex = 17
+        Me.OptionsToolTip.SetToolTip(Me.Label6, "Allows you to see held items ID's and damage values.")
         '
         'Form2
         '
@@ -239,7 +232,6 @@ Partial Class Form2
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ComboBox1x)
         Me.Controls.Add(Me.Label1)
@@ -261,7 +253,6 @@ Partial Class Form2
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents OptionsToolTip As System.Windows.Forms.ToolTip
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
