@@ -393,6 +393,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property MinecraftPlayerName() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("MinecraftPlayerName", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property MinecraftVersion() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("MinecraftVersion", resourceCulture)
@@ -526,6 +536,26 @@ Namespace My.Resources
         Friend ReadOnly Property RememberAccount() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("RememberAccount", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property RememberAccount1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("RememberAccount1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property RememberName() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("RememberName", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

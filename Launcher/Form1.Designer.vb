@@ -35,10 +35,13 @@ Partial Class Form1
         Me.HelpBTN = New System.Windows.Forms.Button()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.LauncherToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.lvLBL = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -46,16 +49,13 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
-        Me.TransparentRichTextBox2 = New Launcher.TransparentRichTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.TransparentRichTextBox2 = New Launcher.TransparentRichTextBox()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,6 +72,7 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(196, 40)
         Me.Button1.TabIndex = 0
+        Me.LauncherToolTip.SetToolTip(Me.Button1, "Start Minecraft")
         Me.Button1.UseVisualStyleBackColor = False
         '
         'TextBox1
@@ -86,6 +87,7 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(176, 22)
         Me.TextBox1.TabIndex = 1
+        Me.LauncherToolTip.SetToolTip(Me.TextBox1, "Choose a player name.")
         '
         'ContextMenuStrip1
         '
@@ -123,6 +125,8 @@ Partial Class Form1
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(196, 40)
         Me.Button2.TabIndex = 2
+        Me.LauncherToolTip.SetToolTip(Me.Button2, "Options for the following" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "In game tooltips." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Full Bright." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Memory Allocation." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "D" & _
+        "ebug Mode.")
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
@@ -135,6 +139,7 @@ Partial Class Form1
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(196, 40)
         Me.Button3.TabIndex = 4
+        Me.LauncherToolTip.SetToolTip(Me.Button3, "Exit the launcher.")
         Me.Button3.UseVisualStyleBackColor = False
         '
         'HelpBTN
@@ -147,6 +152,7 @@ Partial Class Form1
         Me.HelpBTN.Name = "HelpBTN"
         Me.HelpBTN.Size = New System.Drawing.Size(196, 40)
         Me.HelpBTN.TabIndex = 3
+        Me.LauncherToolTip.SetToolTip(Me.HelpBTN, "Learn about the launcher." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Help about the launder.")
         Me.HelpBTN.UseVisualStyleBackColor = False
         '
         'BackgroundWorker1
@@ -156,9 +162,56 @@ Partial Class Form1
         '
         'LauncherToolTip
         '
-        Me.LauncherToolTip.BackColor = System.Drawing.Color.DodgerBlue
-        Me.LauncherToolTip.ForeColor = System.Drawing.Color.White
-        Me.LauncherToolTip.OwnerDraw = True
+        Me.LauncherToolTip.BackColor = System.Drawing.Color.White
+        Me.LauncherToolTip.ForeColor = System.Drawing.Color.Black
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.Transparent
+        Me.Button4.BackgroundImage = Global.Launcher.My.Resources.Resources.Visit
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Location = New System.Drawing.Point(28, 311)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(196, 40)
+        Me.Button4.TabIndex = 14
+        Me.LauncherToolTip.SetToolTip(Me.Button4, "Visit our website.")
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(301, 342)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(182, 21)
+        Me.ComboBox1.TabIndex = 24
+        Me.LauncherToolTip.SetToolTip(Me.ComboBox1, "Choose a version to run.")
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Image = Global.Launcher.My.Resources.Resources.RememberName
+        Me.Label7.Location = New System.Drawing.Point(283, 375)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(207, 17)
+        Me.Label7.TabIndex = 26
+        Me.LauncherToolTip.SetToolTip(Me.Label7, "Remember your player name.")
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.Transparent
+        Me.Button5.BackgroundImage = Global.Launcher.My.Resources.Resources.Update
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Location = New System.Drawing.Point(28, 403)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(196, 40)
+        Me.Button5.TabIndex = 29
+        Me.LauncherToolTip.SetToolTip(Me.Button5, "Learn how to install a mod." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Download and install a small selection " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "of popular " & _
+        "mods from our cloud server" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "automatically.")
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'lvLBL
         '
@@ -200,18 +253,6 @@ Partial Class Form1
         Me.WebBrowser1.Visible = False
         Me.WebBrowser1.WebBrowserShortcutsEnabled = False
         '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.Transparent
-        Me.Button4.BackgroundImage = Global.Launcher.My.Resources.Resources.Visit
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(28, 311)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(196, 40)
-        Me.Button4.TabIndex = 14
-        Me.Button4.UseVisualStyleBackColor = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Launcher.My.Resources.Resources.TextBG2
@@ -235,7 +276,7 @@ Partial Class Form1
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Image = Global.Launcher.My.Resources.Resources.AccountName2
+        Me.Label1.Image = Global.Launcher.My.Resources.Resources.MinecraftPlayerName
         Me.Label1.Location = New System.Drawing.Point(273, 254)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 17)
@@ -285,25 +326,6 @@ Partial Class Form1
         Me.PictureBox3.TabIndex = 23
         Me.PictureBox3.TabStop = False
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(301, 342)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(182, 21)
-        Me.ComboBox1.TabIndex = 24
-        '
-        'Label7
-        '
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Image = Global.Launcher.My.Resources.Resources.RememberAccount
-        Me.Label7.Location = New System.Drawing.Point(283, 375)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(237, 17)
-        Me.Label7.TabIndex = 26
-        '
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
@@ -318,18 +340,6 @@ Partial Class Form1
         Me.BackgroundWorker3.WorkerReportsProgress = True
         Me.BackgroundWorker3.WorkerSupportsCancellation = True
         '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.Transparent
-        Me.Button5.BackgroundImage = Global.Launcher.My.Resources.Resources.Update
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Location = New System.Drawing.Point(28, 403)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(196, 40)
-        Me.Button5.TabIndex = 29
-        Me.Button5.UseVisualStyleBackColor = False
-        '
         'Timer2
         '
         '
@@ -337,19 +347,6 @@ Partial Class Form1
         '
         Me.BackgroundWorker2.WorkerReportsProgress = True
         Me.BackgroundWorker2.WorkerSupportsCancellation = True
-        '
-        'TransparentRichTextBox2
-        '
-        Me.TransparentRichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TransparentRichTextBox2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.TransparentRichTextBox2.ForeColor = System.Drawing.Color.White
-        Me.TransparentRichTextBox2.Location = New System.Drawing.Point(559, 264)
-        Me.TransparentRichTextBox2.Name = "TransparentRichTextBox2"
-        Me.TransparentRichTextBox2.ReadOnly = True
-        Me.TransparentRichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
-        Me.TransparentRichTextBox2.Size = New System.Drawing.Size(192, 226)
-        Me.TransparentRichTextBox2.TabIndex = 33
-        Me.TransparentRichTextBox2.Text = "Loading News, Please Wait..."
         '
         'Label5
         '
@@ -374,6 +371,19 @@ Partial Class Form1
         Me.Label6.Size = New System.Drawing.Size(124, 18)
         Me.Label6.TabIndex = 35
         Me.Label6.Text = "Don't re-distribute"
+        '
+        'TransparentRichTextBox2
+        '
+        Me.TransparentRichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TransparentRichTextBox2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TransparentRichTextBox2.ForeColor = System.Drawing.Color.White
+        Me.TransparentRichTextBox2.Location = New System.Drawing.Point(559, 264)
+        Me.TransparentRichTextBox2.Name = "TransparentRichTextBox2"
+        Me.TransparentRichTextBox2.ReadOnly = True
+        Me.TransparentRichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
+        Me.TransparentRichTextBox2.Size = New System.Drawing.Size(192, 226)
+        Me.TransparentRichTextBox2.TabIndex = 33
+        Me.TransparentRichTextBox2.Text = "Loading News, Please Wait..."
         '
         'Form1
         '

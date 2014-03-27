@@ -921,4 +921,8 @@ Public Class Form1
             CheckBox1.Checked = True
         End If
     End Sub
+
+    Private Sub LauncherToolTip_Popup(sender As Object, e As PopupEventArgs) Handles LauncherToolTip.Popup
+
+    End Sub
 End Class

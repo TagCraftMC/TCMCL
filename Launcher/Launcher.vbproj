@@ -322,6 +322,11 @@
     <None Include="Resources\NewsBGV9.jpg" />
     <None Include="Resources\AutoUpdaterGUI_Final.jpg" />
     <None Include="Resources\ModsGUI_Final.jpg" />
+    <None Include="Resources\AdvanceIT.png" />
+    <None Include="Resources\HeldIT.png" />
+    <None Include="Resources\MinecraftPlayerName.png" />
+    <None Include="Resources\RememberAccount1.png" />
+    <None Include="Resources\RememberName.png" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />
