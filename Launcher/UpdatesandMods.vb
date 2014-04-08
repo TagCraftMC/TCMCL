@@ -23,12 +23,13 @@ Public Class UpdatesandMods
     End Sub
     Private Sub cbversions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbversions.SelectedIndexChanged
         Try
-            TransparentRichTextBox1.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\i\f0\fs22 Loading info, Please wait...\i0\par}"
+            'TransparentRichTextBox1.Rtf = "{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\i\f0\fs22 Loading info, Please wait...\i0\par}"
 
-            BackgroundWorker3.RunWorkerAsync()
+
             selectedversion = cbversions.SelectedItem.ToString
             PictureBox1.ImageLocation = "http://files.tagcraftmc.com/launcher/images/" + cbversions.SelectedItem.ToString + ".png"
             'lblversion.Text = "Minecraft " + cbversions.SelectedItem.ToString
+            BackgroundWorker3.RunWorkerAsync()
 
 
         Catch ex As Exception
@@ -246,6 +247,7 @@ Public Class UpdatesandMods
         Try
             Dim URL As String = "http://files.tagcraftmc.com/launcher/info/" + selectedversion + ".html?t=" + DateTime.Now.ToLocalTime()
             versioninfo = client.DownloadString(URL)
+
 
         Catch ex As Exception
             '

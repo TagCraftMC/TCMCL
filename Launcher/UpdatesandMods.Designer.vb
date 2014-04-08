@@ -192,8 +192,8 @@ Partial Class UpdatesandMods
         '
         'PictureBox1
         '
-        Me.PictureBox1.ErrorImage = Global.Launcher.My.Resources.Resources._0_0_0
-        Me.PictureBox1.Image = Global.Launcher.My.Resources.Resources._0_0_0
+        Me.PictureBox1.ErrorImage = Global.Launcher.My.Resources.Resources.ChooseVersion
+        Me.PictureBox1.Image = Global.Launcher.My.Resources.Resources.ChooseVersion
         Me.PictureBox1.InitialImage = Global.Launcher.My.Resources.Resources._0_0_0
         Me.PictureBox1.Location = New System.Drawing.Point(12, 23)
         Me.PictureBox1.Name = "PictureBox1"
