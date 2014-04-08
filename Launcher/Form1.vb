@@ -872,7 +872,11 @@ Public Class Form1
         Else
             Try
                 Dim URL As String = "http://files.tagcraftmc.com/launcher/minecraftnews.html?t=" + DateTime.Now.ToLocalTime()
-                updatesinforesult = client.DownloadString(URL)
+                updatesinforesult = client.DownloadString(URL).Replace("\red0\green0\blue0", "\red255\green255\blue255")
+
+                'updatesinforesult.Replace("\red0\green176\blue80", "\red255\green255\blue255")
+                'TransparentRichTextBox2.Find("\red0\green176\blue80")
+                'TransparentRichTextBox2.SelectedText = "\red255\green255\blue255"
 
                 'updatesinforesult = updatesinfo
 

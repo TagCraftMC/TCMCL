@@ -360,6 +360,7 @@ Partial Class Form1
         Me.Label5.Size = New System.Drawing.Size(228, 24)
         Me.Label5.TabIndex = 34
         Me.Label5.Text = "DEVELOPMENT BUILD"
+        Me.Label5.Visible = False
         '
         'Label6
         '
@@ -372,6 +373,7 @@ Partial Class Form1
         Me.Label6.Size = New System.Drawing.Size(124, 18)
         Me.Label6.TabIndex = 35
         Me.Label6.Text = "Don't re-distribute"
+        Me.Label6.Visible = False
         '
         'TransparentRichTextBox2
         '
