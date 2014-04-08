@@ -160,6 +160,9 @@
   <data name="InstallModsV2Mouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InstallModsV2Mouse1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RememberAccount1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RememberAccount1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ModsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ModsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -168,6 +171,9 @@
   </data>
   <data name="Update" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Launch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Launch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LatestNews" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LatestNews.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,6 +223,9 @@
   <data name="ModsGUI_Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ModsGUI_Final.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RememberName" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RememberName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Debug" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Debug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -256,8 +265,8 @@
   <data name="AutoUpdaterGUI_Final" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AutoUpdaterGUI_Final.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Promise" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Promise.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CreditsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CreditsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HeldIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeldIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,8 +289,8 @@
   <data name="Exit_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Exit_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Launch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Launch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Thanks1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Thanks1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SaveOptionsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveOptionsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,20 +298,17 @@
   <data name="VisitHover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VisitHover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CreditsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CreditsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LaunchHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LaunchHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Promise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Promise.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="syber" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\syber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Thanks1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Thanks1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OutOfDate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OutOfDate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,10 +319,10 @@
   <data name="blaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RememberAccount1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RememberAccount1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MinecraftUpdates" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinecraftUpdates.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RememberName" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RememberName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MinecraftUpdatesHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinecraftUpdatesHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

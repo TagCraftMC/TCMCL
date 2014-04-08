@@ -252,7 +252,7 @@ Partial Class UpdatesandMods
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "UpdatesandMods"
-        Me.Text = "Updates and Mods"
+        Me.Text = "Minecraft Updates"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

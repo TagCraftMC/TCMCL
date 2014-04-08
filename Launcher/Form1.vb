@@ -652,12 +652,12 @@ Public Class Form1
     End Sub
     Private Sub Button5_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.MouseEnter
 
-        Button5.BackgroundImage = My.Resources.UpdateHover
+        Button5.BackgroundImage = My.Resources.MinecraftUpdatesHover
 
     End Sub
     Private Sub Button5_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.MouseLeave
 
-        Button5.BackgroundImage = My.Resources.Update
+        Button5.BackgroundImage = My.Resources.MinecraftUpdates
 
     End Sub
 

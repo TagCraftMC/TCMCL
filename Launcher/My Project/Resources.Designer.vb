@@ -403,6 +403,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property MinecraftUpdates() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("MinecraftUpdates", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property MinecraftUpdatesHover() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("MinecraftUpdatesHover", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property MinecraftVersion() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("MinecraftVersion", resourceCulture)

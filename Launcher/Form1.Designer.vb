@@ -202,15 +202,16 @@ Partial Class Form1
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.Transparent
-        Me.Button5.BackgroundImage = Global.Launcher.My.Resources.Resources.Update
+        Me.Button5.BackgroundImage = Global.Launcher.My.Resources.Resources.MinecraftUpdates
         Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Location = New System.Drawing.Point(28, 403)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(196, 40)
         Me.Button5.TabIndex = 29
-        Me.LauncherToolTip.SetToolTip(Me.Button5, "Learn how to install a mod." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Download and install a small selection " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "of popular " & _
-        "mods from our cloud server" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "automatically.")
+        Me.LauncherToolTip.SetToolTip(Me.Button5, "Update Minecraft." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Download and install major Minecraft" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "updates from our cloud s" & _
+        "erver automatically." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You're also able to install Minecraft Version" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "that come w" & _
+        "ith pre-installed mods.")
         Me.Button5.UseVisualStyleBackColor = False
         '
         'lvLBL

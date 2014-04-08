@@ -327,6 +327,8 @@
     <None Include="Resources\MinecraftPlayerName.png" />
     <None Include="Resources\RememberAccount1.png" />
     <None Include="Resources\RememberName.png" />
+    <None Include="Resources\MinecraftUpdates.png" />
+    <None Include="Resources\MinecraftUpdatesHover.png" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />
