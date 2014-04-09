@@ -121,8 +121,8 @@
   <data name="UpdateHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UpdateHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MinecraftPlayerName" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MinecraftPlayerName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AccountName2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AccountName2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TextBG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TextBG2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,14 +133,11 @@
   <data name="Fullbright" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fullbright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Visit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Visit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Thanks2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thanks2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="VisitHover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VisitHover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Visit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Visit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Thanks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thanks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -189,9 +186,6 @@
   </data>
   <data name="font" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\font.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AccountName2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AccountName2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RememberAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RememberAccount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,6 +241,9 @@
   <data name="OurLauncher" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OurLauncher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MinecraftPlayerName" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinecraftPlayerName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="creditsandthanks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\creditsandthanks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -267,6 +264,9 @@
   </data>
   <data name="CreditsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CreditsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChooseVersion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChooseVersion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HeldIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeldIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,14 +295,17 @@
   <data name="SaveOptionsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveOptionsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Promise" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Promise.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="VisitHover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VisitHover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LaunchHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LaunchHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Promise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Promise.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MinecraftUpdatesHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MinecraftUpdatesHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -325,7 +328,7 @@
   <data name="blaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ChooseVersion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ChooseVersion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="141" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\141.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

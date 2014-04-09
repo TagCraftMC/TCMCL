@@ -33,7 +33,7 @@ Public Class Form3
         Dim client As WebClient = New WebClient()
         Try
             Dim URL As String = "http://files.tagcraftmc.com/launcher/clientversioninfo.html?t=" + DateTime.Now.ToLocalTime()
-            changelogforupdates = client.DownloadString(URL)
+            changelogforupdates = client.DownloadString(URL).Replace("\red0\green0\blue0", "\red255\green255\blue255")
 
         Catch ex As Exception
             '

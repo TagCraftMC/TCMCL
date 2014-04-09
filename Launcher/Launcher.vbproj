@@ -330,6 +330,7 @@
     <None Include="Resources\MinecraftUpdates.png" />
     <None Include="Resources\MinecraftUpdatesHover.png" />
     <None Include="Resources\ChooseVersion.png" />
+    <None Include="Resources\141.png" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />
