@@ -582,7 +582,9 @@ Public Class Form1
     End Sub
 
     Private Sub HelpBTN_Click(sender As Object, e As EventArgs) Handles HelpBTN.Click
-        HelpBrowser.Show()
+        'There is really no need to create a browser for help, just open a page.
+        'HelpBrowser.Show()
+        System.Diagnostics.Process.Start("http://www.tagcraftmc.com/launcherhelp")
     End Sub
 
     Private Sub CutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutToolStripMenuItem.Click
