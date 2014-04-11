@@ -307,16 +307,25 @@ Public Class Form2
 
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
-        If Environment.Is64BitOperatingSystem = True Then
-            'nothing
-        ElseIf Environment.Is64BitOperatingSystem = False Then
-            ComboBox1x.Text = "Disabled"
-
-        End If
+      
 
         ComboBox1x.Text = "Disabled"
         ComboBox2x.Text = "Disabled"
         ComboBox3x.Text = "Disabled"
+
+        If Environment.Is64BitOperatingSystem = True Then
+            'dont do anything here plz.
+
+        ElseIf Environment.Is64BitOperatingSystem = False Then
+            ComboBox1.Items.Remove("1536M")
+            ComboBox1.Items.Remove("2048M")
+            ComboBox1.Items.Remove("3072M")
+            ComboBox1.Items.Remove("4096M")
+            ComboBox1.Items.Remove("6144M")
+            ComboBox1.Items.Remove("5120M")
+            ComboBox1.Items.Remove("7168M")
+            ComboBox1.Items.Remove("8192M")
+        End If
 
         Try
             loadoptions()

@@ -555,7 +555,7 @@ Public Class Form1
                     If a.Contains("memory:") Then
                         memory = a.Replace("memory:", "")
                         Form2.ComboBox1.Text = memory
-
+                        
                     Else
                         ' do nothing!
                     End If
