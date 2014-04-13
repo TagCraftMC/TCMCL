@@ -58,6 +58,7 @@ Partial Class Form1
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TransparentRichTextBox2 = New Launcher.TransparentRichTextBox()
         Me.BackgroundWorker4 = New System.ComponentModel.BackgroundWorker()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -399,6 +400,17 @@ Partial Class Form1
         Me.BackgroundWorker4.WorkerReportsProgress = True
         Me.BackgroundWorker4.WorkerSupportsCancellation = True
         '
+        'Label9
+        '
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label9.Image = Global.Launcher.My.Resources.Resources.LoadingUUID
+        Me.Label9.Location = New System.Drawing.Point(555, 493)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(196, 40)
+        Me.Label9.TabIndex = 36
+        Me.Label9.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -406,6 +418,7 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.NewsBGV9
         Me.ClientSize = New System.Drawing.Size(784, 562)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TransparentRichTextBox2)
@@ -476,5 +489,6 @@ Partial Class Form1
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents BackgroundWorker4 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 
 End Class

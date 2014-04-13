@@ -72,6 +72,8 @@ Public Class Form1
             ElseIf ComboBox1.Text = "" Then
                 MessageBox.Show("Please choose a Version. This is needed even if you're just playing Single Player", "Are you my mommy?")
             Else
+                Button1.BackgroundImage = My.Resources.LoadingUUID
+                Label9.Visible = True
                 Button1.Enabled = False
 
                 versionnumberwriter()
@@ -420,6 +422,7 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Label9.Location = New Point(294, 449)
         Try
             File.Delete("launcher.old.exe")
         Catch ex As Exception
@@ -816,7 +819,7 @@ Public Class Form1
         'um.. button that says Loading... code comes here!!!!!!
         Timer1.Enabled = True
         'start the timer.
-        Button1.Image = My.Resources.LoadingUUID
+        'Button1.Image = My.Resources.LoadingUUID
 
         BackgroundWorker4.RunWorkerAsync()
         
