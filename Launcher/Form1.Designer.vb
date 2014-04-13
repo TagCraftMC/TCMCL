@@ -55,7 +55,9 @@ Partial Class Form1
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TransparentRichTextBox2 = New Launcher.TransparentRichTextBox()
+        Me.BackgroundWorker4 = New System.ComponentModel.BackgroundWorker()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -375,6 +377,10 @@ Partial Class Form1
         Me.Label6.Text = "Don't re-distribute"
         Me.Label6.Visible = False
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 5000
+        '
         'TransparentRichTextBox2
         '
         Me.TransparentRichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -387,6 +393,11 @@ Partial Class Form1
         Me.TransparentRichTextBox2.Size = New System.Drawing.Size(192, 226)
         Me.TransparentRichTextBox2.TabIndex = 33
         Me.TransparentRichTextBox2.Text = "Loading News, Please Wait..."
+        '
+        'BackgroundWorker4
+        '
+        Me.BackgroundWorker4.WorkerReportsProgress = True
+        Me.BackgroundWorker4.WorkerSupportsCancellation = True
         '
         'Form1
         '
@@ -463,5 +474,7 @@ Partial Class Form1
     Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents BackgroundWorker4 As System.ComponentModel.BackgroundWorker
 
 End Class

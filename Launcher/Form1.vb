@@ -8,6 +8,7 @@ Imports System.Reflection
 Imports System.Drawing.Text
 Imports TagAPIx
 Imports Newtonsoft.Json
+Imports System.Text
 
 'username:Ammar_Ahmad
 'versionnumber:1.7.4
@@ -52,6 +53,7 @@ Public Class Form1
     Dim updatesinfo As String
     Dim updatesinforesult As String
 
+    Dim UUIDCon As String
 
     Public Shared accessOP As String
 
@@ -555,7 +557,7 @@ Public Class Form1
                     If a.Contains("memory:") Then
                         memory = a.Replace("memory:", "")
                         Form2.ComboBox1.Text = memory
-                        
+
                     Else
                         ' do nothing!
                     End If
@@ -684,8 +686,141 @@ Public Class Form1
 
     End Sub
 
-    Public Sub aftereverything()
+    Dim responseFromServer As String
+
+    Public Sub getUUID()
+        Try
+
+            Dim request As WebRequest = WebRequest.Create("https://api.mojang.com/profiles/page/1")
+            request.Method = "POST"
+            Dim postData As String = "{""name"":""" + TextBox1.Text + """,""agent"":""minecraft""}"
+            Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
+            request.ContentType = "application/json"
+            request.ContentLength = byteArray.Length
+            Dim dataStream As Stream = request.GetRequestStream()
+            dataStream.Write(byteArray, 0, byteArray.Length)
+            dataStream.Close()
+            Dim response As WebResponse = request.GetResponse()
+            Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)
+            dataStream = response.GetResponseStream()
+            Dim reader As New StreamReader(dataStream)
+            responseFromServer = reader.ReadToEnd()
+            Console.WriteLine(responseFromServer)
+            reader.Close()
+            dataStream.Close()
+            response.Close()
+
+
+            responseFromServer = responseFromServer.Replace("{", "")
+            responseFromServer = responseFromServer.Replace("}", "")
+            responseFromServer = responseFromServer.Replace("""", "")
+            responseFromServer = responseFromServer.Replace("[", "")
+            responseFromServer = responseFromServer.Replace("]", "")
+
+            responseFromServer = responseFromServer.Replace(",name:" + TextBox1.Text, "")
+
+            responseFromServer = responseFromServer.Replace(",size:1", "")
+            responseFromServer = responseFromServer.Replace(",size:0", "")
+
+            responseFromServer = responseFromServer.Replace("profiles:id:", "")
+            responseFromServer = responseFromServer.Replace("profiles:", "")
+            responseFromServer = responseFromServer.Replace(",legacy:true", "")
+
+            If responseFromServer = vbNullString Then
+                responseFromServer = "OFFLINE_MODE"
+            End If
+
+            UUIDCon = responseFromServer
+
+
+
+        Catch ex As Exception
+            ' yeah I am lazy... screw proper error handling
+
+            If responseFromServer = vbNullString Then
+                responseFromServer = "OFFLINE_MODE"
+            End If
+
+            UUIDCon = responseFromServer
+
+
+        End Try
+        
+        'save value to the txt generated.
+
+    End Sub
+
+    Public Sub writeUUIDtoVersions()
+
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ComboBox1.Text + ".txt")
+
+        Dim a As String
+        Dim b As String = ""
+        Dim x As String = "--uuid OFFLINE_MODE"
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("--uuid OFFLINE_MODE") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ComboBox1.Text + ".txt")
+            line = sr.ReadToEnd()
+        End Using
+
+     
+            line = line.Replace("--uuid OFFLINE_MODE", "--uuid " + UUIDCon)
+            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ComboBox1.Text + ".txt")
+
+
+
+            objReader.Write(line)
+            objReader.Close()
+
+        version = line
+
+        
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        ' this is a timeout method so that MC starts up at X time
         mainx()
+    End Sub
+
+    Private Sub BackgroundWorker4_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker4.DoWork
+        getUUID()
+       
+    End Sub
+
+    Private Sub BackgroundWorker4_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker4.RunWorkerCompleted
+        writeUUIDtoVersions()
+        mainx()
+
+    End Sub
+
+    Public Sub aftereverything()
+        'before calling this get UUID...
+        'yeah screw this.. running this on background...
+        'um.. button that says Loading... code comes here!!!!!!
+        Timer1.Enabled = True
+        'start the timer.
+        Button1.Image = My.Resources.LoadingUUID
+
+        BackgroundWorker4.RunWorkerAsync()
+        
+        
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -827,13 +962,13 @@ Public Class Form1
 
         Dim TextLine As String = ""
 
-            Dim objReader As New System.IO.StreamReader(FILE_NAME)
+        Dim objReader As New System.IO.StreamReader(FILE_NAME)
 
-            Do While objReader.Peek() <> -1
+        Do While objReader.Peek() <> -1
 
-                TextLine = TextLine & objReader.ReadLine() & vbNewLine
+            TextLine = TextLine & objReader.ReadLine() & vbNewLine
 
-            Loop
+        Loop
 
         If TextLine.Contains("url") Then
             If System.IO.File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions/" + ComboBox1.Text + "/DownloadR.AMMAR") = False Then
@@ -931,4 +1066,7 @@ Public Class Form1
     Private Sub LauncherToolTip_Popup(sender As Object, e As PopupEventArgs) Handles LauncherToolTip.Popup
 
     End Sub
+
+  
+
 End Class
