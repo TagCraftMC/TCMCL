@@ -694,9 +694,11 @@ Public Class Form1
     Public Sub getUUID()
         Try
 
-            Dim request As WebRequest = WebRequest.Create("https://api.mojang.com/profiles/page/1")
+            Dim request As WebRequest = WebRequest.Create("https://api.mojang.com/profiles/minecraft")
+
             request.Method = "POST"
-            Dim postData As String = "{""name"":""" + TextBox1.Text + """,""agent"":""minecraft""}"
+            
+            Dim postData As String = "[""" + TextBox1.Text + """]"
             Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
             request.ContentType = "application/json"
             request.ContentLength = byteArray.Length
@@ -704,54 +706,98 @@ Public Class Form1
             dataStream.Write(byteArray, 0, byteArray.Length)
             dataStream.Close()
             Dim response As WebResponse = request.GetResponse()
-            'Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)
+
             dataStream = response.GetResponseStream()
             Dim reader As New StreamReader(dataStream)
             responseFromServer = reader.ReadToEnd()
-            'Console.WriteLine(responseFromServer)
+
             reader.Close()
             dataStream.Close()
             response.Close()
 
+            'if it doesn't contain id go offline mode
 
-            responseFromServer = responseFromServer.Replace("{", "")
-            responseFromServer = responseFromServer.Replace("}", "")
-            responseFromServer = responseFromServer.Replace("""", "")
-            responseFromServer = responseFromServer.Replace("[", "")
-            responseFromServer = responseFromServer.Replace("]", "")
+            If responseFromServer.Contains("""id""") Then
+                'convert it to xml
+                convert_json_UUID_to_Xml_UUID_bc_I_Still_Dont_Know_How_To_Work_With_Json()
 
-            responseFromServer = responseFromServer.Replace(",name:" + TextBox1.Text, "")
-
-            responseFromServer = responseFromServer.Replace(",size:1", "")
-            responseFromServer = responseFromServer.Replace(",size:0", "")
-
-            responseFromServer = responseFromServer.Replace("profiles:id:", "")
-            responseFromServer = responseFromServer.Replace("profiles:", "")
-            responseFromServer = responseFromServer.Replace(",legacy:true", "")
-
-            If responseFromServer = vbNullString Then
-                responseFromServer = "OFFLINE_MODE"
             End If
 
-            UUIDCon = responseFromServer
+            If Not responseFromServer.Contains("""id""") Then
+                responseFromServer = "OFFLINE_MODE"
+                UUIDCon = responseFromServer
 
+            End If
+
+            
 
 
         Catch ex As Exception
             ' yeah I am lazy... screw proper error handling
 
-            If responseFromServer = vbNullString Then
-                responseFromServer = "OFFLINE_MODE"
-            End If
-
+            responseFromServer = "OFFLINE_MODE"
             UUIDCon = responseFromServer
-
 
         End Try
         
         'save value to the txt generated.
 
     End Sub
+
+    Dim jsonString As String
+
+    Public Sub convert_json_UUID_to_Xml_UUID_bc_I_Still_Dont_Know_How_To_Work_With_Json()
+        Try
+            responseFromServer = responseFromServer.Replace("[", "")
+            responseFromServer = responseFromServer.Replace("]", "")
+
+            Dim node As XNode = JsonConvert.DeserializeXNode(responseFromServer, "Root")
+
+            jsonString = node.ToString()
+
+            '-------------------------- Get the UUID from the XML ----------------------------
+
+            GetVal_UUID()
+
+        Catch ex As Exception
+            responseFromServer = "OFFLINE_MODE"
+            UUIDCon = responseFromServer
+        End Try
+    End Sub
+
+
+    Public Sub GetVal_UUID()
+        Try
+
+            Dim aLine As String
+            Dim strReader As New StringReader(jsonString)
+
+            While True
+                aLine = strReader.ReadLine()
+                If aLine Is Nothing Then
+
+                    Exit While
+                Else
+                    If aLine.Contains("<id>") Then
+                        'MsgBox(aLine)
+                        'put the UUID to variable...
+                        aLine = aLine.Replace("<id>", "")
+                        aLine = aLine.Replace("</id>", "")
+                        aLine = aLine.Replace(" ", "")
+                        UUIDCon = aLine
+
+                        Exit While
+                    End If
+                End If
+            End While
+
+        Catch ex As Exception
+            responseFromServer = "OFFLINE_MODE"
+            UUIDCon = responseFromServer
+
+        End Try
+    End Sub
+
 
     Public Sub writeUUIDtoVersions()
 
@@ -814,13 +860,8 @@ Public Class Form1
     End Sub
 
     Public Sub aftereverything()
-        'before calling this get UUID...
-        'yeah screw this.. running this on background...
-        'um.. button that says Loading... code comes here!!!!!!
         Timer1.Enabled = True
-        'start the timer.
-        'Button1.Image = My.Resources.LoadingUUID
-
+        
         BackgroundWorker4.RunWorkerAsync()
         
         
