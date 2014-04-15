@@ -473,7 +473,6 @@ Public Class Form1
 
     Public Function Compare(ByVal x As Object, ByVal y As Object) As Integer Implements IComparer.Compare
         Try
-
             Dim File1 As FileInfo
             Dim File2 As FileInfo
 
@@ -482,11 +481,10 @@ Public Class Form1
 
             Compare = DateTime.Compare(File1.LastWriteTime, File2.LastWriteTime)
 
-
+            Return DateTime.Compare(DirectCast(x, IO.FileInfo).CreationTime, DirectCast(y, IO.FileInfo).CreationTime)
         Catch ex As Exception
-
+            Throw ex
         End Try
-
 
     End Function
 
