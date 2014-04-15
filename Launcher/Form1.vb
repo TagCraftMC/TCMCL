@@ -11,13 +11,15 @@ Imports Newtonsoft.Json
 Imports System.Text
 
 'username:Ammar_Ahmad
-'versionnumber:1.7.4
+'versionnumber:1.7.8
 'rememberaccount:true
 'debugmode:true
 'memorypass:true
-'memory:1024M
+'memory:3072M
 'tagoptions:true
 'runtimecatch:true
+'latestcrash:{pathcomeshere}
+
 
 Public Class Form1
     Implements IComparer
@@ -125,6 +127,44 @@ Public Class Form1
     'Read up
     '-----------------------------------------------------------------------
     'Write down
+
+
+    Public Sub latestcrashwriter()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+        Dim a As String
+        Dim b As String = ""
+
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("latestcrash:") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+            line = sr.ReadToEnd()
+        End Using
+
+        Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+        'objReader = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt")
+        objReader.Write(line.Replace(b, "latestcrash:" + pathoferror))
+        objReader.Close()
+
+
+    End Sub
 
     Public Sub usernamewriter()
         Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
@@ -428,6 +468,8 @@ Public Class Form1
     Dim pathoferror As String
     Dim getoldlogtocheckwithnew As String
 
+    Dim error_on_off As Integer = 0
+
 
     Public Function Compare(ByVal x As Object, ByVal y As Object) As Integer Implements IComparer.Compare
         Try
@@ -440,9 +482,15 @@ Public Class Form1
 
             Compare = DateTime.Compare(File1.LastWriteTime, File2.LastWriteTime)
 
+
         Catch ex As Exception
 
         End Try
+
+
+        Dim returnval As Integer
+        Return returnval
+
     End Function
 
     Public Sub lookuplog()
@@ -464,32 +512,18 @@ Public Class Form1
             'MsgBox(pathoferror)
             'get latest log...
 
-            Dim objReader As New System.IO.StreamReader((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/crash_log.txt"))
-
-            Do While objReader.Peek() <> -1
-
-                getoldlogtocheckwithnew = objReader.ReadLine()
-
-            Loop
-
-            objReader.Close()
-
             If getoldlogtocheckwithnew = pathoferror Then
                 'do nothing...
             Else
                 'new error log stored.
+                latestcrashwriter()
 
-                File.Create((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/crash_log.txt")).Dispose()
-                If File.Exists((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/crash_log.txt")) Then
-                    Using sw As StreamWriter = New StreamWriter((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/crash_log.txt"))
-                        sw.Write(pathoferror)
-                    End Using
-                End If
                 If pathoferror = vbNullString Then
                     ' do nothing...
                 Else
 
-                    MsgBox(pathoferror)
+                    '  MsgBox(pathoferror)
+                    error_on_off = 1
 
                 End If
 
@@ -500,6 +534,13 @@ Public Class Form1
         End Try
     End Sub
 
+    Private Sub BackgroundWorker5_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs)
+
+    End Sub
+
+    Private Sub BackgroundWorker5_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs)
+
+    End Sub
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -521,8 +562,9 @@ Public Class Form1
         End Try
 
         'error log stuff here...
-        lookuplog()
 
+       
+       
 
 
         Dim di As New DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions")
@@ -535,7 +577,11 @@ Public Class Form1
 
         readoptions()
 
+        lookuplog()
 
+        If error_on_off = 1 Then
+            MsgBox(pathoferror)
+        End If
 
         BackgroundWorker1.RunWorkerAsync()
         BackgroundWorker2.RunWorkerAsync()
@@ -1070,6 +1116,14 @@ Public Class Form1
                         ' do nothing!
                     End If
 
+                    If a.Contains("latestcrash:") Then
+                        getoldlogtocheckwithnew = a.Replace("latestcrash:", "")
+
+                        ' MsgBox(getoldlogtocheckwithnew)
+                    Else
+                        ' do nothing!
+                    End If
+
                 Catch ex As Exception
                     'a is nothing now...
                 End Try
@@ -1082,6 +1136,8 @@ Public Class Form1
         Catch ex As Exception
 
         End Try
+
+      
     End Sub
 
     Public Sub readjsonforurl()

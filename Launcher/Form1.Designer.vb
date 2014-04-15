@@ -56,9 +56,9 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.TransparentRichTextBox2 = New Launcher.TransparentRichTextBox()
         Me.BackgroundWorker4 = New System.ComponentModel.BackgroundWorker()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.TransparentRichTextBox2 = New Launcher.TransparentRichTextBox()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -382,19 +382,6 @@ Partial Class Form1
         '
         Me.Timer1.Interval = 5000
         '
-        'TransparentRichTextBox2
-        '
-        Me.TransparentRichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TransparentRichTextBox2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.TransparentRichTextBox2.ForeColor = System.Drawing.Color.White
-        Me.TransparentRichTextBox2.Location = New System.Drawing.Point(559, 264)
-        Me.TransparentRichTextBox2.Name = "TransparentRichTextBox2"
-        Me.TransparentRichTextBox2.ReadOnly = True
-        Me.TransparentRichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
-        Me.TransparentRichTextBox2.Size = New System.Drawing.Size(192, 226)
-        Me.TransparentRichTextBox2.TabIndex = 33
-        Me.TransparentRichTextBox2.Text = "Loading News, Please Wait..."
-        '
         'BackgroundWorker4
         '
         Me.BackgroundWorker4.WorkerReportsProgress = True
@@ -410,6 +397,19 @@ Partial Class Form1
         Me.Label9.Size = New System.Drawing.Size(196, 40)
         Me.Label9.TabIndex = 36
         Me.Label9.Visible = False
+        '
+        'TransparentRichTextBox2
+        '
+        Me.TransparentRichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TransparentRichTextBox2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TransparentRichTextBox2.ForeColor = System.Drawing.Color.White
+        Me.TransparentRichTextBox2.Location = New System.Drawing.Point(559, 264)
+        Me.TransparentRichTextBox2.Name = "TransparentRichTextBox2"
+        Me.TransparentRichTextBox2.ReadOnly = True
+        Me.TransparentRichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
+        Me.TransparentRichTextBox2.Size = New System.Drawing.Size(192, 226)
+        Me.TransparentRichTextBox2.TabIndex = 33
+        Me.TransparentRichTextBox2.Text = "Loading News, Please Wait..."
         '
         'Form1
         '
