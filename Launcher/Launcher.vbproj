@@ -343,6 +343,10 @@
     <None Include="Resources\LoadingUUID.png" />
     <None Include="Resources\DetectedCrash.png" />
     <None Include="Resources\DetectedCrash2.png" />
+    <None Include="Resources\CrashReportGUI.png" />
+    <None Include="Resources\CrashReportGUI.jpg" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\CloseHover.png" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />

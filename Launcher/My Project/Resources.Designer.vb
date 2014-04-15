@@ -143,6 +143,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Close() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Close", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property CloseHover() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CloseHover", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property CopyrightMojang() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("CopyrightMojang", resourceCulture)
@@ -166,6 +186,26 @@ Namespace My.Resources
         Friend ReadOnly Property CopyrightMojang2014() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("CopyrightMojang2014", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property CrashReportGUI() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CrashReportGUI", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property CrashReportGUI1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CrashReportGUI1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

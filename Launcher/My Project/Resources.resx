@@ -145,11 +145,14 @@
   <data name="Thanks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thanks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DetectedCrash2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DetectedCrash2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CopyrightMojang2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CopyrightMojang2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Options1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Options1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CrashReportGUI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrashReportGUI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LoadingNews" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoadingNews.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,6 +292,9 @@
   <data name="LauncherVersion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LauncherVersion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CrashReportGUI1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrashReportGUI.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="0.0.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0.0.0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -312,6 +318,9 @@
   </data>
   <data name="LaunchHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LaunchHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Options1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Options1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Promise" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Promise.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -337,7 +346,10 @@
   <data name="blaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DetectedCrash2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DetectedCrash2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CloseHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CloseHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
