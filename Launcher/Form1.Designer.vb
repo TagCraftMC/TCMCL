@@ -365,6 +365,7 @@ Partial Class Form1
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(723, 43)
         Me.Label5.TabIndex = 37
+        Me.Label5.Visible = False
         '
         'TransparentRichTextBox2
         '
