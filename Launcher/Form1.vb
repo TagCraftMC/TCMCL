@@ -20,6 +20,7 @@ Imports System.Text
 'runtimecatch:true
 
 Public Class Form1
+    Implements IComparer
 
     Public Shared mem As String
     Public Shared ver As String
@@ -421,6 +422,86 @@ Public Class Form1
     End Sub
 
 
+    Dim dirinfo As DirectoryInfo
+    Dim allFiles() As FileInfo
+
+    Dim pathoferror As String
+    Dim getoldlogtocheckwithnew As String
+
+
+    Public Function Compare(ByVal x As Object, ByVal y As Object) As Integer Implements IComparer.Compare
+        Try
+
+            Dim File1 As FileInfo
+            Dim File2 As FileInfo
+
+            File1 = DirectCast(x, FileInfo)
+            File2 = DirectCast(y, FileInfo)
+
+            Compare = DateTime.Compare(File1.LastWriteTime, File2.LastWriteTime)
+
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+    Public Sub lookuplog()
+        Try
+
+            dirinfo = New DirectoryInfo((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/crash-reports"))
+
+            allFiles = dirinfo.GetFiles("*.txt")
+            Array.Sort(allFiles, New Form1)
+            For Each fl As FileInfo In allFiles
+                'MsgBox(fl.FullName.ToString())
+                fl.FullName.ToString()
+                If Not fl.FullName.ToString() = vbNullString Then
+                    pathoferror = fl.FullName.ToString()
+
+                End If
+            Next
+
+            'MsgBox(pathoferror)
+            'get latest log...
+
+            Dim objReader As New System.IO.StreamReader((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/crash_log.txt"))
+
+            Do While objReader.Peek() <> -1
+
+                getoldlogtocheckwithnew = objReader.ReadLine()
+
+            Loop
+
+            objReader.Close()
+
+            If getoldlogtocheckwithnew = pathoferror Then
+                'do nothing...
+            Else
+                'new error log stored.
+
+                File.Create((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/crash_log.txt")).Dispose()
+                If File.Exists((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/crash_log.txt")) Then
+                    Using sw As StreamWriter = New StreamWriter((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/crash_log.txt"))
+                        sw.Write(pathoferror)
+                    End Using
+                End If
+                If pathoferror = vbNullString Then
+                    ' do nothing...
+                Else
+
+                    MsgBox(pathoferror)
+
+                End If
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         Label9.Location = New Point(294, 449)
         Try
@@ -439,6 +520,8 @@ Public Class Form1
 
         End Try
 
+        'error log stuff here...
+        lookuplog()
 
 
 
@@ -697,7 +780,7 @@ Public Class Form1
             Dim request As WebRequest = WebRequest.Create("https://api.mojang.com/profiles/minecraft")
 
             request.Method = "POST"
-            
+
             Dim postData As String = "[""" + TextBox1.Text + """]"
             Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
             request.ContentType = "application/json"
@@ -729,7 +812,7 @@ Public Class Form1
 
             End If
 
-            
+
 
 
         Catch ex As Exception
@@ -739,7 +822,7 @@ Public Class Form1
             UUIDCon = responseFromServer
 
         End Try
-        
+
         'save value to the txt generated.
 
     End Sub
@@ -828,18 +911,18 @@ Public Class Form1
             line = sr.ReadToEnd()
         End Using
 
-     
-            line = line.Replace("--uuid OFFLINE_MODE", "--uuid " + UUIDCon)
-            Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ComboBox1.Text + ".txt")
+
+        line = line.Replace("--uuid OFFLINE_MODE", "--uuid " + UUIDCon)
+        Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ComboBox1.Text + ".txt")
 
 
 
-            objReader.Write(line)
-            objReader.Close()
+        objReader.Write(line)
+        objReader.Close()
 
         version = line
 
-        
+
 
     End Sub
 
@@ -850,7 +933,7 @@ Public Class Form1
 
     Private Sub BackgroundWorker4_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker4.DoWork
         getUUID()
-       
+
     End Sub
 
     Private Sub BackgroundWorker4_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker4.RunWorkerCompleted
@@ -861,10 +944,10 @@ Public Class Form1
 
     Public Sub aftereverything()
         Timer1.Enabled = True
-        
+
         BackgroundWorker4.RunWorkerAsync()
-        
-        
+
+
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -1110,7 +1193,5 @@ Public Class Form1
     Private Sub LauncherToolTip_Popup(sender As Object, e As PopupEventArgs) Handles LauncherToolTip.Popup
 
     End Sub
-
-  
 
 End Class
