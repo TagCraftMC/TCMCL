@@ -39,7 +39,6 @@ Partial Class Form1
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.lvLBL = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -53,11 +52,10 @@ Partial Class Form1
         Me.BackgroundWorker3 = New System.ComponentModel.BackgroundWorker()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BackgroundWorker4 = New System.ComponentModel.BackgroundWorker()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.TransparentRichTextBox2 = New Launcher.TransparentRichTextBox()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -217,19 +215,6 @@ Partial Class Form1
         "ith pre-installed mods.")
         Me.Button5.UseVisualStyleBackColor = False
         '
-        'lvLBL
-        '
-        Me.lvLBL.BackColor = System.Drawing.Color.Transparent
-        Me.lvLBL.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lvLBL.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
-        Me.lvLBL.ForeColor = System.Drawing.Color.Red
-        Me.lvLBL.Image = Global.Launcher.My.Resources.Resources.OutOfDate
-        Me.lvLBL.Location = New System.Drawing.Point(37, 2)
-        Me.lvLBL.Name = "lvLBL"
-        Me.lvLBL.Size = New System.Drawing.Size(701, 20)
-        Me.lvLBL.TabIndex = 9
-        Me.lvLBL.Visible = False
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -352,32 +337,6 @@ Partial Class Form1
         Me.BackgroundWorker2.WorkerReportsProgress = True
         Me.BackgroundWorker2.WorkerSupportsCancellation = True
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(277, 190)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(228, 24)
-        Me.Label5.TabIndex = 34
-        Me.Label5.Text = "DEVELOPMENT BUILD"
-        Me.Label5.Visible = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(331, 214)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(124, 18)
-        Me.Label6.TabIndex = 35
-        Me.Label6.Text = "Don't re-distribute"
-        Me.Label6.Visible = False
-        '
         'Timer1
         '
         Me.Timer1.Interval = 5000
@@ -397,6 +356,15 @@ Partial Class Form1
         Me.Label9.Size = New System.Drawing.Size(196, 40)
         Me.Label9.TabIndex = 36
         Me.Label9.Visible = False
+        '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Image = Global.Launcher.My.Resources.Resources.DetectedCrash2
+        Me.Label5.Location = New System.Drawing.Point(28, 190)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(723, 43)
+        Me.Label5.TabIndex = 37
         '
         'TransparentRichTextBox2
         '
@@ -418,9 +386,8 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.NewsBGV9
         Me.ClientSize = New System.Drawing.Size(784, 562)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TransparentRichTextBox2)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label8)
@@ -434,7 +401,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.lvLBL)
         Me.Controls.Add(Me.HelpBTN)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -466,7 +432,6 @@ Partial Class Form1
     Friend WithEvents PasteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents LauncherToolTip As System.Windows.Forms.ToolTip
-    Friend WithEvents lvLBL As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
     Friend WithEvents Button4 As System.Windows.Forms.Button
@@ -485,10 +450,9 @@ Partial Class Form1
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents TransparentRichTextBox2 As Launcher.TransparentRichTextBox
     Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents BackgroundWorker4 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 
 End Class

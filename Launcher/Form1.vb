@@ -10,7 +10,7 @@ Imports TagAPIx
 Imports Newtonsoft.Json
 Imports System.Text
 
-'username:Ammar_Ahmad
+'username:Ammar_Ahmad_Smells
 'versionnumber:1.7.8
 'rememberaccount:true
 'debugmode:true
@@ -558,8 +558,8 @@ Public Class Form1
 
         'error log stuff here...
 
-       
-       
+
+
 
 
         Dim di As New DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions")
@@ -575,7 +575,8 @@ Public Class Form1
         lookuplog()
 
         If error_on_off = 1 Then
-            MsgBox(pathoferror)
+            'MsgBox(pathoferror)
+            Label5.Visible = True
         End If
 
         BackgroundWorker1.RunWorkerAsync()
@@ -1132,7 +1133,7 @@ Public Class Form1
 
         End Try
 
-      
+
     End Sub
 
     Public Sub readjsonforurl()
@@ -1245,4 +1246,7 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        CrashReader.Show()
+    End Sub
 End Class
