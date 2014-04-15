@@ -488,9 +488,6 @@ Public Class Form1
         End Try
 
 
-        Dim returnval As Integer
-        Return returnval
-
     End Function
 
     Public Sub lookuplog()
