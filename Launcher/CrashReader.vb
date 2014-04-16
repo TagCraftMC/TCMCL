@@ -37,6 +37,10 @@ Public Class CrashReader
                 Label1.Text = "Tips: This error is due to the Mod TabbyChat, if you're unable to start Minecraft just remove it."
             ElseIf stringReader.Contains("ResourceUtils.getResourcePackFile") Then
                 Label1.Text = "Tips: This error is has to do with ResourcePacks, it has been known to happen when using a buggy or outdated optifine mod."
+
+            Else
+                Label1.Text = "Tips: No tips available."
+
             End If
 
         Catch ex As Exception

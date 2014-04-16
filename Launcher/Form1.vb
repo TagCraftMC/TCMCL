@@ -60,7 +60,7 @@ Public Class Form1
 
     Public Shared accessOP As String
 
-    Dim line As String
+    Public Shared line As String
 
     Dim oFilep As System.IO.File
     Dim oWritep As System.IO.StreamWriter
@@ -963,7 +963,11 @@ Public Class Form1
         objReader.Close()
 
         version = line
+        ' MsgBox(version)
+        ' MsgBox(line)
 
+
+        'line = version
 
 
     End Sub

@@ -34,7 +34,7 @@ Partial Class CrashReader
         Me.Button1.BackgroundImage = Global.Launcher.My.Resources.Resources.Close
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(157, 536)
+        Me.Button1.Location = New System.Drawing.Point(157, 532)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(196, 40)
         Me.Button1.TabIndex = 1
@@ -72,6 +72,7 @@ Partial Class CrashReader
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "CrashReader"
         Me.Text = "Crash Report"
         Me.ResumeLayout(False)
