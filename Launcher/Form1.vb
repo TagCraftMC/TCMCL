@@ -961,14 +961,18 @@ Public Class Form1
 
         objReader.Write(line)
         objReader.Close()
+        If line.Contains("liteloader") Or line.Contains("forge") Then
+            line = version
+        Else
 
-        version = line
+            version = line
+
+        End If
         ' MsgBox(version)
         ' MsgBox(line)
 
 
-        'line = version
-
+        
 
     End Sub
 
