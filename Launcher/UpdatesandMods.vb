@@ -76,21 +76,17 @@ Public Class UpdatesandMods
     Public Sub extractzipfile()
         Try
 
-            lblstatus.Text = "Installing"
+            ' lblstatus.Text = "Installing"
             'extract content of zip file
             Dim ZipToUnpack As String = "MinecraftUpdate.zip"
-            'minecraft path comes here!
             Dim TargetDir As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/"
-            'this line will be changed to ./minecraft/
             Console.WriteLine("Extracting file {0} to {1}", ZipToUnpack, TargetDir)
             Using zip1 As ZipFile = ZipFile.Read(ZipToUnpack)
                 Dim e As ZipEntry
-                ' here, we extract every entry, but we could extract    
-                ' based on entry name, size, date, etc.   
                 For Each e In zip1
                     e.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
                 Next
-                lblstatus.Text = "Install Finished"
+                '  lblstatus.Text = "Install Finished"
             End Using
 
         Catch ex As Exception
