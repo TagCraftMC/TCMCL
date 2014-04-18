@@ -73,6 +73,9 @@ Public Class UpdatesandMods
         timeLeft = TimeSpan.FromSeconds(timeLeftAverage * (e.TotalBytesToReceive - e.BytesReceived))
         lbleta.Text = String.Format("{0:00}:{1:00}:{2:00}", timeLeft.TotalHours, timeLeft.Minutes, timeLeft.Seconds)
     End Sub
+
+    Dim statusoflbl As Integer
+
     Public Sub extractzipfile()
         Try
 
@@ -87,6 +90,7 @@ Public Class UpdatesandMods
                     e.Extract(TargetDir, ExtractExistingFileAction.OverwriteSilently)
                 Next
                 '  lblstatus.Text = "Install Finished"
+                statusoflbl = 1
             End Using
 
         Catch ex As Exception
@@ -162,6 +166,7 @@ Public Class UpdatesandMods
             SW.Stop()
             'moved this to bgworker... this was making the application too much gassy.
             BackgroundWorker2.RunWorkerAsync()
+            lblstatus.Text = "Installing"
         ElseIf lblstatus.Text = "Canceled" Then
             'nothing
         Else
@@ -236,6 +241,12 @@ Public Class UpdatesandMods
     End Sub
 
     Private Sub BackgroundWorker2_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
+        If statusoflbl = 1 Then
+            lblstatus.Text = "Install Finished"
+        ElseIf statusoflbl = 0 Then
+            lblstatus.Text = "Install Failed"
+        End If
+
         refreshform1()
     End Sub
     Public Sub updateversioninfo()
