@@ -539,6 +539,60 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        Dim rebuildertext As String
+        rebuildertext = "username:username" + vbNewLine + "versionnumber:" + vbNewLine + "rememberaccount:true" + vbNewLine + "debugmode:false" + vbNewLine + "memorypass:true" + vbNewLine + "memory:1024M" + vbNewLine + "tagoptions:true" + vbNewLine + "runtimecatch:true" + vbNewLine + "latestcrash:"
+
+        Dim line As String = ""
+
+        ' Create new StreamReader instance with Using block.
+        Try
+           
+
+            Dim lines() As String = System.IO.File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+            For Each lineX As String In lines
+                line = line + lineX
+
+
+            Next
+            ' MsgBox(line)
+
+        Catch ex As Exception
+            File.Create(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt").Dispose()
+            line = ""
+            Dim lines() As String = System.IO.File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+
+            For Each lineX As String In lines
+                line = line + lineX
+
+
+            Next
+
+
+        End Try
+        
+        '' MsgBox(line)
+        Try
+            If line.Contains("username:") And line.Contains("versionnumber:") And line.Contains("rememberaccount:") And line.Contains("debugmode:") And line.Contains("memorypass:") And line.Contains("memory:") And line.Contains("tagoptions:") And line.Contains("runtimecatch:") And line.Contains("latestcrash:") Then
+                'do nothing bc file is fine...
+            Else
+                'make it!
+                Using writer As StreamWriter = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+                    writer.Write(rebuildertext)
+
+                End Using
+            End If
+
+        Catch ex As Exception
+            Using writer As StreamWriter = New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
+                writer.Write(rebuildertext)
+
+            End Using
+
+        End Try
+
+
         Label9.Location = New Point(294, 449)
         Try
             File.Delete("launcher.old.exe")

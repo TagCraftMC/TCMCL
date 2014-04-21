@@ -225,7 +225,7 @@ Partial Class Form1
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(81, 16)
         Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Version 1.50"
+        Me.Label4.Text = "Version 1.51"
         Me.Label4.Visible = False
         '
         'WebBrowser1

@@ -395,4 +395,13 @@ Public Class Form2
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
 
     End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        ' rebuild options code comes here...
+        Dim rebuildertext As String
+        rebuildertext = "username:username" + vbNewLine + "versionnumber:" + vbNewLine + "rememberaccount:true" + vbNewLine + "debugmode:false" + vbNewLine + "memorypass:true" + vbNewLine + "memory:1024M" + vbNewLine + "tagoptions:true" + vbNewLine + "runtimecatch:true" + vbNewLine + "latestcrash:"
+        MsgBox(rebuildertext)
+        'stop all background tasks for this to work without causing issues...
+
+    End Sub
 End Class

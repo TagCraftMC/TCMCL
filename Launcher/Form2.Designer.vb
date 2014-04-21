@@ -34,11 +34,12 @@ Partial Class Form2
         Me.ComboBox3x = New System.Windows.Forms.ComboBox()
         Me.ComboBox4x = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ComboBox1x
@@ -164,17 +165,6 @@ Partial Class Form2
         Me.ComboBox1.TabIndex = 21
         Me.OptionsToolTip.SetToolTip(Me.ComboBox1, "Allows you to change how much memory you")
         '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
-        Me.Label3.Location = New System.Drawing.Point(148, 36)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(121, 30)
-        Me.Label3.TabIndex = 11
-        '
         'Button3
         '
         Me.Button3.BackgroundImage = Global.Launcher.My.Resources.Resources.Credits
@@ -217,6 +207,27 @@ Partial Class Form2
         Me.Label6.TabIndex = 17
         Me.OptionsToolTip.SetToolTip(Me.Label6, "Allows you to see held items ID's and damage values.")
         '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
+        Me.Label3.Location = New System.Drawing.Point(148, 36)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(121, 30)
+        Me.Label3.TabIndex = 11
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(109, 311)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(191, 37)
+        Me.Button2.TabIndex = 22
+        Me.Button2.Text = "Rebuild Options"
+        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Visible = False
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -224,6 +235,7 @@ Partial Class Form2
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.OptionsArea
         Me.ClientSize = New System.Drawing.Size(414, 466)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.ComboBox4x)
         Me.Controls.Add(Me.ComboBox3x)
@@ -261,4 +273,5 @@ Partial Class Form2
     Friend WithEvents ComboBox3x As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox4x As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
