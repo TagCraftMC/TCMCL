@@ -151,6 +151,9 @@
   <data name="CopyrightMojang2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CopyrightMojang2014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="blaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CrashReportGUI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CrashReportGUI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -277,6 +280,9 @@
   <data name="ChooseVersion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChooseVersion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Version150" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Version150.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="HeldIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeldIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -343,16 +349,13 @@
   <data name="LoadingNewsANI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoadingNewsANI.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CloseHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CloseHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MinecraftUpdates" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MinecraftUpdates.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CloseHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CloseHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Version150" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Version150.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="152" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\152.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

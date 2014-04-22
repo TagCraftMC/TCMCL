@@ -74,6 +74,7 @@ Public Class Form3
             'rename file
             Try
                 My.Computer.FileSystem.RenameFile("launcher.exe", "launcher.old.exe")
+                My.Computer.FileSystem.RenameFile("TagAPI.dll", "TagAPI.old.dll")
             Catch ex As Exception
 
             End Try

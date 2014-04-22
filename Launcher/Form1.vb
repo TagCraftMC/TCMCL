@@ -547,7 +547,7 @@ Public Class Form1
 
         ' Create new StreamReader instance with Using block.
         Try
-           
+
 
             Dim lines() As String = System.IO.File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/options.txt")
 
@@ -571,7 +571,7 @@ Public Class Form1
 
 
         End Try
-        
+
         '' MsgBox(line)
         Try
             If line.Contains("username:") And line.Contains("versionnumber:") And line.Contains("rememberaccount:") And line.Contains("debugmode:") And line.Contains("memorypass:") And line.Contains("memory:") And line.Contains("tagoptions:") And line.Contains("runtimecatch:") And line.Contains("latestcrash:") Then
@@ -596,6 +596,11 @@ Public Class Form1
         Label9.Location = New Point(294, 449)
         Try
             File.Delete("launcher.old.exe")
+        Catch ex As Exception
+
+        End Try
+        Try
+            File.Delete("TagAPI.old.dll")
         Catch ex As Exception
 
         End Try
@@ -1026,7 +1031,7 @@ Public Class Form1
         ' MsgBox(line)
 
 
-        
+
 
     End Sub
 
