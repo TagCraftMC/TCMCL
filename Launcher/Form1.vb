@@ -529,16 +529,108 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub BackgroundWorker5_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs)
+    Dim usernameID As String
+    Dim password As String
+    Dim auth As String = "OFFLINE_MODE"
+    Dim syn As String
+
+    Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+
+        If e.KeyCode = Keys.F9 Then
+            auth = "OFFLINE_MODE"
+            usernameID = InputBox("Enter your minecraft username/email ID")
+            password = InputBox("Enter your password")
+
+            syn = "{""agent"":{""name"":""Minecraft"",""version"":1},""username"":""setuser"",""password"":""setpassword"",""clientToken"":""""}"
+            syn = syn.Replace("setuser", usernameID)
+            syn = syn.Replace("setpassword", password)
+            Try
+
+                Dim request As WebRequest = WebRequest.Create("https://authserver.mojang.com/authenticate")
+                request.Method = "POST"
+                Dim postData As String = syn
+                Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
+                request.ContentType = "application/json"
+                request.ContentLength = byteArray.Length
+                Dim dataStream As Stream = request.GetRequestStream()
+                dataStream.Write(byteArray, 0, byteArray.Length)
+                dataStream.Close()
+                Dim response As WebResponse = request.GetResponse()
+                Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)
+                dataStream = response.GetResponseStream()
+                Dim reader As New StreamReader(dataStream)
+
+                Dim responseFromServer As String = reader.ReadToEnd()
+                syn = responseFromServer
+                'TextBox1.Text = responseFromServer
+                convert_json_to_Xml_of_auth()
+                Console.WriteLine(responseFromServer)
+
+                reader.Close()
+                dataStream.Close()
+                response.Close()
+                'MsgBox(auth)
+            Catch ex As Exception
+                MsgBox("ERROR COULD NOT AUTHENTICATE!")
+            End Try
+        End If
 
     End Sub
 
-    Private Sub BackgroundWorker5_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs)
+    Public Sub convert_json_to_Xml_of_auth()
+        Try
+            syn = syn.Replace("[", "")
+            syn = syn.Replace("]", "")
 
+            Dim node As XNode = JsonConvert.DeserializeXNode(syn, "Root")
+
+            syn = node.ToString()
+
+            '-------------------------- Get the UUID from the XML ----------------------------
+            'MsgBox(syn)
+            GetVal_auth()
+
+        Catch ex As Exception
+            auth = "OFFLINE_MODE"
+            'UUIDCon = responseFromServer
+        End Try
+    End Sub
+
+    Public Sub GetVal_auth()
+        Try
+
+            Dim aLine As String
+            Dim strReader As New StringReader(syn)
+
+            While True
+                aLine = strReader.ReadLine()
+                If aLine Is Nothing Then
+
+                    Exit While
+                Else
+                    If aLine.Contains("<accessToken>") Then
+                        'MsgBox(aLine)
+                        'put the UUID to variable...
+                        aLine = aLine.Replace("<accessToken>", "")
+                        aLine = aLine.Replace("</accessToken>", "")
+                        aLine = aLine.Replace(" ", "")
+                        auth = aLine
+
+                        Exit While
+                    End If
+                End If
+            End While
+            MsgBox("AUTHENTICATED USING ID: " + auth)
+        Catch ex As Exception
+            auth = "OFFLINE_MODE"
+            UUIDCon = responseFromServer
+
+        End Try
     End Sub
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.KeyPreview = True
 
         Dim rebuildertext As String
         rebuildertext = "username:username" + vbNewLine + "versionnumber:" + vbNewLine + "rememberaccount:true" + vbNewLine + "debugmode:false" + vbNewLine + "memorypass:true" + vbNewLine + "memory:1024M" + vbNewLine + "tagoptions:true" + vbNewLine + "runtimecatch:true" + vbNewLine + "latestcrash:"
@@ -982,6 +1074,44 @@ Public Class Form1
         End Try
     End Sub
 
+    Public Sub writeauthtoversions()
+        Dim reader As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ComboBox1.Text + ".txt")
+
+        Dim a As String
+        Dim b As String = ""
+        Dim x As String = "--accessToken OFFLINE_MODE"
+
+        Do
+            a = reader.ReadLine
+            'MsgBox(a)
+            Try
+                If a.Contains("--accessToken OFFLINE_MODE") Then
+                    b = a
+                    'MsgBox(a)
+                End If
+            Catch ex As Exception
+                'a is nothing now...
+            End Try
+
+        Loop Until a Is Nothing
+
+        reader.Close()
+
+        '
+        Using sr As New StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ComboBox1.Text + ".txt")
+            line = sr.ReadToEnd()
+        End Using
+
+
+        line = line.Replace("--accessToken OFFLINE_MODE", "--accessToken " + auth)
+        Dim objReader As New StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/versions/" + ComboBox1.Text + ".txt")
+
+
+
+        objReader.Write(line)
+        objReader.Close()
+
+    End Sub
 
     Public Sub writeUUIDtoVersions()
 
@@ -1020,6 +1150,15 @@ Public Class Form1
 
         objReader.Write(line)
         objReader.Close()
+
+        '---------------------------------------------auth system comes here---------------------------------------------
+        If auth = "OFFLINE_MODE" Or auth = "" Then
+            'dont do anything...
+        Else
+            writeauthtoversions()
+
+        End If
+        '---------------------------------------------auth system ends here----------------------------------------------
         If line.Contains("liteloader") Or line.Contains("forge") Then
             line = version
         Else
