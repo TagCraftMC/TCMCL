@@ -100,6 +100,7 @@
     <Compile Include="DownloadR.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Encrypt.vb" />
     <Compile Include="TransparentRichTextBox.vb">
       <SubType>Component</SubType>
     </Compile>

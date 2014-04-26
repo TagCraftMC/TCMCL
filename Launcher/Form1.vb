@@ -9,6 +9,7 @@ Imports System.Drawing.Text
 Imports TagAPIx
 Imports Newtonsoft.Json
 Imports System.Text
+Imports System.Security.Cryptography
 
 'username:Ammar_Ahmad_Smells
 'versionnumber:1.7.8
@@ -86,6 +87,8 @@ Public Class Form1
                 '-------------------------- Memory check old config
                 memorypasswriter()
                 '-------------------------- Memory check ends
+
+
                 BackgroundWorker3.RunWorkerAsync()
 
             End If
@@ -533,48 +536,127 @@ Public Class Form1
     Dim password As String
     Dim auth As String = "OFFLINE_MODE"
     Dim syn As String
+    Dim shouldsave As String
+    Dim statusoflogin As Integer = 0
+    Dim statusonstartup As Integer = 0
 
-    Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub BackgroundWorker5_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker5.RunWorkerCompleted
+        If statusoflogin = 2 Then
+            rememberme()
 
-        If e.KeyCode = Keys.F9 Then
-            auth = "OFFLINE_MODE"
+        Else
+            MsgBox("Failed to authenticate.")
+        End If
+    End Sub
+
+    Private Sub BackgroundWorker5_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker5.DoWork
+        Try
+            statusoflogin = 0
+            Dim request As WebRequest = WebRequest.Create("https://authserver.mojang.com/authenticate")
+            request.Method = "POST"
+            Dim postData As String = syn
+            Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
+            request.ContentType = "application/json"
+            request.ContentLength = byteArray.Length
+            Dim dataStream As Stream = request.GetRequestStream()
+            dataStream.Write(byteArray, 0, byteArray.Length)
+            dataStream.Close()
+            Dim response As WebResponse = request.GetResponse()
+            Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)
+            dataStream = response.GetResponseStream()
+            Dim reader As New StreamReader(dataStream)
+
+            Dim responseFromServer As String = reader.ReadToEnd()
+            syn = responseFromServer
+            'TextBox1.Text = responseFromServer
+            reader.Close()
+            dataStream.Close()
+            response.Close()
+
+            convert_json_to_Xml_of_auth()
+            statusoflogin = 2
+            Console.WriteLine(responseFromServer)
+
+            'MsgBox(auth)
+        Catch ex As Exception
+            'MsgBox("ERROR COULD NOT AUTHENTICATE!")
+            statusoflogin = 3
+        End Try
+    End Sub
+
+    Sub encpassword()
+        Dim plainText As String = storedata
+        Dim password As String = "ammar"
+
+        Dim wrapper As New Encrypt(password)
+        Dim cipherText As String = wrapper.EncryptData(plainText)
+
+        My.Computer.FileSystem.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/" & nameoffile, cipherText, False)
+    End Sub
+
+    Dim storedata As String
+    Dim nameoffile As String
+
+    Sub rememberme()
+        If statusonstartup = 1 Then
+        Else
+            If MsgBox("Do you want the launcher to remember your login?", MsgBoxStyle.Information + MsgBoxStyle.YesNo, "TagCraftMC - Minecraft Login") = MsgBoxResult.Yes Then
+                encpassword()
+
+            Else
+                'MsgBox("NO Clicked.")
+                'don't do anything... just leave it...
+            End If
+
+        End If
+      End Sub
+
+    Dim checkauth As String
+
+    Public Sub authenticatemenaow()
+        auth = "OFFLINE_MODE"
+        If statusonstartup = 0 Then
             usernameID = InputBox("Enter your minecraft username/email ID")
             password = InputBox("Enter your password")
-
             syn = "{""agent"":{""name"":""Minecraft"",""version"":1},""username"":""setuser"",""password"":""setpassword"",""clientToken"":""""}"
             syn = syn.Replace("setuser", usernameID)
             syn = syn.Replace("setpassword", password)
-            Try
+            storedata = syn
 
-                Dim request As WebRequest = WebRequest.Create("https://authserver.mojang.com/authenticate")
-                request.Method = "POST"
-                Dim postData As String = syn
-                Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
-                request.ContentType = "application/json"
-                request.ContentLength = byteArray.Length
-                Dim dataStream As Stream = request.GetRequestStream()
-                dataStream.Write(byteArray, 0, byteArray.Length)
-                dataStream.Close()
-                Dim response As WebResponse = request.GetResponse()
-                Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)
-                dataStream = response.GetResponseStream()
-                Dim reader As New StreamReader(dataStream)
+            BackgroundWorker5.RunWorkerAsync()
 
-                Dim responseFromServer As String = reader.ReadToEnd()
-                syn = responseFromServer
-                'TextBox1.Text = responseFromServer
-                convert_json_to_Xml_of_auth()
-                Console.WriteLine(responseFromServer)
+        Else
+            'autodetect..
+            syn = plainText
+            storedata = syn
 
-                reader.Close()
-                dataStream.Close()
-                response.Close()
-                'MsgBox(auth)
-            Catch ex As Exception
-                MsgBox("ERROR COULD NOT AUTHENTICATE!")
-            End Try
+            BackgroundWorker5.RunWorkerAsync()
+
         End If
 
+
+       
+
+    End Sub
+
+    Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.F9 Then
+            authenticatemenaow()
+        End If
+        If e.KeyCode = Keys.F12 Then
+            ' authenticatemenaow()
+            Dim filenametodelete As String
+            filenametodelete = InputBox("Enter the username you want to remove...", "Auth-Delete")
+            If (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/" + filenametodelete)) = True Then
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/" + filenametodelete)
+                MsgBox("Login details removed.")
+
+            Else
+                MsgBox("Unable to remove login details.")
+
+            End If
+
+        End If
     End Sub
 
     Public Sub convert_json_to_Xml_of_auth()
@@ -620,7 +702,11 @@ Public Class Form1
                     End If
                 End If
             End While
-            MsgBox("AUTHENTICATED USING ID: " + auth)
+            ' MsgBox("AUTHENTICATED USING ID: " + auth)
+
+            GetVal_name()
+
+
         Catch ex As Exception
             auth = "OFFLINE_MODE"
             UUIDCon = responseFromServer
@@ -628,6 +714,51 @@ Public Class Form1
         End Try
     End Sub
 
+    Public Sub GetVal_name()
+        Try
+
+            Dim aLine As String
+            Dim strReader As New StringReader(syn)
+
+            While True
+                aLine = strReader.ReadLine()
+                If aLine Is Nothing Then
+
+                    Exit While
+                Else
+                    If aLine.Contains("<name>") Then
+                        'MsgBox(aLine)
+                        'put the UUID to variable...
+                        aLine = aLine.Replace("<name>", "")
+                        aLine = aLine.Replace("</name>", "")
+                        aLine = aLine.Replace(" ", "")
+                        nameoffile = aLine
+
+                        Exit While
+                    End If
+                End If
+            End While
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Dim plainText As String
+
+    Sub Decoding()
+        Dim cipherText As String = My.Computer.FileSystem.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/" + TextBox1.Text)
+        Dim password As String = "ammar"
+        Dim wrapper As New Encrypt(password)
+
+        ' DecryptData throws if the wrong password is used. 
+        Try
+            plainText = wrapper.DecryptData(cipherText)
+
+        Catch ex As System.Security.Cryptography.CryptographicException
+            '    MsgBox("The data could not be decrypted with the password.")
+        End Try
+    End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.KeyPreview = True
@@ -722,6 +853,10 @@ Public Class Form1
 
 
         readoptions()
+
+        
+
+
 
         lookuplog()
 
@@ -957,6 +1092,19 @@ Public Class Form1
 
     Private Sub BackgroundWorker3_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker3.DoWork
         progresshere = 0
+
+        If (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Settings/" + TextBox1.Text) = True) Then
+            'MsgBox("hi")
+            'decrypt + send!
+            statusonstartup = 1
+
+            Decoding()
+            ' BackgroundWorker5.RunWorkerAsync()
+            authenticatemenaow()
+        Else
+            'do nothing.
+        End If
+
         TagAPIx.Class1.optionreader()
         TagAPIx.Class1.main()
         TagAPIx.Class1.extractfile()
@@ -1455,4 +1603,7 @@ Public Class Form1
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
         CrashReader.Show()
     End Sub
+
+   
+   
 End Class

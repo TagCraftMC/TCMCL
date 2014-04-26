@@ -14,6 +14,8 @@ Module Module1
     'lets face it... this code hasn't changed in a while... it needs to change.. NAOW!
     'new method to get 32/64 bit sheet.. this allows users to install java in any dir they want!
     'this will also add support for the java 8
+    '... well that broke everything... 
+    'reverted it back to what it was before.
 
     Dim javapath As String
 

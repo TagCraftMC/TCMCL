@@ -57,6 +57,7 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TransparentRichTextBox2 = New Launcher.TransparentRichTextBox()
+        Me.BackgroundWorker5 = New System.ComponentModel.BackgroundWorker()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -380,6 +381,11 @@ Partial Class Form1
         Me.TransparentRichTextBox2.TabIndex = 33
         Me.TransparentRichTextBox2.Text = "Loading News, Please Wait..."
         '
+        'BackgroundWorker5
+        '
+        Me.BackgroundWorker5.WorkerReportsProgress = True
+        Me.BackgroundWorker5.WorkerSupportsCancellation = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -455,5 +461,6 @@ Partial Class Form1
     Friend WithEvents BackgroundWorker4 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents BackgroundWorker5 As System.ComponentModel.BackgroundWorker
 
 End Class
